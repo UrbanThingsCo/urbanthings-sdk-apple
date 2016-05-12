@@ -1,5 +1,6 @@
 ![Logo](http://urbanthings.co/wp-content/themes/urbanthings/assets/images/urbanthings_logo_small.png)
 # UrbanThings API Framework for Apple Platforms
+[![Carthage compatible](https://img.shields.io/badge/Version-0.9-109480.svg?style=flat)]()
 
 ## Introduction
 
@@ -8,7 +9,7 @@ The UrbanThings API for Apple Platforms has been developed as a modern, highly c
 The SDK has been developed in Swift and is to be used with Swift.  This is in order to make the resulting data fully type safe with no ambiguity as to the meaning of any data elements.  The resulting data can be [made available to Objective-C code if needed](#objective-c).
 
 ### Supported platforms
-[![Platform](https://img.shields.io/cocoapods/p/Dip.svg?style=flat)](http://cocoapods.org/pods/Dip)
+[![Platform](https://img.shields.io/cocoapods/p/Dip.svg?style=flat)]()
 [![Swift Version](https://img.shields.io/badge/Swift-2.2-F16D39.svg?style=flat)](https://developer.apple.com/swift)
 
 The SDK is compatible with iOS (including extensions), OS X, tvOS and watchKit. It is build with Xcode 7.3 / Swift 2.2. Deployment versions supported are as follows:
@@ -38,6 +39,8 @@ github urbanthings/urbanthings-sdk-apple
 (adjust as per Carthage docs if you want specific version or branch). Also refer to the [docs](https://github.com/Carthage/Carthage) for details on how to build and install or update the framework into your project.
 
 #### Swift Package Manager
+[![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)]()
+
 If you use Swift Package Manager add Dip as dependency to you Package.swift:
 
 ```
@@ -48,6 +51,17 @@ let package = Package(
   ]
 )
 ```
+
+#### CocoaPods
+[![CocoaPods Compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](http://cocoapods.org)
+
+The SDK is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "UrbanThingsAPI"
+```
+More information on CocoaPods can be found [here](https://cocoapods.org).
 
 #### Add source to your project
 If you do not want to use a package manager clone the [repository](https://github.com/urbanthings/urbanthings-sdk-apple.git), open the `UrbanThingsAPI.xcodeproj` project with Xcode and build the target(s) for the platforms you required. You can then add the frameworks to your project. Alternatively you can add the  `UrbanThingsAPI.xcodeproj` as a project within your own project.
@@ -422,4 +436,4 @@ let mkPolyline = try polyline.asMKPolyline()
 ```
 
 ## License
-The UrbanThings API Framework for Apple Platforms is made available under the **Apache License, Version 2.0**. Please see the [LICENSE](file:LICENSE) file for further details.
+The UrbanThings API Framework for Apple Platforms is made available under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0). Please see the [LICENSE](file:LICENSE) file for further details.
