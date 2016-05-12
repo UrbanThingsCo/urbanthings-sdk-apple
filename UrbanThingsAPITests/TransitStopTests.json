@@ -1,0 +1,16 @@
+{
+    "bearing" : 0,
+    "country" : "UK",
+    "hasResourceStatus" : 0,
+    "importSource" : "NAPTAN",
+    "isClosed" : 0,
+    "lat" : 50.995626289,
+    "lng" : -0.00096444,
+    "localityName" : "",
+    "name" : "Sheffield Park (Bluebell Railway)",
+    "placePointType" : 0,
+    "primaryCode" : "1400ZZBBSHF0",
+    "smsCode" : "",
+    "stopMode" : 9,
+    "subClassType" : "TransitStop"
+}

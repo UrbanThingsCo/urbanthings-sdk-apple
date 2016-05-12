@@ -1,0 +1,7 @@
+{
+    "agencyID" : "TFL",
+    "agencyImportSource" : "TFL",
+    "agencyName" : "TfL",
+    "agencyTimeZone" : "UTC",
+    "agencyURL" : "http://www.tfl.gov.uk"
+}

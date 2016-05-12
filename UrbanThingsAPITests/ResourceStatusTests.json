@@ -1,0 +1,11 @@
+{
+    "attributionLabel" : "Santander Cycles data supplied by Transport for London",
+    "availablePlaces" : 22,
+    "importSourceID" : "TFL_BIKE",
+    "isClosed" : 0,
+    "primaryCode" : "TFL_BIKE:569",
+    "statusText" : "7 bikes, 22 docks",
+    "takenPlaces" : 7,
+    "timeStamp" : "2016-05-08T20:28:05+00:00",
+    "vehicleType" : 11
+}

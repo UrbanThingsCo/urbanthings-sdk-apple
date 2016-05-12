@@ -1,0 +1,8 @@
+{
+    "name": "BANES Car Park Data Feed via BathHacked CiC",
+    "importSourceID": "UK_BN_CP",
+    "attributionLabel": "Information provided by Bath and North East Somerset Council and curated by Bath:Hacked CiC",
+    "attributionNotes": "Attribution to be displayed on a single page within application, if possible.",
+    "sourceInfoURL": "http://www.bathhacked.org",
+    "sourceDataURL": "https://data.bathhacked.org/Transport/BANES-Live-Car-Park-Occupancy/u3w2-9yme"
+}

@@ -1,0 +1,2309 @@
+{
+    "success": true,
+    "data": [
+             {
+             "smsCode": "bthjtjt",
+             "bearing": 135,
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_ADPS",
+                            "routeID": "UK_TNDS_NOC_ADPS-X76",
+                            "lineName": "X76",
+                            "operatorName": "Ad'Rains Psv",
+                            "operatorID": "UK_TNDS_NOC_ADPS",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.40680241,
+                            "centrePointLng": -2.060500179
+                            },
+                            "typicalTripHeadsign": "Combe Park, RUH - Main Entrance"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-734",
+                            "lineName": "734",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383844325,
+                            "centrePointLng": -2.35138394
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-271",
+                            "lineName": "271",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349704245,
+                            "centrePointLng": -2.149953571
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-272",
+                            "lineName": "272",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.370014357,
+                            "centrePointLng": -2.129524033
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-114",
+                            "lineName": "114",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.509892346,
+                            "centrePointLng": -2.248967438
+                            },
+                            "typicalTripHeadsign": "Bathwick, King Edward's School"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-232",
+                            "lineName": "232",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.394300419,
+                            "centrePointLng": -2.243864649
+                            },
+                            "typicalTripHeadsign": "Lansdown Royal School"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30069",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Bathwick Street",
+             "lat": 51.387442114,
+             "lng": -2.353043058
+             },
+             {
+             "smsCode": "bthjtaw",
+             "bearing": 45,
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-734",
+                            "lineName": "734",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383844325,
+                            "centrePointLng": -2.35138394
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30072",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "St John's Road",
+             "lat": 51.387170126,
+             "lng": -2.356748725
+             },
+             {
+             "smsCode": "bthjmwd",
+             "bearing": 0,
+             "stopIndicator": "AA",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-2",
+                            "lineName": "2",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.391905594,
+                            "centrePointLng": -2.36550347
+                            },
+                            "typicalTripHeadsign": "Ensleigh, MOD Ensleigh"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-700",
+                            "lineName": "700",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.385963341,
+                            "centrePointLng": -2.367068476
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-701",
+                            "lineName": "701",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383995258,
+                            "centrePointLng": -2.374619111
+                            },
+                            "typicalTripHeadsign": "Twerton Bridge"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-31",
+                            "lineName": "31",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.397626073,
+                            "centrePointLng": -2.374126613
+                            },
+                            "typicalTripHeadsign": "Lansdown Park & Ride"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-6",
+                            "lineName": "6",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.464898898,
+                            "centrePointLng": -2.544058508
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-20A",
+                            "lineName": "20A",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.377619983,
+                            "centrePointLng": -2.363099825
+                            },
+                            "typicalTripHeadsign": "University of Bath"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-620",
+                            "lineName": "620",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.459098264,
+                            "centrePointLng": -2.393599461
+                            },
+                            "typicalTripHeadsign": "Old Sodbury, The Cross Hands"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-79",
+                            "lineName": "79",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.442659986,
+                            "centrePointLng": -2.360499251
+                            },
+                            "typicalTripHeadsign": "Tormarton, The Major's Retreat"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30480",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Alfred Street",
+             "lat": 51.386301647,
+             "lng": -2.361398141
+             },
+             {
+             "smsCode": "bthjmwm",
+             "bearing": 180,
+             "stopIndicator": "AB",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-2",
+                            "lineName": "2",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.391905594,
+                            "centrePointLng": -2.36550347
+                            },
+                            "typicalTripHeadsign": "Oldfield Park, Western Riverside"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-700",
+                            "lineName": "700",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.385963341,
+                            "centrePointLng": -2.367068476
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-701",
+                            "lineName": "701",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383995258,
+                            "centrePointLng": -2.374619111
+                            },
+                            "typicalTripHeadsign": "Twerton Bridge"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-31",
+                            "lineName": "31",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.397626073,
+                            "centrePointLng": -2.374126613
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Milsom Street"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-7",
+                            "lineName": "7",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.466969095,
+                            "centrePointLng": -2.542472937
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-20C",
+                            "lineName": "20C",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.377574751,
+                            "centrePointLng": -2.362302487
+                            },
+                            "typicalTripHeadsign": "University of Bath"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-620",
+                            "lineName": "620",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.459098264,
+                            "centrePointLng": -2.393599461
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30479",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Alfred Street",
+             "lat": 51.385889047,
+             "lng": -2.361064363
+             },
+             {
+             "smsCode": "bthjtmw",
+             "bearing": 90,
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-265",
+                            "lineName": "265",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.296170044,
+                            "centrePointLng": -2.257959015
+                            },
+                            "typicalTripHeadsign": "Boreham Field, The Dene"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-4",
+                            "lineName": "4",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.490893111,
+                            "centrePointLng": -2.636081753
+                            },
+                            "typicalTripHeadsign": "Bathampton, Holcombe Vale"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_LTRV",
+                            "routeID": "UK_TNDS_NOC_LTRV-94",
+                            "lineName": "94",
+                            "operatorName": "Libra Travel",
+                            "operatorID": "UK_TNDS_NOC_LTRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349536075,
+                            "centrePointLng": -2.284155898
+                            },
+                            "typicalTripHeadsign": "Trowbridge, Manvers House"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30007",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Holburne Museum",
+             "lat": 51.385340559,
+             "lng": -2.352193393
+             },
+             {
+             "smsCode": "bthjpam",
+             "bearing": 0,
+             "stopIndicator": "SF",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_ADPS",
+                            "routeID": "UK_TNDS_NOC_ADPS-X76",
+                            "lineName": "X76",
+                            "operatorName": "Ad'Rains Psv",
+                            "operatorID": "UK_TNDS_NOC_ADPS",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.40680241,
+                            "centrePointLng": -2.060500179
+                            },
+                            "typicalTripHeadsign": "Marlborough, Lloyds Bank"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_COAC",
+                            "routeID": "UK_TNDS_NOC_COAC-37",
+                            "lineName": "37",
+                            "operatorName": "Coachstyle",
+                            "operatorID": "UK_TNDS_NOC_COAC",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.486118257,
+                            "centrePointLng": -2.231548713
+                            },
+                            "typicalTripHeadsign": "Hullavington, Queens Head"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-779",
+                            "lineName": "779",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.390041123,
+                            "centrePointLng": -2.350725846
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-13",
+                            "lineName": "13",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383668692,
+                            "centrePointLng": -2.336579225
+                            },
+                            "typicalTripHeadsign": "Bathford School"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-271",
+                            "lineName": "271",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349704245,
+                            "centrePointLng": -2.149953571
+                            },
+                            "typicalTripHeadsign": "Devizes, The Pelican"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-272",
+                            "lineName": "272",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.370014357,
+                            "centrePointLng": -2.129524033
+                            },
+                            "typicalTripHeadsign": "Bowerhill, Kingfisher Drive"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-7",
+                            "lineName": "7",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.466969095,
+                            "centrePointLng": -2.542472937
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-X31",
+                            "lineName": "X31",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.420780986,
+                            "centrePointLng": -2.236807384
+                            },
+                            "typicalTripHeadsign": "Chippenham, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-228",
+                            "lineName": "228",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.41771754,
+                            "centrePointLng": -2.307904365
+                            },
+                            "typicalTripHeadsign": "Colerne, Pinewood Way"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-X72",
+                            "lineName": "X72",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.318232234,
+                            "centrePointLng": -1.990313542
+                            },
+                            "typicalTripHeadsign": "Bowerhill, Barnes Wallis Close (opposite)"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-X83",
+                            "lineName": "X83",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.415569651,
+                            "centrePointLng": -2.245239684
+                            },
+                            "typicalTripHeadsign": "Lackham, Wiltshire College"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30584",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Hilton Hotel",
+             "lat": 51.385236717,
+             "lng": -2.359737139
+             },
+             {
+             "smsCode": "bthjtpa",
+             "bearing": 270,
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_ADPS",
+                            "routeID": "UK_TNDS_NOC_ADPS-X76",
+                            "lineName": "X76",
+                            "operatorName": "Ad'Rains Psv",
+                            "operatorID": "UK_TNDS_NOC_ADPS",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.40680241,
+                            "centrePointLng": -2.060500179
+                            },
+                            "typicalTripHeadsign": "Combe Park, RUH - Main Entrance"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-265",
+                            "lineName": "265",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.296170044,
+                            "centrePointLng": -2.257959015
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-271",
+                            "lineName": "271",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349704245,
+                            "centrePointLng": -2.149953571
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-272",
+                            "lineName": "272",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.370014357,
+                            "centrePointLng": -2.129524033
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-4",
+                            "lineName": "4",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.490893111,
+                            "centrePointLng": -2.636081753
+                            },
+                            "typicalTripHeadsign": "Kingsway, Ambleside Road"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_LTRV",
+                            "routeID": "UK_TNDS_NOC_LTRV-94",
+                            "lineName": "94",
+                            "operatorName": "Libra Travel",
+                            "operatorID": "UK_TNDS_NOC_LTRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349536075,
+                            "centrePointLng": -2.284155898
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Grand Parade"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30031",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Holburne Museum",
+             "lat": 51.385233047,
+             "lng": -2.352063233
+             },
+             {
+             "smsCode": "bthjpda",
+             "bearing": 180,
+             "stopIndicator": "SE",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_COAC",
+                            "routeID": "UK_TNDS_NOC_COAC-37",
+                            "lineName": "37",
+                            "operatorName": "Coachstyle",
+                            "operatorID": "UK_TNDS_NOC_COAC",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.486118257,
+                            "centrePointLng": -2.231548713
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Grand Parade"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-779",
+                            "lineName": "779",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.390041123,
+                            "centrePointLng": -2.350725846
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-13",
+                            "lineName": "13",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383668692,
+                            "centrePointLng": -2.336579225
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Dorchester Street"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-6",
+                            "lineName": "6",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.464898898,
+                            "centrePointLng": -2.544058508
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-X31",
+                            "lineName": "X31",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.420780986,
+                            "centrePointLng": -2.236807384
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-228",
+                            "lineName": "228",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.41771754,
+                            "centrePointLng": -2.307904365
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-X72",
+                            "lineName": "X72",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.318232234,
+                            "centrePointLng": -1.990313542
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-X86",
+                            "lineName": "X86",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.376066739,
+                            "centrePointLng": -2.268044612
+                            },
+                            "typicalTripHeadsign": "Claverton Down, Ralph Allen School Grounds"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30583",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Hilton Hotel",
+             "lat": 51.38487771,
+             "lng": -2.359518767
+             },
+             {
+             "smsCode": "bthjtmd",
+             "bearing": 180,
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_LTRV",
+                            "routeID": "UK_TNDS_NOC_LTRV-94",
+                            "lineName": "94",
+                            "operatorName": "Libra Travel",
+                            "operatorID": "UK_TNDS_NOC_LTRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349536075,
+                            "centrePointLng": -2.284155898
+                            },
+                            "typicalTripHeadsign": "Trowbridge, Manvers House"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30057",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Edward Street",
+             "lat": 51.38469121,
+             "lng": -2.352835076
+             },
+             {
+             "smsCode": "bthjtjw",
+             "bearing": 0,
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-734",
+                            "lineName": "734",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383844325,
+                            "centrePointLng": -2.35138394
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_LTRV",
+                            "routeID": "UK_TNDS_NOC_LTRV-94",
+                            "lineName": "94",
+                            "operatorName": "Libra Travel",
+                            "operatorID": "UK_TNDS_NOC_LTRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349536075,
+                            "centrePointLng": -2.284155898
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Grand Parade"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30056",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Edward Street",
+             "lat": 51.384609938,
+             "lng": -2.352949414
+             },
+             {
+             "smsCode": "bthjmwa",
+             "bearing": 180,
+             "stopIndicator": "SC",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-2",
+                            "lineName": "2",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.391905594,
+                            "centrePointLng": -2.36550347
+                            },
+                            "typicalTripHeadsign": "Oldfield Park, Western Riverside"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-700",
+                            "lineName": "700",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.385963341,
+                            "centrePointLng": -2.367068476
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-701",
+                            "lineName": "701",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383995258,
+                            "centrePointLng": -2.374619111
+                            },
+                            "typicalTripHeadsign": "Twerton Bridge"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-7",
+                            "lineName": "7",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.466969095,
+                            "centrePointLng": -2.542472937
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-20C",
+                            "lineName": "20C",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.377574751,
+                            "centrePointLng": -2.362302487
+                            },
+                            "typicalTripHeadsign": "University of Bath"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-620",
+                            "lineName": "620",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.459098264,
+                            "centrePointLng": -2.393599461
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30477",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Milsom Street",
+             "lat": 51.384107136,
+             "lng": -2.361553298
+             },
+             {
+             "smsCode": "bthmtam",
+             "bearing": 180,
+             "stopIndicator": "SG",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_BZCO",
+                            "routeID": "UK_TNDS_NOC_BZCO-86",
+                            "lineName": "86",
+                            "operatorName": "Beeline Coaches",
+                            "operatorID": "UK_TNDS_NOC_BZCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.372319468,
+                            "centrePointLng": -2.252518524
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Grand Parade"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-31",
+                            "lineName": "31",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.397626073,
+                            "centrePointLng": -2.374126613
+                            },
+                            "typicalTripHeadsign": "Lansdown Park & Ride"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC56472",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Milsom Street",
+             "lat": 51.38400836,
+             "lng": -2.36150941
+             },
+             {
+             "smsCode": "bthjtdp",
+             "bearing": 45,
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-265",
+                            "lineName": "265",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.296170044,
+                            "centrePointLng": -2.257959015
+                            },
+                            "typicalTripHeadsign": "Boreham Field, The Dene"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-4",
+                            "lineName": "4",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.490893111,
+                            "centrePointLng": -2.636081753
+                            },
+                            "typicalTripHeadsign": "Bathampton, Holcombe Vale"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_LTRV",
+                            "routeID": "UK_TNDS_NOC_LTRV-94",
+                            "lineName": "94",
+                            "operatorName": "Libra Travel",
+                            "operatorID": "UK_TNDS_NOC_LTRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349536075,
+                            "centrePointLng": -2.284155898
+                            },
+                            "typicalTripHeadsign": "Trowbridge, Manvers House"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30005",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Laura Place",
+             "lat": 51.38393599,
+             "lng": -2.35577515
+             },
+             {
+             "smsCode": "bthjtdw",
+             "bearing": 225,
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_ADPS",
+                            "routeID": "UK_TNDS_NOC_ADPS-X76",
+                            "lineName": "X76",
+                            "operatorName": "Ad'Rains Psv",
+                            "operatorID": "UK_TNDS_NOC_ADPS",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.40680241,
+                            "centrePointLng": -2.060500179
+                            },
+                            "typicalTripHeadsign": "Combe Park, RUH - Main Entrance"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-734",
+                            "lineName": "734",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383844325,
+                            "centrePointLng": -2.35138394
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-265",
+                            "lineName": "265",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.296170044,
+                            "centrePointLng": -2.257959015
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-271",
+                            "lineName": "271",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349704245,
+                            "centrePointLng": -2.149953571
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-272",
+                            "lineName": "272",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.370014357,
+                            "centrePointLng": -2.129524033
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-4",
+                            "lineName": "4",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.490893111,
+                            "centrePointLng": -2.636081753
+                            },
+                            "typicalTripHeadsign": "Kingsway, Ambleside Road"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_LTRV",
+                            "routeID": "UK_TNDS_NOC_LTRV-94",
+                            "lineName": "94",
+                            "operatorName": "Libra Travel",
+                            "operatorID": "UK_TNDS_NOC_LTRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349536075,
+                            "centrePointLng": -2.284155898
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Grand Parade"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30032",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Laura Place",
+             "lat": 51.383828526,
+             "lng": -2.355630615
+             },
+             {
+             "smsCode": "bthjpaj",
+             "bearing": 315,
+             "stopIndicator": "SD",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_ADPS",
+                            "routeID": "UK_TNDS_NOC_ADPS-X76",
+                            "lineName": "X76",
+                            "operatorName": "Ad'Rains Psv",
+                            "operatorID": "UK_TNDS_NOC_ADPS",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.40680241,
+                            "centrePointLng": -2.060500179
+                            },
+                            "typicalTripHeadsign": "Marlborough, Lloyds Bank"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-2",
+                            "lineName": "2",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.391905594,
+                            "centrePointLng": -2.36550347
+                            },
+                            "typicalTripHeadsign": "Ensleigh, MOD Ensleigh"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-700",
+                            "lineName": "700",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.385963341,
+                            "centrePointLng": -2.367068476
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-701",
+                            "lineName": "701",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383995258,
+                            "centrePointLng": -2.374619111
+                            },
+                            "typicalTripHeadsign": "Twerton Bridge"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-716",
+                            "lineName": "716",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383390081,
+                            "centrePointLng": -2.380015589
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Manvers Street"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-779",
+                            "lineName": "779",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.390041123,
+                            "centrePointLng": -2.350725846
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-271",
+                            "lineName": "271",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349704245,
+                            "centrePointLng": -2.149953571
+                            },
+                            "typicalTripHeadsign": "Devizes, The Pelican"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-272",
+                            "lineName": "272",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.370014357,
+                            "centrePointLng": -2.129524033
+                            },
+                            "typicalTripHeadsign": "Bowerhill, Kingfisher Drive"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-6",
+                            "lineName": "6",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.464898898,
+                            "centrePointLng": -2.544058508
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-7",
+                            "lineName": "7",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.466969095,
+                            "centrePointLng": -2.542472937
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-X31",
+                            "lineName": "X31",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.420780986,
+                            "centrePointLng": -2.236807384
+                            },
+                            "typicalTripHeadsign": "Chippenham, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-20A",
+                            "lineName": "20A",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.377619983,
+                            "centrePointLng": -2.363099825
+                            },
+                            "typicalTripHeadsign": "University of Bath"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-620",
+                            "lineName": "620",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.459098264,
+                            "centrePointLng": -2.393599461
+                            },
+                            "typicalTripHeadsign": "Old Sodbury, The Cross Hands"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-79",
+                            "lineName": "79",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.442659986,
+                            "centrePointLng": -2.360499251
+                            },
+                            "typicalTripHeadsign": "Tormarton, The Major's Retreat"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-X72",
+                            "lineName": "X72",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.318232234,
+                            "centrePointLng": -1.990313542
+                            },
+                            "typicalTripHeadsign": "Bowerhill, Barnes Wallis Close (opposite)"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30478",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Broad Street",
+             "lat": 51.383464643,
+             "lng": -2.359953166
+             },
+             {
+             "smsCode": "bthjptg",
+             "bearing": 135,
+             "stopIndicator": "CI",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_ADPS",
+                            "routeID": "UK_TNDS_NOC_ADPS-X76",
+                            "lineName": "X76",
+                            "operatorName": "Ad'Rains Psv",
+                            "operatorID": "UK_TNDS_NOC_ADPS",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.40680241,
+                            "centrePointLng": -2.060500179
+                            },
+                            "typicalTripHeadsign": "Combe Park, RUH - Main Entrance"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_BNSC",
+                            "routeID": "UK_TNDS_NOC_BNSC-752",
+                            "lineName": "752",
+                            "operatorName": "Bath & NE Somerset Coun",
+                            "operatorID": "UK_TNDS_NOC_BNSC",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.348325807,
+                            "centrePointLng": -2.495556046
+                            },
+                            "typicalTripHeadsign": "Hinton Blewett Church"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_BZCO",
+                            "routeID": "UK_TNDS_NOC_BZCO-86",
+                            "lineName": "86",
+                            "operatorName": "Beeline Coaches",
+                            "operatorID": "UK_TNDS_NOC_BZCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.372319468,
+                            "centrePointLng": -2.252518524
+                            },
+                            "typicalTripHeadsign": "Semington, Bus Shelter Shelter"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-2",
+                            "lineName": "2",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.391905594,
+                            "centrePointLng": -2.36550347
+                            },
+                            "typicalTripHeadsign": "Oldfield Park, Western Riverside"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-13",
+                            "lineName": "13",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383668692,
+                            "centrePointLng": -2.336579225
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Dorchester Street"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-265",
+                            "lineName": "265",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.296170044,
+                            "centrePointLng": -2.257959015
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-271",
+                            "lineName": "271",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349704245,
+                            "centrePointLng": -2.149953571
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-272",
+                            "lineName": "272",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.370014357,
+                            "centrePointLng": -2.129524033
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-4",
+                            "lineName": "4",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.490893111,
+                            "centrePointLng": -2.636081753
+                            },
+                            "typicalTripHeadsign": "Kingsway, Ambleside Road"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-6",
+                            "lineName": "6",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.464898898,
+                            "centrePointLng": -2.544058508
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-7",
+                            "lineName": "7",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.466969095,
+                            "centrePointLng": -2.542472937
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-X31",
+                            "lineName": "X31",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.420780986,
+                            "centrePointLng": -2.236807384
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-20C",
+                            "lineName": "20C",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.377574751,
+                            "centrePointLng": -2.362302487
+                            },
+                            "typicalTripHeadsign": "University of Bath"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FRMN",
+                            "routeID": "UK_TNDS_NOC_FRMN-X80",
+                            "lineName": "X80",
+                            "operatorName": "Frome Minibuses",
+                            "operatorID": "UK_TNDS_NOC_FRMN",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.307544952,
+                            "centrePointLng": -2.336646863
+                            },
+                            "typicalTripHeadsign": "Frome, Car Park"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-228",
+                            "lineName": "228",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.41771754,
+                            "centrePointLng": -2.307904365
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-X72",
+                            "lineName": "X72",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.318232234,
+                            "centrePointLng": -1.990313542
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-X86",
+                            "lineName": "X86",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.376066739,
+                            "centrePointLng": -2.268044612
+                            },
+                            "typicalTripHeadsign": "Claverton Down, Ralph Allen School Grounds"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_REAL",
+                            "routeID": "UK_TNDS_NOC_REAL-X88",
+                            "lineName": "X88",
+                            "operatorName": "Real Coach Hire",
+                            "operatorID": "UK_TNDS_NOC_REAL",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.29580706,
+                            "centrePointLng": -2.155266931
+                            },
+                            "typicalTripHeadsign": "Chitterne, All Saints and St Mary's Church"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30611",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Grand Parade",
+             "lat": 51.38251834,
+             "lng": -2.357718438
+             },
+             {
+             "smsCode": "bthjpwt",
+             "bearing": 135,
+             "stopIndicator": "CL",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_BZCO",
+                            "routeID": "UK_TNDS_NOC_BZCO-64",
+                            "lineName": "64",
+                            "operatorName": "Beeline Coaches",
+                            "operatorID": "UK_TNDS_NOC_BZCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.356472071,
+                            "centrePointLng": -2.271320636
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Rebecca Fountain"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_COAC",
+                            "routeID": "UK_TNDS_NOC_COAC-37",
+                            "lineName": "37",
+                            "operatorName": "Coachstyle",
+                            "operatorID": "UK_TNDS_NOC_COAC",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.486118257,
+                            "centrePointLng": -2.231548713
+                            },
+                            "typicalTripHeadsign": "Hullavington, Queens Head"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-700",
+                            "lineName": "700",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.385963341,
+                            "centrePointLng": -2.367068476
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-701",
+                            "lineName": "701",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383995258,
+                            "centrePointLng": -2.374619111
+                            },
+                            "typicalTripHeadsign": "Twerton Bridge"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-734",
+                            "lineName": "734",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383844325,
+                            "centrePointLng": -2.35138394
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-779",
+                            "lineName": "779",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.390041123,
+                            "centrePointLng": -2.350725846
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-620",
+                            "lineName": "620",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.459098264,
+                            "centrePointLng": -2.393599461
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_LTRV",
+                            "routeID": "UK_TNDS_NOC_LTRV-94",
+                            "lineName": "94",
+                            "operatorName": "Libra Travel",
+                            "operatorID": "UK_TNDS_NOC_LTRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349536075,
+                            "centrePointLng": -2.284155898
+                            },
+                            "typicalTripHeadsign": "Westwood, Turning Circle"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_REAL",
+                            "routeID": "UK_TNDS_NOC_REAL-X88",
+                            "lineName": "X88",
+                            "operatorName": "Real Coach Hire",
+                            "operatorID": "UK_TNDS_NOC_REAL",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.29580706,
+                            "centrePointLng": -2.155266931
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Dorchester Street"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30612",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Grand Parade",
+             "lat": 51.382222841,
+             "lng": -2.357313785
+             },
+             {
+             "smsCode": "bthjpdp",
+             "bearing": 0,
+             "stopIndicator": "CG",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_BZCO",
+                            "routeID": "UK_TNDS_NOC_BZCO-86",
+                            "lineName": "86",
+                            "operatorName": "Beeline Coaches",
+                            "operatorID": "UK_TNDS_NOC_BZCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.372319468,
+                            "centrePointLng": -2.252518524
+                            },
+                            "typicalTripHeadsign": "Semington, Bus Shelter Shelter"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-2",
+                            "lineName": "2",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.391905594,
+                            "centrePointLng": -2.36550347
+                            },
+                            "typicalTripHeadsign": "Ensleigh, MOD Ensleigh"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-700",
+                            "lineName": "700",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.385963341,
+                            "centrePointLng": -2.367068476
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-701",
+                            "lineName": "701",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383995258,
+                            "centrePointLng": -2.374619111
+                            },
+                            "typicalTripHeadsign": "Twerton Bridge"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-716",
+                            "lineName": "716",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383390081,
+                            "centrePointLng": -2.380015589
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Manvers Street"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-13",
+                            "lineName": "13",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383668692,
+                            "centrePointLng": -2.336579225
+                            },
+                            "typicalTripHeadsign": "Bathford School"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-271",
+                            "lineName": "271",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349704245,
+                            "centrePointLng": -2.149953571
+                            },
+                            "typicalTripHeadsign": "Devizes, The Pelican"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-272",
+                            "lineName": "272",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.370014357,
+                            "centrePointLng": -2.129524033
+                            },
+                            "typicalTripHeadsign": "Bowerhill, Kingfisher Drive"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-X31",
+                            "lineName": "X31",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.420780986,
+                            "centrePointLng": -2.236807384
+                            },
+                            "typicalTripHeadsign": "Chippenham, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-20A",
+                            "lineName": "20A",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.377619983,
+                            "centrePointLng": -2.363099825
+                            },
+                            "typicalTripHeadsign": "University of Bath"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-620",
+                            "lineName": "620",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.459098264,
+                            "centrePointLng": -2.393599461
+                            },
+                            "typicalTripHeadsign": "Old Sodbury, The Cross Hands"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-228",
+                            "lineName": "228",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.41771754,
+                            "centrePointLng": -2.307904365
+                            },
+                            "typicalTripHeadsign": "Colerne, Pinewood Way"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-79",
+                            "lineName": "79",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.442659986,
+                            "centrePointLng": -2.360499251
+                            },
+                            "typicalTripHeadsign": "Tormarton, The Major's Retreat"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-X72",
+                            "lineName": "X72",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.318232234,
+                            "centrePointLng": -1.990313542
+                            },
+                            "typicalTripHeadsign": "Bowerhill, Barnes Wallis Close (opposite)"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FSRV",
+                            "routeID": "UK_TNDS_NOC_FSRV-X83",
+                            "lineName": "X83",
+                            "operatorName": "Faresaver",
+                            "operatorID": "UK_TNDS_NOC_FSRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.415569651,
+                            "centrePointLng": -2.245239684
+                            },
+                            "typicalTripHeadsign": "Lackham, Wiltshire College"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30609",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Guildhall",
+             "lat": 51.382180987,
+             "lng": -2.359238986
+             },
+             {
+             "smsCode": "bthjpdw",
+             "bearing": 0,
+             "stopIndicator": "CC",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_BZCO",
+                            "routeID": "UK_TNDS_NOC_BZCO-64",
+                            "lineName": "64",
+                            "operatorName": "Beeline Coaches",
+                            "operatorID": "UK_TNDS_NOC_BZCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.356472071,
+                            "centrePointLng": -2.271320636
+                            },
+                            "typicalTripHeadsign": "Paxcroft Mead, Leap Gate Bottom"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-734",
+                            "lineName": "734",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.383844325,
+                            "centrePointLng": -2.35138394
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_CTCO",
+                            "routeID": "UK_TNDS_NOC_CTCO-779",
+                            "lineName": "779",
+                            "operatorName": "CT Coaches",
+                            "operatorID": "UK_TNDS_NOC_CTCO",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.390041123,
+                            "centrePointLng": -2.350725846
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-265",
+                            "lineName": "265",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.296170044,
+                            "centrePointLng": -2.257959015
+                            },
+                            "typicalTripHeadsign": "Boreham Field, The Dene"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-4",
+                            "lineName": "4",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.490893111,
+                            "centrePointLng": -2.636081753
+                            },
+                            "typicalTripHeadsign": "Bathampton, Holcombe Vale"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-6",
+                            "lineName": "6",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.464898898,
+                            "centrePointLng": -2.544058508
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-7",
+                            "lineName": "7",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.466969095,
+                            "centrePointLng": -2.542472937
+                            },
+                            "typicalTripHeadsign": "Bath City Centre, Bus Station"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_LTRV",
+                            "routeID": "UK_TNDS_NOC_LTRV-94",
+                            "lineName": "94",
+                            "operatorName": "Libra Travel",
+                            "operatorID": "UK_TNDS_NOC_LTRV",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.349536075,
+                            "centrePointLng": -2.284155898
+                            },
+                            "typicalTripHeadsign": "Trowbridge, Manvers House"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30607",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Guildhall",
+             "lat": 51.381929307,
+             "lng": -2.359208276
+             },
+             {
+             "smsCode": "bthjpdt",
+             "bearing": 0,
+             "stopIndicator": "CF",
+             "isClosed": false,
+             "stopMode": 3,
+             "routeHints": [
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FBRI",
+                            "routeID": "UK_TNDS_NOC_FBRI-U1",
+                            "lineName": "U1",
+                            "operatorName": "First in Bristol Bath &",
+                            "operatorID": "UK_TNDS_NOC_FBRI",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.379087416,
+                            "centrePointLng": -2.349647059
+                            },
+                            "typicalTripHeadsign": "Oldfield Park, Junction Road"
+                            },
+                            {
+                            "routeInfo": {
+                            "agencyCode": "UK_TNDS_NOC_FHML",
+                            "routeID": "UK_TNDS_NOC_FHML-U18",
+                            "lineName": "U18",
+                            "operatorName": "Wessex Connect",
+                            "operatorID": "UK_TNDS_NOC_FHML",
+                            "operatorRegion": "SW",
+                            "routeType": 3,
+                            "centrePointLat": 51.379087416,
+                            "centrePointLng": -2.349647059
+                            },
+                            "typicalTripHeadsign": "University of Bath"
+                            }
+                            ],
+             "importSource": "NAPTAN",
+             "primaryCode": "0180BAC30608",
+             "placePointType": 103,
+             "localityName": "",
+             "country": "UK",
+             "hasResourceStatus": false,
+             "subClassType": "TransitStop",
+             "name": "Guildhall",
+             "lat": 51.381750749,
+             "lng": -2.358790164
+             }
+             ]
+}
