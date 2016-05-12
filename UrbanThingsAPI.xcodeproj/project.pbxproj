@@ -770,6 +770,8 @@
 		2C6A4E071CE3C72E00475C9F /* Trips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
 		2C6A4E0E1CE3CB5800475C9F /* ResponseProcessingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseProcessingTests.swift; sourceTree = "<group>"; };
 		2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePolylineTests.swift; sourceTree = "<group>"; };
+		2C8048881CE4D49D00AE863A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2C80488A1CE4E12A00AE863A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2CD690CA1CD224DF00747E36 /* NSURL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Extensions.swift"; sourceTree = "<group>"; };
 		2CD690CC1CD2281200747E36 /* PlacePointType+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacePointType+JSON.swift"; sourceTree = "<group>"; };
 		2CD690CE1CD2296D00747E36 /* TransitMode+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransitMode+JSON.swift"; sourceTree = "<group>"; };
@@ -930,6 +932,8 @@
 		2C5F2BFB1CCE9AA900999713 = {
 			isa = PBXGroup;
 			children = (
+				2C80488A1CE4E12A00AE863A /* LICENSE */,
+				2C8048881CE4D49D00AE863A /* README.md */,
 				2C5F2C071CCE9AA900999713 /* UrbanThingsAPI */,
 				2CD690EF1CD351D900747E36 /* UrbanThingsAPITests */,
 				2C591E801CDA1D4A00B955A6 /* Demo */,

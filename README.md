@@ -1,3 +1,4 @@
+![Logo](http://urbanthings.co/wp-content/themes/urbanthings/assets/images/urbanthings_logo_small.png)
 # UrbanThings API Framework for Apple Platforms
 
 ## Introduction
@@ -7,7 +8,10 @@ The UrbanThings API for Apple Platforms has been developed as a modern, highly c
 The SDK has been developed in Swift and is to be used with Swift.  This is in order to make the resulting data fully type safe with no ambiguity as to the meaning of any data elements.  The resulting data can be [made available to Objective-C code if needed](#objective-c).
 
 ### Supported platforms
-The SDK is compatible with iOS (including extensions), OS X, tvOS and watchKit. Version support is as follows:
+[![Platform](https://img.shields.io/cocoapods/p/Dip.svg?style=flat)](http://cocoapods.org/pods/Dip)
+[![Swift Version](https://img.shields.io/badge/Swift-2.2-F16D39.svg?style=flat)](https://developer.apple.com/swift)
+
+The SDK is compatible with iOS (including extensions), OS X, tvOS and watchKit. It is build with Xcode 7.3 / Swift 2.2. Deployment versions supported are as follows:
 
 Platform | Min Supported Version
 ---------|----------------------
@@ -24,13 +28,29 @@ The SDK has been [made available](http://www.github.com/urbanthings) to the Open
 We support a number of ways of including the framework in your project. 
 
 #### Carthage
-To be completed
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+To use the Carthage framework manager insure you have Carthage installed and add a **Cartfile** to your project ([see docs](https://github.com/Carthage/Carthage)). Add the following to your **Cartfile**:
+
+```
+github urbanthings/urbanthings-sdk-apple
+```
+(adjust as per Carthage docs if you want specific version or branch). Also refer to the [docs](https://github.com/Carthage/Carthage) for details on how to build and install or update the framework into your project.
 
 #### Swift Package Manager
-To be completed
+If you use Swift Package Manager add Dip as dependency to you Package.swift:
+
+```
+let package = Package(
+  name: "MyPackage",
+  dependencies: [
+    .Package(url: "https://github.com/AliSoftware/Dip.git", "0.9")
+  ]
+)
+```
 
 #### Add source to your project
-To be completed
+If you do not want to use a package manager clone the [repository](https://github.com/urbanthings/urbanthings-sdk-apple.git), open the `UrbanThingsAPI.xcodeproj` project with Xcode and build the target(s) for the platforms you required. You can then add the frameworks to your project. Alternatively you can add the  `UrbanThingsAPI.xcodeproj` as a project within your own project.
 
 ## Obtaining an API instance
 To request data from the server, you instantiate an instance of the `UrbanThingsAPI` class.
@@ -400,3 +420,6 @@ for point in try polyline.asCoordinateSequence() {
 let mkPolyline = try polyline.asMKPolyline()
 
 ```
+
+## License
+The UrbanThings API Framework for Apple Platforms is made available under the **Apache License, Version 2.0**. Please see the [LICENSE](file:LICENSE) file for further details.
