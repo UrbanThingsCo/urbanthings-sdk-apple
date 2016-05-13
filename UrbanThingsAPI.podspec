@@ -18,5 +18,5 @@ Provides Swift framework for all Apple platforms to access the UrbanThings Trans
   s.tvos.deployment_target = '9.0'
 
   s.source_files          = 'UrbanThingsAPI/**/*.{swift,h}'
-
+  s.watchos.exclude_files = '**/MKPolyline+GooglePolyline.swift'
 end

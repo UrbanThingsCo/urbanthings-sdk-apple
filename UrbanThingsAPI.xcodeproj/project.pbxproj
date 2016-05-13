@@ -547,6 +547,7 @@
 		2C6A4E131CE4A35700475C9F /* GooglePolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */; };
 		2C6A4E141CE4A35700475C9F /* GooglePolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */; };
 		2C6A4E151CE4A35700475C9F /* GooglePolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */; };
+		2C80488E1CE5B20300AE863A /* String+GooglePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691291CD6122600747E36 /* String+GooglePolyline.swift */; };
 		2CD690CB1CD224DF00747E36 /* NSURL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+Extensions.swift */; };
 		2CD690CD1CD2281200747E36 /* PlacePointType+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CC1CD2281200747E36 /* PlacePointType+JSON.swift */; };
 		2CD690CF1CD2296D00747E36 /* TransitMode+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CE1CD2296D00747E36 /* TransitMode+JSON.swift */; };
@@ -1793,6 +1794,7 @@
 				2C0CE39F1CE317D90054847C /* StopBoardGroup.swift in Sources */,
 				2C0CE3EB1CE317EE0054847C /* QueryKeys.swift in Sources */,
 				2C0CE46B1CE317FA0054847C /* UTTransitTripInfo.swift in Sources */,
+				2C80488E1CE5B20300AE863A /* String+GooglePolyline.swift in Sources */,
 				2C0CE4541CE317FA0054847C /* UTObject.swift in Sources */,
 				2C0CE38F1CE317D90054847C /* Attribution.swift in Sources */,
 				2C0CE3DE1CE317E90054847C /* JSONInitialization.swift in Sources */,

@@ -6,8 +6,6 @@
 //  Copyright © 2016 Fat Attitude. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 //! Project version number for UrbanThingsAPI.
 FOUNDATION_EXPORT double UrbanThingsAPIVersionNumber;
 

@@ -24,7 +24,11 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import MapKit
+#if !os(watchOS)
+    import MapKit
+#else
+    import CoreLocation
+#endif
 
 extension String {
     
@@ -158,46 +162,6 @@ extension String {
     }
     
     /**
-     Initialize string to Google encoded polyline for a sequence of MKMapPoint
-     points.
-     
-     - parameter sequence: Sequence of points to encode
-     
-     - returns: Initialized encoded string
-     */
-    @available(tvOS 9.2, *)
-    public init<S:SequenceType where S.Generator.Element == MKMapPoint>(googlePolylineMapPointSequence sequence:S) {
-        self.init(googlePolylineLocationCoordinateSequence:sequence.map { MKCoordinateForMapPoint($0) })
-    }
-
-    /**
-     Initialize string to Google encoded polyline from points contained in an instance
-     of MKMultiPoint.
-     
-     - parameter sequence: Sequence of points to encode
-     
-     - returns: Initialized encoded string
-     */
-    @available(tvOS 9.2, *)
-    public init(googlePolylineMKMultiPoint polyline:MKMultiPoint) {
-        
-        var encoder = CoordinateEncoder()
-
-        var count = polyline.pointCount
-        var ptr = polyline.points()
-        
-        var s = ""
-        while(count > 0) {
-            let coord = MKCoordinateForMapPoint(ptr.memory)
-            s = s + encoder.encode(coord)
-            ptr = ptr.successor()
-            count -= 1
-        }
-        
-        self.init(s)
-    }
-    
-    /**
      Returns sequence of CLLocationCoordinate2D points for the decoded Google polyline
      string.
      
@@ -220,6 +184,54 @@ extension String {
     public func asCoordinateArray() throws -> [CLLocationCoordinate2D] {
         return [CLLocationCoordinate2D](try self.asCoordinateSequence())
     }
+
+}
+
+// MapKit is not available for watchOS
+
+#if !os(watchOS)
+
+extension String {
+    
+    /**
+     Initialize string to Google encoded polyline for a sequence of MKMapPoint
+     points.
+     
+     - parameter sequence: Sequence of points to encode
+     
+     - returns: Initialized encoded string
+     */
+    @available(tvOS 9.2, *)
+    public init<S:SequenceType where S.Generator.Element == MKMapPoint>(googlePolylineMapPointSequence sequence:S) {
+        self.init(googlePolylineLocationCoordinateSequence:sequence.map { MKCoordinateForMapPoint($0) })
+    }
+    
+    /**
+     Initialize string to Google encoded polyline from points contained in an instance
+     of MKMultiPoint.
+     
+     - parameter sequence: Sequence of points to encode
+     
+     - returns: Initialized encoded string
+     */
+    @available(tvOS 9.2, *)
+    public init(googlePolylineMKMultiPoint polyline:MKMultiPoint) {
+        
+        var encoder = CoordinateEncoder()
+        
+        var count = polyline.pointCount
+        var ptr = polyline.points()
+        
+        var s = ""
+        while(count > 0) {
+            let coord = MKCoordinateForMapPoint(ptr.memory)
+            s = s + encoder.encode(coord)
+            ptr = ptr.successor()
+            count -= 1
+        }
+        
+        self.init(s)
+    }
     
     /**
      Returns MKPolyline instance containing points from decoded Google polyline
@@ -234,3 +246,5 @@ extension String {
         return MKPolyline(sequence:try self.asCoordinateSequence())
     }
 }
+
+#endif
