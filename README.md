@@ -9,10 +9,10 @@ The UrbanThings API for Apple Platforms has been developed as a modern, highly c
 The SDK has been developed in Swift and is to be used with Swift.  This is in order to make the resulting data fully type safe with no ambiguity as to the meaning of any data elements.  The resulting data can be [made available to Objective-C code if needed](#objective-c).
 
 ### Supported platforms
-[![Platform](https://img.shields.io/cocoapods/p/Dip.svg?style=flat)]()
-[![Swift Version](https://img.shields.io/badge/Swift-2.2-F16D39.svg?style=flat)](https://developer.apple.com/swift)
+[![Platform](https://img.shields.io/badge/Platforms-iOS|tvOS|watchOS|OSX-109480.svg?style=flat)]()
+[![Swift Version](https://img.shields.io/badge/Swift-2.2-109480.svg?style=flat)](https://developer.apple.com/swift)
 
-The SDK is compatible with iOS (including extensions), OS X, tvOS and watchKit. It is build with Xcode 7.3 / Swift 2.2. Deployment versions supported are as follows:
+The SDK is compatible with iOS (including extensions), OS X (incuding extensions), tvOS and watchKit. It is build with Xcode 7.3 / Swift 2.2. Deployment versions supported are as follows:
 
 Platform | Min Supported Version
 ---------|----------------------
@@ -29,7 +29,7 @@ The SDK has been [made available](http://www.github.com/urbanthings) to the Open
 We support a number of ways of including the framework in your project. 
 
 #### Carthage
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-109480.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 To use the Carthage framework manager insure you have Carthage installed and add a **Cartfile** to your project ([see docs](https://github.com/Carthage/Carthage)). Add the following to your **Cartfile**:
 
@@ -39,7 +39,7 @@ github urbanthings/urbanthings-sdk-apple
 (adjust as per Carthage docs if you want specific version or branch). Also refer to the [docs](https://github.com/Carthage/Carthage) for details on how to build and install or update the framework into your project.
 
 #### Swift Package Manager
-[![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)]()
+[![SPM compatible](https://img.shields.io/badge/SPM-compatible-109480.svg?style=flat)]()
 
 If you use Swift Package Manager add Dip as dependency to you Package.swift:
 
@@ -47,13 +47,13 @@ If you use Swift Package Manager add Dip as dependency to you Package.swift:
 let package = Package(
   name: "MyPackage",
   dependencies: [
-    .Package(url: "https://github.com/AliSoftware/Dip.git", "0.9")
+    .Package(url: "https://github.com/urbanthings/urbanthings-sdk-apple.git", "0.9")
   ]
 )
 ```
 
 #### CocoaPods
-[![CocoaPods Compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](http://cocoapods.org)
+[![CocoaPods Compatible](https://img.shields.io/badge/CocoaPods-compatible-109480.svg?style=flat)](http://cocoapods.org)
 
 The SDK is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
