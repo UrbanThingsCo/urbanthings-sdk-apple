@@ -154,9 +154,22 @@ extension XCTestCase {
         return true
     }
     
-    // Need to properly provide solution for location testing but for now will assume its true
-    func compareLocation(location:Location, json:AnyObject, path:String) -> Bool {
-        return true
+    func compareLocation(location:Location, json:AnyObject?, path:String) -> Bool {
+        guard let jsonDict = json as? [String:AnyObject] else {
+            print("\(path) - \(json) not [String:AnyObject]")
+            return false
+        }
+        // See if any of the possible codings work
+        if let loc = try? CLLocationCoordinate2D(required:jsonDict, latitude:.Latitude, longitude:.Longitude) {
+            return loc.latitude == location.latitude && loc.longitude == location.longitude
+        }
+        // See if any of the possible codings work
+        if let loc = try? CLLocationCoordinate2D(required:jsonDict, latitude:.TransitStopLatitude, longitude:.TransitStopLongitude) {
+            return loc.latitude == location.latitude && loc.longitude == location.longitude
+        }
+        
+        print("\(path) - \(jsonDict) not location")
+        return false
     }
     
     func compare(subject:Any, json:AnyObject?, path:String = "") throws -> Bool {
