@@ -12,7 +12,7 @@ The SDK has been developed in Swift and is to be used with Swift.  This is in or
 [![Platform](https://img.shields.io/badge/Platforms-iOS|tvOS|watchOS|OSX-109480.svg?style=flat)]()
 [![Swift Version](https://img.shields.io/badge/Swift-2.2-109480.svg?style=flat)](https://developer.apple.com/swift)
 
-The SDK is compatible with iOS (including extensions), OS X (incuding extensions), tvOS and watchKit. It is build with Xcode 7.3 / Swift 2.2. Deployment versions supported are as follows:
+The SDK is compatible with iOS (including extensions), OS X (incuding extensions), tvOS and watchKit. It is built with Xcode 7.3.1 / Swift 2.2. Deployment versions supported are as follows:
 
 Platform | Min Supported Version
 ---------|----------------------
