@@ -41,7 +41,7 @@ github urbanthings/urbanthings-sdk-apple
 #### Swift Package Manager
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-109480.svg?style=flat)]()
 
-If you use Swift Package Manager add Dip as dependency to you Package.swift:
+If you use Swift Package Manager add UrbanThingsAPI as dependency to you Package.swift:
 
 ```
 let package = Package(
