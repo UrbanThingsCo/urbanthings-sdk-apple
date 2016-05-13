@@ -188,7 +188,7 @@ struct MockRequestHandler : RequestHandler {
     let data:NSData?
     
     init(jsonFile:String) {
-        if let path = NSBundle(forClass: MockResponseHandler.self)
+        if let path = NSBundle(forClass: MockRequestHandler.self)
         		.pathForResource(jsonFile, ofType: "json") {
             data = NSData(contentsOfFile: path)
         } else {

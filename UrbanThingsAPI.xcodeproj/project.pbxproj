@@ -444,9 +444,9 @@
 		2C1CF7BD1CE0D90300F1E08A /* UTTransitJourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CF7BC1CE0D90300F1E08A /* UTTransitJourneyLeg.swift */; };
 		2C1CF7BF1CE10BBB00F1E08A /* NSNotificationCenter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CF7BE1CE10BBB00F1E08A /* NSNotificationCenter+Extensions.swift */; };
 		2C1CF7C41CE1C0A800F1E08A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CF7C31CE1C0A800F1E08A /* Logger.swift */; };
-		2C2A61BC1CE3AAE70081C1EC /* MockResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A61BB1CE3AAE70081C1EC /* MockResponseHandler.swift */; };
-		2C2A61BD1CE3AAE70081C1EC /* MockResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A61BB1CE3AAE70081C1EC /* MockResponseHandler.swift */; };
-		2C2A61BE1CE3AAE70081C1EC /* MockResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A61BB1CE3AAE70081C1EC /* MockResponseHandler.swift */; };
+		2C2A61BC1CE3AAE70081C1EC /* MockRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */; };
+		2C2A61BD1CE3AAE70081C1EC /* MockRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */; };
+		2C2A61BE1CE3AAE70081C1EC /* MockRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */; };
 		2C2A61C01CE3C3D80081C1EC /* TransitStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61BF1CE3C3D80081C1EC /* TransitStops.json */; };
 		2C2A61C11CE3C3D80081C1EC /* TransitStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61BF1CE3C3D80081C1EC /* TransitStops.json */; };
 		2C2A61C21CE3C3D80081C1EC /* TransitStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61BF1CE3C3D80081C1EC /* TransitStops.json */; };
@@ -682,7 +682,7 @@
 		2C1CF7BC1CE0D90300F1E08A /* UTTransitJourneyLeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitJourneyLeg.swift; sourceTree = "<group>"; };
 		2C1CF7BE1CE10BBB00F1E08A /* NSNotificationCenter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+Extensions.swift"; sourceTree = "<group>"; };
 		2C1CF7C31CE1C0A800F1E08A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		2C2A61BB1CE3AAE70081C1EC /* MockResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockResponseHandler.swift; sourceTree = "<group>"; };
+		2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestHandler.swift; sourceTree = "<group>"; };
 		2C2A61BF1CE3C3D80081C1EC /* TransitStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TransitStops.json; sourceTree = "<group>"; };
 		2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CallingAtStops.json; sourceTree = "<group>"; };
 		2C4A15561CD1E9EF00C61B76 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -1103,7 +1103,7 @@
 				2C60AF051CDFC0ED00329630 /* JSON */,
 				2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */,
 				2C60AF011CDFB8FC00329630 /* XCTestCase+Extensions.swift */,
-				2C2A61BB1CE3AAE70081C1EC /* MockResponseHandler.swift */,
+				2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */,
 				2C6A4E0E1CE3CB5800475C9F /* ResponseProcessingTests.swift */,
 				2C60AEF91CDF92E900329630 /* UTObjectsTests */,
 				2CD690F01CD351D900747E36 /* UrbanThingsAPITests.swift */,
@@ -1730,7 +1730,7 @@
 				2C0CE4891CE324300054847C /* XCTestCase+Extensions.swift in Sources */,
 				2C0CE4881CE324300054847C /* SystemObjectJsonTests.swift in Sources */,
 				2C0CE48F1CE324300054847C /* UTResourceStatusTests.swift in Sources */,
-				2C2A61BE1CE3AAE70081C1EC /* MockResponseHandler.swift in Sources */,
+				2C2A61BE1CE3AAE70081C1EC /* MockRequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2025,7 +2025,7 @@
 				2C0CE47D1CE3242F0054847C /* XCTestCase+Extensions.swift in Sources */,
 				2C0CE47C1CE3242F0054847C /* SystemObjectJsonTests.swift in Sources */,
 				2C0CE4831CE3242F0054847C /* UTResourceStatusTests.swift in Sources */,
-				2C2A61BD1CE3AAE70081C1EC /* MockResponseHandler.swift in Sources */,
+				2C2A61BD1CE3AAE70081C1EC /* MockRequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2198,7 +2198,7 @@
 				2C1CF7B51CE0974100F1E08A /* UTPlacePointListTests.swift in Sources */,
 				2C60AF111CDFDD2F00329630 /* UTResourceStatusTests.swift in Sources */,
 				2C60AEFA1CDF932300329630 /* UTImportSourceTests.swift in Sources */,
-				2C2A61BC1CE3AAE70081C1EC /* MockResponseHandler.swift in Sources */,
+				2C2A61BC1CE3AAE70081C1EC /* MockRequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
