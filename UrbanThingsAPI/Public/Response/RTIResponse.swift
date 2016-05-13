@@ -18,6 +18,6 @@ public protocol RTIResponse {
     /// A string that indicates the reason why no RTIReport objects have been returned in this report, if applicable.
     var noDataLabel:String? { get }
     /// The data source for this report - may optionally be displayed by the client.
-    var sourceName:String? { get }
+    var sourceName:String { get }
     
 }

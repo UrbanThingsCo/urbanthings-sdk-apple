@@ -14,8 +14,8 @@ class UTResourceStatus : UTAttribution, ResourceStatus {
     let importSourceID:String 
     let timestamp:NSDate 
     let statusText:String? 
-    let availablePlaces:Int 
-    let takenPlaces:Int 
+    let availablePlaces:Int?
+    let takenPlaces:Int?
     let isClosed:Bool 
     let trend:ResourceTrend?
     let customStatusCode:Int?
@@ -25,8 +25,8 @@ class UTResourceStatus : UTAttribution, ResourceStatus {
         self.primaryCode = try parse(required: json, key: .PrimaryCode, type: UTResourceStatus.self)
         self.importSourceID = try parse(required: json, key: .ImportSourceID, type: UTResourceStatus.self)
         self.statusText = try parse(optional: json, key: .StatusText, type: UTResourceStatus.self)
-        self.availablePlaces = try parse(required: json, key: .AvailablePlaces, type: UTResourceStatus.self)
-        self.takenPlaces = try parse(required: json, key: .TakenPlaces, type: UTResourceStatus.self)
+        self.availablePlaces = try parse(optional: json, key: .AvailablePlaces, type: UTResourceStatus.self)
+        self.takenPlaces = try parse(optional: json, key: .TakenPlaces, type: UTResourceStatus.self)
         self.isClosed = try parse(required: json, key: .IsClosed, type: UTResourceStatus.self)
         self.customStatusCode = try parse(optional: json, key: .CustomStatusCode, type: UTResourceStatus.self)
         self.trend = try parse(optional: json, key: .Trend, type: UTResourceStatus.self)

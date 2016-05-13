@@ -20,12 +20,12 @@ public protocol StopBoard : Attribution, StopBoardColor {
     /// A list of service/disruption messages that relate to this particular StopBoard.
     var messages:[StopBoardMessage] { get }
     /// If this is set to `true`, no `StopBoardRow` instances (as contained in the rows property) contain a `SecondaryLabel` string.
-    var hideSecondary:Bool { get }
+    var hideSecondary:Bool? { get }
     /// If this is set to `true`, no `StopBoardRow` instances (as contained in the Rows property) contain a `PlatformLabel` string.
-    var hidePlatform:Bool { get }
+    var hidePlatform:Bool? { get }
     /// If this is set to `false`, a client should consider that each group of `StopBoardRow` instances represents a distinct dataset. 
     /// For example, one group might represent 'Arrivals' and another group might represent 'Departures'.
-    var enableGroupFiltering:Bool { get }
+    var enableGroupFiltering:Bool? { get }
     /// A string that describes the purpose of the IDLabel string contained in each StopBoardRow Clients may wish 
     /// to display this string as a 'column header' in a presented stop board.
     var idHeader:String? { get }

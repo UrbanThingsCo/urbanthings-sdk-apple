@@ -12,7 +12,7 @@ import Foundation
 public protocol VehicleRTI {
     /// The unique identifier of the Agency operating this vehicle. If the information comes from our systems, a corresponding 
     /// `TransitAgency` object will exist with this ID.
-    var agencyCode:String { get }
+    var agencyCode:String? { get }
     /// In some systems this ID allows the vehicle to be uniquely identified.
     var vehicleID:String { get }
     ///  Inidcates how late, or early, the vehicle is presently running. A value of nil indicates no available data.
@@ -23,4 +23,6 @@ public protocol VehicleRTI {
     var vehicleCapacityTotalPassengers:UInt? { get }
     /// The number of passengers presently on board this vehicle, if available.
     var vehicleOccupancyPassengers:UInt? { get }
+    /// Indicates whether the vehicle been cancelled (either in advance, or en-route)
+    var isCancelled:Bool? { get }
 }

@@ -12,9 +12,9 @@ class UTStopBoard : UTAttribution, StopBoard {
     let rows:[StopBoardRow] 
     let groups:[StopBoardGroup] 
     let messages:[StopBoardMessage] 
-    let hideSecondary:Bool 
-    let hidePlatform:Bool 
-    let enableGroupFiltering:Bool 
+    let hideSecondary:Bool?
+    let hidePlatform:Bool?
+    let enableGroupFiltering:Bool?
     let idHeader:String? 
     let mainHeader:String? 
     let secondaryHeader:String? 
@@ -29,9 +29,9 @@ class UTStopBoard : UTAttribution, StopBoard {
         self.rows = try parse(required:json, key: .Rows, type:UTStopBoard.self) { try [UTStopBoardRow](required:$0) }.map { $0 as StopBoardRow }
         self.groups = try parse(required:json, key: .Groups, type:UTStopBoardGroup.self) { try [UTStopBoardGroup](required:$0) }.map { $0 as StopBoardGroup }
         self.messages = try parse(required:json, key: .Messages, type:UTStopBoardGroup.self) { try [UTStopBoardMessage](required:$0) }.map { $0 as StopBoardMessage }
-        self.hideSecondary = try parse(required: json, key: .HideSecondary, type: UTStopBoard.self)
-        self.hidePlatform = try parse(required: json, key: .HidePlatform, type: UTStopBoard.self)
-        self.enableGroupFiltering = try parse(required: json, key: .EnableGroupFiltering, type: UTStopBoard.self)
+        self.hideSecondary = try parse(optional: json, key: .HideSecondary, type: UTStopBoard.self)
+        self.hidePlatform = try parse(optional: json, key: .HidePlatform, type: UTStopBoard.self)
+        self.enableGroupFiltering = try parse(optional: json, key: .EnableGroupFiltering, type: UTStopBoard.self)
         self.idHeader = try parse(optional: json, key: .IDHeader, type: UTStopBoard.self)
         self.mainHeader = try parse(optional: json, key: .MainHeader, type: UTStopBoard.self)
         self.secondaryHeader = try parse(optional: json, key: .SecondaryHeader, type: UTStopBoard.self)

@@ -154,6 +154,11 @@ extension XCTestCase {
         return true
     }
     
+    // Need to properly provide solution for location testing but for now will assume its true
+    func compareLocation(location:Location, json:AnyObject, path:String) -> Bool {
+        return true
+    }
+    
     func compare(subject:Any, json:AnyObject?, path:String = "") throws -> Bool {
         let mirror = Mirror(reflecting: subject)
         guard let style = mirror.displayStyle else {
@@ -174,8 +179,8 @@ extension XCTestCase {
                 if let label = child.label {
                     let jsonLabel = mappingDict[label] ?? label
                     // Location is a special case since its initialised from keys in the parent JSON
-                    if child is Location {
-                        if try !compare(child.value, json: json, path:path) {
+                    if let _ = child.value as? Location {
+                        if !compareLocation(child.value as! Location, json: json, path:path) {
                             return false
                         }
                     } else if try !compare(child.value, json: json[jsonLabel], path:path + "." + jsonLabel) {

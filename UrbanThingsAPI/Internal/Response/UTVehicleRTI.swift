@@ -10,20 +10,22 @@ import Foundation
 
 class UTVehicleRTI : UTObject, VehicleRTI {
     
-    let agencyCode:String
+    let agencyCode:String?
     let vehicleID:String
     let delayOffsetMinutes:Int?
     let vehicleRegistrationCode:String?
     let vehicleCapacityTotalPassengers:UInt?
     let vehicleOccupancyPassengers:UInt?
+    let isCancelled:Bool?
     
     override init(json: [String : AnyObject]) throws {
-        self.agencyCode = try parse(required: json, key: .AgencyCode, type: UTVehicleRTI.self)
+        self.agencyCode = try parse(optional: json, key: .AgencyCode, type: UTVehicleRTI.self)
         self.vehicleID = try parse(required: json, key: .VehicleID, type: UTVehicleRTI.self)
         self.vehicleRegistrationCode = try parse(optional:json, key: .VehicleRegistrationCode, type: UTVehicleRTI.self)
         self.delayOffsetMinutes = try parse(optional: json, key: .DelayOffsetMinutes, type: UTVehicleRTI.self)
         self.vehicleCapacityTotalPassengers = try parse(optional: json, key: .VehicleCapacityTotalPassengers, type: UTVehicleRTI.self)
         self.vehicleOccupancyPassengers = try parse(optional: json, key: .VehicleOccupancyPassengers, type: UTVehicleRTI.self)
+        self.isCancelled = try parse(optional: json, key: .IsCancelled, type: UTVehicleRTI.self)
         try super.init(json: json)
     }
 }

@@ -29,9 +29,9 @@ public protocol ResourceStatus : Attribution {
     /// A text message detailing the current status if available/applicable.
     var statusText:String? { get }
     /// Number of available places at the resource.
-    var availablePlaces:Int { get }
+    var availablePlaces:Int? { get }
     /// Number of taken places at the resources.
-    var takenPlaces:Int { get }
+    var takenPlaces:Int? { get }
     /// Whether or not the resource is currently closed.
     var isClosed:Bool { get }
     /// Capacity trend for the resource if available.

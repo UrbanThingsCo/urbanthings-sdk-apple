@@ -27,5 +27,5 @@ public protocol TransitStopRTIReport : Attribution {
     var sourceName:String { get }
     /// The time at which this report was generated. Can be used to generate a more accurate 'waiting time until vehicle comes' 
     /// since we know what the server THOUGHT the time was when it generated the expected time.
-    var timestamp:NSDate { get }
+    var timestamp:NSDate? { get }
 }

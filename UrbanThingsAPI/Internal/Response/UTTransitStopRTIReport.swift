@@ -16,7 +16,7 @@ class UTTransitStopRTIReport : UTAttribution, TransitStopRTIReport {
     let disruptions:[Disruption]
     let noDataLabel:String?
     let sourceName:String
-    let timestamp:NSDate
+    let timestamp:NSDate?
 
     override init(json: [String : AnyObject]) throws {
         self.reportName = try parse(optional: json, key: .ReportName, type: UTTransitStopRTIReport.self)
@@ -25,7 +25,7 @@ class UTTransitStopRTIReport : UTAttribution, TransitStopRTIReport {
         self.disruptions = try parse(required:json, key: .Disruptions, type:UTTransitStopRTIReport.self) { try [UTDisruption](required:$0) }.map { $0 as Disruption }
         self.noDataLabel = try parse(optional: json, key: .NoDataLabel, type: UTTransitStopRTIReport.self)
         self.sourceName = try parse(required: json, key: .SourceName, type: UTTransitStopRTIReport.self)
-        self.timestamp = try parse(required:json, key: .Timestamp, type:UTDisruption.self) { try String(required: $0).requiredDate() }
+        self.timestamp = try parse(optional:json, key: .Timestamp, type:UTDisruption.self) { try String(optional: $0)?.requiredDate() }
         try super.init(json: json)
     }
 }
