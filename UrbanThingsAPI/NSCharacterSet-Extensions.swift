@@ -26,7 +26,7 @@
 
 import Foundation
 
-public extension NSCharacterSet {
+extension NSCharacterSet {
     
     /**
      Return a singleton instance of character set that contains only the characters for a URL parameter value 
@@ -34,7 +34,7 @@ public extension NSCharacterSet {
      
      - returns: The character set instance
      */
-    static func URLQueryParameterValueAllowedCharacterSet() -> NSCharacterSet {
+    public static func URLQueryParameterValueAllowedCharacterSet() -> NSCharacterSet {
      
         struct Static {
             static var token: dispatch_once_t = 0

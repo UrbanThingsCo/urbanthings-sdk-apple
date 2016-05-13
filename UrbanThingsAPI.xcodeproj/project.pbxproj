@@ -305,8 +305,8 @@
 		2C0CE4131CE317F80054847C /* UTTransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6910A1CD38BB500747E36 /* UTTransitTripInfo.swift */; };
 		2C0CE4141CE317F80054847C /* UTVehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6916F1CD7FC7700747E36 /* UTVehicleRTI.swift */; };
 		2C0CE4151CE317F80054847C /* NSCharacterSet-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C741CD0AFA500999713 /* NSCharacterSet-Extensions.swift */; };
-		2C0CE4161CE317F80054847C /* NSHTTPURLResponse+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Logging.swift */; };
-		2C0CE4171CE317F80054847C /* NSURL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+Extensions.swift */; };
+		2C0CE4161CE317F80054847C /* NSHTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Extensions.swift */; };
+		2C0CE4171CE317F80054847C /* NSURL+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */; };
 		2C0CE4181CE317F80054847C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C681CD009D600999713 /* String+Extensions.swift */; };
 		2C0CE4191CE317F90054847C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5C1CCFAABF00999713 /* APIResponse.swift */; };
 		2C0CE41A1CE317F90054847C /* APIResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C471CCF51AA00999713 /* APIResponseType.swift */; };
@@ -349,8 +349,8 @@
 		2C0CE43F1CE317F90054847C /* UTTransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6910A1CD38BB500747E36 /* UTTransitTripInfo.swift */; };
 		2C0CE4401CE317F90054847C /* UTVehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6916F1CD7FC7700747E36 /* UTVehicleRTI.swift */; };
 		2C0CE4411CE317F90054847C /* NSCharacterSet-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C741CD0AFA500999713 /* NSCharacterSet-Extensions.swift */; };
-		2C0CE4421CE317F90054847C /* NSHTTPURLResponse+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Logging.swift */; };
-		2C0CE4431CE317F90054847C /* NSURL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+Extensions.swift */; };
+		2C0CE4421CE317F90054847C /* NSHTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Extensions.swift */; };
+		2C0CE4431CE317F90054847C /* NSURL+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */; };
 		2C0CE4441CE317F90054847C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C681CD009D600999713 /* String+Extensions.swift */; };
 		2C0CE4451CE317FA0054847C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5C1CCFAABF00999713 /* APIResponse.swift */; };
 		2C0CE4461CE317FA0054847C /* APIResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C471CCF51AA00999713 /* APIResponseType.swift */; };
@@ -393,8 +393,8 @@
 		2C0CE46B1CE317FA0054847C /* UTTransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6910A1CD38BB500747E36 /* UTTransitTripInfo.swift */; };
 		2C0CE46C1CE317FA0054847C /* UTVehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6916F1CD7FC7700747E36 /* UTVehicleRTI.swift */; };
 		2C0CE46D1CE317FA0054847C /* NSCharacterSet-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C741CD0AFA500999713 /* NSCharacterSet-Extensions.swift */; };
-		2C0CE46E1CE317FA0054847C /* NSHTTPURLResponse+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Logging.swift */; };
-		2C0CE46F1CE317FA0054847C /* NSURL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+Extensions.swift */; };
+		2C0CE46E1CE317FA0054847C /* NSHTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Extensions.swift */; };
+		2C0CE46F1CE317FA0054847C /* NSURL+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */; };
 		2C0CE4701CE317FA0054847C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C681CD009D600999713 /* String+Extensions.swift */; };
 		2C0CE47B1CE320A90054847C /* UTColor+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691261CD5F44A00747E36 /* UTColor+JSON.swift */; };
 		2C0CE47C1CE3242F0054847C /* SystemObjectJsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */; };
@@ -505,7 +505,7 @@
 		2C5F2C791CD103A800999713 /* UTTransitRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C781CD103A800999713 /* UTTransitRouteInfo.swift */; };
 		2C5F2C7B1CD103C400999713 /* UTTransitDetailedRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7A1CD103C400999713 /* UTTransitDetailedRouteInfo.swift */; };
 		2C5F2C7D1CD120AB00999713 /* TransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7C1CD120AB00999713 /* TransitAgency.swift */; };
-		2C5F2C7F1CD129AA00999713 /* NSHTTPURLResponse+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Logging.swift */; };
+		2C5F2C7F1CD129AA00999713 /* NSHTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Extensions.swift */; };
 		2C60AED31CDCC21700329630 /* StopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C60AED21CDCC21700329630 /* StopsModel.swift */; };
 		2C60AEDD1CDCCE0400329630 /* StopsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C60AEDC1CDCCE0400329630 /* StopsListViewController.swift */; };
 		2C60AEDF1CDCCE2C00329630 /* StopsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C60AEDE1CDCCE2C00329630 /* StopsMapViewController.swift */; };
@@ -548,7 +548,7 @@
 		2C6A4E141CE4A35700475C9F /* GooglePolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */; };
 		2C6A4E151CE4A35700475C9F /* GooglePolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */; };
 		2C80488E1CE5B20300AE863A /* String+GooglePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691291CD6122600747E36 /* String+GooglePolyline.swift */; };
-		2CD690CB1CD224DF00747E36 /* NSURL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+Extensions.swift */; };
+		2CD690CB1CD224DF00747E36 /* NSURL+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */; };
 		2CD690CD1CD2281200747E36 /* PlacePointType+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CC1CD2281200747E36 /* PlacePointType+JSON.swift */; };
 		2CD690CF1CD2296D00747E36 /* TransitMode+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CE1CD2296D00747E36 /* TransitMode+JSON.swift */; };
 		2CD690D11CD22AFF00747E36 /* Bool+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690D01CD22AFF00747E36 /* Bool+JSON.swift */; };
@@ -731,17 +731,17 @@
 		2C5F2C621CCFB35800999713 /* UTPlacePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTPlacePoint.swift; sourceTree = "<group>"; };
 		2C5F2C641CCFB65E00999713 /* UTTransitStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitStop.swift; sourceTree = "<group>"; };
 		2C5F2C661CCFF61E00999713 /* UTLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTLocation.swift; sourceTree = "<group>"; };
-		2C5F2C681CD009D600999713 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		2C5F2C681CD009D600999713 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "../String+Extensions.swift"; sourceTree = "<group>"; };
 		2C5F2C6A1CD00A0000999713 /* JSONKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONKey.swift; sourceTree = "<group>"; };
 		2C5F2C6C1CD00BB600999713 /* TransitMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitMode.swift; sourceTree = "<group>"; };
 		2C5F2C6E1CD00CC000999713 /* PlacePointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePointType.swift; sourceTree = "<group>"; };
 		2C5F2C701CD08F5F00999713 /* UTPlacePointList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTPlacePointList.swift; sourceTree = "<group>"; };
-		2C5F2C741CD0AFA500999713 /* NSCharacterSet-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCharacterSet-Extensions.swift"; sourceTree = "<group>"; };
+		2C5F2C741CD0AFA500999713 /* NSCharacterSet-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSCharacterSet-Extensions.swift"; path = "../NSCharacterSet-Extensions.swift"; sourceTree = "<group>"; };
 		2C5F2C761CD0C64F00999713 /* QueryParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryParameters.swift; sourceTree = "<group>"; };
 		2C5F2C781CD103A800999713 /* UTTransitRouteInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitRouteInfo.swift; sourceTree = "<group>"; };
 		2C5F2C7A1CD103C400999713 /* UTTransitDetailedRouteInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitDetailedRouteInfo.swift; sourceTree = "<group>"; };
 		2C5F2C7C1CD120AB00999713 /* TransitAgency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitAgency.swift; sourceTree = "<group>"; };
-		2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSHTTPURLResponse+Logging.swift"; sourceTree = "<group>"; };
+		2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSHTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
 		2C60AED21CDCC21700329630 /* StopsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsModel.swift; sourceTree = "<group>"; };
 		2C60AEDC1CDCCE0400329630 /* StopsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsListViewController.swift; sourceTree = "<group>"; };
 		2C60AEDE1CDCCE2C00329630 /* StopsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsMapViewController.swift; sourceTree = "<group>"; };
@@ -773,7 +773,7 @@
 		2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePolylineTests.swift; sourceTree = "<group>"; };
 		2C8048881CE4D49D00AE863A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2C80488A1CE4E12A00AE863A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		2CD690CA1CD224DF00747E36 /* NSURL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Extensions.swift"; sourceTree = "<group>"; };
+		2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+JSON.swift"; sourceTree = "<group>"; };
 		2CD690CC1CD2281200747E36 /* PlacePointType+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacePointType+JSON.swift"; sourceTree = "<group>"; };
 		2CD690CE1CD2296D00747E36 /* TransitMode+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransitMode+JSON.swift"; sourceTree = "<group>"; };
 		2CD690D01CD22AFF00747E36 /* Bool+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+JSON.swift"; sourceTree = "<group>"; };
@@ -968,16 +968,18 @@
 		2C5F2C1F1CCE9AB000999713 /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				2C4A15561CD1E9EF00C61B76 /* Error.swift */,
-				2C1CF7C31CE1C0A800F1E08A /* Logger.swift */,
-				2CD691281CD611FD00747E36 /* GooglePolyline */,
-				2CD690D31CD24FC700747E36 /* Request */,
-				2CD691301CD6578B00747E36 /* Response */,
 				2C591E981CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift */,
 				2CD691611CD7E02400747E36 /* UrbanThingsAPI+Public.swift */,
 				2CD6915F1CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift */,
 				2C5F2C5E1CCFAB6800999713 /* UrbanThingsAPI+Static.swift */,
 				2C5F2C571CCF5FFB00999713 /* UrbanThingsAPIType.swift */,
+				2C4A15561CD1E9EF00C61B76 /* Error.swift */,
+				2C1CF7C31CE1C0A800F1E08A /* Logger.swift */,
+				2C5F2C741CD0AFA500999713 /* NSCharacterSet-Extensions.swift */,
+				2C5F2C681CD009D600999713 /* String+Extensions.swift */,
+				2CD691281CD611FD00747E36 /* GooglePolyline */,
+				2CD690D31CD24FC700747E36 /* Request */,
+				2CD691301CD6578B00747E36 /* Response */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -989,10 +991,6 @@
 				2C5F2C0A1CCE9AA900999713 /* Info.plist */,
 				2C5F2C1F1CCE9AB000999713 /* Public */,
 				2CD691311CD6813F00747E36 /* Internal */,
-				2C5F2C741CD0AFA500999713 /* NSCharacterSet-Extensions.swift */,
-				2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Logging.swift */,
-				2CD690CA1CD224DF00747E36 /* NSURL+Extensions.swift */,
-				2C5F2C681CD009D600999713 /* String+Extensions.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -1059,15 +1057,15 @@
 				2CD691591CD72FA500747E36 /* JSONInitialization.swift */,
 				2CD691121CD38F6C00747E36 /* NSDate+JSON.swift */,
 				2C60AF031CDFBD8600329630 /* NSTimeZone+JSON.swift */,
+				2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */,
 				2CD690CC1CD2281200747E36 /* PlacePointType+JSON.swift */,
 				2C591E791CDA16F300B955A6 /* ResourceTrend+JSON.swift */,
 				2CD691341CD684DB00747E36 /* String+JSON.swift */,
 				2CD690CE1CD2296D00747E36 /* TransitMode+JSON.swift */,
-				2CD691261CD5F44A00747E36 /* UTColor+JSON.swift */,
 				2CD6910E1CD38D8900747E36 /* UInt+JSON.swift */,
+				2CD691261CD5F44A00747E36 /* UTColor+JSON.swift */,
 			);
-			name = JSON;
-			path = ..;
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		2CD690D31CD24FC700747E36 /* Request */ = {
@@ -1176,6 +1174,7 @@
 			children = (
 				2C5F2C5A1CCF634E00999713 /* UrbanThingsAPI.swift */,
 				2C60AEE41CDE515A00329630 /* Error+Internal.swift */,
+				2C5F2C7E1CD129AA00999713 /* NSHTTPURLResponse+Extensions.swift */,
 				2CD690D21CD22B3C00747E36 /* JSON */,
 				2CD691331CD6825B00747E36 /* Request */,
 				2CD691321CD6814C00747E36 /* Response */,
@@ -1622,7 +1621,7 @@
 				2C0CE4271CE317F90054847C /* UTMonitoredStopCall.swift in Sources */,
 				2C0CE31F1CE317CF0054847C /* TransitRoutesByLineNameRequest.swift in Sources */,
 				2C0CE36A1CE317D80054847C /* JourneyLeg.swift in Sources */,
-				2C0CE4431CE317F90054847C /* NSURL+Extensions.swift in Sources */,
+				2C0CE4431CE317F90054847C /* NSURL+JSON.swift in Sources */,
 				2C0CE3821CE317D80054847C /* TransitStopRTIResponse.swift in Sources */,
 				2C0CE37F1CE317D80054847C /* TransitScheduledCall.swift in Sources */,
 				2C0CE4331CE317F90054847C /* UTTransitAgency.swift in Sources */,
@@ -1643,7 +1642,7 @@
 				2C0CE3691CE317D80054847C /* Journey.swift in Sources */,
 				2C0CE43D1CE317F90054847C /* UTTransitStopScheduledCallSummary.swift in Sources */,
 				2C0CE3801CE317D80054847C /* TransitStop.swift in Sources */,
-				2C0CE4421CE317F90054847C /* NSHTTPURLResponse+Logging.swift in Sources */,
+				2C0CE4421CE317F90054847C /* NSHTTPURLResponse+Extensions.swift in Sources */,
 				2C0CE4371CE317F90054847C /* UTTransitScheduledCall.swift in Sources */,
 				2C0CE31B1CE317CF0054847C /* Request.swift in Sources */,
 				2C0CE3191CE317CF0054847C /* RealtimeResourceStatusRequest.swift in Sources */,
@@ -1781,7 +1780,7 @@
 				2C0CE4531CE317FA0054847C /* UTMonitoredStopCall.swift in Sources */,
 				2C0CE3331CE317D00054847C /* TransitRoutesByLineNameRequest.swift in Sources */,
 				2C0CE3951CE317D90054847C /* JourneyLeg.swift in Sources */,
-				2C0CE46F1CE317FA0054847C /* NSURL+Extensions.swift in Sources */,
+				2C0CE46F1CE317FA0054847C /* NSURL+JSON.swift in Sources */,
 				2C0CE3AD1CE317D90054847C /* TransitStopRTIResponse.swift in Sources */,
 				2C0CE3AA1CE317D90054847C /* TransitScheduledCall.swift in Sources */,
 				2C0CE45F1CE317FA0054847C /* UTTransitAgency.swift in Sources */,
@@ -1802,7 +1801,7 @@
 				2C0CE3941CE317D90054847C /* Journey.swift in Sources */,
 				2C0CE4691CE317FA0054847C /* UTTransitStopScheduledCallSummary.swift in Sources */,
 				2C0CE3AB1CE317D90054847C /* TransitStop.swift in Sources */,
-				2C0CE46E1CE317FA0054847C /* NSHTTPURLResponse+Logging.swift in Sources */,
+				2C0CE46E1CE317FA0054847C /* NSHTTPURLResponse+Extensions.swift in Sources */,
 				2C0CE4631CE317FA0054847C /* UTTransitScheduledCall.swift in Sources */,
 				2C0CE32F1CE317D00054847C /* Request.swift in Sources */,
 				2C0CE32D1CE317D00054847C /* RealtimeResourceStatusRequest.swift in Sources */,
@@ -1918,7 +1917,7 @@
 				2C0CE3FB1CE317F80054847C /* UTMonitoredStopCall.swift in Sources */,
 				2C0CE30B1CE317CE0054847C /* TransitRoutesByLineNameRequest.swift in Sources */,
 				2C0CE33F1CE317D70054847C /* JourneyLeg.swift in Sources */,
-				2C0CE4171CE317F80054847C /* NSURL+Extensions.swift in Sources */,
+				2C0CE4171CE317F80054847C /* NSURL+JSON.swift in Sources */,
 				2C0CE3571CE317D70054847C /* TransitStopRTIResponse.swift in Sources */,
 				2C0CE3541CE317D70054847C /* TransitScheduledCall.swift in Sources */,
 				2C0CE4071CE317F80054847C /* UTTransitAgency.swift in Sources */,
@@ -1939,7 +1938,7 @@
 				2C0CE33E1CE317D70054847C /* Journey.swift in Sources */,
 				2C0CE4111CE317F80054847C /* UTTransitStopScheduledCallSummary.swift in Sources */,
 				2C0CE3551CE317D70054847C /* TransitStop.swift in Sources */,
-				2C0CE4161CE317F80054847C /* NSHTTPURLResponse+Logging.swift in Sources */,
+				2C0CE4161CE317F80054847C /* NSHTTPURLResponse+Extensions.swift in Sources */,
 				2C0CE40B1CE317F80054847C /* UTTransitScheduledCall.swift in Sources */,
 				2C0CE3071CE317CE0054847C /* Request.swift in Sources */,
 				2C0CE3051CE317CE0054847C /* RealtimeResourceStatusRequest.swift in Sources */,
@@ -2126,7 +2125,7 @@
 				2C60AEEF1CDF543000329630 /* TransitAgencyRequest.swift in Sources */,
 				2C60AEF51CDF70B100329630 /* RealtimeResourceStatusRequest.swift in Sources */,
 				2C5F2C431CCF46C400999713 /* ImportSource.swift in Sources */,
-				2CD690CB1CD224DF00747E36 /* NSURL+Extensions.swift in Sources */,
+				2CD690CB1CD224DF00747E36 /* NSURL+JSON.swift in Sources */,
 				2CD691251CD55B0D00747E36 /* UITransitTripCalendarGroup.swift in Sources */,
 				2CD691351CD684DB00747E36 /* String+JSON.swift in Sources */,
 				2C5F2C6B1CD00A0000999713 /* JSONKey.swift in Sources */,
@@ -2177,7 +2176,7 @@
 				2CD691211CD50BD800747E36 /* TransitTripsRequest.swift in Sources */,
 				2CD6917E1CD890D800747E36 /* UTRTIResponse.swift in Sources */,
 				2CD691701CD7FC7700747E36 /* UTVehicleRTI.swift in Sources */,
-				2C5F2C7F1CD129AA00999713 /* NSHTTPURLResponse+Logging.swift in Sources */,
+				2C5F2C7F1CD129AA00999713 /* NSHTTPURLResponse+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
