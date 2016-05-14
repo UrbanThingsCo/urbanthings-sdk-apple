@@ -37,6 +37,11 @@
                BlueprintName = "UrbanThingsAPITests-tvOS"
                ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "UrbanThingsAPITests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
