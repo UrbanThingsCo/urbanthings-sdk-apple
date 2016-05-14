@@ -1,0 +1,103 @@
+{
+    "success": true,
+    "data": {
+        "stopID": "490007418W",
+        "rtiReports": [
+                       {
+                       "upcomingCalls": [
+                                         {
+                                         "expectedArrivalTime": "2016-05-14T06:16:15+00:00",
+                                         "expectedDepartureTime": "2016-05-14T06:16:15+00:00",
+                                         "masterDisplayFormat": 0,
+                                         "vehicleRTI": {
+                                         "vehicleID": "5202",
+                                         "vehicleRegistrationCode": "LTZ1402"
+                                         },
+                                         "isCancelled": false,
+                                         "tripInfo": {
+                                         "headsign": "Trafalgar Sq"
+                                         },
+                                         "routeInfo": {
+                                         "lineName": "15",
+                                         "operatorName": "Tfl",
+                                         "operatorRegion": "L",
+                                         "routeType": 3
+                                         },
+                                         "scheduledCall": {}
+                                         },
+                                         {
+                                         "expectedArrivalTime": "2016-05-14T06:22:25+00:00",
+                                         "expectedDepartureTime": "2016-05-14T06:22:25+00:00",
+                                         "masterDisplayFormat": 0,
+                                         "vehicleRTI": {
+                                         "vehicleID": "6208",
+                                         "vehicleRegistrationCode": "LTZ1408"
+                                         },
+                                         "isCancelled": false,
+                                         "tripInfo": {
+                                         "headsign": "Trafalgar Sq"
+                                         },
+                                         "routeInfo": {
+                                         "lineName": "15",
+                                         "operatorName": "Tfl",
+                                         "operatorRegion": "L",
+                                         "routeType": 3
+                                         },
+                                         "scheduledCall": {}
+                                         },
+                                         {
+                                         "expectedArrivalTime": "2016-05-14T06:31:29+00:00",
+                                         "expectedDepartureTime": "2016-05-14T06:31:29+00:00",
+                                         "masterDisplayFormat": 0,
+                                         "vehicleRTI": {
+                                         "vehicleID": "6288",
+                                         "vehicleRegistrationCode": "LTZ1396"
+                                         },
+                                         "isCancelled": false,
+                                         "tripInfo": {
+                                         "headsign": "Trafalgar Sq"
+                                         },
+                                         "routeInfo": {
+                                         "lineName": "15",
+                                         "operatorName": "Tfl",
+                                         "operatorRegion": "L",
+                                         "routeType": 3
+                                         },
+                                         "scheduledCall": {}
+                                         },
+                                         {
+                                         "expectedArrivalTime": "2016-05-14T06:41:51+00:00",
+                                         "expectedDepartureTime": "2016-05-14T06:41:51+00:00",
+                                         "masterDisplayFormat": 0,
+                                         "vehicleRTI": {
+                                         "vehicleID": "6294",
+                                         "vehicleRegistrationCode": "LTZ1394"
+                                         },
+                                         "isCancelled": false,
+                                         "tripInfo": {
+                                         "headsign": "Trafalgar Sq"
+                                         },
+                                         "routeInfo": {
+                                         "lineName": "15",
+                                         "operatorName": "Tfl",
+                                         "operatorRegion": "L",
+                                         "routeType": 3
+                                         },
+                                         "scheduledCall": {}
+                                         }
+                                         ],
+                       "disruptions": [
+                                       {
+                                       "startDate": "2016-05-14T03:35:00+00:00",
+                                       "endDate": "2016-05-14T22:59:00+00:00",
+                                       "localizedDescription": "Northern Line - No service today High Barnet / Mill Hill East - Archway. For Central London use the rail replacement bus services that are in operation",
+                                       "severity": 3
+                                       }
+                                       ],
+                       "sourceName": "UrbanThings",
+                       "timeStamp": "2016-05-14T06:12:52.0826296+00:00"
+                       }
+                       ],
+        "sourceName": "Multiple"
+    }
+}

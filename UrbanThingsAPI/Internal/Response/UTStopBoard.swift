@@ -27,8 +27,8 @@ class UTStopBoard : UTAttribution, StopBoard {
     override init(json: [String : AnyObject]) throws {
         self.headerLabel = try parse(optional: json, key: .HeaderLabel, type: UTStopBoard.self)
         self.rows = try parse(required:json, key: .Rows, type:UTStopBoard.self) { try [UTStopBoardRow](required:$0) }.map { $0 as StopBoardRow }
-        self.groups = try parse(required:json, key: .Groups, type:UTStopBoardGroup.self) { try [UTStopBoardGroup](required:$0) }.map { $0 as StopBoardGroup }
-        self.messages = try parse(required:json, key: .Messages, type:UTStopBoardGroup.self) { try [UTStopBoardMessage](required:$0) }.map { $0 as StopBoardMessage }
+        self.groups = try parse(required:json, key: .Groups, type:UTStopBoard.self) { try [UTStopBoardGroup](required:$0) }.map { $0 as StopBoardGroup }
+        self.messages = try parse(required:json, key: .Messages, type:UTStopBoard.self) { try [UTStopBoardMessage](required:$0) }.map { $0 as StopBoardMessage }
         self.hideSecondary = try parse(optional: json, key: .HideSecondary, type: UTStopBoard.self)
         self.hidePlatform = try parse(optional: json, key: .HidePlatform, type: UTStopBoard.self)
         self.enableGroupFiltering = try parse(optional: json, key: .EnableGroupFiltering, type: UTStopBoard.self)

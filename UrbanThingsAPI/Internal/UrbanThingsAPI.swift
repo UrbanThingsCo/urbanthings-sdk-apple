@@ -60,11 +60,11 @@ extension UrbanThingsAPI {
     }
     
     func parseData<T>(parser:(json:AnyObject?, logger:Logger) throws -> T, data:NSData) throws -> T {
-        #if DEBUG
+//        #if DEBUG
         if let utf8 = String(data: data, encoding: NSUTF8StringEncoding) {
-            logger.log(.Debug, utf8)
+            logger.log(.Info, utf8)
         }
-        #endif
+//        #endif
         let json = try NSJSONSerialization.JSONObjectWithData(data, options: [])
         let apiResponse:APIResponse<T> = try APIResponse<T>(json:json, parser:parser, logger:self.logger)
         guard apiResponse.success else {

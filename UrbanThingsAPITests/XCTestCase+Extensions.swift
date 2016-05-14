@@ -14,8 +14,19 @@ let mappingDict:[String:String] = [
     "timestamp" : "timeStamp",
     "calendarID" : "id",
     "pickupType" : "pickUpType",
-    "dropoffType" : "dropOffType"
+    "dropoffType" : "dropOffType",
+    "isRTI" : "isrti"
 ]
+
+extension XCTestCase {
+    
+    func getAPIInstanceAndJSON(jsonFile:String) throws -> (api:UrbanThingsAPIType, json:AnyObject?) {
+        let requestHandler = try MockRequestHandler(jsonFile: jsonFile)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.sessionConfigurationForUrbanThingsAPI(apiKey:"a key"))
+        return (api:UrbanThingsAPI(session: session, requestHandler: requestHandler), json:requestHandler.json)
+    }
+    
+}
 
 extension XCTestCase {
     
@@ -87,6 +98,11 @@ extension XCTestCase {
         if let asNSTimeZone = subject as? NSTimeZone {
             let jsonValue = try NSTimeZone(required: json)
             return compare(asNSTimeZone, jsonValue, path)
+        }
+        
+        if let asUTColor = subject as? UTColor {
+            let jsonValue = try UTColor.fromJSON(required: json)
+            return compare(asUTColor, jsonValue, path)
         }
         
         // Location is complicated since its built from two fields in the dictionary and the keys change
@@ -161,11 +177,19 @@ extension XCTestCase {
         }
         // See if any of the possible codings work
         if let loc = try? CLLocationCoordinate2D(required:jsonDict, latitude:.Latitude, longitude:.Longitude) {
-            return loc.latitude == location.latitude && loc.longitude == location.longitude
+            if loc.latitude != location.latitude || loc.longitude != location.longitude {
+                print("\(loc) != \(location)")
+                return false
+            }
+            return true
         }
         // See if any of the possible codings work
         if let loc = try? CLLocationCoordinate2D(required:jsonDict, latitude:.TransitStopLatitude, longitude:.TransitStopLongitude) {
-            return loc.latitude == location.latitude && loc.longitude == location.longitude
+            if loc.latitude != location.latitude || loc.longitude != location.longitude {
+                print("\(loc) != \(location)")
+                return false
+            }
+            return true
         }
         
         print("\(path) - \(jsonDict) not location")

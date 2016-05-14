@@ -21,7 +21,7 @@ class UTStopBoardRow : UTObject, StopBoardRow {
     let secondaryLabel:String? 
     let platformLabel:String? 
     let timeMajorLabel:String? 
-    let timeMinorlabel:String? 
+    let timeMinorLabel:String?
 
     override init(json: [String : AnyObject]) throws {
         self.noteText = try parse(optional: json, key: .NoteText, type: UTStopBoardRow.self)
@@ -35,7 +35,7 @@ class UTStopBoardRow : UTObject, StopBoardRow {
         self.secondaryLabel = try parse(optional: json, key: .SecondaryLabel, type: UTStopBoardRow.self)
         self.platformLabel = try parse(optional: json, key: .PlatformLabel, type: UTStopBoardRow.self)
         self.timeMajorLabel = try parse(optional: json, key: .TimeMajorLabel, type: UTStopBoardRow.self)
-        self.timeMinorlabel = try parse(optional: json, key: .TimeMinorLabel, type: UTStopBoardRow.self)
+        self.timeMinorLabel = try parse(optional: json, key: .TimeMinorLabel, type: UTStopBoardRow.self)
         try super.init(json: json)
     }
 }

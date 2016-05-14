@@ -1,0 +1,85 @@
+{
+    "success": true,
+    "data": [
+             {
+             "agencyCode": "TFL",
+             "routeID": "TFL-1",
+             "lineName": "1",
+             "operatorName": "TfL",
+             "operatorID": "TFL",
+             "routeType": 3,
+             "centrePointLat": 51.5032745,
+             "centrePointLng": -0.087409
+             },
+             {
+             "agencyCode": "TFL",
+             "routeID": "TFL-10",
+             "lineName": "10",
+             "operatorName": "TfL",
+             "operatorID": "TFL",
+             "routeType": 3,
+             "centrePointLat": 51.5128215,
+             "centrePointLng": -0.172366
+             },
+             {
+             "agencyCode": "TFL",
+             "routeID": "TFL-100",
+             "lineName": "100",
+             "operatorName": "TfL",
+             "operatorID": "TFL",
+             "routeType": 3,
+             "centrePointLat": 51.505843,
+             "centrePointLng": -0.077639
+             },
+             {
+             "agencyCode": "TFL",
+             "routeID": "TFL-101",
+             "lineName": "101",
+             "operatorName": "TfL",
+             "operatorID": "TFL",
+             "routeType": 3,
+             "centrePointLat": 51.542588,
+             "centrePointLng": 0.052177
+             },
+             {
+             "agencyCode": "TFL",
+             "routeID": "TFL-102",
+             "lineName": "102",
+             "operatorName": "TfL",
+             "operatorID": "TFL",
+             "routeType": 3,
+             "centrePointLat": 51.5951325,
+             "centrePointLng": -0.141152
+             },
+             {
+             "agencyCode": "TFL",
+             "routeID": "TFL-103",
+             "lineName": "103",
+             "operatorName": "TfL",
+             "operatorID": "TFL",
+             "routeType": 3,
+             "centrePointLat": 51.560378,
+             "centrePointLng": 0.173742
+             },
+             {
+             "agencyCode": "TFL",
+             "routeID": "TFL-104",
+             "lineName": "104",
+             "operatorName": "TfL",
+             "operatorID": "TFL",
+             "routeType": 3,
+             "centrePointLat": 51.538137,
+             "centrePointLng": 0.0277905
+             },
+             {
+             "agencyCode": "TFL",
+             "routeID": "TFL-105",
+             "lineName": "105",
+             "operatorName": "TfL",
+             "operatorID": "TFL",
+             "routeType": 3,
+             "centrePointLat": 51.507138,
+             "centrePointLng": -0.4020135
+             }
+        ]
+}

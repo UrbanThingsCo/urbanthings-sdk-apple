@@ -1,0 +1,126 @@
+{
+"success": true,
+"data": {
+"stopID": "490007418W",
+"timeStamp": 635988104750000000,
+"sourceName": "Tfl/Transix",
+"stopBoards": [
+{
+"headerLabel": "STOPBOARD",
+"rows": [
+{
+"isrti": true,
+"groupID": "15",
+"vehicleMode": 3,
+"serverRouteToken": "U3RvcElEQW5kTGluZU5hbWUsNDkwMDA3NDE4VywxNQ==",
+"vehicleRegistrationText": "LTZ1408",
+"trackingID": "6208",
+"idLabel": "15",
+"mainLabel": "Trafalgar Square",
+"timeLabel": "6min",
+"timeMajorLabel": "6",
+"timeMinorLabel": "min"
+},
+{
+"isrti": true,
+"groupID": "15",
+"vehicleMode": 3,
+"serverRouteToken": "U3RvcElEQW5kTGluZU5hbWUsNDkwMDA3NDE4VywxNQ==",
+"vehicleRegistrationText": "LTZ1271",
+"trackingID": "5654",
+"idLabel": "15",
+"mainLabel": "Trafalgar Square",
+"timeLabel": "8min",
+"timeMajorLabel": "8",
+"timeMinorLabel": "min"
+},
+{
+"isrti": true,
+"groupID": "15",
+"vehicleMode": 3,
+"serverRouteToken": "U3RvcElEQW5kTGluZU5hbWUsNDkwMDA3NDE4VywxNQ==",
+"vehicleRegistrationText": "LTZ1396",
+"trackingID": "6288",
+"idLabel": "15",
+"mainLabel": "Trafalgar Square",
+"timeLabel": "13min",
+"timeMajorLabel": "13",
+"timeMinorLabel": "min"
+},
+{
+"isrti": true,
+"groupID": "15",
+"vehicleMode": 3,
+"serverRouteToken": "U3RvcElEQW5kTGluZU5hbWUsNDkwMDA3NDE4VywxNQ==",
+"vehicleRegistrationText": "LTZ1394",
+"trackingID": "6294",
+"idLabel": "15",
+"mainLabel": "Trafalgar Square",
+"timeLabel": "21min",
+"timeMajorLabel": "21",
+"timeMinorLabel": "min"
+},
+{
+"isrti": true,
+"groupID": "15",
+"vehicleMode": 3,
+"serverRouteToken": "U3RvcElEQW5kTGluZU5hbWUsNDkwMDA3NDE4VywxNQ==",
+"vehicleRegistrationText": "WLT871",
+"trackingID": "6627",
+"idLabel": "15",
+"mainLabel": "Trafalgar Square",
+"timeLabel": "22min",
+"timeMajorLabel": "22",
+"timeMinorLabel": "min"
+},
+{
+"isrti": true,
+"groupID": "15",
+"vehicleMode": 3,
+"serverRouteToken": "U3RvcElEQW5kTGluZU5hbWUsNDkwMDA3NDE4VywxNQ==",
+"vehicleRegistrationText": "LTZ1263",
+"trackingID": "5646",
+"idLabel": "15",
+"mainLabel": "Trafalgar Square",
+"timeLabel": "28min",
+"timeMajorLabel": "28",
+"timeMinorLabel": "min"
+}
+],
+"groups": [
+{
+"groupID": "15",
+"label": "15"
+},
+{
+"groupID": "N15",
+"label": "N15"
+}
+],
+"messages": [
+{
+"headerText": "Message",
+"mainText": "Northern Line - No service today High Barnet / Mill Hill East - Archway. For Central London use the rail replacement bus services that are in operation",
+"iconURL": "http://static.fatattitude.com/transitplatform/icon_message_default.png",
+"color": "#666666",
+"colorCompliment": "#FFFFFF",
+"severity": 3
+}
+],
+"messagesIconURL": "http://static.fatattitude.com/transitplatform/icon_message_default.png",
+"idLabelWidth": 6,
+"platformLabelWidth": 4,
+"timeLabelWidth": 8,
+"hideSecondary": true,
+"hidePlatform": true,
+"enableGroupFiltering": true,
+"attributionLabel": "TfL",
+"color": "#DD2222",
+"colorCompliment": "#FFFFFF",
+"interstitialPermitted": true
+}
+],
+"enableAutoRefresh": true,
+"autoRefreshDuration": 30
+}
+}

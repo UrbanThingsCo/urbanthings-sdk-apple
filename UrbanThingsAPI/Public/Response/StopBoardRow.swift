@@ -42,6 +42,6 @@ public protocol StopBoardRow {
     var timeMajorLabel:String? { get }
     /// The second of two labels identifying the time at which the vehicle will stop For example, `timeMajorLabel` might contain 
     /// the value '12', while `timeMinorLabel` might contain the value 'minutes'.
-    var timeMinorlabel:String? { get }
+    var timeMinorLabel:String? { get }
 
 }

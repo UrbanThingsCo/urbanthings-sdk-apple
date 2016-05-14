@@ -1,0 +1,11 @@
+{
+    "success" : true,
+    "data" :
+    [{
+        "agencyID" : "TFL",
+        "agencyImportSource" : "TFL",
+        "agencyName" : "TfL",
+        "agencyTimeZone" : "America/Indiana/Vincennes",
+        "agencyURL" : "http://www.tfl.gov.uk"
+    }]
+}

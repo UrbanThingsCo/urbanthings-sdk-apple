@@ -1,0 +1,18 @@
+{
+    "success" : true,
+    "data" :
+    [{
+     "agencyID" : "TFL",
+     "agencyImportSource" : "TFL",
+     "agencyName" : "TfL",
+     "agencyTimeZone" : "UTC",
+     "agencyURL" : "http://www.tfl.gov.uk"
+     },
+     {
+     "agencyID" : "ABC",
+     "agencyImportSource" : "DEF",
+     "agencyName" : "ABC Transit",
+     "agencyTimeZone" : "Europe/Zurich",
+     "agencyURL" : "http://www.abc.gov"
+     }]
+}

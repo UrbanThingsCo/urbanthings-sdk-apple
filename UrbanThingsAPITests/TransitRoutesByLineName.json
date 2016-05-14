@@ -1,0 +1,135 @@
+{
+"success": true,
+"data": [
+{
+"routeDescription": "Keepers Corner - Reigate Sixth Form College",
+"agencyCode": "UK_TNDS_NOC_SPSV",
+"routeID": "UK_TNDS_NOC_SPSV-324",
+"lineName": "324",
+"operatorName": "Southdown PSV",
+"operatorID": "UK_TNDS_NOC_SPSV",
+"operatorRegion": "SE",
+"routeType": 3,
+"centrePointLat": 51.201911542,
+"centrePointLng": -0.157392622
+},
+{
+"agencyCode": "TFL",
+"routeID": "TFL-324",
+"lineName": "324",
+"operatorName": "TfL",
+"operatorID": "TFL",
+"routeType": 3,
+"centrePointLat": 51.5970165,
+"centrePointLng": -0.2644535
+},
+{
+"routeDescription": "Francis Combe Academy - Downings Wood Terminus",
+"agencyCode": "UK_TNDS_NOC_ASES",
+"routeID": "UK_TNDS_NOC_ASES-324",
+"lineName": "324",
+"operatorName": "Arriva the Shires",
+"operatorID": "UK_TNDS_NOC_ASES",
+"operatorRegion": "SE",
+"routeType": 3,
+"centrePointLat": 51.641375642,
+"centrePointLng": -0.456527577
+},
+{
+"routeDescription": "Tesco - Whitefriars",
+"agencyCode": "UK_TNDS_NOC_CHLK",
+"routeID": "UK_TNDS_NOC_CHLK-324",
+"lineName": "324",
+"operatorName": "Chalkwell Garage & Coac",
+"operatorID": "UK_TNDS_NOC_CHLK",
+"operatorRegion": "SE",
+"routeType": 3,
+"centrePointLat": 51.358678573,
+"centrePointLng": 0.903584685
+},
+{
+"routeDescription": "Huddersfield - Meltham",
+"agencyCode": "UK_TNDS_NOC_FHUD",
+"routeID": "UK_TNDS_NOC_FHUD-324",
+"lineName": "324",
+"operatorName": "First Calderdale and Hud",
+"operatorID": "UK_TNDS_NOC_FHUD",
+"operatorRegion": "Y",
+"routeType": 3,
+"centrePointLat": 53.618700244,
+"centrePointLng": -1.816904539
+},
+{
+"routeDescription": "Huddersfield - Meltham",
+"agencyCode": "UK_TNDS_NOC_KLNE",
+"routeID": "UK_TNDS_NOC_KLNE-324",
+"lineName": "324",
+"operatorName": "K-Line",
+"operatorID": "UK_TNDS_NOC_KLNE",
+"operatorRegion": "Y",
+"routeType": 3,
+"centrePointLat": 53.618718221,
+"centrePointLng": -1.816904539
+},
+{
+"routeDescription": "Stockport - Haughton Green Circular",
+"agencyCode": "UK_TNDS_NOC_MCTR",
+"routeID": "UK_TNDS_NOC_MCTR-324",
+"lineName": "324",
+"operatorName": "Manchester Community Tra",
+"operatorID": "UK_TNDS_NOC_MCTR",
+"operatorRegion": "NW",
+"routeType": 3,
+"centrePointLat": 53.43201177,
+"centrePointLng": -2.13044204
+},
+{
+"routeDescription": "Bannockburn Or Stirling - Dollar",
+"agencyCode": "UK_TNDS_NOC_FSCE",
+"routeID": "UK_TNDS_NOC_FSCE-324",
+"lineName": "324",
+"operatorName": "First Scotland East",
+"operatorID": "UK_TNDS_NOC_FSCE",
+"operatorRegion": "S",
+"routeType": 3,
+"centrePointLat": 56.14315025,
+"centrePointLng": -3.803358495
+},
+{
+"routeDescription": "Govanhill - Chryston",
+"agencyCode": "UK_TNDS_NOC_FGLA",
+"routeID": "UK_TNDS_NOC_FGLA-324",
+"lineName": "324",
+"operatorName": "First Glasgow",
+"operatorID": "UK_TNDS_NOC_FGLA",
+"operatorRegion": "S",
+"routeType": 3,
+"centrePointLat": 55.875468261,
+"centrePointLng": -4.176247377
+},
+{
+"routeDescription": "Brodick - Blackwaterfoot Via North Island",
+"agencyCode": "UK_TNDS_NOC_STWS",
+"routeID": "UK_TNDS_NOC_STWS-324",
+"lineName": "324",
+"operatorName": "Stagecoach West Scotland",
+"operatorID": "UK_TNDS_NOC_STWS",
+"operatorRegion": "S",
+"routeType": 3,
+"centrePointLat": 55.633000637,
+"centrePointLng": -5.26119518
+},
+{
+"routeDescription": "Cabrich - Dingwall",
+"agencyCode": "UK_TNDS_NOC_ROSM",
+"routeID": "UK_TNDS_NOC_ROSM-324A",
+"lineName": "324A",
+"operatorName": "Ross Minibuses",
+"operatorID": "UK_TNDS_NOC_ROSM",
+"operatorRegion": "S",
+"routeType": 3,
+"centrePointLat": 57.499808571,
+"centrePointLng": -4.448485204
+}
+]
+}
