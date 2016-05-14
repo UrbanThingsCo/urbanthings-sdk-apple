@@ -27,7 +27,7 @@ public protocol MonitoredStopCall : StopCall {
     /// A value to aid presentation; this indicates whether a time based or distance based display is most appropriate.
     var masterDisplayFormat:MonitoredStopCallDisplayFormat { get }
     /// Any additional Real Time information for this vehicle - the delay field is not relevant in this context.
-    var vehicleRTI:[VehicleRTI] { get }
+    var vehicleRTI:VehicleRTI { get }
     /// A label representing the platform at which the vehicle is expected to call when it arrives at this stop if applicable.
     var platform:String? { get }
     /// A flag to indicate if the vehicle's trip has been cancelled. If this is set to TRUE any conflicting real time information should be discarded.

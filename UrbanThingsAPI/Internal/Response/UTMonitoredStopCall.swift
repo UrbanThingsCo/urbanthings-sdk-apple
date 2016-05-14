@@ -14,7 +14,7 @@ class UTMonitoredStopCall : UTStopCall, MonitoredStopCall {
     let expectedDepartureTime: NSDate?
     let distanceMetres: Int?
     let masterDisplayFormat: MonitoredStopCallDisplayFormat
-    let vehicleRTI: [VehicleRTI]
+    let vehicleRTI: VehicleRTI
     let platform: String?
     let isCancelled: Bool
 
@@ -25,7 +25,7 @@ class UTMonitoredStopCall : UTStopCall, MonitoredStopCall {
         self.isCancelled = try parse(required: json, key: .IsCancelled, type: UTMonitoredStopCall.self)
         self.distanceMetres = try parse(optional: json, key: .DistanceMetres, type: UTMonitoredStopCall.self)
         self.masterDisplayFormat = try parse(required: json, key: .MasterDisplayFormat, type: UTMonitoredStopCall.self)
-        self.vehicleRTI = try parse(required:json, key: .VehicleRTI, type:UTMonitoredStopCall.self) { try [UTVehicleRTI](required:$0) }.map { $0 as VehicleRTI }
+        self.vehicleRTI = try parse(required:json, key: .VehicleRTI, type:UTVehicleRTI.self) as UTVehicleRTI
         try super.init(json: json)
     }
 }
