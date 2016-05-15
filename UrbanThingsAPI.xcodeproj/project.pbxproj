@@ -659,6 +659,154 @@
 		2CD691A81CD916C300747E36 /* RealtimeReportRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691A71CD916C300747E36 /* RealtimeReportRequest.swift */; };
 		2CD691AB1CD9258D00747E36 /* RealtimeStopboardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691AA1CD9258D00747E36 /* RealtimeStopboardRequest.swift */; };
 		2CEA4B5B1CE36F14004A568F /* TransitStopsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CEA4B5A1CE36F14004A568F /* TransitStopsResponse.json */; };
+		2CFFC9E31CE86A8D002D8AC4 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CFFCA121CE86CAB002D8AC4 /* Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA111CE86CAB002D8AC4 /* Attribution.swift */; };
+		2CFFCA131CE86CAB002D8AC4 /* Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA111CE86CAB002D8AC4 /* Attribution.swift */; };
+		2CFFCA141CE86CAB002D8AC4 /* Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA111CE86CAB002D8AC4 /* Attribution.swift */; };
+		2CFFCA151CE86CAB002D8AC4 /* Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA111CE86CAB002D8AC4 /* Attribution.swift */; };
+		2CFFCA321CE89A35002D8AC4 /* ImportSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA311CE89A35002D8AC4 /* ImportSource.swift */; };
+		2CFFCA331CE89A35002D8AC4 /* ImportSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA311CE89A35002D8AC4 /* ImportSource.swift */; };
+		2CFFCA341CE89A35002D8AC4 /* ImportSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA311CE89A35002D8AC4 /* ImportSource.swift */; };
+		2CFFCA351CE89A35002D8AC4 /* ImportSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA311CE89A35002D8AC4 /* ImportSource.swift */; };
+		2CFFCA371CE89A7A002D8AC4 /* DirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA361CE89A7A002D8AC4 /* DirectionsResponse.swift */; };
+		2CFFCA381CE89A7A002D8AC4 /* DirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA361CE89A7A002D8AC4 /* DirectionsResponse.swift */; };
+		2CFFCA391CE89A7A002D8AC4 /* DirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA361CE89A7A002D8AC4 /* DirectionsResponse.swift */; };
+		2CFFCA3A1CE89A7A002D8AC4 /* DirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA361CE89A7A002D8AC4 /* DirectionsResponse.swift */; };
+		2CFFCA3C1CE89AB3002D8AC4 /* PlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA3B1CE89AB3002D8AC4 /* PlacePoint.swift */; };
+		2CFFCA3D1CE89AB3002D8AC4 /* PlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA3B1CE89AB3002D8AC4 /* PlacePoint.swift */; };
+		2CFFCA3E1CE89AB3002D8AC4 /* PlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA3B1CE89AB3002D8AC4 /* PlacePoint.swift */; };
+		2CFFCA3F1CE89AB3002D8AC4 /* PlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA3B1CE89AB3002D8AC4 /* PlacePoint.swift */; };
+		2CFFCA411CE89ADD002D8AC4 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA401CE89ADD002D8AC4 /* Journey.swift */; };
+		2CFFCA421CE89ADD002D8AC4 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA401CE89ADD002D8AC4 /* Journey.swift */; };
+		2CFFCA431CE89ADD002D8AC4 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA401CE89ADD002D8AC4 /* Journey.swift */; };
+		2CFFCA441CE89ADD002D8AC4 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA401CE89ADD002D8AC4 /* Journey.swift */; };
+		2CFFCA461CE89AF2002D8AC4 /* JourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA451CE89AF2002D8AC4 /* JourneyLeg.swift */; };
+		2CFFCA471CE89AF2002D8AC4 /* JourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA451CE89AF2002D8AC4 /* JourneyLeg.swift */; };
+		2CFFCA481CE89AF2002D8AC4 /* JourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA451CE89AF2002D8AC4 /* JourneyLeg.swift */; };
+		2CFFCA491CE89AF2002D8AC4 /* JourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA451CE89AF2002D8AC4 /* JourneyLeg.swift */; };
+		2CFFCA4B1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA4A1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift */; };
+		2CFFCA4C1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA4A1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift */; };
+		2CFFCA4D1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA4A1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift */; };
+		2CFFCA4E1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA4A1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift */; };
+		2CFFCA501CE89B5A002D8AC4 /* Disruption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA4F1CE89B5A002D8AC4 /* Disruption.swift */; };
+		2CFFCA511CE89B5A002D8AC4 /* Disruption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA4F1CE89B5A002D8AC4 /* Disruption.swift */; };
+		2CFFCA521CE89B5A002D8AC4 /* Disruption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA4F1CE89B5A002D8AC4 /* Disruption.swift */; };
+		2CFFCA531CE89B5A002D8AC4 /* Disruption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA4F1CE89B5A002D8AC4 /* Disruption.swift */; };
+		2CFFCA551CE89B8D002D8AC4 /* MonitoredStopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA541CE89B8D002D8AC4 /* MonitoredStopCall.swift */; };
+		2CFFCA561CE89B8D002D8AC4 /* MonitoredStopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA541CE89B8D002D8AC4 /* MonitoredStopCall.swift */; };
+		2CFFCA571CE89B8D002D8AC4 /* MonitoredStopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA541CE89B8D002D8AC4 /* MonitoredStopCall.swift */; };
+		2CFFCA581CE89B8D002D8AC4 /* MonitoredStopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA541CE89B8D002D8AC4 /* MonitoredStopCall.swift */; };
+		2CFFCA5A1CE89E45002D8AC4 /* VehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA591CE89E45002D8AC4 /* VehicleRTI.swift */; };
+		2CFFCA5B1CE89E45002D8AC4 /* VehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA591CE89E45002D8AC4 /* VehicleRTI.swift */; };
+		2CFFCA5C1CE89E45002D8AC4 /* VehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA591CE89E45002D8AC4 /* VehicleRTI.swift */; };
+		2CFFCA5D1CE89E45002D8AC4 /* VehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA591CE89E45002D8AC4 /* VehicleRTI.swift */; };
+		2CFFCA5F1CE89E6D002D8AC4 /* PlacePointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA5E1CE89E6D002D8AC4 /* PlacePointList.swift */; };
+		2CFFCA601CE89E6D002D8AC4 /* PlacePointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA5E1CE89E6D002D8AC4 /* PlacePointList.swift */; };
+		2CFFCA611CE89E6D002D8AC4 /* PlacePointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA5E1CE89E6D002D8AC4 /* PlacePointList.swift */; };
+		2CFFCA621CE89E6D002D8AC4 /* PlacePointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA5E1CE89E6D002D8AC4 /* PlacePointList.swift */; };
+		2CFFCA641CE89EC2002D8AC4 /* ResourceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA631CE89EC2002D8AC4 /* ResourceStatus.swift */; };
+		2CFFCA651CE89EC2002D8AC4 /* ResourceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA631CE89EC2002D8AC4 /* ResourceStatus.swift */; };
+		2CFFCA661CE89EC2002D8AC4 /* ResourceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA631CE89EC2002D8AC4 /* ResourceStatus.swift */; };
+		2CFFCA671CE89EC2002D8AC4 /* ResourceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA631CE89EC2002D8AC4 /* ResourceStatus.swift */; };
+		2CFFCA691CE8C41B002D8AC4 /* RTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA681CE8C41B002D8AC4 /* RTIResponse.swift */; };
+		2CFFCA6A1CE8C41B002D8AC4 /* RTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA681CE8C41B002D8AC4 /* RTIResponse.swift */; };
+		2CFFCA6B1CE8C41B002D8AC4 /* RTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA681CE8C41B002D8AC4 /* RTIResponse.swift */; };
+		2CFFCA6C1CE8C41B002D8AC4 /* RTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA681CE8C41B002D8AC4 /* RTIResponse.swift */; };
+		2CFFCA6E1CE8C441002D8AC4 /* StopBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA6D1CE8C441002D8AC4 /* StopBoard.swift */; };
+		2CFFCA6F1CE8C441002D8AC4 /* StopBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA6D1CE8C441002D8AC4 /* StopBoard.swift */; };
+		2CFFCA701CE8C441002D8AC4 /* StopBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA6D1CE8C441002D8AC4 /* StopBoard.swift */; };
+		2CFFCA711CE8C441002D8AC4 /* StopBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA6D1CE8C441002D8AC4 /* StopBoard.swift */; };
+		2CFFCA731CE8C460002D8AC4 /* StopBoardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA721CE8C460002D8AC4 /* StopBoardColor.swift */; };
+		2CFFCA741CE8C460002D8AC4 /* StopBoardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA721CE8C460002D8AC4 /* StopBoardColor.swift */; };
+		2CFFCA751CE8C460002D8AC4 /* StopBoardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA721CE8C460002D8AC4 /* StopBoardColor.swift */; };
+		2CFFCA761CE8C460002D8AC4 /* StopBoardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA721CE8C460002D8AC4 /* StopBoardColor.swift */; };
+		2CFFCA771CE8C572002D8AC4 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UrbanThingsAPI.framework */; };
+		2CFFCA781CE8C579002D8AC4 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2D41CE3178D0054847C /* UrbanThingsAPI.framework */; };
+		2CFFCA791CE8C581002D8AC4 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2AB1CE316E30054847C /* UrbanThingsAPI.framework */; };
+		2CFFCA7A1CE8C58F002D8AC4 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2C71CE3176E0054847C /* UrbanThingsAPI.framework */; };
+		2CFFCA7C1CE8C5AC002D8AC4 /* StopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA7B1CE8C5AC002D8AC4 /* StopCall.swift */; };
+		2CFFCA7D1CE8C5AC002D8AC4 /* StopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA7B1CE8C5AC002D8AC4 /* StopCall.swift */; };
+		2CFFCA7E1CE8C5AC002D8AC4 /* StopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA7B1CE8C5AC002D8AC4 /* StopCall.swift */; };
+		2CFFCA7F1CE8C5AC002D8AC4 /* StopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA7B1CE8C5AC002D8AC4 /* StopCall.swift */; };
+		2CFFCA811CE8C5D8002D8AC4 /* TransitRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA801CE8C5D8002D8AC4 /* TransitRouteInfo.swift */; };
+		2CFFCA821CE8C5D8002D8AC4 /* TransitRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA801CE8C5D8002D8AC4 /* TransitRouteInfo.swift */; };
+		2CFFCA831CE8C5D8002D8AC4 /* TransitRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA801CE8C5D8002D8AC4 /* TransitRouteInfo.swift */; };
+		2CFFCA841CE8C5D8002D8AC4 /* TransitRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA801CE8C5D8002D8AC4 /* TransitRouteInfo.swift */; };
+		2CFFCA861CE8C623002D8AC4 /* TransitScheduledCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA851CE8C623002D8AC4 /* TransitScheduledCall.swift */; };
+		2CFFCA871CE8C623002D8AC4 /* TransitScheduledCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA851CE8C623002D8AC4 /* TransitScheduledCall.swift */; };
+		2CFFCA881CE8C623002D8AC4 /* TransitScheduledCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA851CE8C623002D8AC4 /* TransitScheduledCall.swift */; };
+		2CFFCA891CE8C623002D8AC4 /* TransitScheduledCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA851CE8C623002D8AC4 /* TransitScheduledCall.swift */; };
+		2CFFCA8B1CE8C67D002D8AC4 /* StopBoardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA8A1CE8C67D002D8AC4 /* StopBoardRow.swift */; };
+		2CFFCA8C1CE8C67D002D8AC4 /* StopBoardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA8A1CE8C67D002D8AC4 /* StopBoardRow.swift */; };
+		2CFFCA8D1CE8C67D002D8AC4 /* StopBoardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA8A1CE8C67D002D8AC4 /* StopBoardRow.swift */; };
+		2CFFCA8E1CE8C67D002D8AC4 /* StopBoardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA8A1CE8C67D002D8AC4 /* StopBoardRow.swift */; };
+		2CFFCA901CE8C6CB002D8AC4 /* StopBoardGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA8F1CE8C6CA002D8AC4 /* StopBoardGroup.swift */; };
+		2CFFCA911CE8C6CB002D8AC4 /* StopBoardGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA8F1CE8C6CA002D8AC4 /* StopBoardGroup.swift */; };
+		2CFFCA921CE8C6CB002D8AC4 /* StopBoardGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA8F1CE8C6CA002D8AC4 /* StopBoardGroup.swift */; };
+		2CFFCA931CE8C6CB002D8AC4 /* StopBoardGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA8F1CE8C6CA002D8AC4 /* StopBoardGroup.swift */; };
+		2CFFCA951CE8C6EE002D8AC4 /* StopBoardMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA941CE8C6EE002D8AC4 /* StopBoardMessage.swift */; };
+		2CFFCA961CE8C6EE002D8AC4 /* StopBoardMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA941CE8C6EE002D8AC4 /* StopBoardMessage.swift */; };
+		2CFFCA971CE8C6EE002D8AC4 /* StopBoardMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA941CE8C6EE002D8AC4 /* StopBoardMessage.swift */; };
+		2CFFCA981CE8C6EE002D8AC4 /* StopBoardMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA941CE8C6EE002D8AC4 /* StopBoardMessage.swift */; };
+		2CFFCA9A1CE8C71B002D8AC4 /* TriState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA991CE8C71B002D8AC4 /* TriState.swift */; };
+		2CFFCA9B1CE8C71B002D8AC4 /* TriState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA991CE8C71B002D8AC4 /* TriState.swift */; };
+		2CFFCA9C1CE8C71B002D8AC4 /* TriState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA991CE8C71B002D8AC4 /* TriState.swift */; };
+		2CFFCA9D1CE8C71B002D8AC4 /* TriState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA991CE8C71B002D8AC4 /* TriState.swift */; };
+		2CFFCAA71CE8C8FB002D8AC4 /* TransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAA61CE8C8FB002D8AC4 /* TransitTripInfo.swift */; };
+		2CFFCAA81CE8C8FB002D8AC4 /* TransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAA61CE8C8FB002D8AC4 /* TransitTripInfo.swift */; };
+		2CFFCAA91CE8C8FB002D8AC4 /* TransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAA61CE8C8FB002D8AC4 /* TransitTripInfo.swift */; };
+		2CFFCAAA1CE8C8FB002D8AC4 /* TransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAA61CE8C8FB002D8AC4 /* TransitTripInfo.swift */; };
+		2CFFCAAC1CE8C94A002D8AC4 /* TransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAAB1CE8C94A002D8AC4 /* TransitAgency.swift */; };
+		2CFFCAAD1CE8C94A002D8AC4 /* TransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAAB1CE8C94A002D8AC4 /* TransitAgency.swift */; };
+		2CFFCAAE1CE8C94A002D8AC4 /* TransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAAB1CE8C94A002D8AC4 /* TransitAgency.swift */; };
+		2CFFCAAF1CE8C94A002D8AC4 /* TransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAAB1CE8C94A002D8AC4 /* TransitAgency.swift */; };
+		2CFFCAB11CE8C969002D8AC4 /* TransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAB01CE8C969002D8AC4 /* TransitCalendar.swift */; };
+		2CFFCAB21CE8C969002D8AC4 /* TransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAB01CE8C969002D8AC4 /* TransitCalendar.swift */; };
+		2CFFCAB31CE8C969002D8AC4 /* TransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAB01CE8C969002D8AC4 /* TransitCalendar.swift */; };
+		2CFFCAB41CE8C969002D8AC4 /* TransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAB01CE8C969002D8AC4 /* TransitCalendar.swift */; };
+		2CFFCAB61CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAB51CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift */; };
+		2CFFCAB71CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAB51CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift */; };
+		2CFFCAB81CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAB51CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift */; };
+		2CFFCAB91CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAB51CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift */; };
+		2CFFCABB1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCABA1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift */; };
+		2CFFCABC1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCABA1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift */; };
+		2CFFCABD1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCABA1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift */; };
+		2CFFCABE1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCABA1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift */; };
+		2CFFCAC01CE8CA1B002D8AC4 /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCABF1CE8CA1B002D8AC4 /* TransitStop.swift */; };
+		2CFFCAC11CE8CA1B002D8AC4 /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCABF1CE8CA1B002D8AC4 /* TransitStop.swift */; };
+		2CFFCAC21CE8CA1B002D8AC4 /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCABF1CE8CA1B002D8AC4 /* TransitStop.swift */; };
+		2CFFCAC31CE8CA1B002D8AC4 /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCABF1CE8CA1B002D8AC4 /* TransitStop.swift */; };
+		2CFFCAC51CE8CA6C002D8AC4 /* TransitStopRTIReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAC41CE8CA6C002D8AC4 /* TransitStopRTIReport.swift */; };
+		2CFFCAC61CE8CA6C002D8AC4 /* TransitStopRTIReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAC41CE8CA6C002D8AC4 /* TransitStopRTIReport.swift */; };
+		2CFFCAC71CE8CA6C002D8AC4 /* TransitStopRTIReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAC41CE8CA6C002D8AC4 /* TransitStopRTIReport.swift */; };
+		2CFFCAC81CE8CA6C002D8AC4 /* TransitStopRTIReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAC41CE8CA6C002D8AC4 /* TransitStopRTIReport.swift */; };
+		2CFFCACA1CE8CA89002D8AC4 /* TransitStopRTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAC91CE8CA89002D8AC4 /* TransitStopRTIResponse.swift */; };
+		2CFFCACB1CE8CA89002D8AC4 /* TransitStopRTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAC91CE8CA89002D8AC4 /* TransitStopRTIResponse.swift */; };
+		2CFFCACC1CE8CA89002D8AC4 /* TransitStopRTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAC91CE8CA89002D8AC4 /* TransitStopRTIResponse.swift */; };
+		2CFFCACD1CE8CA89002D8AC4 /* TransitStopRTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAC91CE8CA89002D8AC4 /* TransitStopRTIResponse.swift */; };
+		2CFFCACF1CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCACE1CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift */; };
+		2CFFCAD01CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCACE1CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift */; };
+		2CFFCAD11CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCACE1CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift */; };
+		2CFFCAD21CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCACE1CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift */; };
+		2CFFCAD41CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAD31CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift */; };
+		2CFFCAD51CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAD31CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift */; };
+		2CFFCAD61CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAD31CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift */; };
+		2CFFCAD71CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAD31CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift */; };
+		2CFFCAD91CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAD81CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift */; };
+		2CFFCADA1CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAD81CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift */; };
+		2CFFCADB1CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAD81CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift */; };
+		2CFFCADC1CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAD81CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift */; };
+		2CFFCADE1CE8CB27002D8AC4 /* TransitTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCADD1CE8CB27002D8AC4 /* TransitTrip.swift */; };
+		2CFFCADF1CE8CB27002D8AC4 /* TransitTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCADD1CE8CB27002D8AC4 /* TransitTrip.swift */; };
+		2CFFCAE01CE8CB27002D8AC4 /* TransitTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCADD1CE8CB27002D8AC4 /* TransitTrip.swift */; };
+		2CFFCAE11CE8CB27002D8AC4 /* TransitTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCADD1CE8CB27002D8AC4 /* TransitTrip.swift */; };
+		2CFFCAE31CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAE21CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift */; };
+		2CFFCAE41CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAE21CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift */; };
+		2CFFCAE51CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAE21CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift */; };
+		2CFFCAE61CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAE21CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift */; };
+		2CFFCAE71CE8CC8E002D8AC4 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CFFCAE81CE8CC8E002D8AC4 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CFFCAE91CE8CC8F002D8AC4 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -689,6 +837,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2C5F2C041CCE9AA900999713;
 			remoteInfo = UrbanThingsAPI;
+		};
+		2CFFCA9E1CE8C888002D8AC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C5F2C041CCE9AA900999713;
+			remoteInfo = "UrbanThingsAPI-iOS";
+		};
+		2CFFCAA01CE8C88D002D8AC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C0CE2D31CE3178D0054847C;
+			remoteInfo = "UrbanThingsAPI-OSX";
+		};
+		2CFFCAA21CE8C892002D8AC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C0CE2AA1CE316E30054847C;
+			remoteInfo = "UrbanThingsAPI-tvOS";
+		};
+		2CFFCAA41CE8C897002D8AC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C0CE2C61CE3176E0054847C;
+			remoteInfo = "UrbanThingsAPI-watchOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -901,6 +1077,46 @@
 		2CD691B01CD9478A00747E36 /* UTImportSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTImportSourceTests.swift; sourceTree = "<group>"; };
 		2CD691B21CD947E700747E36 /* ImportSourceTests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImportSourceTests.json; sourceTree = "<group>"; };
 		2CEA4B5A1CE36F14004A568F /* TransitStopsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TransitStopsResponse.json; sourceTree = "<group>"; };
+		2CFFC9E01CE86A8D002D8AC4 /* UTAPIObjCAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPIObjCAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UTAPIObjCAdapter.h; path = ../UTAPIObjCAdapter/UTAPIObjCAdapter.h; sourceTree = "<group>"; };
+		2CFFC9ED1CE86AEF002D8AC4 /* UTAPIObjCAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPIObjCAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CFFC9FA1CE86B2A002D8AC4 /* UTAPIObjCAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPIObjCAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CFFCA071CE86B46002D8AC4 /* UTAPIObjCAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPIObjCAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CFFCA111CE86CAB002D8AC4 /* Attribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribution.swift; sourceTree = "<group>"; };
+		2CFFCA311CE89A35002D8AC4 /* ImportSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportSource.swift; sourceTree = "<group>"; };
+		2CFFCA361CE89A7A002D8AC4 /* DirectionsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsResponse.swift; sourceTree = "<group>"; };
+		2CFFCA3B1CE89AB3002D8AC4 /* PlacePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePoint.swift; sourceTree = "<group>"; };
+		2CFFCA401CE89ADD002D8AC4 /* Journey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		2CFFCA451CE89AF2002D8AC4 /* JourneyLeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyLeg.swift; sourceTree = "<group>"; };
+		2CFFCA4A1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsResponseStatus.swift; sourceTree = "<group>"; };
+		2CFFCA4F1CE89B5A002D8AC4 /* Disruption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disruption.swift; sourceTree = "<group>"; };
+		2CFFCA541CE89B8D002D8AC4 /* MonitoredStopCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitoredStopCall.swift; sourceTree = "<group>"; };
+		2CFFCA591CE89E45002D8AC4 /* VehicleRTI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleRTI.swift; sourceTree = "<group>"; };
+		2CFFCA5E1CE89E6D002D8AC4 /* PlacePointList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePointList.swift; sourceTree = "<group>"; };
+		2CFFCA631CE89EC2002D8AC4 /* ResourceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceStatus.swift; sourceTree = "<group>"; };
+		2CFFCA681CE8C41B002D8AC4 /* RTIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTIResponse.swift; sourceTree = "<group>"; };
+		2CFFCA6D1CE8C441002D8AC4 /* StopBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopBoard.swift; sourceTree = "<group>"; };
+		2CFFCA721CE8C460002D8AC4 /* StopBoardColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopBoardColor.swift; sourceTree = "<group>"; };
+		2CFFCA7B1CE8C5AC002D8AC4 /* StopCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopCall.swift; sourceTree = "<group>"; };
+		2CFFCA801CE8C5D8002D8AC4 /* TransitRouteInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitRouteInfo.swift; sourceTree = "<group>"; };
+		2CFFCA851CE8C623002D8AC4 /* TransitScheduledCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitScheduledCall.swift; sourceTree = "<group>"; };
+		2CFFCA8A1CE8C67D002D8AC4 /* StopBoardRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopBoardRow.swift; sourceTree = "<group>"; };
+		2CFFCA8F1CE8C6CA002D8AC4 /* StopBoardGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopBoardGroup.swift; sourceTree = "<group>"; };
+		2CFFCA941CE8C6EE002D8AC4 /* StopBoardMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopBoardMessage.swift; sourceTree = "<group>"; };
+		2CFFCA991CE8C71B002D8AC4 /* TriState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriState.swift; sourceTree = "<group>"; };
+		2CFFCAA61CE8C8FB002D8AC4 /* TransitTripInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitTripInfo.swift; sourceTree = "<group>"; };
+		2CFFCAAB1CE8C94A002D8AC4 /* TransitAgency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitAgency.swift; sourceTree = "<group>"; };
+		2CFFCAB01CE8C969002D8AC4 /* TransitCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitCalendar.swift; sourceTree = "<group>"; };
+		2CFFCAB51CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitDetailedRouteInfo.swift; sourceTree = "<group>"; };
+		2CFFCABA1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitJourneyLeg.swift; sourceTree = "<group>"; };
+		2CFFCABF1CE8CA1B002D8AC4 /* TransitStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStop.swift; sourceTree = "<group>"; };
+		2CFFCAC41CE8CA6C002D8AC4 /* TransitStopRTIReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStopRTIReport.swift; sourceTree = "<group>"; };
+		2CFFCAC91CE8CA89002D8AC4 /* TransitStopRTIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStopRTIResponse.swift; sourceTree = "<group>"; };
+		2CFFCACE1CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStopScheduledCall.swift; sourceTree = "<group>"; };
+		2CFFCAD31CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStopScheduledCalls.swift; sourceTree = "<group>"; };
+		2CFFCAD81CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStopScheduledCallSummary.swift; sourceTree = "<group>"; };
+		2CFFCADD1CE8CB27002D8AC4 /* TransitTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitTrip.swift; sourceTree = "<group>"; };
+		2CFFCAE21CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitTripCalendarGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -964,6 +1180,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CFFC9DC1CE86A8D002D8AC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCA771CE8C572002D8AC4 /* UrbanThingsAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9E91CE86AEF002D8AC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCA7A1CE8C58F002D8AC4 /* UrbanThingsAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9F61CE86B2A002D8AC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCA791CE8C581002D8AC4 /* UrbanThingsAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFCA031CE86B46002D8AC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCA781CE8C579002D8AC4 /* UrbanThingsAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -990,6 +1238,7 @@
 				2C5F2C071CCE9AA900999713 /* UrbanThingsAPI */,
 				2CD690EF1CD351D900747E36 /* UrbanThingsAPITests */,
 				2C591E801CDA1D4A00B955A6 /* Demo */,
+				2CFFCA0F1CE86B6B002D8AC4 /* UTAPIObjcAdapter */,
 				2C5F2C061CCE9AA900999713 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1005,6 +1254,10 @@
 				2C0CE2C71CE3176E0054847C /* UrbanThingsAPI.framework */,
 				2C0CE2D41CE3178D0054847C /* UrbanThingsAPI.framework */,
 				2C0CE2DD1CE3178D0054847C /* UrbanThingsAPITests-OSX.xctest */,
+				2CFFC9E01CE86A8D002D8AC4 /* UTAPIObjCAdapter.framework */,
+				2CFFC9ED1CE86AEF002D8AC4 /* UTAPIObjCAdapter.framework */,
+				2CFFC9FA1CE86B2A002D8AC4 /* UTAPIObjCAdapter.framework */,
+				2CFFCA071CE86B46002D8AC4 /* UTAPIObjCAdapter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1012,7 +1265,10 @@
 		2C5F2C071CCE9AA900999713 /* UrbanThingsAPI */ = {
 			isa = PBXGroup;
 			children = (
-				2C5F2C591CCF633800999713 /* Source */,
+				2C5F2C1F1CCE9AB000999713 /* Public */,
+				2CD691311CD6813F00747E36 /* Internal */,
+				2C5F2C081CCE9AA900999713 /* UrbanThingsAPI.h */,
+				2C5F2C0A1CCE9AA900999713 /* Info.plist */,
 			);
 			path = UrbanThingsAPI;
 			sourceTree = "<group>";
@@ -1034,17 +1290,6 @@
 				2CD691301CD6578B00747E36 /* Response */,
 			);
 			path = Public;
-			sourceTree = "<group>";
-		};
-		2C5F2C591CCF633800999713 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				2C5F2C081CCE9AA900999713 /* UrbanThingsAPI.h */,
-				2C5F2C0A1CCE9AA900999713 /* Info.plist */,
-				2C5F2C1F1CCE9AB000999713 /* Public */,
-				2CD691311CD6813F00747E36 /* Internal */,
-			);
-			name = Source;
 			sourceTree = "<group>";
 		};
 		2C60AED11CDCC18100329630 /* Models */ = {
@@ -1319,6 +1564,59 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
+		2CFFCA0F1CE86B6B002D8AC4 /* UTAPIObjcAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */,
+				2CFFCA101CE86BF8002D8AC4 /* Public */,
+			);
+			name = UTAPIObjcAdapter;
+			path = ObjCAdapter;
+			sourceTree = "<group>";
+		};
+		2CFFCA101CE86BF8002D8AC4 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				2CFFCA111CE86CAB002D8AC4 /* Attribution.swift */,
+				2CFFCA361CE89A7A002D8AC4 /* DirectionsResponse.swift */,
+				2CFFCA4A1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift */,
+				2CFFCA4F1CE89B5A002D8AC4 /* Disruption.swift */,
+				2CFFCA311CE89A35002D8AC4 /* ImportSource.swift */,
+				2CFFCA401CE89ADD002D8AC4 /* Journey.swift */,
+				2CFFCA451CE89AF2002D8AC4 /* JourneyLeg.swift */,
+				2CFFCA541CE89B8D002D8AC4 /* MonitoredStopCall.swift */,
+				2CFFCA3B1CE89AB3002D8AC4 /* PlacePoint.swift */,
+				2CFFCA5E1CE89E6D002D8AC4 /* PlacePointList.swift */,
+				2CFFCA631CE89EC2002D8AC4 /* ResourceStatus.swift */,
+				2CFFCA681CE8C41B002D8AC4 /* RTIResponse.swift */,
+				2CFFCA6D1CE8C441002D8AC4 /* StopBoard.swift */,
+				2CFFCA721CE8C460002D8AC4 /* StopBoardColor.swift */,
+				2CFFCA8F1CE8C6CA002D8AC4 /* StopBoardGroup.swift */,
+				2CFFCA941CE8C6EE002D8AC4 /* StopBoardMessage.swift */,
+				2CFFCA8A1CE8C67D002D8AC4 /* StopBoardRow.swift */,
+				2CFFCA7B1CE8C5AC002D8AC4 /* StopCall.swift */,
+				2CFFCAAB1CE8C94A002D8AC4 /* TransitAgency.swift */,
+				2CFFCAB01CE8C969002D8AC4 /* TransitCalendar.swift */,
+				2CFFCAB51CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift */,
+				2CFFCABA1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift */,
+				2CFFCA801CE8C5D8002D8AC4 /* TransitRouteInfo.swift */,
+				2CFFCA851CE8C623002D8AC4 /* TransitScheduledCall.swift */,
+				2CFFCABF1CE8CA1B002D8AC4 /* TransitStop.swift */,
+				2CFFCAC41CE8CA6C002D8AC4 /* TransitStopRTIReport.swift */,
+				2CFFCAC91CE8CA89002D8AC4 /* TransitStopRTIResponse.swift */,
+				2CFFCACE1CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift */,
+				2CFFCAD31CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift */,
+				2CFFCAD81CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift */,
+				2CFFCADD1CE8CB27002D8AC4 /* TransitTrip.swift */,
+				2CFFCAE21CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift */,
+				2CFFCAA61CE8C8FB002D8AC4 /* TransitTripInfo.swift */,
+				2CFFCA991CE8C71B002D8AC4 /* TriState.swift */,
+				2CFFCA591CE89E45002D8AC4 /* VehicleRTI.swift */,
+			);
+			name = Public;
+			path = ../UTAPIObjCAdapter/Public;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1347,6 +1645,38 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9DD1CE86A8D002D8AC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFC9E31CE86A8D002D8AC4 /* UTAPIObjCAdapter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9EA1CE86AEF002D8AC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCAE91CE8CC8F002D8AC4 /* UTAPIObjCAdapter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9F71CE86B2A002D8AC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCAE81CE8CC8E002D8AC4 /* UTAPIObjCAdapter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFCA041CE86B46002D8AC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCAE71CE8CC8E002D8AC4 /* UTAPIObjCAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1498,6 +1828,82 @@
 			productReference = 2CD690EE1CD351D900747E36 /* UrbanThingsAPITests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		2CFFC9DF1CE86A8D002D8AC4 /* UTAPIObjCAdapter-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CFFC9E71CE86A8D002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-iOS" */;
+			buildPhases = (
+				2CFFC9DB1CE86A8D002D8AC4 /* Sources */,
+				2CFFC9DC1CE86A8D002D8AC4 /* Frameworks */,
+				2CFFC9DD1CE86A8D002D8AC4 /* Headers */,
+				2CFFC9DE1CE86A8D002D8AC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CFFCA9F1CE8C888002D8AC4 /* PBXTargetDependency */,
+			);
+			name = "UTAPIObjCAdapter-iOS";
+			productName = "UTAPIObjCAdapter-iOS";
+			productReference = 2CFFC9E01CE86A8D002D8AC4 /* UTAPIObjCAdapter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2CFFC9EC1CE86AEF002D8AC4 /* UTAPIObjCAdapter-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CFFC9F21CE86AEF002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-watchOS" */;
+			buildPhases = (
+				2CFFC9E81CE86AEF002D8AC4 /* Sources */,
+				2CFFC9E91CE86AEF002D8AC4 /* Frameworks */,
+				2CFFC9EA1CE86AEF002D8AC4 /* Headers */,
+				2CFFC9EB1CE86AEF002D8AC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CFFCAA51CE8C897002D8AC4 /* PBXTargetDependency */,
+			);
+			name = "UTAPIObjCAdapter-watchOS";
+			productName = "UTAPIObjCAdapter-watchOS";
+			productReference = 2CFFC9ED1CE86AEF002D8AC4 /* UTAPIObjCAdapter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2CFFC9F91CE86B2A002D8AC4 /* UTAPIObjCAdapter-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CFFC9FF1CE86B2A002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-tvOS" */;
+			buildPhases = (
+				2CFFC9F51CE86B2A002D8AC4 /* Sources */,
+				2CFFC9F61CE86B2A002D8AC4 /* Frameworks */,
+				2CFFC9F71CE86B2A002D8AC4 /* Headers */,
+				2CFFC9F81CE86B2A002D8AC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CFFCAA31CE8C892002D8AC4 /* PBXTargetDependency */,
+			);
+			name = "UTAPIObjCAdapter-tvOS";
+			productName = "UTAPIObjCAdapter-tvOS";
+			productReference = 2CFFC9FA1CE86B2A002D8AC4 /* UTAPIObjCAdapter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2CFFCA061CE86B46002D8AC4 /* UTAPIObjCAdapter-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CFFCA0C1CE86B46002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-OSX" */;
+			buildPhases = (
+				2CFFCA021CE86B46002D8AC4 /* Sources */,
+				2CFFCA031CE86B46002D8AC4 /* Frameworks */,
+				2CFFCA041CE86B46002D8AC4 /* Headers */,
+				2CFFCA051CE86B46002D8AC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CFFCAA11CE8C88D002D8AC4 /* PBXTargetDependency */,
+			);
+			name = "UTAPIObjCAdapter-OSX";
+			productName = "UTAPIObjCAdapter-OSX";
+			productReference = 2CFFCA071CE86B46002D8AC4 /* UTAPIObjCAdapter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1532,6 +1938,18 @@
 					2CD690ED1CD351D900747E36 = {
 						CreatedOnToolsVersion = 7.3;
 					};
+					2CFFC9DF1CE86A8D002D8AC4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					2CFFC9EC1CE86AEF002D8AC4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					2CFFC9F91CE86B2A002D8AC4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					2CFFCA061CE86B46002D8AC4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 2C5F2BFF1CCE9AA900999713 /* Build configuration list for PBXProject "UrbanThingsAPI" */;
@@ -1555,6 +1973,10 @@
 				2C0CE2DC1CE3178D0054847C /* UrbanThingsAPITests-OSX */,
 				2C0CE2B31CE316E30054847C /* UrbanThingsAPITests-tvOS */,
 				2C591E7E1CDA1D4A00B955A6 /* Demo */,
+				2CFFC9DF1CE86A8D002D8AC4 /* UTAPIObjCAdapter-iOS */,
+				2CFFCA061CE86B46002D8AC4 /* UTAPIObjCAdapter-OSX */,
+				2CFFC9F91CE86B2A002D8AC4 /* UTAPIObjCAdapter-tvOS */,
+				2CFFC9EC1CE86AEF002D8AC4 /* UTAPIObjCAdapter-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1686,6 +2108,34 @@
 				2C9F52CB1CE66C50004AF1FB /* TransitAgencies.json in Resources */,
 				2C6A4E0B1CE3C72E00475C9F /* Trips.json in Resources */,
 				2C60AF0B1CDFD39A00329630 /* TransitStopTests.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9DE1CE86A8D002D8AC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9EB1CE86AEF002D8AC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9F81CE86B2A002D8AC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFCA051CE86B46002D8AC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2322,6 +2772,174 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CFFC9DB1CE86A8D002D8AC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCA5A1CE89E45002D8AC4 /* VehicleRTI.swift in Sources */,
+				2CFFCA8B1CE8C67D002D8AC4 /* StopBoardRow.swift in Sources */,
+				2CFFCAAC1CE8C94A002D8AC4 /* TransitAgency.swift in Sources */,
+				2CFFCA121CE86CAB002D8AC4 /* Attribution.swift in Sources */,
+				2CFFCAC51CE8CA6C002D8AC4 /* TransitStopRTIReport.swift in Sources */,
+				2CFFCAD41CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift in Sources */,
+				2CFFCADE1CE8CB27002D8AC4 /* TransitTrip.swift in Sources */,
+				2CFFCA371CE89A7A002D8AC4 /* DirectionsResponse.swift in Sources */,
+				2CFFCA3C1CE89AB3002D8AC4 /* PlacePoint.swift in Sources */,
+				2CFFCAB11CE8C969002D8AC4 /* TransitCalendar.swift in Sources */,
+				2CFFCA811CE8C5D8002D8AC4 /* TransitRouteInfo.swift in Sources */,
+				2CFFCA861CE8C623002D8AC4 /* TransitScheduledCall.swift in Sources */,
+				2CFFCA951CE8C6EE002D8AC4 /* StopBoardMessage.swift in Sources */,
+				2CFFCA5F1CE89E6D002D8AC4 /* PlacePointList.swift in Sources */,
+				2CFFCAB61CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift in Sources */,
+				2CFFCA461CE89AF2002D8AC4 /* JourneyLeg.swift in Sources */,
+				2CFFCAA71CE8C8FB002D8AC4 /* TransitTripInfo.swift in Sources */,
+				2CFFCABB1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift in Sources */,
+				2CFFCA6E1CE8C441002D8AC4 /* StopBoard.swift in Sources */,
+				2CFFCA9A1CE8C71B002D8AC4 /* TriState.swift in Sources */,
+				2CFFCAE31CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */,
+				2CFFCA901CE8C6CB002D8AC4 /* StopBoardGroup.swift in Sources */,
+				2CFFCA551CE89B8D002D8AC4 /* MonitoredStopCall.swift in Sources */,
+				2CFFCA641CE89EC2002D8AC4 /* ResourceStatus.swift in Sources */,
+				2CFFCAD91CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift in Sources */,
+				2CFFCA501CE89B5A002D8AC4 /* Disruption.swift in Sources */,
+				2CFFCACF1CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift in Sources */,
+				2CFFCACA1CE8CA89002D8AC4 /* TransitStopRTIResponse.swift in Sources */,
+				2CFFCA691CE8C41B002D8AC4 /* RTIResponse.swift in Sources */,
+				2CFFCA7C1CE8C5AC002D8AC4 /* StopCall.swift in Sources */,
+				2CFFCAC01CE8CA1B002D8AC4 /* TransitStop.swift in Sources */,
+				2CFFCA4B1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift in Sources */,
+				2CFFCA321CE89A35002D8AC4 /* ImportSource.swift in Sources */,
+				2CFFCA411CE89ADD002D8AC4 /* Journey.swift in Sources */,
+				2CFFCA731CE8C460002D8AC4 /* StopBoardColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9E81CE86AEF002D8AC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCA5D1CE89E45002D8AC4 /* VehicleRTI.swift in Sources */,
+				2CFFCA8E1CE8C67D002D8AC4 /* StopBoardRow.swift in Sources */,
+				2CFFCAAF1CE8C94A002D8AC4 /* TransitAgency.swift in Sources */,
+				2CFFCA151CE86CAB002D8AC4 /* Attribution.swift in Sources */,
+				2CFFCAC81CE8CA6C002D8AC4 /* TransitStopRTIReport.swift in Sources */,
+				2CFFCAD71CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift in Sources */,
+				2CFFCAE11CE8CB27002D8AC4 /* TransitTrip.swift in Sources */,
+				2CFFCA3A1CE89A7A002D8AC4 /* DirectionsResponse.swift in Sources */,
+				2CFFCA3F1CE89AB3002D8AC4 /* PlacePoint.swift in Sources */,
+				2CFFCAB41CE8C969002D8AC4 /* TransitCalendar.swift in Sources */,
+				2CFFCA841CE8C5D8002D8AC4 /* TransitRouteInfo.swift in Sources */,
+				2CFFCA891CE8C623002D8AC4 /* TransitScheduledCall.swift in Sources */,
+				2CFFCA981CE8C6EE002D8AC4 /* StopBoardMessage.swift in Sources */,
+				2CFFCA621CE89E6D002D8AC4 /* PlacePointList.swift in Sources */,
+				2CFFCAB91CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift in Sources */,
+				2CFFCA491CE89AF2002D8AC4 /* JourneyLeg.swift in Sources */,
+				2CFFCAAA1CE8C8FB002D8AC4 /* TransitTripInfo.swift in Sources */,
+				2CFFCABE1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift in Sources */,
+				2CFFCA711CE8C441002D8AC4 /* StopBoard.swift in Sources */,
+				2CFFCA9D1CE8C71B002D8AC4 /* TriState.swift in Sources */,
+				2CFFCAE61CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */,
+				2CFFCA931CE8C6CB002D8AC4 /* StopBoardGroup.swift in Sources */,
+				2CFFCA581CE89B8D002D8AC4 /* MonitoredStopCall.swift in Sources */,
+				2CFFCA671CE89EC2002D8AC4 /* ResourceStatus.swift in Sources */,
+				2CFFCADC1CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift in Sources */,
+				2CFFCA531CE89B5A002D8AC4 /* Disruption.swift in Sources */,
+				2CFFCAD21CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift in Sources */,
+				2CFFCACD1CE8CA89002D8AC4 /* TransitStopRTIResponse.swift in Sources */,
+				2CFFCA6C1CE8C41B002D8AC4 /* RTIResponse.swift in Sources */,
+				2CFFCA7F1CE8C5AC002D8AC4 /* StopCall.swift in Sources */,
+				2CFFCAC31CE8CA1B002D8AC4 /* TransitStop.swift in Sources */,
+				2CFFCA4E1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift in Sources */,
+				2CFFCA351CE89A35002D8AC4 /* ImportSource.swift in Sources */,
+				2CFFCA441CE89ADD002D8AC4 /* Journey.swift in Sources */,
+				2CFFCA761CE8C460002D8AC4 /* StopBoardColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFC9F51CE86B2A002D8AC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCA5C1CE89E45002D8AC4 /* VehicleRTI.swift in Sources */,
+				2CFFCA8D1CE8C67D002D8AC4 /* StopBoardRow.swift in Sources */,
+				2CFFCAAE1CE8C94A002D8AC4 /* TransitAgency.swift in Sources */,
+				2CFFCA141CE86CAB002D8AC4 /* Attribution.swift in Sources */,
+				2CFFCAC71CE8CA6C002D8AC4 /* TransitStopRTIReport.swift in Sources */,
+				2CFFCAD61CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift in Sources */,
+				2CFFCAE01CE8CB27002D8AC4 /* TransitTrip.swift in Sources */,
+				2CFFCA391CE89A7A002D8AC4 /* DirectionsResponse.swift in Sources */,
+				2CFFCA3E1CE89AB3002D8AC4 /* PlacePoint.swift in Sources */,
+				2CFFCAB31CE8C969002D8AC4 /* TransitCalendar.swift in Sources */,
+				2CFFCA831CE8C5D8002D8AC4 /* TransitRouteInfo.swift in Sources */,
+				2CFFCA881CE8C623002D8AC4 /* TransitScheduledCall.swift in Sources */,
+				2CFFCA971CE8C6EE002D8AC4 /* StopBoardMessage.swift in Sources */,
+				2CFFCA611CE89E6D002D8AC4 /* PlacePointList.swift in Sources */,
+				2CFFCAB81CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift in Sources */,
+				2CFFCA481CE89AF2002D8AC4 /* JourneyLeg.swift in Sources */,
+				2CFFCAA91CE8C8FB002D8AC4 /* TransitTripInfo.swift in Sources */,
+				2CFFCABD1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift in Sources */,
+				2CFFCA701CE8C441002D8AC4 /* StopBoard.swift in Sources */,
+				2CFFCA9C1CE8C71B002D8AC4 /* TriState.swift in Sources */,
+				2CFFCAE51CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */,
+				2CFFCA921CE8C6CB002D8AC4 /* StopBoardGroup.swift in Sources */,
+				2CFFCA571CE89B8D002D8AC4 /* MonitoredStopCall.swift in Sources */,
+				2CFFCA661CE89EC2002D8AC4 /* ResourceStatus.swift in Sources */,
+				2CFFCADB1CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift in Sources */,
+				2CFFCA521CE89B5A002D8AC4 /* Disruption.swift in Sources */,
+				2CFFCAD11CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift in Sources */,
+				2CFFCACC1CE8CA89002D8AC4 /* TransitStopRTIResponse.swift in Sources */,
+				2CFFCA6B1CE8C41B002D8AC4 /* RTIResponse.swift in Sources */,
+				2CFFCA7E1CE8C5AC002D8AC4 /* StopCall.swift in Sources */,
+				2CFFCAC21CE8CA1B002D8AC4 /* TransitStop.swift in Sources */,
+				2CFFCA4D1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift in Sources */,
+				2CFFCA341CE89A35002D8AC4 /* ImportSource.swift in Sources */,
+				2CFFCA431CE89ADD002D8AC4 /* Journey.swift in Sources */,
+				2CFFCA751CE8C460002D8AC4 /* StopBoardColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFFCA021CE86B46002D8AC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFFCA5B1CE89E45002D8AC4 /* VehicleRTI.swift in Sources */,
+				2CFFCA8C1CE8C67D002D8AC4 /* StopBoardRow.swift in Sources */,
+				2CFFCAAD1CE8C94A002D8AC4 /* TransitAgency.swift in Sources */,
+				2CFFCA131CE86CAB002D8AC4 /* Attribution.swift in Sources */,
+				2CFFCAC61CE8CA6C002D8AC4 /* TransitStopRTIReport.swift in Sources */,
+				2CFFCAD51CE8CAC1002D8AC4 /* TransitStopScheduledCalls.swift in Sources */,
+				2CFFCADF1CE8CB27002D8AC4 /* TransitTrip.swift in Sources */,
+				2CFFCA381CE89A7A002D8AC4 /* DirectionsResponse.swift in Sources */,
+				2CFFCA3D1CE89AB3002D8AC4 /* PlacePoint.swift in Sources */,
+				2CFFCAB21CE8C969002D8AC4 /* TransitCalendar.swift in Sources */,
+				2CFFCA821CE8C5D8002D8AC4 /* TransitRouteInfo.swift in Sources */,
+				2CFFCA871CE8C623002D8AC4 /* TransitScheduledCall.swift in Sources */,
+				2CFFCA961CE8C6EE002D8AC4 /* StopBoardMessage.swift in Sources */,
+				2CFFCA601CE89E6D002D8AC4 /* PlacePointList.swift in Sources */,
+				2CFFCAB71CE8C9C8002D8AC4 /* TransitDetailedRouteInfo.swift in Sources */,
+				2CFFCA471CE89AF2002D8AC4 /* JourneyLeg.swift in Sources */,
+				2CFFCAA81CE8C8FB002D8AC4 /* TransitTripInfo.swift in Sources */,
+				2CFFCABC1CE8C9E8002D8AC4 /* TransitJourneyLeg.swift in Sources */,
+				2CFFCA6F1CE8C441002D8AC4 /* StopBoard.swift in Sources */,
+				2CFFCA9B1CE8C71B002D8AC4 /* TriState.swift in Sources */,
+				2CFFCAE41CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */,
+				2CFFCA911CE8C6CB002D8AC4 /* StopBoardGroup.swift in Sources */,
+				2CFFCA561CE89B8D002D8AC4 /* MonitoredStopCall.swift in Sources */,
+				2CFFCA651CE89EC2002D8AC4 /* ResourceStatus.swift in Sources */,
+				2CFFCADA1CE8CAF2002D8AC4 /* TransitStopScheduledCallSummary.swift in Sources */,
+				2CFFCA511CE89B5A002D8AC4 /* Disruption.swift in Sources */,
+				2CFFCAD01CE8CAA6002D8AC4 /* TransitStopScheduledCall.swift in Sources */,
+				2CFFCACB1CE8CA89002D8AC4 /* TransitStopRTIResponse.swift in Sources */,
+				2CFFCA6A1CE8C41B002D8AC4 /* RTIResponse.swift in Sources */,
+				2CFFCA7D1CE8C5AC002D8AC4 /* StopCall.swift in Sources */,
+				2CFFCAC11CE8CA1B002D8AC4 /* TransitStop.swift in Sources */,
+				2CFFCA4C1CE89B2D002D8AC4 /* DirectionsResponseStatus.swift in Sources */,
+				2CFFCA331CE89A35002D8AC4 /* ImportSource.swift in Sources */,
+				2CFFCA421CE89ADD002D8AC4 /* Journey.swift in Sources */,
+				2CFFCA741CE8C460002D8AC4 /* StopBoardColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2344,6 +2962,26 @@
 			isa = PBXTargetDependency;
 			target = 2C5F2C041CCE9AA900999713 /* UrbanThingsAPI-iOS */;
 			targetProxy = 2CD690F41CD351D900747E36 /* PBXContainerItemProxy */;
+		};
+		2CFFCA9F1CE8C888002D8AC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C5F2C041CCE9AA900999713 /* UrbanThingsAPI-iOS */;
+			targetProxy = 2CFFCA9E1CE8C888002D8AC4 /* PBXContainerItemProxy */;
+		};
+		2CFFCAA11CE8C88D002D8AC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C0CE2D31CE3178D0054847C /* UrbanThingsAPI-OSX */;
+			targetProxy = 2CFFCAA01CE8C88D002D8AC4 /* PBXContainerItemProxy */;
+		};
+		2CFFCAA31CE8C892002D8AC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C0CE2AA1CE316E30054847C /* UrbanThingsAPI-tvOS */;
+			targetProxy = 2CFFCAA21CE8C892002D8AC4 /* PBXContainerItemProxy */;
+		};
+		2CFFCAA51CE8C897002D8AC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C0CE2C61CE3176E0054847C /* UrbanThingsAPI-watchOS */;
+			targetProxy = 2CFFCAA41CE8C897002D8AC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2719,6 +3357,172 @@
 			};
 			name = Release;
 		};
+		2CFFC9E51CE86A8D002D8AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.ios.UTAPIObjCAdapter;
+				PRODUCT_NAME = UTAPIObjCAdapter;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CFFC9E61CE86A8D002D8AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.ios.UTAPIObjCAdapter;
+				PRODUCT_NAME = UTAPIObjCAdapter;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2CFFC9F31CE86AEF002D8AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.watchos.UTAPIObjCAdapter-watchOS";
+				PRODUCT_NAME = UTAPIObjCAdapter;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		2CFFC9F41CE86AEF002D8AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.watchos.UTAPIObjCAdapter-watchOS";
+				PRODUCT_NAME = UTAPIObjCAdapter;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		2CFFCA001CE86B2A002D8AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.tvos.UTAPIObjCAdapter-tvOS";
+				PRODUCT_NAME = UTAPIObjCAdapter;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		2CFFCA011CE86B2A002D8AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.tvos.UTAPIObjCAdapter-tvOS";
+				PRODUCT_NAME = UTAPIObjCAdapter;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		2CFFCA0D1CE86B46002D8AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.osx.UTAPIObjCAdapter-OSX";
+				PRODUCT_NAME = UTAPIObjCAdapter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CFFCA0E1CE86B46002D8AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.osx.UTAPIObjCAdapter-OSX";
+				PRODUCT_NAME = UTAPIObjCAdapter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2802,6 +3606,38 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2CFFC9E71CE86A8D002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CFFC9E51CE86A8D002D8AC4 /* Debug */,
+				2CFFC9E61CE86A8D002D8AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CFFC9F21CE86AEF002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CFFC9F31CE86AEF002D8AC4 /* Debug */,
+				2CFFC9F41CE86AEF002D8AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CFFC9FF1CE86B2A002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CFFCA001CE86B2A002D8AC4 /* Debug */,
+				2CFFCA011CE86B2A002D8AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CFFCA0C1CE86B46002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CFFCA0D1CE86B46002D8AC4 /* Debug */,
+				2CFFCA0E1CE86B46002D8AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

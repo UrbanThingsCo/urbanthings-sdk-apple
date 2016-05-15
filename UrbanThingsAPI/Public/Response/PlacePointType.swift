@@ -30,7 +30,7 @@ import Foundation
 /// - CarParkingSpace - Car park
 
 /// `PlacePointType` lists all valid types of place point.
-public enum PlacePointType : Int {
+@objc public enum PlacePointType : Int {
     /// A place that doesn't fall into any of the other PlacePointType options, raw value 0
     case Place = 0
     /// A road, raw value 1

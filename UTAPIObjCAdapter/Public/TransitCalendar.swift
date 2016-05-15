@@ -2,32 +2,15 @@
 //  TransitCalendar.swift
 //  UrbanThingsAPI
 //
-//  Created by Mark Woollard on 29/04/2016.
+//  Created by Mark Woollard on 15/05/2016.
 //  Copyright © 2016 Fat Attitude. All rights reserved.
 //
 
 import Foundation
-
-/// `WeekDay` defines the days of the week.
-@objc public enum WeekDay : Int {
-    /// The day is Sunday.
-    case Sunday = 0
-    /// The day is Monday.
-    case Monday = 1
-    /// The day is Tuesday.
-    case Tuesday = 2
-    /// The day is Wednesday.
-    case Wednesday = 3
-    /// The day is Thursday.
-    case Thursday = 4
-    /// The day is Friday.
-    case Friday = 5
-    /// The day is Saturday.
-    case Saturday = 6
-}
+import UrbanThingsAPI
 
 /// `TransitCalendar` provides details about the dates / days of the week that a particular `TransitTrip` operates.
-public protocol TransitCalendar {
+@objc public protocol TransitCalendar {
     /// The internal unique ID representing this calendar. Multiple trips may share a single calendar. This ID is synonymous with a GTFS 'service ID'
     var calendarID:String { get }
     /// The date that the corresponding TransitTrip begins operating from, inclusive.
