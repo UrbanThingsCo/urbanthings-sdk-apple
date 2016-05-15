@@ -327,14 +327,14 @@ To use data within Objective-C it needs to be converted to Objective-C compatabi
         super.init()
     }
     
-    var intOptional:NSNumber {
+    @objc var intOptional:NSNumber {
     	  guard adapted.intOptional != nil else {
     	      return nil
     	  }
     	  return NSNumber(integer:self.adapted.intOptional!)
     }
     
-    var uintOptional:NSNumber {
+    @objc var uintOptional:NSNumber {
     	  guard adapted.uintOptional != nil else {
     	      return nil
     	  }
