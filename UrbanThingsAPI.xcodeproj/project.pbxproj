@@ -1912,7 +1912,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Fat Attitude";
+				ORGANIZATIONNAME = UrbanThings;
 				TargetAttributes = {
 					2C0CE2AA1CE316E30054847C = {
 						CreatedOnToolsVersion = 7.3;

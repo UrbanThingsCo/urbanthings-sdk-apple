@@ -3,7 +3,7 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 26/04/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 /// `StopBoardColor` details a color pair for background and text. Inherited by `StopBoard`, `StopBoardGroup` and `StopBoardMessage`.
