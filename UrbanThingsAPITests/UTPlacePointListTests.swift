@@ -23,7 +23,7 @@ class UTPlacePointListTests: XCTestCase {
         super.tearDown()
     }
     
-    func testRequiredInitialisation() throws {
+    func testInitialisation() throws {
         let _:UTPlacePointList = try self.initializationFromJSON(JSONFileName)
     }
     

@@ -267,8 +267,8 @@
 		2C0CE3ED1CE317F80054847C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5C1CCFAABF00999713 /* APIResponse.swift */; };
 		2C0CE3EE1CE317F80054847C /* APIResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C471CCF51AA00999713 /* APIResponseType.swift */; };
 		2C0CE3EF1CE317F80054847C /* JSONKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C6A1CD00A0000999713 /* JSONKey.swift */; };
-		2C0CE3F01CE317F80054847C /* UITransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691141CD3FE4A00747E36 /* UITransitCalendar.swift */; };
-		2C0CE3F11CE317F80054847C /* UITransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691241CD55B0D00747E36 /* UITransitTripCalendarGroup.swift */; };
+		2C0CE3F01CE317F80054847C /* UTTransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691141CD3FE4A00747E36 /* UTTransitCalendar.swift */; };
+		2C0CE3F11CE317F80054847C /* UTTransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691241CD55B0D00747E36 /* UTTransitTripCalendarGroup.swift */; };
 		2C0CE3F21CE317F80054847C /* UTAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691691CD7E51C00747E36 /* UTAttribution.swift */; };
 		2C0CE3F31CE317F80054847C /* UTDirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691951CD9002800747E36 /* UTDirectionsResponse.swift */; };
 		2C0CE3F41CE317F80054847C /* UTDirectionsResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691981CD902B500747E36 /* UTDirectionsResponseStatus.swift */; };
@@ -311,8 +311,8 @@
 		2C0CE4191CE317F90054847C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5C1CCFAABF00999713 /* APIResponse.swift */; };
 		2C0CE41A1CE317F90054847C /* APIResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C471CCF51AA00999713 /* APIResponseType.swift */; };
 		2C0CE41B1CE317F90054847C /* JSONKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C6A1CD00A0000999713 /* JSONKey.swift */; };
-		2C0CE41C1CE317F90054847C /* UITransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691141CD3FE4A00747E36 /* UITransitCalendar.swift */; };
-		2C0CE41D1CE317F90054847C /* UITransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691241CD55B0D00747E36 /* UITransitTripCalendarGroup.swift */; };
+		2C0CE41C1CE317F90054847C /* UTTransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691141CD3FE4A00747E36 /* UTTransitCalendar.swift */; };
+		2C0CE41D1CE317F90054847C /* UTTransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691241CD55B0D00747E36 /* UTTransitTripCalendarGroup.swift */; };
 		2C0CE41E1CE317F90054847C /* UTAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691691CD7E51C00747E36 /* UTAttribution.swift */; };
 		2C0CE41F1CE317F90054847C /* UTDirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691951CD9002800747E36 /* UTDirectionsResponse.swift */; };
 		2C0CE4201CE317F90054847C /* UTDirectionsResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691981CD902B500747E36 /* UTDirectionsResponseStatus.swift */; };
@@ -355,8 +355,8 @@
 		2C0CE4451CE317FA0054847C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5C1CCFAABF00999713 /* APIResponse.swift */; };
 		2C0CE4461CE317FA0054847C /* APIResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C471CCF51AA00999713 /* APIResponseType.swift */; };
 		2C0CE4471CE317FA0054847C /* JSONKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C6A1CD00A0000999713 /* JSONKey.swift */; };
-		2C0CE4481CE317FA0054847C /* UITransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691141CD3FE4A00747E36 /* UITransitCalendar.swift */; };
-		2C0CE4491CE317FA0054847C /* UITransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691241CD55B0D00747E36 /* UITransitTripCalendarGroup.swift */; };
+		2C0CE4481CE317FA0054847C /* UTTransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691141CD3FE4A00747E36 /* UTTransitCalendar.swift */; };
+		2C0CE4491CE317FA0054847C /* UTTransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691241CD55B0D00747E36 /* UTTransitTripCalendarGroup.swift */; };
 		2C0CE44A1CE317FA0054847C /* UTAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691691CD7E51C00747E36 /* UTAttribution.swift */; };
 		2C0CE44B1CE317FA0054847C /* UTDirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691951CD9002800747E36 /* UTDirectionsResponse.swift */; };
 		2C0CE44C1CE317FA0054847C /* UTDirectionsResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691981CD902B500747E36 /* UTDirectionsResponseStatus.swift */; };
@@ -407,7 +407,6 @@
 		2C0CE4831CE3242F0054847C /* UTResourceStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C60AF101CDFDD2F00329630 /* UTResourceStatusTests.swift */; };
 		2C0CE4841CE3242F0054847C /* UTPlacePointListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CF7B41CE0974100F1E08A /* UTPlacePointListTests.swift */; };
 		2C0CE4851CE3242F0054847C /* UrbanThingsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690F01CD351D900747E36 /* UrbanThingsAPITests.swift */; };
-		2C0CE4861CE3242F0054847C /* JSONExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6913B1CD68AEC00747E36 /* JSONExtensionTests.swift */; };
 		2C0CE4871CE3242F0054847C /* TestPlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E9A1CDB131C00B955A6 /* TestPlacePoint.swift */; };
 		2C0CE4881CE324300054847C /* SystemObjectJsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */; };
 		2C0CE4891CE324300054847C /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C60AF011CDFB8FC00329630 /* XCTestCase+Extensions.swift */; };
@@ -419,7 +418,6 @@
 		2C0CE48F1CE324300054847C /* UTResourceStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C60AF101CDFDD2F00329630 /* UTResourceStatusTests.swift */; };
 		2C0CE4901CE324300054847C /* UTPlacePointListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CF7B41CE0974100F1E08A /* UTPlacePointListTests.swift */; };
 		2C0CE4911CE324300054847C /* UrbanThingsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690F01CD351D900747E36 /* UrbanThingsAPITests.swift */; };
-		2C0CE4921CE324300054847C /* JSONExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6913B1CD68AEC00747E36 /* JSONExtensionTests.swift */; };
 		2C0CE4931CE324300054847C /* TestPlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E9A1CDB131C00B955A6 /* TestPlacePoint.swift */; };
 		2C0CE4941CE3243F0054847C /* ImportSourceTests.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CD691B21CD947E700747E36 /* ImportSourceTests.json */; };
 		2C0CE4951CE3243F0054847C /* TransitAgencyTests.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C60AEFD1CDFA23900329630 /* TransitAgencyTests.json */; };
@@ -618,21 +616,20 @@
 		2CD6910F1CD38D8900747E36 /* UInt+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6910E1CD38D8900747E36 /* UInt+JSON.swift */; };
 		2CD691111CD38F3C00747E36 /* UTTransitScheduledCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691101CD38F3C00747E36 /* UTTransitScheduledCall.swift */; };
 		2CD691131CD38F6C00747E36 /* NSDate+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691121CD38F6C00747E36 /* NSDate+JSON.swift */; };
-		2CD691151CD3FE4A00747E36 /* UITransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691141CD3FE4A00747E36 /* UITransitCalendar.swift */; };
+		2CD691151CD3FE4A00747E36 /* UTTransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691141CD3FE4A00747E36 /* UTTransitCalendar.swift */; };
 		2CD691191CD488C000747E36 /* UTObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691181CD488BF00747E36 /* UTObject.swift */; };
 		2CD6911B1CD4A77A00747E36 /* UTTransitStopScheduledCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6911A1CD4A77A00747E36 /* UTTransitStopScheduledCalls.swift */; };
 		2CD6911D1CD4A92B00747E36 /* UTStopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6911C1CD4A92B00747E36 /* UTStopCall.swift */; };
 		2CD6911F1CD5051E00747E36 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6911E1CD5051E00747E36 /* Location.swift */; };
 		2CD691211CD50BD800747E36 /* TransitTripsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691201CD50BD800747E36 /* TransitTripsRequest.swift */; };
 		2CD691231CD53BF000747E36 /* TransitStopCallsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691221CD53BF000747E36 /* TransitStopCallsRequest.swift */; };
-		2CD691251CD55B0D00747E36 /* UITransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691241CD55B0D00747E36 /* UITransitTripCalendarGroup.swift */; };
+		2CD691251CD55B0D00747E36 /* UTTransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691241CD55B0D00747E36 /* UTTransitTripCalendarGroup.swift */; };
 		2CD691271CD5F44A00747E36 /* UTColor+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691261CD5F44A00747E36 /* UTColor+JSON.swift */; };
 		2CD6912B1CD6122600747E36 /* String+GooglePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691291CD6122600747E36 /* String+GooglePolyline.swift */; };
 		2CD6912C1CD6122600747E36 /* MKPolyline+GooglePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6912A1CD6122600747E36 /* MKPolyline+GooglePolyline.swift */; };
 		2CD6912E1CD6125600747E36 /* GooglePolylineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6912D1CD6125600747E36 /* GooglePolylineError.swift */; };
 		2CD691351CD684DB00747E36 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691341CD684DB00747E36 /* String+JSON.swift */; };
 		2CD691371CD6872800747E36 /* Array+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691361CD6872800747E36 /* Array+JSON.swift */; };
-		2CD6913C1CD68AEC00747E36 /* JSONExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6913B1CD68AEC00747E36 /* JSONExtensionTests.swift */; };
 		2CD6915A1CD72FA500747E36 /* JSONInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691591CD72FA500747E36 /* JSONInitialization.swift */; };
 		2CD691601CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6915F1CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift */; };
 		2CD691621CD7E02400747E36 /* UrbanThingsAPI+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691611CD7E02400747E36 /* UrbanThingsAPI+Public.swift */; };
@@ -858,21 +855,20 @@
 		2CD6910E1CD38D8900747E36 /* UInt+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt+JSON.swift"; sourceTree = "<group>"; };
 		2CD691101CD38F3C00747E36 /* UTTransitScheduledCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitScheduledCall.swift; sourceTree = "<group>"; };
 		2CD691121CD38F6C00747E36 /* NSDate+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+JSON.swift"; sourceTree = "<group>"; };
-		2CD691141CD3FE4A00747E36 /* UITransitCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITransitCalendar.swift; sourceTree = "<group>"; };
+		2CD691141CD3FE4A00747E36 /* UTTransitCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitCalendar.swift; sourceTree = "<group>"; };
 		2CD691181CD488BF00747E36 /* UTObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTObject.swift; sourceTree = "<group>"; };
 		2CD6911A1CD4A77A00747E36 /* UTTransitStopScheduledCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitStopScheduledCalls.swift; sourceTree = "<group>"; };
 		2CD6911C1CD4A92B00747E36 /* UTStopCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTStopCall.swift; sourceTree = "<group>"; };
 		2CD6911E1CD5051E00747E36 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2CD691201CD50BD800747E36 /* TransitTripsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitTripsRequest.swift; sourceTree = "<group>"; };
 		2CD691221CD53BF000747E36 /* TransitStopCallsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStopCallsRequest.swift; sourceTree = "<group>"; };
-		2CD691241CD55B0D00747E36 /* UITransitTripCalendarGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITransitTripCalendarGroup.swift; sourceTree = "<group>"; };
+		2CD691241CD55B0D00747E36 /* UTTransitTripCalendarGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitTripCalendarGroup.swift; sourceTree = "<group>"; };
 		2CD691261CD5F44A00747E36 /* UTColor+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UTColor+JSON.swift"; sourceTree = "<group>"; };
 		2CD691291CD6122600747E36 /* String+GooglePolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+GooglePolyline.swift"; sourceTree = "<group>"; };
 		2CD6912A1CD6122600747E36 /* MKPolyline+GooglePolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKPolyline+GooglePolyline.swift"; sourceTree = "<group>"; };
 		2CD6912D1CD6125600747E36 /* GooglePolylineError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePolylineError.swift; sourceTree = "<group>"; };
 		2CD691341CD684DB00747E36 /* String+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+JSON.swift"; sourceTree = "<group>"; };
 		2CD691361CD6872800747E36 /* Array+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+JSON.swift"; sourceTree = "<group>"; };
-		2CD6913B1CD68AEC00747E36 /* JSONExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONExtensionTests.swift; sourceTree = "<group>"; };
 		2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemObjectJsonTests.swift; sourceTree = "<group>"; };
 		2CD691591CD72FA500747E36 /* JSONInitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONInitialization.swift; sourceTree = "<group>"; };
 		2CD6915F1CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UrbanThingsAPI+RTI.swift"; sourceTree = "<group>"; };
@@ -1167,19 +1163,10 @@
 		2CD690EF1CD351D900747E36 /* UrbanThingsAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */,
+				2CFFC9D71CE84830002D8AC4 /* Infrastructure */,
 				2C60AF051CDFC0ED00329630 /* JSON */,
-				2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */,
-				2C60AF011CDFB8FC00329630 /* XCTestCase+Extensions.swift */,
-				2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */,
-				2C6A4E0E1CE3CB5800475C9F /* StaticResponseProcessingTests.swift */,
-				2C9F52D31CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift */,
-				2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */,
-				2C60AEF91CDF92E900329630 /* UTObjectsTests */,
-				2CD690F01CD351D900747E36 /* UrbanThingsAPITests.swift */,
+				2CFFC9D81CE84876002D8AC4 /* Tests */,
 				2CD690F21CD351D900747E36 /* Info.plist */,
-				2CD6913B1CD68AEC00747E36 /* JSONExtensionTests.swift */,
-				2C591E9A1CDB131C00B955A6 /* TestPlacePoint.swift */,
 			);
 			path = UrbanThingsAPITests;
 			sourceTree = "<group>";
@@ -1258,8 +1245,6 @@
 				2C5F2C5C1CCFAABF00999713 /* APIResponse.swift */,
 				2C5F2C471CCF51AA00999713 /* APIResponseType.swift */,
 				2C5F2C6A1CD00A0000999713 /* JSONKey.swift */,
-				2CD691141CD3FE4A00747E36 /* UITransitCalendar.swift */,
-				2CD691241CD55B0D00747E36 /* UITransitTripCalendarGroup.swift */,
 				2CD691691CD7E51C00747E36 /* UTAttribution.swift */,
 				2CD691951CD9002800747E36 /* UTDirectionsResponse.swift */,
 				2CD691981CD902B500747E36 /* UTDirectionsResponseStatus.swift */,
@@ -1282,6 +1267,7 @@
 				2CD691891CD8B5C100747E36 /* UTStopBoardRow.swift */,
 				2CD6911C1CD4A92B00747E36 /* UTStopCall.swift */,
 				2CD690E81CD341FB00747E36 /* UTTransitAgency.swift */,
+				2CD691141CD3FE4A00747E36 /* UTTransitCalendar.swift */,
 				2C5F2C7A1CD103C400999713 /* UTTransitDetailedRouteInfo.swift */,
 				2C1CF7BC1CE0D90300F1E08A /* UTTransitJourneyLeg.swift */,
 				2C5F2C781CD103A800999713 /* UTTransitRouteInfo.swift */,
@@ -1293,6 +1279,7 @@
 				2CD6911A1CD4A77A00747E36 /* UTTransitStopScheduledCalls.swift */,
 				2CD6910C1CD38BF400747E36 /* UTTransitStopScheduledCallSummary.swift */,
 				2CD691081CD38AE600747E36 /* UTTransitTrip.swift */,
+				2CD691241CD55B0D00747E36 /* UTTransitTripCalendarGroup.swift */,
 				2CD6910A1CD38BB500747E36 /* UTTransitTripInfo.swift */,
 				2CD6916F1CD7FC7700747E36 /* UTVehicleRTI.swift */,
 			);
@@ -1306,6 +1293,30 @@
 				2C5F2C761CD0C64F00999713 /* QueryParameters.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		2CFFC9D71CE84830002D8AC4 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				2C591E9A1CDB131C00B955A6 /* TestPlacePoint.swift */,
+				2C60AF011CDFB8FC00329630 /* XCTestCase+Extensions.swift */,
+				2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */,
+			);
+			name = Infrastructure;
+			sourceTree = "<group>";
+		};
+		2CFFC9D81CE84876002D8AC4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C60AEF91CDF92E900329630 /* UTObjectsTests */,
+				2CD690F01CD351D900747E36 /* UrbanThingsAPITests.swift */,
+				2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */,
+				2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */,
+				2C6A4E0E1CE3CB5800475C9F /* StaticResponseProcessingTests.swift */,
+				2C9F52D31CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift */,
+				2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1718,7 +1729,7 @@
 				2C0CE4201CE317F90054847C /* UTDirectionsResponseStatus.swift in Sources */,
 				2C0CE37E1CE317D80054847C /* TransitRouteInfo.swift in Sources */,
 				2C0CE3241CE317CF0054847C /* TransitTripGroupsRequest.swift in Sources */,
-				2C0CE41D1CE317F90054847C /* UITransitTripCalendarGroup.swift in Sources */,
+				2C0CE41D1CE317F90054847C /* UTTransitTripCalendarGroup.swift in Sources */,
 				2C0CE3141CE317CF0054847C /* Parsers.swift in Sources */,
 				2C0CE3BD1CE317E00054847C /* Error+Internal.swift in Sources */,
 				2C0CE4361CE317F90054847C /* UTTransitRouteInfo.swift in Sources */,
@@ -1733,7 +1744,7 @@
 				2C0CE4331CE317F90054847C /* UTTransitAgency.swift in Sources */,
 				2C0CE2EC1CE317A90054847C /* Error.swift in Sources */,
 				2C0CE3711CE317D80054847C /* RTIResponse.swift in Sources */,
-				2C0CE41C1CE317F90054847C /* UITransitCalendar.swift in Sources */,
+				2C0CE41C1CE317F90054847C /* UTTransitCalendar.swift in Sources */,
 				2C0CE37D1CE317D80054847C /* TransitMode.swift in Sources */,
 				2C0CE4411CE317F90054847C /* NSCharacterSet-Extensions.swift in Sources */,
 				2C0CE43A1CE317F90054847C /* UTTransitStopRTIResponse.swift in Sources */,
@@ -1830,7 +1841,6 @@
 				2C6A4E111CE3CB5800475C9F /* StaticResponseProcessingTests.swift in Sources */,
 				2C0CE48E1CE324300054847C /* UTTransitStopTests.swift in Sources */,
 				2C0CE48C1CE324300054847C /* UTImportSourceTests.swift in Sources */,
-				2C0CE4921CE324300054847C /* JSONExtensionTests.swift in Sources */,
 				2C0CE48D1CE324300054847C /* UTPlacePointTests.swift in Sources */,
 				2C0CE48A1CE324300054847C /* UTObjectTests.swift in Sources */,
 				2C6A4E151CE4A35700475C9F /* GooglePolylineTests.swift in Sources */,
@@ -1879,7 +1889,7 @@
 				2C0CE44C1CE317FA0054847C /* UTDirectionsResponseStatus.swift in Sources */,
 				2C0CE3A91CE317D90054847C /* TransitRouteInfo.swift in Sources */,
 				2C0CE3381CE317D00054847C /* TransitTripGroupsRequest.swift in Sources */,
-				2C0CE4491CE317FA0054847C /* UITransitTripCalendarGroup.swift in Sources */,
+				2C0CE4491CE317FA0054847C /* UTTransitTripCalendarGroup.swift in Sources */,
 				2C0CE3281CE317D00054847C /* Parsers.swift in Sources */,
 				2C0CE3BF1CE317E00054847C /* Error+Internal.swift in Sources */,
 				2C0CE4621CE317FA0054847C /* UTTransitRouteInfo.swift in Sources */,
@@ -1894,7 +1904,7 @@
 				2C0CE45F1CE317FA0054847C /* UTTransitAgency.swift in Sources */,
 				2C0CE2ED1CE317AA0054847C /* Error.swift in Sources */,
 				2C0CE39C1CE317D90054847C /* RTIResponse.swift in Sources */,
-				2C0CE4481CE317FA0054847C /* UITransitCalendar.swift in Sources */,
+				2C0CE4481CE317FA0054847C /* UTTransitCalendar.swift in Sources */,
 				2C0CE3A81CE317D90054847C /* TransitMode.swift in Sources */,
 				2C0CE46D1CE317FA0054847C /* NSCharacterSet-Extensions.swift in Sources */,
 				2C0CE4661CE317FA0054847C /* UTTransitStopRTIResponse.swift in Sources */,
@@ -2016,7 +2026,7 @@
 				2C0CE3F41CE317F80054847C /* UTDirectionsResponseStatus.swift in Sources */,
 				2C0CE3531CE317D70054847C /* TransitRouteInfo.swift in Sources */,
 				2C0CE3101CE317CE0054847C /* TransitTripGroupsRequest.swift in Sources */,
-				2C0CE3F11CE317F80054847C /* UITransitTripCalendarGroup.swift in Sources */,
+				2C0CE3F11CE317F80054847C /* UTTransitTripCalendarGroup.swift in Sources */,
 				2C0CE3001CE317CE0054847C /* Parsers.swift in Sources */,
 				2C0CE3BB1CE317DF0054847C /* Error+Internal.swift in Sources */,
 				2C0CE40A1CE317F80054847C /* UTTransitRouteInfo.swift in Sources */,
@@ -2031,7 +2041,7 @@
 				2C0CE4071CE317F80054847C /* UTTransitAgency.swift in Sources */,
 				2C0CE2EB1CE317A70054847C /* Error.swift in Sources */,
 				2C0CE3461CE317D70054847C /* RTIResponse.swift in Sources */,
-				2C0CE3F01CE317F80054847C /* UITransitCalendar.swift in Sources */,
+				2C0CE3F01CE317F80054847C /* UTTransitCalendar.swift in Sources */,
 				2C0CE3521CE317D70054847C /* TransitMode.swift in Sources */,
 				2C0CE4151CE317F80054847C /* NSCharacterSet-Extensions.swift in Sources */,
 				2C0CE40E1CE317F80054847C /* UTTransitStopRTIResponse.swift in Sources */,
@@ -2127,7 +2137,6 @@
 				2C6A4E101CE3CB5800475C9F /* StaticResponseProcessingTests.swift in Sources */,
 				2C0CE4821CE3242F0054847C /* UTTransitStopTests.swift in Sources */,
 				2C0CE4801CE3242F0054847C /* UTImportSourceTests.swift in Sources */,
-				2C0CE4861CE3242F0054847C /* JSONExtensionTests.swift in Sources */,
 				2C0CE4811CE3242F0054847C /* UTPlacePointTests.swift in Sources */,
 				2C0CE47E1CE3242F0054847C /* UTObjectTests.swift in Sources */,
 				2C6A4E141CE4A35700475C9F /* GooglePolylineTests.swift in Sources */,
@@ -2172,7 +2181,7 @@
 				2C1CF7B91CE0D46300F1E08A /* TransitStopScheduledCall.swift in Sources */,
 				2C5F2C6D1CD00BB600999713 /* TransitMode.swift in Sources */,
 				2CD691AB1CD9258D00747E36 /* RealtimeStopboardRequest.swift in Sources */,
-				2CD691151CD3FE4A00747E36 /* UITransitCalendar.swift in Sources */,
+				2CD691151CD3FE4A00747E36 /* UTTransitCalendar.swift in Sources */,
 				2C5F2C611CCFAC6300999713 /* UTImportSource.swift in Sources */,
 				2C5F2C751CD0AFA500999713 /* NSCharacterSet-Extensions.swift in Sources */,
 				2C5F2C501CCF549200999713 /* StopBoardRow.swift in Sources */,
@@ -2236,7 +2245,7 @@
 				2C60AEF51CDF70B100329630 /* RealtimeResourceStatusRequest.swift in Sources */,
 				2C5F2C431CCF46C400999713 /* ImportSource.swift in Sources */,
 				2CD690CB1CD224DF00747E36 /* NSURL+JSON.swift in Sources */,
-				2CD691251CD55B0D00747E36 /* UITransitTripCalendarGroup.swift in Sources */,
+				2CD691251CD55B0D00747E36 /* UTTransitTripCalendarGroup.swift in Sources */,
 				2CD691351CD684DB00747E36 /* String+JSON.swift in Sources */,
 				2C5F2C6B1CD00A0000999713 /* JSONKey.swift in Sources */,
 				2C5F2C2F1CCF3FA800999713 /* TransitTripInfo.swift in Sources */,
@@ -2304,7 +2313,6 @@
 				2C60AEFC1CDF933B00329630 /* SystemObjectJsonTests.swift in Sources */,
 				2C60AEF81CDF893600329630 /* UTObjectTests.swift in Sources */,
 				2CD690F11CD351D900747E36 /* UrbanThingsAPITests.swift in Sources */,
-				2CD6913C1CD68AEC00747E36 /* JSONExtensionTests.swift in Sources */,
 				2C6A4E131CE4A35700475C9F /* GooglePolylineTests.swift in Sources */,
 				2C60AF091CDFC25800329630 /* UTPlacePointTests.swift in Sources */,
 				2C1CF7B51CE0974100F1E08A /* UTPlacePointListTests.swift in Sources */,

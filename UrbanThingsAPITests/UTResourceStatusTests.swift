@@ -23,7 +23,7 @@ class UTResourceStatusTests: XCTestCase {
         super.tearDown()
     }
     
-    func testRequiredInitialisation() throws {
+    func testInitialisation() throws {
         let _:UTResourceStatus = try self.initializationFromJSON(JSONFileName)
     }
 
