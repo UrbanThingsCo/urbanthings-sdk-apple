@@ -3,7 +3,7 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 06/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import UIKit
