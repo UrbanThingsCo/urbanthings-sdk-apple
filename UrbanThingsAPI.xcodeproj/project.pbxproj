@@ -1238,7 +1238,7 @@
 				2C5F2C071CCE9AA900999713 /* UrbanThingsAPI */,
 				2CD690EF1CD351D900747E36 /* UrbanThingsAPITests */,
 				2C591E801CDA1D4A00B955A6 /* Demo */,
-				2CFFCA0F1CE86B6B002D8AC4 /* UTAPIObjcAdapter */,
+				2CFFCA0F1CE86B6B002D8AC4 /* UTAPIObjCAdapter */,
 				2C5F2C061CCE9AA900999713 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1564,13 +1564,13 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
-		2CFFCA0F1CE86B6B002D8AC4 /* UTAPIObjcAdapter */ = {
+		2CFFCA0F1CE86B6B002D8AC4 /* UTAPIObjCAdapter */ = {
 			isa = PBXGroup;
 			children = (
 				2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */,
 				2CFFCA101CE86BF8002D8AC4 /* Public */,
 			);
-			name = UTAPIObjcAdapter;
+			name = UTAPIObjCAdapter;
 			path = UTAPIObjCAdapter/Public;
 			sourceTree = "<group>";
 		};
