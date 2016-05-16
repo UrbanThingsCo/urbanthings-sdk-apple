@@ -5,6 +5,8 @@ script:
   - xctool -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-OSX -sdk macosx ONLY_ACTIVE_ARCH=NO
   - xctool -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-tvOS -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO
   - xctool -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-watchOS -sdk watchsimulator ONLY_ACTIVE_ARCH=NO
-
+  - xctool test -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPITests-iOS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool test -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPITests-OSX -sdk macosx ONLY_ACTIVE_ARCH=NO
+  - xctool test -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPITests-tvOS -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO 
 
 
