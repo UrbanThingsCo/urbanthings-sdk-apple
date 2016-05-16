@@ -1078,7 +1078,7 @@
 		2CD691B21CD947E700747E36 /* ImportSourceTests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImportSourceTests.json; sourceTree = "<group>"; };
 		2CEA4B5A1CE36F14004A568F /* TransitStopsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TransitStopsResponse.json; sourceTree = "<group>"; };
 		2CFFC9E01CE86A8D002D8AC4 /* UTAPIObjCAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPIObjCAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UTAPIObjCAdapter.h; path = ../UTAPIObjCAdapter/UTAPIObjCAdapter.h; sourceTree = "<group>"; };
+		2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UTAPIObjCAdapter.h; path = ../UTAPIObjCAdapter.h; sourceTree = "<group>"; };
 		2CFFC9ED1CE86AEF002D8AC4 /* UTAPIObjCAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPIObjCAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFFC9FA1CE86B2A002D8AC4 /* UTAPIObjCAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPIObjCAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFFCA071CE86B46002D8AC4 /* UTAPIObjCAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPIObjCAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1571,7 +1571,7 @@
 				2CFFCA101CE86BF8002D8AC4 /* Public */,
 			);
 			name = UTAPIObjcAdapter;
-			path = ObjCAdapter;
+			path = UTAPIObjCAdapter/Public;
 			sourceTree = "<group>";
 		};
 		2CFFCA101CE86BF8002D8AC4 /* Public */ = {
@@ -1614,7 +1614,6 @@
 				2CFFCA591CE89E45002D8AC4 /* VehicleRTI.swift */,
 			);
 			name = Public;
-			path = ../UTAPIObjCAdapter/Public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3614,6 +3613,7 @@
 				2CFFC9E61CE86A8D002D8AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CFFC9F21CE86AEF002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -3622,6 +3622,7 @@
 				2CFFC9F41CE86AEF002D8AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CFFC9FF1CE86B2A002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -3630,6 +3631,7 @@
 				2CFFCA011CE86B2A002D8AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CFFCA0C1CE86B46002D8AC4 /* Build configuration list for PBXNativeTarget "UTAPIObjCAdapter-OSX" */ = {
 			isa = XCConfigurationList;
@@ -3638,6 +3640,7 @@
 				2CFFCA0E1CE86B46002D8AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -3,12 +3,14 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
-import UrbanThingsAPI
 import CoreLocation
+import protocol UrbanThingsAPI.TransitRouteInfo
+import enum UrbanThingsAPI.TransitMode
+import typealias UrbanThingsAPI.UTColor
 
 @objc public protocol TransitRouteInfo {
     /// A unique code that represents the agency operating this particular route, optional.
@@ -31,4 +33,28 @@ import CoreLocation
     var routeType:TransitMode { get }
     /// Location of the geographical centre point of this route, (based on analysing the route's longest trips in each direction). This may be used to aid in sorting routes by proximity. Will be CLLocationCoordinate2DInvalid if no data available.
     var centerPoint:CLLocationCoordinate2D { get }
+}
+
+@objc public class UTTransitRouteInfo : NSObject, TransitRouteInfo {
+    
+    let adapted:UrbanThingsAPI.TransitRouteInfo
+    
+    public init?(adapt: UrbanThingsAPI.TransitRouteInfo?) {
+        guard let adapt = adapt else {
+            return nil
+        }
+        self.adapted = adapt
+        self.centerPoint = CLLocationCoordinate2D(latitude: adapt.centerPoint?.latitude ?? InvalidDegrees, longitude: adapt.centerPoint?.longitude ?? InvalidDegrees)
+    }
+    
+    public var agencyCode:String? { return self.adapted.agencyCode }
+    public var routeID:String? { return self.adapted.routeID }
+    public var lineName:String? { return self.adapted.lineName }
+    public var lineColor:UTColor? { return self.adapted.lineColor }
+    public var lineTextColor:UTColor? { return self.adapted.lineTextColor }
+    public var operatorName:String? { return self.adapted.operatorName }
+    public var operatorID:String? { return self.adapted.operatorID }
+    public var operatorRegion:String? { return self.adapted.operatorRegion }
+    public var routeType:TransitMode { return self.adapted.routeType }
+    public let centerPoint:CLLocationCoordinate2D
 }

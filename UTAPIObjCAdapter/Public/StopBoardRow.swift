@@ -3,11 +3,12 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
-import UrbanThingsAPI
+import protocol UrbanThingsAPI.StopBoardRow
+import enum UrbanThingsAPI.TransitMode
 
 /// `StopBoardRow` provides details of a row on a stop board.
 @objc public protocol StopBoardRow {
@@ -44,5 +45,26 @@ import UrbanThingsAPI
     /// The second of two labels identifying the time at which the vehicle will stop For example, `timeMajorLabel` might contain
     /// the value '12', while `timeMinorLabel` might contain the value 'minutes'.
     var timeMinorLabel:String? { get }
+}
+
+@objc public class UTStopBoardRow : NSObject, StopBoardRow {
     
+    let adapted: UrbanThingsAPI.StopBoardRow
+    
+    public init(adapt: UrbanThingsAPI.StopBoardRow) {
+        self.adapted = adapt
+    }
+    
+    public var noteText:String? { return self.adapted.noteText }
+    public var isRTI:Bool { return self.adapted.isRTI }
+    public var groupID:String? { return self.adapted.groupID }
+    public var vehicleMode:TransitMode { return self.adapted.vehicleMode }
+    public var vehicleRegistrationText:String? { return self.adapted.vehicleRegistrationText }
+    public var trackingID:String? { return self.adapted.trackingID }
+    public var idLabel:String? { return self.adapted.idLabel }
+    public var mainLabel:String? { return self.adapted.mainLabel }
+    public var secondaryLabel:String? { return self.adapted.secondaryLabel }
+    public var platformLabel:String? { return self.adapted.platformLabel }
+    public var timeMajorLabel:String? { return self.adapted.timeMajorLabel }
+    public var timeMinorLabel:String? { return self.adapted.timeMinorLabel }
 }

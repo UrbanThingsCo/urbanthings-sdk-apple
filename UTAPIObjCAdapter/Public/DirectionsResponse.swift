@@ -3,11 +3,11 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
-
+import protocol UrbanThingsAPI.DirectionsResponse
 
 @objc public protocol DirectionsResponse {
     /// Unique identifier for the response
@@ -24,4 +24,24 @@ import Foundation
     var attributionsHTML:String? { get }
     /// String in HTML to display as a general warning with the route.
     var warningsHTML:String? { get }
+}
+
+@objc public class UTDirectionsResponse : NSObject, DirectionsResponse {
+    
+    let adapted:UrbanThingsAPI.DirectionsResponse
+    
+    public init(adapt:UrbanThingsAPI.DirectionsResponse) {
+        self.adapted = adapt
+        self.status = UTDirectionsResponseStatus(adapt: adapt.status)
+        self.journeys = adapt.journeys?.map { UTJourney(adapt:$0) }
+        self.placePoints = adapt.placePoints?.map { UTPlacePoint(adapt:$0) }
+    }
+    
+    public var responseID:String? { return self.adapted.responseID }
+    public let status:DirectionsResponseStatus
+    public let journeys:[Journey]?
+    public let placePoints:[PlacePoint]?
+    public var sourceName:String? { return self.adapted.sourceName }
+    public var attributionsHTML:String? { return self.adapted.attributionsHTML }
+    public var warningsHTML:String? { return self.adapted.warningsHTML }
 }

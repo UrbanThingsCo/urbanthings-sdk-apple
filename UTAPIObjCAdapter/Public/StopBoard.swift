@@ -3,10 +3,15 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
+import protocol UrbanThingsAPI.StopBoard
+import protocol UrbanThingsAPI.StopBoardRow
+import protocol UrbanThingsAPI.StopBoardGroup
+import protocol UrbanThingsAPI.StopBoardMessage
+import typealias UrbanThingsAPI.UTColor
 
 @objc public protocol StopBoard : Attribution, StopBoardColor {
     /// A piece of text that describes the StopBoard, unique to a particular StopBoardResponse.
@@ -44,4 +49,35 @@ import Foundation
     /// A string that indicates the reason why no data has been returned in this StopBoard. In cases where `StopBoardRow` instancces
     /// exist, this will be `nil`.
     var noDataLabel:String? { get }
+}
+
+@objc public class UTStopBoard : UTAttribution, StopBoard {
+    
+    var stopBoard: UrbanThingsAPI.StopBoard { return self.adapted as! UrbanThingsAPI.StopBoard }
+    
+    public init(adapt: UrbanThingsAPI.StopBoard) {
+        self.rows = adapt.rows.map { UTStopBoardRow(adapt: $0) }
+        self.groups = adapt.groups.map { UTStopBoardGroup(adapt: $0) }
+        self.messages = adapt.messages.map { UTStopBoardMessage(adapt: $0) }
+        self.hideSecondary = TriState(adapt.hideSecondary)
+        self.hidePlatform = TriState(adapt.hidePlatform)
+        self.enableGroupFiltering = TriState(adapt.enableGroupFiltering)
+        super.init(adapt: adapt)
+    }
+    
+    public var headerLabel:String? { return self.stopBoard.headerLabel }
+    public let rows:[StopBoardRow]
+    public let groups:[StopBoardGroup]
+    public let messages:[StopBoardMessage]
+    public let hideSecondary:TriState
+    public let hidePlatform:TriState
+    public let enableGroupFiltering:TriState
+    public var idHeader:String? { return self.stopBoard.idHeader }
+    public var mainHeader:String? { return self.stopBoard.mainHeader }
+    public var secondaryHeader:String? { return self.stopBoard.secondaryHeader }
+    public var platformHeader:String? { return self.stopBoard.platformHeader }
+    public var timeHeader:String? { return self.stopBoard.timeHeader }
+    public var noDataLabel:String? { return self.stopBoard.noDataLabel }
+    public var color:UTColor? { return self.stopBoard.color }
+    public var colorCompliment:UTColor? { return self.stopBoard.colorCompliment }
 }

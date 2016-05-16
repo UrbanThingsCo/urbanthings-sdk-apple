@@ -3,10 +3,11 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
+import protocol UrbanThingsAPI.TransitJourneyLeg
 
 /// `TransitJourneyLeg` protocol extends `JourneyLeg` to add details specific to a journey leg taken by transit service such as bus or train.
 @objc public protocol TransitJourneyLeg : JourneyLeg {
@@ -18,4 +19,20 @@ import Foundation
     /// A list of stops that will be called at en-route, if known.
     var scheduledStopCalls: [TransitScheduledCall]? { get }
     
+}
+
+@objc public class UTTransitJourneyLeg : UTJourneyLeg, TransitJourneyLeg {
+    
+    var transitJourneyLeg:UrbanThingsAPI.TransitJourneyLeg { return self.adapted as! UrbanThingsAPI.TransitJourneyLeg }
+    
+    public init(adapt: UrbanThingsAPI.TransitJourneyLeg) {
+        self.linkedTransitRouteInfo = UTTransitRouteInfo(adapt: adapt.linkedTransitRouteInfo)
+        self.linkedTransitTripInfo = UTTransitTripInfo(adapt: adapt.linkedTransitTripInfo)
+        self.scheduledStopCalls = adapt.scheduledStopCalls?.map { UTTransitScheduledCall(adapt: $0) }
+        super.init(adapt: adapt)
+    }
+    
+    public let linkedTransitRouteInfo: TransitRouteInfo?
+    public let linkedTransitTripInfo: TransitTripInfo?
+    public let scheduledStopCalls: [TransitScheduledCall]?
 }

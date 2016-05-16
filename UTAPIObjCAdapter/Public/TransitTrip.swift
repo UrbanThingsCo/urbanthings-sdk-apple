@@ -3,10 +3,11 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
+import protocol UrbanThingsAPI.TransitTrip
 
 /// `TransitTrip` details a transit route and one of the scheduled times that the route runs.
 @objc public protocol TransitTrip {
@@ -18,4 +19,21 @@ import Foundation
     var stopCalls:[TransitStopScheduledCallSummary] { get }
     /// Google polyline string representing the route
     var polyline:String? { get }
+}
+
+@objc public class UTTransitTrip : NSObject, TransitTrip {
+    
+    let adapted: UrbanThingsAPI.TransitTrip
+    
+    public init(adapt: UrbanThingsAPI.TransitTrip) {
+        self.adapted = adapt
+        self.info = UTTransitTripInfo(adapt: adapt.info)!
+        self.calendar = UTTransitCalendar(adapt: adapt.calendar)
+        self.stopCalls = adapt.stopCalls.map { UTTransitStopScheduledCallSummary(adapt: $0) }
+    }
+    
+    public let info:TransitTripInfo
+    public let calendar:TransitCalendar?
+    public let stopCalls:[TransitStopScheduledCallSummary]
+    public var polyline:String? { return self.adapted.polyline }
 }

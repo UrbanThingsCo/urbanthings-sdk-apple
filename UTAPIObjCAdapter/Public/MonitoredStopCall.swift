@@ -3,11 +3,12 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
-import UrbanThingsAPI
+import protocol UrbanThingsAPI.MonitoredStopCall
+import enum UrbanThingsAPI.MonitoredStopCallDisplayFormat
 
 /// `MonitoredStopCall` contains realtime information for a timetabled call at a transit stop.
 @objc public protocol MonitoredStopCall : StopCall {
@@ -27,4 +28,20 @@ import UrbanThingsAPI
     var isCancelled:Bool { get }
 }
 
-
+@objc public class UTMonitoredStopCall : UTStopCall, MonitoredStopCall {
+    
+    var monitoredStopCall:UrbanThingsAPI.MonitoredStopCall { return self.adapted as! UrbanThingsAPI.MonitoredStopCall }
+    
+    public init(adapt:UrbanThingsAPI.MonitoredStopCall) {
+        self.vehicleRTI = UTVehicleRTI(adapt: adapt.vehicleRTI)
+        super.init(adapt: adapt)
+    }
+    
+    public var expectedArrivalTime:NSDate? { return self.monitoredStopCall.expectedArrivalTime }
+    public var expectedDepartureTime:NSDate? { return self.monitoredStopCall.expectedDepartureTime }
+    public var distanceMetres:Int { return self.monitoredStopCall.distanceMetres ?? -1 }
+    public var masterDisplayFormat:MonitoredStopCallDisplayFormat { return self.monitoredStopCall.masterDisplayFormat }
+    public let vehicleRTI:VehicleRTI
+    public var platform:String? { return self.monitoredStopCall.platform }
+    public var isCancelled:Bool { return self.monitoredStopCall.isCancelled }
+}

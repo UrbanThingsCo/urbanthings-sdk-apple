@@ -3,11 +3,12 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
-import UrbanThingsAPI
+import protocol UrbanThingsAPI.Disruption
+import enum UrbanThingsAPI.DisruptionSeverity
 
 /// Defines properties for a disruption record.
 @objc public protocol Disruption {
@@ -24,4 +25,20 @@ import UrbanThingsAPI
     /// The severity of the disruption, on a scale of 1-10, with 10 being the most severe
     var severity:DisruptionSeverity { get }
     
+}
+
+@objc public class UTDisruption : NSObject, Disruption {
+    
+    let adapted:UrbanThingsAPI.Disruption
+    
+    public init(adapt:UrbanThingsAPI.Disruption) {
+        self.adapted = adapt
+    }
+    
+    public var startDate:NSDate? { return self.adapted.startDate }
+    public var endDate:NSDate? { return self.adapted.endDate }
+    public var localizedSummary:String? { return self.adapted.localizedSummary }
+    public var localizedDescription:String? { return self.adapted.localizedDescription }
+    public var localizedAdditionalInfo:String? { return self.adapted.localizedAdditionalInfo }
+    public var severity:DisruptionSeverity { return self.adapted.severity }
 }

@@ -3,10 +3,11 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
+import protocol UrbanThingsAPI.VehicleRTI
 
 
 @objc public protocol VehicleRTI {
@@ -19,10 +20,30 @@ import Foundation
     var delayOffsetMinutes:Int { get }
     /// The vehicle registration number, as publicly displayed.
     var vehicleRegistrationCode:String? { get }
+    /// Indicates whether the capacity and occupancy data is valid
+    var hasCapacityData:Bool { get }
     /// The number of passengers that this vehicle is able to carry, if avialable.
-    var vehicleCapacityTotalPassengers:Int { get }
+    var vehicleCapacityTotalPassengers:UInt { get }
     /// The number of passengers presently on board this vehicle, if available.
-    var vehicleOccupancyPassengers:Int { get }
+    var vehicleOccupancyPassengers:UInt { get }
     /// Indicates whether the vehicle been cancelled (either in advance, or en-route)
-    var isCancelled:Bool { get }
+    var isCancelled:TriState { get }
+}
+
+@objc public class UTVehicleRTI : NSObject, VehicleRTI {
+    
+    let adapted:UrbanThingsAPI.VehicleRTI
+    
+    public init(adapt:UrbanThingsAPI.VehicleRTI) {
+        self.adapted = adapt
+    }
+    
+    public var agencyCode:String? { return self.adapted.agencyCode }
+    public var vehicleID:String { return self.adapted.vehicleID }
+    public var delayOffsetMinutes:Int { return self.adapted.delayOffsetMinutes ?? 0 }
+    public var vehicleRegistrationCode:String? { return self.adapted.vehicleRegistrationCode }
+    public var hasCapacityData:Bool { return self.adapted.vehicleCapacityTotalPassengers != nil && self.adapted.vehicleOccupancyPassengers != nil }
+    public var vehicleCapacityTotalPassengers:UInt { return self.adapted.vehicleCapacityTotalPassengers ?? 0 }
+    public var vehicleOccupancyPassengers:UInt { return self.adapted.vehicleCapacityTotalPassengers ?? 0 }
+    public var isCancelled:TriState { return TriState(self.adapted.isCancelled) }
 }

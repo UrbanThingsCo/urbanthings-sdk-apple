@@ -3,11 +3,12 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
-import UrbanThingsAPI
+import protocol UrbanThingsAPI.TransitCalendar
+import enum UrbanThingsAPI.WeekDay
 
 /// `TransitCalendar` provides details about the dates / days of the week that a particular `TransitTrip` operates.
 @objc public protocol TransitCalendar {
@@ -23,4 +24,23 @@ import UrbanThingsAPI
     var excludedRunningDates:[NSDate] { get }
     /// Test if the trip runs on a particular day of the week
     func runsOn(weekday:WeekDay) -> Bool
+}
+
+@objc public class UTTransitCalendar : NSObject, TransitCalendar {
+    
+    let adapted: UrbanThingsAPI.TransitCalendar
+    
+    public init?(adapt: UrbanThingsAPI.TransitCalendar?) {
+        guard let adapt = adapt else {
+            return nil
+        }
+        self.adapted = adapt
+    }
+    
+    public var calendarID:String { return self.adapted.calendarID }
+    public var startDate:NSDate { return self.adapted.startDate }
+    public var endDate:NSDate { return self.adapted.endDate }
+    public var additionalRunningDates:[NSDate] { return self.adapted.additionalRunningDates }
+    public var excludedRunningDates:[NSDate] { return self.adapted.excludedRunningDates }
+    public func runsOn(weekday:WeekDay) -> Bool { return self.adapted.runsOn(weekday) }
 }

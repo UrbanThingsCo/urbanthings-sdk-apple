@@ -3,11 +3,12 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
-import UrbanThingsAPI
+import protocol UrbanThingsAPI.TransitStop
+import enum UrbanThingsAPI.TransitMode
 
 /// Defines a transit stop
 ///
@@ -30,4 +31,22 @@ import UrbanThingsAPI
     var isClosed:Bool { get }
     /// Mode of transport available from the stop
     var stopMode:TransitMode { get }
+}
+
+@objc public class UTTransitStop : UTPlacePoint, TransitStop {
+    
+    var transitStop:UrbanThingsAPI.TransitStop { return super.adapted as! UrbanThingsAPI.TransitStop }
+    
+    public init(adapt: UrbanThingsAPI.TransitStop) {
+        super.init(adapt: adapt)
+    }
+    
+    public var additionalCode:String? { return self.transitStop.additionalCode }
+    public var smsCode:String? { return self.transitStop.smsCode }
+    public var hasBearing:Bool { return self.transitStop.bearing != nil }
+    public var bearing:Int { return self.transitStop.bearing ?? 0 }
+    public var directionName:String? { return self.transitStop.directionName }
+    public var stopIndicator:String? { return self.transitStop.stopIndicator }
+    public var isClosed:Bool { return self.transitStop.isClosed }
+    public var stopMode:TransitMode { return self.transitStop.stopMode }
 }

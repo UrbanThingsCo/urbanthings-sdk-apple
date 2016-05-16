@@ -3,10 +3,11 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
+import protocol UrbanThingsAPI.TransitStopRTIReport
 
 /// `TransitStopRTIReport` provides a report for a particular stop. There may be multiple reports for a stop.
 @objc public protocol TransitStopRTIReport : Attribution {
@@ -28,4 +29,23 @@ import Foundation
     /// The time at which this report was generated. Can be used to generate a more accurate 'waiting time until vehicle comes'
     /// since we know what the server THOUGHT the time was when it generated the expected time.
     var timestamp:NSDate? { get }
+}
+
+@objc public class UTTransitStopRTIReport : UTAttribution, TransitStopRTIReport {
+    
+    var transitStopRTIReport:UrbanThingsAPI.TransitStopRTIReport { return self.adapted as! UrbanThingsAPI.TransitStopRTIReport }
+    
+    public init(adapt: UrbanThingsAPI.TransitStopRTIReport) {
+        self.upcomingCalls = adapt.upcomingCalls.map { UTMonitoredStopCall(adapt: $0) }
+        self.disruptions = adapt.disruptions.map { UTDisruption(adapt: $0) }
+        super.init(adapt: adapt)
+    }
+    
+    public var reportName:String? { return self.transitStopRTIReport.reportName }
+    public var platformID:String? { return self.transitStopRTIReport.platformID }
+    public let upcomingCalls:[MonitoredStopCall]
+    public let disruptions:[Disruption]
+    public var noDataLabel:String? { return self.transitStopRTIReport.noDataLabel }
+    public var sourceName:String { return self.transitStopRTIReport.sourceName }
+    public var timestamp:NSDate? { return self.transitStopRTIReport.timestamp }
 }

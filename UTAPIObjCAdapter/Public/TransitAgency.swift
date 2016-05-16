@@ -3,10 +3,11 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
+import protocol UrbanThingsAPI.TransitAgency
 
 /// `TransitAgency` provides details for a transit agency.
 @objc public protocol TransitAgency {
@@ -28,4 +29,23 @@ import Foundation
     var agencyRegion:String? { get }
     /// The data import source for this agency.
     var agencyImportSource:String? { get }
+}
+
+@objc public class UTTransitAgency : NSObject, TransitAgency {
+    
+    let adapted: UrbanThingsAPI.TransitAgency
+    
+    public init(adapt: UrbanThingsAPI.TransitAgency) {
+        self.adapted = adapt
+    }
+
+    public var agencyID:String { return self.adapted.agencyID }
+    public var agencyName:String { return self.adapted.agencyName }
+    public var agencyURL:NSURL { return self.adapted.agencyURL }
+    public var agencyTimeZone:NSTimeZone { return self.adapted.agencyTimeZone }
+    public var agencyLanguage:String? { return self.adapted.agencyLanguage }
+    public var agencyPhone:String? { return self.adapted.agencyPhone }
+    public var agencyFareURL:NSURL? { return self.adapted.agencyFareURL }
+    public var agencyRegion:String? { return self.adapted.agencyRegion }
+    public var agencyImportSource:String? { return self.adapted.agencyImportSource }
 }

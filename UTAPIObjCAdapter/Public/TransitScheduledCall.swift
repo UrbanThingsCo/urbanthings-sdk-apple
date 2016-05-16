@@ -3,10 +3,12 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
+import protocol UrbanThingsAPI.TransitScheduledCall
+import enum UrbanThingsAPI.TransitCallType
 
 /// `TransitCallType` details the types of transit call that can be made.
 @objc public enum TransitCallType:Int {
@@ -19,6 +21,10 @@ import Foundation
     /// Make arrangements with the driver of the vehicle.
     case ArrangeWithDriver = 3
     case Unknown = -1
+    
+    init(_ value: UrbanThingsAPI.TransitCallType?) {
+        self = TransitCallType(rawValue: value?.rawValue ?? -1) ?? .Unknown
+    }
 }
 
 @objc public protocol TransitScheduledCall {
@@ -32,4 +38,18 @@ import Foundation
     var dropoffType:TransitCallType { get }
 }
 
+@objc public class UTTransitScheduledCall : NSObject, TransitScheduledCall {
+    
+    let adapted:UrbanThingsAPI.TransitScheduledCall
+    
+    public init(adapt: UrbanThingsAPI.TransitScheduledCall) {
+        self.adapted = adapt
+        self.pickupType = TransitCallType(adapt.pickupType)
+        self.dropoffType = TransitCallType(adapt.dropoffType)
+    }
 
+    public var scheduledArrivalTime: NSDate? { return self.adapted.scheduledArrivalTime }
+    public var scheduledDepartureTime: NSDate? { return self.adapted.scheduledDepartureTime }
+    public let pickupType: TransitCallType
+    public let dropoffType: TransitCallType
+}

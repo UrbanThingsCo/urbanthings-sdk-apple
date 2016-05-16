@@ -3,12 +3,13 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
 import CoreLocation
-import UrbanThingsAPI
+import protocol UrbanThingsAPI.PlacePoint
+import enum UrbanThingsAPI.PlacePointType
 
 /// PlacePoint represents a place with a geo-location.
 ///
@@ -40,3 +41,21 @@ import UrbanThingsAPI
     var location:CLLocationCoordinate2D { get }
 }
 
+@objc public class UTPlacePoint : NSObject, PlacePoint {
+    
+    let adapted:UrbanThingsAPI.PlacePoint
+    
+    public init(adapt:UrbanThingsAPI.PlacePoint) {
+        self.adapted = adapt
+        self.location = CLLocationCoordinate2D(latitude: adapt.location.latitude, longitude: adapt.location.longitude)
+    }
+    
+    public var name:String? { return self.adapted.name }
+    public var importSource:String? { return self.adapted.importSource }
+    public var primaryCode:String { return self.adapted.primaryCode }
+    public var placePointType:PlacePointType { return self.adapted.placePointType }
+    public var localityName:String? { return self.adapted.localityName }
+    public var country:String? { return self.adapted.country }
+    public var hasResourceStatus:Bool { return self.adapted.hasResourceStatus }
+    public let location:CLLocationCoordinate2D
+}

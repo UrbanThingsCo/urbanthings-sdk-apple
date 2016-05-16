@@ -3,11 +3,11 @@
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 15/05/2016.
-//  Copyright © 2016 Fat Attitude. All rights reserved.
+//  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import Foundation
-
+import protocol UrbanThingsAPI.RTIResponse
 
 /// `RTIResponse` gives basic details for a real time response.
 @objc public protocol RTIResponse {
@@ -18,4 +18,17 @@ import Foundation
     /// The data source for this report - may optionally be displayed by the client.
     var sourceName:String { get }
     
+}
+
+@objc public class UTRTIResponse : NSObject, RTIResponse {
+    
+    let adapted:UrbanThingsAPI.RTIResponse
+    
+    public init(adapt:UrbanThingsAPI.RTIResponse) {
+        self.adapted = adapt
+    }
+    
+    public var stopID:String { return self.adapted.stopID }
+    public var noDataLabel:String? { return self.adapted.noDataLabel }
+    public var sourceName:String { return self.adapted.sourceName }
 }
