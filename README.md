@@ -1,6 +1,8 @@
 ![Logo](http://urbanthings.co/wp-content/themes/urbanthings/assets/images/urbanthings_logo_small.png)
+
 # UrbanThings API Framework for Apple Platforms
 [![Carthage compatible](https://img.shields.io/badge/Version-0.9-109480.svg?style=flat)]()
+[![CI Status](http://img.shields.io/travis/urbanthings/urbanthings-sdk-apple.svg?style=flat)](https://travis-ci.org/urbanthings/urbanthings-sdk-apple)
 
 ## Introduction
 
@@ -315,93 +317,47 @@ if let f = objc.intOptional as? Float {
 Because of the above ambiguity when working in Swift we have taken the decision not to provide Objective-C compatability directly.
 
 #### How to work in Objective-C
-To use data within Objective-C it needs to be converted to Objective-C compatabile classes. There are multiple possible approaches but we suggest providing adapter objects.
+To use data within Objective-C it needs to be converted to Objective-C compatabile classes. Whilst you are free to implement this yourself to meet your needs we are providing a separate framework within the SDK **UTAPIObjCAdapter**.
+
+The framework provides a full set of objects that can adapt the pure Swift response data structures to be useable from Objective-C. These all take an object implementing the corresponding Swift response protocol and implement a corresponding Objective-C protocol. Again this protocol based approach allows you to provide your own implementations of the Objective-C data response protocols if you don't want to use the provided implementations.
+
+As an example lets assume we have an Objective-C class that processes a list of `PlacePoint` objects:
 
 ```
-@objc class ObjcAdapter : NSObject, ObjcEquivalent {
+import <UTAPIObjCAdapter/UTAPIObjCAdapter.h>
 
-    let adapted:SwiftOnly
-
-    init(adapt:SwiftOnly) {
-        self.adapted = adapt
-        super.init()
-    }
-    
-    @objc var intOptional:NSNumber {
-    	  guard adapted.intOptional != nil else {
-    	      return nil
-    	  }
-    	  return NSNumber(integer:self.adapted.intOptional!)
-    }
-    
-    @objc var uintOptional:NSNumber {
-    	  guard adapted.uintOptional != nil else {
-    	      return nil
-    	  }
-    	  return NSNumber(unsignedInteger:self.adapted.uintOptional!)
-    }
-}
-```
-
-Objective-C code snippet to demonstrate passing data from Swift code (this assumes that the necessary bridging headers and Xcode options are configured). Please see the relevant [Apple documentation](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/) for more details.
-
-```
-@interface ObjectiveCStuff : NSObject
-- (void)doSometing:(ObjcAdapter*)objc;
+@interface PlacePointProcessor : NSObject
+- (void)process:(NSArray<PlacePoint *> * _Nonnull)points;
 @end
 
-@implementation ObjectiveCStuff
-- (void)doSomething:(nonnull ObjcAdapter*)objc {
-    NSInteger n = 0;
-    NSUInteger u = 0;
-    if (objc.intOptional = nil) {
-        n = [objc.intOptional integerValue];
-    }
-    if (objc.uintOptional != nil) {
-        u = [objc.intOptional unsignedIntegerValue];
-    }
-    if (n != 0 && u != 0) {
-        NSLog("Got %ld and %lu", n, u);
-    }
+@implementation PlacePointProcessor
+- (void)process:(NSArray<PlacePoint *> * _Nonnull)points {
+    // Do some processing...
 }
 @end
 ```
 
-This can the be utilized as follows from Swift code:
+Objective-C code snippet above assumes that the necessary bridging headers and Xcode options are configured. Please see the relevant [Apple documentation](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/) for more details.
+
+Now we can write some Swift code to request the data to be processed by the Objective-C code:
 
 ```
-// Get a class instance that can be passed to Objective-C code
-let objc = ObjcAdapter(adapt: swiftOnlyInstance)
-// Get ObjC class defined in Objective-C code
-let objcClass = ObjectiveCStuff()
-// Call its method
-objcClass.doSomething(objc)
+import UrbanThingsAPI
+import UTAPIObjCAdapter
 
-```
-
-In the example a reference to the adapted instance is held within the adapter and used as the source of data. Since all the response object protocols define immutablility no copying of the wrapped object's data takes place, regardless to whether the actual instance is a class or struct. 
-
-It also provides a more or less one to one mapping of properties, but a different interface could be provided for the adapter if it would make more sense for Objective-C code. A possible example of this might be:
-
-```
-@objc protocol ObjcEquivalent {
-	var hasIntOptional:Bool { get }
-	var intOptionalValue:Int { get }
-	var hasUIntOptional:Bool { get }
-	var uintOptionalValue:Int { get }
+let api = UrbanThingsAPI(apiKey:"A VALID API KEY")
+let processor = PlacePointProcessor()
+api.sendRequest(UTPlacePointsRequest(center:office, radius:500)) { data, error in
+	if let data = data {
+		// Map the array of Swift objects to adapted Objective-C objects
+		let adaptedData = data.points.map { UTPlacePoint(adapt:$0) }
+		// Can now pass this to the Objective-C method
+		processor.process(adaptedData)
+	} else {
+		print("Error - \(error)")
+	}
 }
 ```
-
-Where arrays are involved in the response set you can use the Swift map function to convert the array:
-
-```
-// Array of objects that cannot be used by Objective-C code
-let swiftArray = [SwiftOnly]()
-// Create an array that can be passed to Objective-C code
-let objcArray:[ObjEquivalent] = swiftArray.map { ObjcAdapter(adapt:$0) }
-```
-
-As we work the SDK into our existing Objective-C codebase we will be building a set of adapter objects which will be made available as part of the open source offering.
 
 #### _ObjectiveCBridgeable protocol
 Items that are bridgable between Swift and Objective-C implement this protocol. However at this time this protocol is poorly documented. We will be looking into whether this is an approach to simplify interoperabilty as well although there are some complications within the framework as how we might acheive this cleanly. However if we can work through the issues you would then have a set of Objective-C objects / adapters and could convert using type casting:
