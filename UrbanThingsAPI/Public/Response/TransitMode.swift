@@ -57,6 +57,8 @@ import Foundation
     case Car = 12
     /// Transit by coach, raw value 13
     case Coach = 13
+    /// A vehicle powered by electricity
+    case ElectricVehicle = 14
     /// Transit by multiple modes, raw value 9000
     case Multiple = 9000
     /// Unknown transit system, none of the other available values are appropriate, raw value 9999
