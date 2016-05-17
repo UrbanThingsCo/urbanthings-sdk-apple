@@ -6,8 +6,6 @@
 //  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 //! Project version number for UTAPIObjCAdapter-iOS.
 FOUNDATION_EXPORT double UTAPIObjCAdapter_iOSVersionNumber;
 
