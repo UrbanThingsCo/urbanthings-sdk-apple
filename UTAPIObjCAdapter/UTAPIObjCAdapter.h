@@ -1,6 +1,6 @@
 //
-//  UTAPIObjCAdapter-iOS.h
-//  UTAPIObjCAdapter-iOS
+//  UTAPIObjCAdapter.h
+//  UTAPIObjCAdapter
 //
 //  Created by Mark Woollard on 15/05/2016.
 //  Copyright © 2016 UrbanThings. All rights reserved.

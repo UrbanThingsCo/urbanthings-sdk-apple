@@ -659,7 +659,6 @@
 		2CD691A81CD916C300747E36 /* RealtimeReportRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691A71CD916C300747E36 /* RealtimeReportRequest.swift */; };
 		2CD691AB1CD9258D00747E36 /* RealtimeStopboardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691AA1CD9258D00747E36 /* RealtimeStopboardRequest.swift */; };
 		2CEA4B5B1CE36F14004A568F /* TransitStopsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CEA4B5A1CE36F14004A568F /* TransitStopsResponse.json */; };
-		2CFFC9E31CE86A8D002D8AC4 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CFFCA121CE86CAB002D8AC4 /* Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA111CE86CAB002D8AC4 /* Attribution.swift */; };
 		2CFFCA131CE86CAB002D8AC4 /* Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA111CE86CAB002D8AC4 /* Attribution.swift */; };
 		2CFFCA141CE86CAB002D8AC4 /* Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA111CE86CAB002D8AC4 /* Attribution.swift */; };
@@ -804,9 +803,6 @@
 		2CFFCAE41CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAE21CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift */; };
 		2CFFCAE51CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAE21CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift */; };
 		2CFFCAE61CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCAE21CE8CB49002D8AC4 /* TransitTripCalendarGroup.swift */; };
-		2CFFCAE71CE8CC8E002D8AC4 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CFFCAE81CE8CC8E002D8AC4 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CFFCAE91CE8CC8F002D8AC4 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1651,7 +1647,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CFFC9E31CE86A8D002D8AC4 /* UTAPIObjCAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1659,7 +1654,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CFFCAE91CE8CC8F002D8AC4 /* UTAPIObjCAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1667,7 +1661,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CFFCAE81CE8CC8E002D8AC4 /* UTAPIObjCAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1675,7 +1668,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CFFCAE71CE8CC8E002D8AC4 /* UTAPIObjCAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
