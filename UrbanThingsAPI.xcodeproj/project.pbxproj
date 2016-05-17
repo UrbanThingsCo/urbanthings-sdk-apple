@@ -465,6 +465,7 @@
 		2C2A61C41CE3C40A0081C1EC /* CallingAtStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */; };
 		2C2A61C51CE3C40A0081C1EC /* CallingAtStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */; };
 		2C2A61C61CE3C40A0081C1EC /* CallingAtStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */; };
+		2C46A13C1CEB49300041B514 /* UrbanThingsAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2C46A13B1CEB49300041B514 /* UrbanThingsAPI.podspec */; };
 		2C4A15571CD1E9EF00C61B76 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A15561CD1E9EF00C61B76 /* Error.swift */; };
 		2C591E7A1CDA16F300B955A6 /* ResourceTrend+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E791CDA16F300B955A6 /* ResourceTrend+JSON.swift */; };
 		2C591E821CDA1D4A00B955A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E811CDA1D4A00B955A6 /* AppDelegate.swift */; };
@@ -773,6 +774,7 @@
 		2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestHandler.swift; sourceTree = "<group>"; };
 		2C2A61BF1CE3C3D80081C1EC /* TransitStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TransitStops.json; sourceTree = "<group>"; };
 		2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CallingAtStops.json; sourceTree = "<group>"; };
+		2C46A13B1CEB49300041B514 /* UrbanThingsAPI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UrbanThingsAPI.podspec; sourceTree = "<group>"; };
 		2C4A15561CD1E9EF00C61B76 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		2C591E771CD9CAD700B955A6 /* UTObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTObjectTests.swift; sourceTree = "<group>"; };
 		2C591E791CDA16F300B955A6 /* ResourceTrend+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResourceTrend+JSON.swift"; sourceTree = "<group>"; };
@@ -1036,6 +1038,7 @@
 			children = (
 				2C80488A1CE4E12A00AE863A /* LICENSE */,
 				2C8048881CE4D49D00AE863A /* README.md */,
+				2C46A13B1CEB49300041B514 /* UrbanThingsAPI.podspec */,
 				2C5F2C071CCE9AA900999713 /* UrbanThingsAPI */,
 				2CD690EF1CD351D900747E36 /* UrbanThingsAPITests */,
 				2C591E801CDA1D4A00B955A6 /* Demo */,
@@ -1713,6 +1716,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A13C1CEB49300041B514 /* UrbanThingsAPI.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2923,6 +2927,7 @@
 				2CFFCAED1CEAF030002D8AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

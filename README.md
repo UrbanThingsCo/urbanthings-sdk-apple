@@ -40,20 +40,6 @@ github urbanthings/urbanthings-sdk-apple
 ```
 (adjust as per Carthage docs if you want specific version or branch). Also refer to the [docs](https://github.com/Carthage/Carthage) for details on how to build and install or update the framework into your project.
 
-#### Swift Package Manager
-[![SPM compatible](https://img.shields.io/badge/SPM-compatible-109480.svg?style=flat)]()
-
-If you use Swift Package Manager add UrbanThingsAPI as dependency to you Package.swift:
-
-```
-let package = Package(
-  name: "MyPackage",
-  dependencies: [
-    .Package(url: "https://github.com/urbanthings/urbanthings-sdk-apple.git", "0.9")
-  ]
-)
-```
-
 #### CocoaPods
 [![CocoaPods Compatible](https://img.shields.io/badge/CocoaPods-compatible-109480.svg?style=flat)](http://cocoapods.org)
 
@@ -64,6 +50,11 @@ it, simply add the following line to your Podfile:
 pod "UrbanThingsAPI"
 ```
 More information on CocoaPods can be found [here](https://cocoapods.org).
+
+#### Swift Package Manager
+[![SPM compatible](https://img.shields.io/badge/SPM-not yet-109480.svg?style=flat)]()
+
+Swift Package Manager currently only supports OS X and Linux and not from within Xcode. We will be adding support once it fully suports all Apple platforms. 
 
 #### Add source to your project
 If you do not want to use a package manager clone the [repository](https://github.com/urbanthings/urbanthings-sdk-apple.git), open the `UrbanThingsAPI.xcodeproj` project with Xcode and build the target(s) for the platforms you required. You can then add the frameworks to your project. Alternatively you can add the  `UrbanThingsAPI.xcodeproj` as a project within your own project.
