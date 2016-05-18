@@ -27,9 +27,7 @@ class TransitStopAdapter : NSObject, MKAnnotation {
         return self.stop.name
     }
     
-    @objc var subtitle:String? {
-        return nil;
-    }
+    @objc var subtitle:String? = "Fetching..."
 }
 
 class StopsMapViewController : UIViewController, MKMapViewDelegate {
@@ -76,12 +74,27 @@ class StopsMapViewController : UIViewController, MKMapViewDelegate {
         self.mapView.setCamera(camera, animated: true)
     }
     
+    var resourceRequest:UrbanThingsAPIRequest?
+    
     // MARK: MKMapViewDelegate
     @objc func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         if let annotation = view.annotation as? TransitStopAdapter {
             NSNotificationCenter.defaultCenter().postNotificationName(TransitStopSelected,
                                                                       object: self,
                                                                       userInfo: [TransitStopPrimaryCode:annotation.stop.primaryCode])
+            
+            self.resourceRequest = StopsModel.sharedInstance.getStopResources(annotation.stop) { msg in
+                NSOperationQueue.mainQueue().addOperationWithBlock {
+                    (view.annotation as? TransitStopAdapter)?.subtitle = msg
+                }
+                self.resourceRequest?.cancel()
+                self.resourceRequest = nil
+            }
         }
+    }
+    
+    @objc func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
+        resourceRequest?.cancel()
+        resourceRequest = nil
     }
 }
