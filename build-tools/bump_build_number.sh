@@ -7,6 +7,7 @@ fi
 
 plist="$1"
 dir="$(dirname "$plist")"
+prod="$(basename $dir)"
 
 # Only increment the build number if source files have changed
 if [ -n "$(find "$dir" \! -path "*xcuserdata*" \! -path "*.git" -newer "$plist")" ]; then
@@ -17,10 +18,10 @@ if [ -n "$(find "$dir" \! -path "*xcuserdata*" \! -path "*.git" -newer "$plist")
     fi
     buildnum=`printf "%d" 0x$buildnum`
     buildnum=$(expr $buildnum + 1)
-    buildnum=`printf "%x" $buildnum`
+    buildnum=`printf "%04x" $buildnum`
     /usr/libexec/Plistbuddy -c "Set CFBundleVersion $buildnum" "$plist"
-    echo "Incremented build number to $buildnum"
+    echo "Incremented $prod build number to $buildnum"
 else
-    echo "Not incrementing build number as source files have not changed"
+    echo "Not incrementing $prod build number as source files have not changed"
 fi
 
