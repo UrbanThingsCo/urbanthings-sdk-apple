@@ -24,6 +24,16 @@ class ContainerViewController : UIViewController {
         self.refreshData()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        
+        // Ensure you have set a valid ApiKey in StopsModel.swift
+        if !StopsModel.sharedInstance.hasValidApiKey() {
+            let alert = UIAlertController(title: "No API Key", message: "To use the demo app you must insert your Api key into the appropriate place in file StopsModel.swift", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
     @IBAction func changeType(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 1:
