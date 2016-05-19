@@ -11,7 +11,7 @@ import UrbanThingsAPI
 import CoreLocation
 
 // Replace string with your API key
-let ApiKey = "A valid API key"
+let ApiKey = "REPLACE_WITH_VALID_API_KEY"
 
 /// Notification that is sent whenever there is a data update received from the server.
 let StopDataUpdated = "StopDataUpdated"

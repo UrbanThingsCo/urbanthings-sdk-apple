@@ -20,6 +20,12 @@ class ContainerViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Ensure you have set a valid ApiKey in StopsModel.swift
+        if ApiKey == "REPLACE_WITH_VALID_API_KEY" {
+            let alert = UIAlertController(title: "No API Key", message: "To use the demo app you must insert your Api key into the appropriate place in file StopsModel.swift", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alert, animated: true, completion: nil) 
+        }
+        
         self.location = StopsModel.sharedInstance.demoLocations[0]
         self.refreshData()
     }
