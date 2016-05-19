@@ -10,8 +10,8 @@ import Foundation
 import UrbanThingsAPI
 import CoreLocation
 
-// Replace string with your API key
-let ApiKey = "A valid API key"
+// Replace this blank string with your API key
+let ApiKey = "YOUR_API_KEY"
 
 /// Notification that is sent whenever there is a data update received from the server.
 let StopDataUpdated = "StopDataUpdated"
@@ -158,5 +158,9 @@ class StopsModel {
             // Send the latest value
             completion(data?.statusText)
         }
+    }
+    
+    func hasValidApiKey() -> Bool {
+        return !ApiKey.containsString("API_KEY")
     }
 }
