@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "UnitTests-Swift.h"
-#import <UIKit/UIKit.h>
+
 @import UTAPIObjCAdapter;
 
 @interface StaticAdapterTests : XCTestCase

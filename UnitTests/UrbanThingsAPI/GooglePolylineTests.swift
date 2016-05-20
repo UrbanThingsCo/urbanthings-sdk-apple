@@ -43,6 +43,7 @@ class GooglePolylineTests: XCTestCase {
         XCTAssertEqual(testCoords.count, index)
     }
     
+    @available(tvOS 9.2, *)
     func testDecodingToMKPolyline() throws {
         let sut = testString
         let mkPolyline = try sut.asMKPolyline()
@@ -65,6 +66,7 @@ class GooglePolylineTests: XCTestCase {
         XCTAssertThrowsError(try sut.asCoordinateArray())
     }
 
+    @available(tvOS 9.2, *)
     func testDecodingToMKPolylineFailsForBadString() {
         let sut = testBadString
         XCTAssertThrowsError(try sut.asMKPolyline())
@@ -75,11 +77,13 @@ class GooglePolylineTests: XCTestCase {
         XCTAssertEqual(sut, testString)
     }
     
+    @available(tvOS 9.2, *)
     func testEncodingMKMapPoints() {
         let sut = String(googlePolylineMapPointSequence: testCoords.map { MKMapPointForCoordinate($0) })
         XCTAssertEqual(sut, testString)
     }
 
+    @available(tvOS 9.2, *)
     func testEncodingMKMultiPoint() {
         let multiPoint = MKPolyline(sequence: testCoords)
         let sut = String(googlePolylineMKMultiPoint: multiPoint)
