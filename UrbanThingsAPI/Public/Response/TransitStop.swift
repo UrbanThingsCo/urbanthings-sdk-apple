@@ -27,4 +27,6 @@ public protocol TransitStop : PlacePoint {
     var isClosed:Bool { get }
     /// Mode of transport available from the stop
     var stopMode:TransitMode { get }
+    /// Primary code of parent object
+    var parentPrimaryCode:String? { get }
 }

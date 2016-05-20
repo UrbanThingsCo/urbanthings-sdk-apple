@@ -31,6 +31,7 @@ enum JSONKey : String {
     case Longitude = "lng"
     case StopMode = "stopMode"
     case AdditionalCode = "additionalCode"
+    case ParentPrimaryCode = "parentPrimaryCode"
     case SmsCode = "smsCode"
     case Bearing = "bearing"
     case DirectionName = "directionName"

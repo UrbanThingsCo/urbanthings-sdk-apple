@@ -30,6 +30,8 @@ import UTAPI
     var isClosed:Bool { get }
     /// Mode of transport available from the stop
     var stopMode:TransitMode { get }
+    /// Primary code of parent object
+    var parentPrimaryCode: String? { get }
 }
 
 @objc public class UTTransitStop : UTPlacePoint, TransitStop {
@@ -48,4 +50,5 @@ import UTAPI
     public var stopIndicator:String? { return self.transitStop.stopIndicator }
     public var isClosed:Bool { return self.transitStop.isClosed }
     public var stopMode:TransitMode { return self.transitStop.stopMode }
+    public var parentPrimaryCode: String? { return self.transitStop.parentPrimaryCode }
 }
