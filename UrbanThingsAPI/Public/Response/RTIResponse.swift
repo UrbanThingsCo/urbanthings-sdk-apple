@@ -9,8 +9,6 @@
 import Foundation
 
 
-// TODO - confirm which are optional
-
 /// `RTIResponse` gives basic details for a real time response.
 public protocol RTIResponse {
     /// The PrimaryCode of the stop that this RTI Report has been generated for.

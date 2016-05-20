@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C5F2C041CCE9AA900999713"
-               BuildableName = "UrbanThingsAPI.framework"
+               BuildableName = "UTAPI.framework"
                BlueprintName = "UrbanThingsAPI-iOS"
                ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
             </BuildableReference>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2CD690ED1CD351D900747E36"
-               BuildableName = "UrbanThingsAPITests-iOS.xctest"
-               BlueprintName = "UrbanThingsAPITests-iOS"
+               BuildableName = "UnitTests-iOS.xctest"
+               BlueprintName = "UnitTests-iOS"
                ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2CD690ED1CD351D900747E36"
-               BuildableName = "UrbanThingsAPITests-iOS.xctest"
-               BlueprintName = "UrbanThingsAPITests-iOS"
+               BuildableName = "UnitTests-iOS.xctest"
+               BlueprintName = "UnitTests-iOS"
                ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
             </BuildableReference>
             <SkippedTests>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C5F2C041CCE9AA900999713"
-            BuildableName = "UrbanThingsAPI.framework"
+            BuildableName = "UTAPI.framework"
             BlueprintName = "UrbanThingsAPI-iOS"
             ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C5F2C041CCE9AA900999713"
-            BuildableName = "UrbanThingsAPI.framework"
+            BuildableName = "UTAPI.framework"
             BlueprintName = "UrbanThingsAPI-iOS"
             ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
          </BuildableReference>
@@ -102,7 +102,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C5F2C041CCE9AA900999713"
-            BuildableName = "UrbanThingsAPI.framework"
+            BuildableName = "UTAPI.framework"
             BlueprintName = "UrbanThingsAPI-iOS"
             ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
          </BuildableReference>

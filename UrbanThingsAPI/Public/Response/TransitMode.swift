@@ -28,7 +28,7 @@ import Foundation
 /// - Unknown - Unknown transit system, none of the other available values are appropriate
 /// - None - No transit system was specified
 
-public enum TransitMode : Int {
+@objc public enum TransitMode : Int {
     /// Transit by tram, Int value 0
     case Tram = 0
     /// Transit on subway system, raw value 1

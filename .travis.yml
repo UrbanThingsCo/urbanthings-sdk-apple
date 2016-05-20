@@ -8,5 +8,9 @@ script:
   - xctool test -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-iOS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
   - xctool test -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-OSX -sdk macosx ONLY_ACTIVE_ARCH=NO
   - xctool test -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-tvOS -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO 
+  - xctool -project UrbanThingsAPI.xcodeproj -scheme UTAPIObjCAdapter-iOS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool -project UrbanThingsAPI.xcodeproj -scheme UTAPIObjCAdapter-OSX -sdk macosx ONLY_ACTIVE_ARCH=NO
+  - xctool -project UrbanThingsAPI.xcodeproj -scheme UTAPIObjCAdapter-tvOS -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO
+  - xctool -project UrbanThingsAPI.xcodeproj -scheme UTAPIObjCAdapter-watchOS -sdk watchsimulator ONLY_ACTIVE_ARCH=NO
 
 

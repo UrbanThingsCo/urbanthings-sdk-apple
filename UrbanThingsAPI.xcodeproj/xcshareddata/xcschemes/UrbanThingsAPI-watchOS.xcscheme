@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C0CE2C61CE3176E0054847C"
-               BuildableName = "UrbanThingsAPI.framework"
+               BuildableName = "UTAPI.framework"
                BlueprintName = "UrbanThingsAPI-watchOS"
                ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C0CE2C61CE3176E0054847C"
-            BuildableName = "UrbanThingsAPI.framework"
+            BuildableName = "UTAPI.framework"
             BlueprintName = "UrbanThingsAPI-watchOS"
             ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C0CE2C61CE3176E0054847C"
-            BuildableName = "UrbanThingsAPI.framework"
+            BuildableName = "UTAPI.framework"
             BlueprintName = "UrbanThingsAPI-watchOS"
             ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
          </BuildableReference>
