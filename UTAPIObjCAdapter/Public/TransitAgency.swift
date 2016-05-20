@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `TransitAgency` provides details for a transit agency.
-@objc public protocol TransitAgency {
+@objc public protocol TransitAgency : NSObjectProtocol {
     /// The unique identifier representing the agency this record relates to.
     var agencyID:String { get }
     /// The name of the transit agency.

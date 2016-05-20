@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `TransitTrip` details a transit route and one of the scheduled times that the route runs.
-@objc public protocol TransitTrip {
+@objc public protocol TransitTrip : NSObjectProtocol {
     /// Basic information about this trip - agency code, vehicle Headsign, etc.
     var info:TransitTripInfo { get }
     /// The dates on which this trip operates.

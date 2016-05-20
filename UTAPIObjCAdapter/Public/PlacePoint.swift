@@ -13,7 +13,7 @@ import UTAPI
 /// PlacePoint represents a place with a geo-location.
 ///
 /// Inherited by `TransitStop`
-@objc public protocol PlacePoint {
+@objc public protocol PlacePoint : NSObjectProtocol {
     
     /// Place point name in native locale, optional
     var name:String? { get }

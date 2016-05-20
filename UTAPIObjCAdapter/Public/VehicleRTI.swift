@@ -9,7 +9,7 @@
 import Foundation
 import UTAPI
 
-@objc public protocol VehicleRTI {
+@objc public protocol VehicleRTI : NSObjectProtocol {
     /// The unique identifier of the Agency operating this vehicle. If the information comes from our systems, a corresponding
     /// `TransitAgency` object will exist with this ID.
     var agencyCode:String? { get }

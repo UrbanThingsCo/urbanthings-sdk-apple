@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `RTIResponse` gives basic details for a real time response.
-@objc public protocol RTIResponse {
+@objc public protocol RTIResponse : NSObjectProtocol {
     /// The PrimaryCode of the stop that this RTI Report has been generated for.
     var stopID:String { get }
     /// A string that indicates the reason why no RTIReport objects have been returned in this report, if applicable.

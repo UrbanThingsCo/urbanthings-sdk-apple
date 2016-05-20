@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// Defines status data for the response from a directions requests.
-@objc public protocol DirectionsResponseStatus {
+@objc public protocol DirectionsResponseStatus : NSObjectProtocol {
     /// Status code
     var statusCode:Int { get }
     /// Error code

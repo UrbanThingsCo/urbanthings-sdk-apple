@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 import UTAPI
 
-@objc public protocol TransitRouteInfo {
+@objc public protocol TransitRouteInfo : NSObjectProtocol {
     /// A unique code that represents the agency operating this particular route, optional.
     var agencyCode:String? { get }
     /// A unique code that represents this route. Note that IDs in some regions may change periodically and thus should not be stored on the client.

@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `TransitCalendar` provides details about the dates / days of the week that a particular `TransitTrip` operates.
-@objc public protocol TransitCalendar {
+@objc public protocol TransitCalendar : NSObjectProtocol {
     /// The internal unique ID representing this calendar. Multiple trips may share a single calendar. This ID is synonymous with a GTFS 'service ID'
     var calendarID:String { get }
     /// The date that the corresponding TransitTrip begins operating from, inclusive.

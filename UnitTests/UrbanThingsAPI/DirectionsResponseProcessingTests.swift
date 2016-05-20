@@ -10,7 +10,7 @@ import XCTest
 import CoreLocation
 @testable import UTAPI
 
-private let directionsRequest = UTDirectionsRequest(
+let directionsRequest = UTDirectionsRequest(
     origin: TestPlacePoint(primaryCode: "SUNNYMEADS", name:"Sunnymeads Station", location: CLLocationCoordinate2D(latitude: 51.4702933, longitude:-0.5615487)),
     destination: TestPlacePoint(primaryCode: "OFFICE", name:"Office", location: CLLocationCoordinate2D(latitude: 51.5291205, longitude:-0.0802295)))
 

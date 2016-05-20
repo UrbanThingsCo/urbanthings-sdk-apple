@@ -13,7 +13,7 @@ import UTAPI
 public let InvalidDegrees:Double = 360
 
 /// `TransitStopScheduledCallSummary` provides summary details of a single call at a given transit stop.
-@objc public protocol TransitStopScheduledCallSummary {
+@objc public protocol TransitStopScheduledCallSummary : NSObjectProtocol {
     /// The primaryCode of the TransitStop at which the vehicle calls.
     var transitStopPrimaryCode:String { get }
     /// The name of the TransitStop at which the vehicle calls.

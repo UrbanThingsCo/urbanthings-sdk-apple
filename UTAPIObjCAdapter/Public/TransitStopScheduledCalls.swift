@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `TransitStopScheduledCalls` provides details of scheduled calls for a particular transit stop.
-@objc public protocol TransitStopScheduledCalls {
+@objc public protocol TransitStopScheduledCalls : NSObjectProtocol {
     /// The primary code of the TransitStop that this list relates to
     var stopID:String { get }
     /// The beginning of the time period to which this list of stop calls relates.

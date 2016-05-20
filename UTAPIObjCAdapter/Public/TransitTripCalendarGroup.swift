@@ -13,7 +13,7 @@ import UTAPI
 /// to the days of the week on which they run. Note that the trips have their individual 'calendar'
 /// fields set to nil in order to avoid mass duplication of the data. To ascertain the particular calendar
 /// for each trip, simply examine the `Calendar` field of its parent `TransitTripCalendarGroup` object.
-@objc public protocol TransitTripCalendarGroup {
+@objc public protocol TransitTripCalendarGroup : NSObjectProtocol {
     /// The calendar for all Trips in this grouping, i.e. which days/dates do these trips run on.
     var calendar:TransitCalendar { get }
     /// A list of the TransitTrip objects that form this particular group

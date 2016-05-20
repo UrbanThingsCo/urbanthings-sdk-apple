@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `StopBoardColor` details a color pair for background and text. Inherited by `StopBoard`, `StopBoardGroup` and `StopBoardMessage`.
-@objc public protocol StopBoardColor {
+@objc public protocol StopBoardColor : NSObjectProtocol {
     /// The color that represents this StopBoard - this may be used to add branding-specific colors to stops that relate to
     /// public transportation lines with a published brand colour. For example, London Underground lines have distinct branding
     /// colors per-line in the United Kingdom.

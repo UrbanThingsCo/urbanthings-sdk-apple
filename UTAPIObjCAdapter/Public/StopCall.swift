@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `StopCall` details a particular vehicle's timetabled stop at a particular transit stop.
-@objc public protocol StopCall {
+@objc public protocol StopCall : NSObjectProtocol {
     /// This provides information about the destination (headsign), origin, vehicle registration, etc.
     var tripInfo:TransitTripInfo { get }
     /// This provides information about the line name, vehicle mode, operator name, etc.

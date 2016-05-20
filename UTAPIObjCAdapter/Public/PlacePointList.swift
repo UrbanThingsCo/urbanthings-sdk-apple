@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// PlacePointList contains results of a geographically bounded request for place points.
-@objc public protocol PlacePointList {
+@objc public protocol PlacePointList : NSObjectProtocol {
     /// Array of place points that matched the search request
     var placePoints:[PlacePoint] { get }
     /// The source of the location lookup which should be displayed to end-users

@@ -26,7 +26,7 @@ import UTAPI
     }
 }
 
-@objc public protocol TransitScheduledCall {
+@objc public protocol TransitScheduledCall : NSObjectProtocol {
     /// The scheduled arrival time of the vehicle, if available.
     var scheduledArrivalTime:NSDate? { get }
     /// The scheduled departure time of the vehicle, if available.

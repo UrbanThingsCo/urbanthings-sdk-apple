@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `JourneyLeg` protocol describes a journey leg. `Inherited by TransitJourneyLeg`.
-@objc public protocol JourneyLeg {
+@objc public protocol JourneyLeg : NSObjectProtocol {
     /// A localized instruction, in HTML, displayed to the user in journey planning results, e.g. Take the 126 bus towards Heathrow.
     var summaryHTML:String? { get }
     /// Place point ID of the point of origin for the leg

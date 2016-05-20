@@ -9,7 +9,7 @@
 import Foundation
 import UTAPI
 
-@objc public protocol Attribution {
+@objc public protocol Attribution : NSObjectProtocol {
     /// An attribution label text for the data - clients MUST display either this label or the string contained at AttributionLabel to conform with the Terms and Conditions of using the API.
     var attributionLabel:String? { get }
     /// An attribution graphic for the data - clients MUST display either this label or the string contained at AttributionLabel to conform with the Terms and Conditions of using the API.

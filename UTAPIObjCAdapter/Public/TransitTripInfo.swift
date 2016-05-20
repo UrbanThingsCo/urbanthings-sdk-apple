@@ -9,7 +9,7 @@
 import Foundation
 import UTAPI
 
-@objc public protocol TransitTripInfo {
+@objc public protocol TransitTripInfo : NSObjectProtocol {
     /// A unique identifier representing the agency that operates this trip.
     var agencyCode:String? { get }
     /// A unique code that represents this trip. Note that IDs in some regions may change periodically and thus should not be stored on the client.

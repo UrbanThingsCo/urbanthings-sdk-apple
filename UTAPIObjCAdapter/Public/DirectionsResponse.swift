@@ -9,7 +9,7 @@
 import Foundation
 import UTAPI
 
-@objc public protocol DirectionsResponse {
+@objc public protocol DirectionsResponse : NSObjectProtocol {
     /// Unique identifier for the response
     var responseID:String? { get }
     /// Status of the response as a `DirectionsResponseStatus` instance

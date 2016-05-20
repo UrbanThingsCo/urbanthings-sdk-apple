@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `TransitStopScheduledCall` details scheduled calls made at a given stop.
-@objc public protocol TransitStopScheduledCall {
+@objc public protocol TransitStopScheduledCall : NSObjectProtocol {
     
     /// The TransitStop at which the vehicle calls.
     var stop: TransitStop { get }

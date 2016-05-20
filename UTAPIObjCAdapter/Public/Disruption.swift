@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// Defines properties for a disruption record.
-@objc public protocol Disruption {
+@objc public protocol Disruption : NSObjectProtocol {
     /// The date and time at which this disruption started, or will start. If nil, the start date/time of the disruption is assumed to have passed
     var startDate:NSDate? { get }
     /// The date and time at which this disruption will end, or ended. If nil, it is assumed that the end date/time of the disruption has not passed

@@ -10,7 +10,7 @@ import Foundation
 import UTAPI
 
 /// `Journey` defines a journey that fulfills a directions request
-@objc public protocol Journey {
+@objc public protocol Journey : NSObjectProtocol {
     /// Arrival time for the journey.
     var arrivalTime:NSDate? { get }
     /// Departure time for the journey.
