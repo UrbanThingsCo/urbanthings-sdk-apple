@@ -9,7 +9,7 @@
 import Foundation
 
 /// Possible levels of disruption.
-public enum DisruptionSeverity: Int {
+@objc public enum DisruptionSeverity: Int {
     /// Disruption level 1.
     case Level1 = 1
     /// Disruption level 2.

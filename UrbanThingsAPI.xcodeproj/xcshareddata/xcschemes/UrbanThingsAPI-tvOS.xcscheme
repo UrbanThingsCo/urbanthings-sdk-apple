@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C0CE2AA1CE316E30054847C"
-               BuildableName = "UrbanThingsAPI.framework"
+               BuildableName = "UTAPI.framework"
                BlueprintName = "UrbanThingsAPI-tvOS"
                ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
             </BuildableReference>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C0CE2B31CE316E30054847C"
-               BuildableName = "UrbanThingsAPITests-tvOS.xctest"
-               BlueprintName = "UrbanThingsAPITests-tvOS"
+               BuildableName = "UnitTests-tvOS.xctest"
+               BlueprintName = "UnitTests-tvOS"
                ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
             </BuildableReference>
             <SkippedTests>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C0CE2AA1CE316E30054847C"
-            BuildableName = "UrbanThingsAPI.framework"
+            BuildableName = "UTAPI.framework"
             BlueprintName = "UrbanThingsAPI-tvOS"
             ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C0CE2AA1CE316E30054847C"
-            BuildableName = "UrbanThingsAPI.framework"
+            BuildableName = "UTAPI.framework"
             BlueprintName = "UrbanThingsAPI-tvOS"
             ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
          </BuildableReference>
@@ -88,7 +88,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C0CE2AA1CE316E30054847C"
-            BuildableName = "UrbanThingsAPI.framework"
+            BuildableName = "UTAPI.framework"
             BlueprintName = "UrbanThingsAPI-tvOS"
             ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
          </BuildableReference>

@@ -9,7 +9,7 @@
 import Foundation
 
 /// `WeekDay` defines the days of the week.
-public enum WeekDay : Int {
+@objc public enum WeekDay : Int {
     /// The day is Sunday.
     case Sunday = 0
     /// The day is Monday.

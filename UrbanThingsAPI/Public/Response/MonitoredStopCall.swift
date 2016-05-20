@@ -9,7 +9,7 @@
 import Foundation
 
 /// Defines how arrival at stop is displayed
-public enum MonitoredStopCallDisplayFormat:Int {
+@objc public enum MonitoredStopCallDisplayFormat:Int {
     /// Display time until arrival at stop
     case Time = 0
     /// Display distance from stop
