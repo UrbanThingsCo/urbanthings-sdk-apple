@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import UrbanThingsAPI
+import UTAPI
 
 class StopCell : UITableViewCell {
     
@@ -16,7 +16,7 @@ class StopCell : UITableViewCell {
     
     var request:UrbanThingsAPIRequest?
     
-    func bind(stop:TransitStop) {
+    func bind(stop:UTAPI.TransitStop) {
         self.nameLabel?.text = stop.name!
         self.typeLabel?.text = "Checking..."
         self.request = StopsModel.sharedInstance.getStopResources(stop) { status in

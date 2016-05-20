@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitAgency
+import UTAPI
 
 /// `TransitAgency` provides details for a transit agency.
 @objc public protocol TransitAgency {
@@ -33,9 +33,9 @@ import protocol UrbanThingsAPI.TransitAgency
 
 @objc public class UTTransitAgency : NSObject, TransitAgency {
     
-    let adapted: UrbanThingsAPI.TransitAgency
+    let adapted: UTAPI.TransitAgency
     
-    public init(adapt: UrbanThingsAPI.TransitAgency) {
+    public init(adapt: UTAPI.TransitAgency) {
         self.adapted = adapt
     }
 

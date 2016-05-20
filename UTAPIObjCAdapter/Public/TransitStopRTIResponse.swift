@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitStopRTIResponse
+import UTAPI
 
 /// `TransitStopRTIResponse` extends an RTIResponse to provide details for transit stops.
 @objc public protocol TransitStopRTIResponse : RTIResponse {
@@ -19,7 +19,7 @@ import protocol UrbanThingsAPI.TransitStopRTIResponse
 
 @objc public class UTTransitStopRTIResponse : UTRTIResponse, TransitStopRTIResponse {
     
-    public init(adapt:UrbanThingsAPI.TransitStopRTIResponse) {
+    public init(adapt:UTAPI.TransitStopRTIResponse) {
         self.rtiReports = adapt.rtiReports?.map { UTTransitStopRTIReport(adapt: $0) }
         super.init(adapt: adapt)
     }

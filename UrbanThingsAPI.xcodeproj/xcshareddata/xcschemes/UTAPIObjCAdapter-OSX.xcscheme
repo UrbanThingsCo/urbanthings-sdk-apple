@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2C0CE2DC1CE3178D0054847C"
+               BuildableName = "UnitTests-OSX.xctest"
+               BlueprintName = "UnitTests-OSX"
+               ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2CFFCA061CE86B46002D8AC4"
+            BuildableName = "UTAPIObjCAdapter.framework"
+            BlueprintName = "UTAPIObjCAdapter-OSX"
+            ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

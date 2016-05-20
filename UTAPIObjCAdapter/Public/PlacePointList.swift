@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.PlacePointList
-import protocol UrbanThingsAPI.PlacePoint
+import UTAPI
 
 /// PlacePointList contains results of a geographically bounded request for place points.
 @objc public protocol PlacePointList {
@@ -22,9 +21,9 @@ import protocol UrbanThingsAPI.PlacePoint
 
 @objc public class UTPlacePointList : NSObject, PlacePointList {
     
-    let adapted: UrbanThingsAPI.PlacePointList
+    let adapted: UTAPI.PlacePointList
     
-    public init(adapt: UrbanThingsAPI.PlacePointList) {
+    public init(adapt: UTAPI.PlacePointList) {
         self.adapted = adapt
         self.placePoints = adapt.placePoints.map { UTPlacePoint(adapt: $0) }
     }

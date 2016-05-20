@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import UrbanThingsAPI
+import UTAPI
 
 class StopsListViewController : UITableViewController {
  
     var updateObserver:AnyObject?
     var selectionObserver:AnyObject?
-    var data:[TransitStop] = []
+    var data:[UTAPI.TransitStop] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import UrbanThingsAPI
+import UTAPI
 import CoreLocation
 
 // Replace string with your API key
-let ApiKey = "YOUR_API_KEY"
+let ApiKey = "12345"
 
 /// Notification that is sent whenever there is a data update received from the server.
 let StopDataUpdated = "StopDataUpdated"
@@ -77,10 +77,10 @@ class StopsModel {
     
     /// Current data is stored here, its private so that we can enforce
     /// thread safe access through use of dispatch barrier
-    private var internalData:[TransitStop] = []
-    var data:[TransitStop] {
+    private var internalData:[UTAPI.TransitStop] = []
+    var data:[UTAPI.TransitStop] {
         get {
-            var currentData:[TransitStop] = []
+            var currentData:[UTAPI.TransitStop] = []
             dispatch_sync(readWriteQueue) {
                 currentData = self.internalData
             }
@@ -190,6 +190,8 @@ class StopsModel {
                             var map = [String:RequestItem]()
                             self.deferred.forEach { map[$0.stopID] = $0 }
                             data.forEach {
+                                // Lets call some ObjC code
+                                ObjCDemo.logStatus(UTAPIObjCAdapter.UTResourceStatus(adapt: $0))
                                 if let item = map[$0.primaryCode] {
                                     let msg = $0.statusText ?? Unavailable
                                     item.completion(msg)
@@ -233,7 +235,7 @@ class StopsModel {
     //  - parameters:
     //    - stop: The transit stop of interest
     //    - completion: Completion handler that will be called with result of call when completed
-    func getStopResources(stop:TransitStop, completion:(String?) -> Void) -> UrbanThingsAPIRequest? {
+    func getStopResources(stop:UTAPI.TransitStop, completion:(String?) -> Void) -> UrbanThingsAPIRequest? {
         var existing:ResourceStatus?
         
         // Attempt to get an existing value from the cache

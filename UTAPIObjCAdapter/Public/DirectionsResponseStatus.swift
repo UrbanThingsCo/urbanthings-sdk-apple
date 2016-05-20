@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.DirectionsResponseStatus
+import UTAPI
 
 /// Defines status data for the response from a directions requests.
 @objc public protocol DirectionsResponseStatus {
@@ -21,9 +21,9 @@ import protocol UrbanThingsAPI.DirectionsResponseStatus
 
 @objc public class UTDirectionsResponseStatus : NSObject, DirectionsResponseStatus {
     
-    let adapted:UrbanThingsAPI.DirectionsResponseStatus
+    let adapted:UTAPI.DirectionsResponseStatus
     
-    public init(adapt:UrbanThingsAPI.DirectionsResponseStatus) {
+    public init(adapt:UTAPI.DirectionsResponseStatus) {
         self.adapted = adapt
         super.init()
     }

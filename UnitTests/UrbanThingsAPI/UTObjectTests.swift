@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
 func XCTAssertNone(value:Any?) {
     if let _ = value {

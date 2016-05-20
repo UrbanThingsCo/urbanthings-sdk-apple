@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
 class UTImportSourceTests: XCTestCase {
 

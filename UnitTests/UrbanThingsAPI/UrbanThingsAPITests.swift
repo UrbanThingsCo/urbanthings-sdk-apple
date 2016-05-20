@@ -8,7 +8,7 @@
 
 import XCTest
 import CoreLocation
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
 let ApiTestKey = "A VALID API KEY"
 

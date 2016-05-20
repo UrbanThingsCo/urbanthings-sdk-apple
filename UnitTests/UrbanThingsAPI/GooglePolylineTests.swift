@@ -8,7 +8,7 @@
 
 import XCTest
 import MapKit
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
 let testString = "_p~iF~ps|U_ulLnnqC_mqNvxq`@"
 let testBadString = "_p~iF~ps|0_ulLnnqC_mqNvxq`@"

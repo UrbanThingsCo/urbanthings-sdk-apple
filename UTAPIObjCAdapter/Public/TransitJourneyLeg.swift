@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitJourneyLeg
+import UTAPI
 
 /// `TransitJourneyLeg` protocol extends `JourneyLeg` to add details specific to a journey leg taken by transit service such as bus or train.
 @objc public protocol TransitJourneyLeg : JourneyLeg {
@@ -23,9 +23,9 @@ import protocol UrbanThingsAPI.TransitJourneyLeg
 
 @objc public class UTTransitJourneyLeg : UTJourneyLeg, TransitJourneyLeg {
     
-    var transitJourneyLeg:UrbanThingsAPI.TransitJourneyLeg { return self.adapted as! UrbanThingsAPI.TransitJourneyLeg }
+    var transitJourneyLeg:UTAPI.TransitJourneyLeg { return self.adapted as! UTAPI.TransitJourneyLeg }
     
-    public init(adapt: UrbanThingsAPI.TransitJourneyLeg) {
+    public init(adapt: UTAPI.TransitJourneyLeg) {
         self.linkedTransitRouteInfo = UTTransitRouteInfo(adapt: adapt.linkedTransitRouteInfo)
         self.linkedTransitTripInfo = UTTransitTripInfo(adapt: adapt.linkedTransitTripInfo)
         self.scheduledStopCalls = adapt.scheduledStopCalls?.map { UTTransitScheduledCall(adapt: $0) }

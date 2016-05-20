@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitTripInfo
+import UTAPI
 
 @objc public protocol TransitTripInfo {
     /// A unique identifier representing the agency that operates this trip.
@@ -32,9 +32,9 @@ import protocol UrbanThingsAPI.TransitTripInfo
 
 @objc public class UTTransitTripInfo : NSObject, TransitTripInfo {
     
-    let adapted:UrbanThingsAPI.TransitTripInfo
+    let adapted:UTAPI.TransitTripInfo
     
-    public init?(adapt:UrbanThingsAPI.TransitTripInfo?) {
+    public init?(adapt:UTAPI.TransitTripInfo?) {
         guard let adapt = adapt else {
             return nil
         }

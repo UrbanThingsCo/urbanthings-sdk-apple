@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.Disruption
-import enum UrbanThingsAPI.DisruptionSeverity
+import UTAPI
 
 /// Defines properties for a disruption record.
 @objc public protocol Disruption {
@@ -29,9 +28,9 @@ import enum UrbanThingsAPI.DisruptionSeverity
 
 @objc public class UTDisruption : NSObject, Disruption {
     
-    let adapted:UrbanThingsAPI.Disruption
+    let adapted:UTAPI.Disruption
     
-    public init(adapt:UrbanThingsAPI.Disruption) {
+    public init(adapt:UTAPI.Disruption) {
         self.adapted = adapt
     }
     

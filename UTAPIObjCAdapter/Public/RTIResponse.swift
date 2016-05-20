@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.RTIResponse
+import UTAPI
 
 /// `RTIResponse` gives basic details for a real time response.
 @objc public protocol RTIResponse {
@@ -22,9 +22,9 @@ import protocol UrbanThingsAPI.RTIResponse
 
 @objc public class UTRTIResponse : NSObject, RTIResponse {
     
-    let adapted:UrbanThingsAPI.RTIResponse
+    let adapted:UTAPI.RTIResponse
     
-    public init(adapt:UrbanThingsAPI.RTIResponse) {
+    public init(adapt:UTAPI.RTIResponse) {
         self.adapted = adapt
     }
     

@@ -1,17 +1,17 @@
 //
-//  UTTransitStopTests.swift
+//  UTPlacePointListTests.swift
 //  UrbanThingsAPI
 //
-//  Created by Mark Woollard on 08/05/2016.
+//  Created by Mark Woollard on 09/05/2016.
 //  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
 import XCTest
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
-private let JSONFileName = "TransitStopTests"
+private let JSONFileName = "PlacePointListTests"
 
-class UTTransitStopTests: XCTestCase {
+class UTPlacePointListTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -24,16 +24,15 @@ class UTTransitStopTests: XCTestCase {
     }
     
     func testInitialisation() throws {
-        let _:UTTransitStop = try self.initializationFromJSON(JSONFileName)
+        let _:UTPlacePointList = try self.initializationFromJSON(JSONFileName)
     }
-
+    
     func testPerformance() throws {
         let json = self.loadJSON(JSONFileName)
         self.measureBlock {
             (0..<100).forEach { _ in
-                let _ = try! UTTransitStop(required: json)
+                let _ = try! UTPlacePointList(required: json)
             }
         }
     }
-
 }

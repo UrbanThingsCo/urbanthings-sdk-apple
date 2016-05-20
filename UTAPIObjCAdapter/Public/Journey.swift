@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.Journey
+import UTAPI
 
 /// `Journey` defines a journey that fulfills a directions request
 @objc public protocol Journey {
@@ -29,9 +29,9 @@ import protocol UrbanThingsAPI.Journey
 
 @objc public class UTJourney : NSObject, Journey {
     
-    let adapted:UrbanThingsAPI.Journey
+    let adapted:UTAPI.Journey
     
-    public init(adapt:UrbanThingsAPI.Journey) {
+    public init(adapt:UTAPI.Journey) {
         self.adapted = adapt
         self.legs = [] //
     }

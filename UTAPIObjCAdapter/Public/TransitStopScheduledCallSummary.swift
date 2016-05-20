@@ -8,8 +8,7 @@
 
 import Foundation
 import CoreLocation
-import protocol UrbanThingsAPI.TransitStopScheduledCallSummary
-import protocol UrbanThingsAPI.Location
+import UTAPI
 
 public let InvalidDegrees:Double = 360
 
@@ -29,9 +28,9 @@ public let InvalidDegrees:Double = 360
 
 @objc public class UTTransitStopScheduledCallSummary : NSObject, TransitStopScheduledCallSummary {
     
-    let adapted:UrbanThingsAPI.TransitStopScheduledCallSummary
+    let adapted:UTAPI.TransitStopScheduledCallSummary
     
-    public init(adapt:UrbanThingsAPI.TransitStopScheduledCallSummary) {
+    public init(adapt:UTAPI.TransitStopScheduledCallSummary) {
         self.adapted = adapt
         self.transitStopLocation = CLLocationCoordinate2D(latitude: adapt.transitStopLocation?.latitude ?? InvalidDegrees, longitude: adapt.transitStopLocation?.latitude ?? InvalidDegrees)
         self.scheduledCall = UTTransitScheduledCall(adapt: adapt.scheduledCall)

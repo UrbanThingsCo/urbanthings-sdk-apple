@@ -8,7 +8,7 @@
 
 import XCTest
 import CoreLocation
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
 private let directionsRequest = UTDirectionsRequest(
     origin: TestPlacePoint(primaryCode: "SUNNYMEADS", name:"Sunnymeads Station", location: CLLocationCoordinate2D(latitude: 51.4702933, longitude:-0.5615487)),

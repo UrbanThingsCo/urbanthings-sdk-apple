@@ -8,7 +8,7 @@
 
 import XCTest
 import CoreLocation
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
 let mappingDict:[String:String] = [
     "timestamp" : "timeStamp",
@@ -20,12 +20,15 @@ let mappingDict:[String:String] = [
 
 extension XCTestCase {
     
-    func getAPIInstanceAndJSON(jsonFile:String) throws -> (api:UrbanThingsAPIType, json:AnyObject?) {
+    class func getAPIInstanceAndJSON(jsonFile:String) throws -> (api:UrbanThingsAPIType, json:AnyObject?) {
         let requestHandler = try MockRequestHandler(jsonFile: jsonFile)
         let session = NSURLSession(configuration: NSURLSessionConfiguration.sessionConfigurationForUrbanThingsAPI(apiKey:"a key"))
         return (api:UrbanThingsAPI(session: session, requestHandler: requestHandler), json:requestHandler.json)
     }
-    
+
+    func getAPIInstanceAndJSON(jsonFile:String) throws -> (api:UrbanThingsAPIType, json:AnyObject?) {
+        return try XCTestCase.getAPIInstanceAndJSON(jsonFile)
+    }
 }
 
 extension XCTestCase {

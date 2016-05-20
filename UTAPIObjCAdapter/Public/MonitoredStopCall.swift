@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.MonitoredStopCall
-import enum UrbanThingsAPI.MonitoredStopCallDisplayFormat
+import UTAPI
 
 /// `MonitoredStopCall` contains realtime information for a timetabled call at a transit stop.
 @objc public protocol MonitoredStopCall : StopCall {
@@ -30,9 +29,9 @@ import enum UrbanThingsAPI.MonitoredStopCallDisplayFormat
 
 @objc public class UTMonitoredStopCall : UTStopCall, MonitoredStopCall {
     
-    var monitoredStopCall:UrbanThingsAPI.MonitoredStopCall { return self.adapted as! UrbanThingsAPI.MonitoredStopCall }
+    var monitoredStopCall:UTAPI.MonitoredStopCall { return self.adapted as! UTAPI.MonitoredStopCall }
     
-    public init(adapt:UrbanThingsAPI.MonitoredStopCall) {
+    public init(adapt:UTAPI.MonitoredStopCall) {
         self.vehicleRTI = UTVehicleRTI(adapt: adapt.vehicleRTI)
         super.init(adapt: adapt)
     }

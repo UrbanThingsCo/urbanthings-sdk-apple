@@ -7,11 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.StopBoard
-import protocol UrbanThingsAPI.StopBoardRow
-import protocol UrbanThingsAPI.StopBoardGroup
-import protocol UrbanThingsAPI.StopBoardMessage
-import typealias UrbanThingsAPI.UTColor
+import UTAPI
 
 @objc public protocol StopBoard : Attribution, StopBoardColor {
     /// A piece of text that describes the StopBoard, unique to a particular StopBoardResponse.
@@ -53,9 +49,9 @@ import typealias UrbanThingsAPI.UTColor
 
 @objc public class UTStopBoard : UTAttribution, StopBoard {
     
-    var stopBoard: UrbanThingsAPI.StopBoard { return self.adapted as! UrbanThingsAPI.StopBoard }
+    var stopBoard: UTAPI.StopBoard { return self.adapted as! UTAPI.StopBoard }
     
-    public init(adapt: UrbanThingsAPI.StopBoard) {
+    public init(adapt: UTAPI.StopBoard) {
         self.rows = adapt.rows.map { UTStopBoardRow(adapt: $0) }
         self.groups = adapt.groups.map { UTStopBoardGroup(adapt: $0) }
         self.messages = adapt.messages.map { UTStopBoardMessage(adapt: $0) }

@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.StopBoardColor
-import typealias UrbanThingsAPI.UTColor
+import UTAPI
 
 /// `StopBoardColor` details a color pair for background and text. Inherited by `StopBoard`, `StopBoardGroup` and `StopBoardMessage`.
 @objc public protocol StopBoardColor {
@@ -22,9 +21,9 @@ import typealias UrbanThingsAPI.UTColor
 
 @objc public class UTStopBoardColor : NSObject, StopBoardColor {
     
-    let adapted: UrbanThingsAPI.StopBoardColor
+    let adapted: UTAPI.StopBoardColor
     
-    public init(adapt: UrbanThingsAPI.StopBoardColor) {
+    public init(adapt: UTAPI.StopBoardColor) {
         self.adapted = adapt
     }
     

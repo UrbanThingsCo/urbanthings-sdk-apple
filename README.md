@@ -1,7 +1,7 @@
 ![Logo](http://urbanthings.co/wp-content/themes/urbanthings/assets/images/urbanthings_logo_small.png)
 
 # UrbanThings API Framework for Apple Platforms
-[![Carthage compatible](https://img.shields.io/badge/Version-0.9.1-109480.svg?style=flat)]()
+[![Carthage compatible](https://img.shields.io/badge/Version-0.9.2-109480.svg?style=flat)]()
 [![CI Status](http://img.shields.io/travis/urbanthings/urbanthings-sdk-apple.svg?style=flat)](https://travis-ci.org/urbanthings/urbanthings-sdk-apple)
 
 ## Introduction
@@ -63,7 +63,7 @@ If you do not want to use a package manager clone the [repository](https://githu
 To request data from the server, you instantiate an instance of the `UrbanThingsAPI` class.
 
 ```
-import UrbanThingsSDK
+import UTAPI
 
 let api = UrbanThingsAPI("A valid API key")
 ```
@@ -333,7 +333,7 @@ Objective-C code snippet above assumes that the necessary bridging headers and X
 Now we can write some Swift code to request the data to be processed by the Objective-C code:
 
 ```
-import UrbanThingsAPI
+import UTAPI
 import UTAPIObjCAdapter
 
 let api = UrbanThingsAPI(apiKey:"A VALID API KEY")

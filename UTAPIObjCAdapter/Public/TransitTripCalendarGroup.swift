@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitTripCalendarGroup
+import UTAPI
 
 /// Defines a group of trips along a specific route, i.e. a timetable. The trips are grouped according
 /// to the days of the week on which they run. Note that the trips have their individual 'calendar'
@@ -22,9 +22,9 @@ import protocol UrbanThingsAPI.TransitTripCalendarGroup
 
 @objc public class UTTransitTripCalendarGroup : NSObject, TransitTripCalendarGroup {
     
-    let adapted: UrbanThingsAPI.TransitTripCalendarGroup
+    let adapted: UTAPI.TransitTripCalendarGroup
     
-    public init(adapt: UrbanThingsAPI.TransitTripCalendarGroup) {
+    public init(adapt: UTAPI.TransitTripCalendarGroup) {
         self.adapted = adapt
         self.calendar = UTTransitCalendar(adapt: adapt.calendar)!
         self.trips = adapt.trips.map { UTTransitTrip(adapt: $0) }

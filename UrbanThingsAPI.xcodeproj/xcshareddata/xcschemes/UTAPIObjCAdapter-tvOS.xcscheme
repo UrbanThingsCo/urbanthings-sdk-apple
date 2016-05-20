@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2C0CE2B31CE316E30054847C"
+               BuildableName = "UnitTests-tvOS.xctest"
+               BlueprintName = "UnitTests-tvOS"
+               ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2CFFC9F91CE86B2A002D8AC4"
+            BuildableName = "UTAPIObjCAdapter.framework"
+            BlueprintName = "UTAPIObjCAdapter-tvOS"
+            ReferencedContainer = "container:UrbanThingsAPI.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitCalendar
-import enum UrbanThingsAPI.WeekDay
+import UTAPI
 
 /// `TransitCalendar` provides details about the dates / days of the week that a particular `TransitTrip` operates.
 @objc public protocol TransitCalendar {
@@ -28,9 +27,9 @@ import enum UrbanThingsAPI.WeekDay
 
 @objc public class UTTransitCalendar : NSObject, TransitCalendar {
     
-    let adapted: UrbanThingsAPI.TransitCalendar
+    let adapted: UTAPI.TransitCalendar
     
-    public init?(adapt: UrbanThingsAPI.TransitCalendar?) {
+    public init?(adapt: UTAPI.TransitCalendar?) {
         guard let adapt = adapt else {
             return nil
         }

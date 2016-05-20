@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.DirectionsResponse
+import UTAPI
 
 @objc public protocol DirectionsResponse {
     /// Unique identifier for the response
@@ -28,9 +28,9 @@ import protocol UrbanThingsAPI.DirectionsResponse
 
 @objc public class UTDirectionsResponse : NSObject, DirectionsResponse {
     
-    let adapted:UrbanThingsAPI.DirectionsResponse
+    let adapted:UTAPI.DirectionsResponse
     
-    public init(adapt:UrbanThingsAPI.DirectionsResponse) {
+    public init(adapt:UTAPI.DirectionsResponse) {
         self.adapted = adapt
         self.status = UTDirectionsResponseStatus(adapt: adapt.status)
         self.journeys = adapt.journeys?.map { UTJourney(adapt:$0) }

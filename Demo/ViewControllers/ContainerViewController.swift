@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreLocation
-import UrbanThingsAPI
+import UTAPI
 
 class ContainerViewController : UIViewController {
     

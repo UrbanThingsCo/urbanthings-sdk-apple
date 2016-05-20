@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
 struct TestPlacePoint : PlacePoint {
     

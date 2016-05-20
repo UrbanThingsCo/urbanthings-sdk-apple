@@ -1,5 +1,5 @@
 //
-//  UTResourceStatusTests.swift
+//  UTPlacePointTests.swift
 //  UrbanThingsAPI
 //
 //  Created by Mark Woollard on 08/05/2016.
@@ -7,11 +7,11 @@
 //
 
 import XCTest
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
-private let JSONFileName = "ResourceStatusTests"
+private let JSONFileName = "PlacePointTests"
 
-class UTResourceStatusTests: XCTestCase {
+class UTPlacePointTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -24,16 +24,15 @@ class UTResourceStatusTests: XCTestCase {
     }
     
     func testInitialisation() throws {
-        let _:UTResourceStatus = try self.initializationFromJSON(JSONFileName)
+        let _:UTPlacePoint = try self.initializationFromJSON(JSONFileName)
     }
 
     func testPerformance() throws {
         let json = self.loadJSON(JSONFileName)
         self.measureBlock {
             (0..<100).forEach { _ in
-                let _ = try! UTResourceStatus(required: json)
+                let _ = try! UTPlacePoint(required: json)
             }
         }
     }
-
 }

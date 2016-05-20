@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.StopCall
+import UTAPI
 
 /// `StopCall` details a particular vehicle's timetabled stop at a particular transit stop.
 @objc public protocol StopCall {
@@ -21,9 +21,9 @@ import protocol UrbanThingsAPI.StopCall
 
 @objc public class UTStopCall : NSObject, StopCall {
     
-    let adapted:UrbanThingsAPI.StopCall
+    let adapted:UTAPI.StopCall
     
-    public init(adapt:UrbanThingsAPI.StopCall) {
+    public init(adapt:UTAPI.StopCall) {
         self.adapted = adapt
         self.tripInfo = UTTransitTripInfo(adapt: adapt.tripInfo)!
         self.routeInfo = UTTransitRouteInfo(adapt: adapt.routeInfo)!

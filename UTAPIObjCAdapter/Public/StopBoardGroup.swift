@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.StopBoardGroup
+import UTAPI
 
 /// `StopBoardGroup` details grouping of `StopBoardRow` instances. Rows that have their `groupID` matching the
 /// `groupID` of this structure should be grouped together.
@@ -21,9 +21,9 @@ import protocol UrbanThingsAPI.StopBoardGroup
 
 @objc public class UTStopBoardGroup : UTStopBoardColor, StopBoardGroup {
     
-    var stopBoardGroup: UrbanThingsAPI.StopBoardGroup { return self.adapted as! UrbanThingsAPI.StopBoardGroup }
+    var stopBoardGroup: UTAPI.StopBoardGroup { return self.adapted as! UTAPI.StopBoardGroup }
     
-    public init(adapt: UrbanThingsAPI.StopBoardGroup) {
+    public init(adapt: UTAPI.StopBoardGroup) {
         super.init(adapt: adapt)
     }
     

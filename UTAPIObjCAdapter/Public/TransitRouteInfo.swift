@@ -8,9 +8,7 @@
 
 import Foundation
 import CoreLocation
-import protocol UrbanThingsAPI.TransitRouteInfo
-import enum UrbanThingsAPI.TransitMode
-import typealias UrbanThingsAPI.UTColor
+import UTAPI
 
 @objc public protocol TransitRouteInfo {
     /// A unique code that represents the agency operating this particular route, optional.
@@ -37,9 +35,9 @@ import typealias UrbanThingsAPI.UTColor
 
 @objc public class UTTransitRouteInfo : NSObject, TransitRouteInfo {
     
-    let adapted:UrbanThingsAPI.TransitRouteInfo
+    let adapted:UTAPI.TransitRouteInfo
     
-    public init?(adapt: UrbanThingsAPI.TransitRouteInfo?) {
+    public init?(adapt: UTAPI.TransitRouteInfo?) {
         guard let adapt = adapt else {
             return nil
         }

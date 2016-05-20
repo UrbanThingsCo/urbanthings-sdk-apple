@@ -6,12 +6,16 @@
 //  Copyright © 2016 UrbanThings. All rights reserved.
 //
 
-//! Project version number for UTAPIObjCAdapter-iOS.
-FOUNDATION_EXPORT double UTAPIObjCAdapter_iOSVersionNumber;
+@import Foundation;
 
-//! Project version string for UTAPIObjCAdapter-iOS.
-FOUNDATION_EXPORT const unsigned char UTAPIObjCAdapter_iOSVersionString[];
+#if TARGET_OS_IPHONE || TARGET_OS_TV || TARGET_OS_SIMULATOR || TARGET_OS_WATCH
+@import UIKit;
+#else
+@import AppKit;
+#endif
 
-// In this header, you should import all the public headers of your framework using statements like #import <UTAPIObjCAdapter_iOS/PublicHeader.h>
+//! Project version number for UTAPIObjCAdapter
+FOUNDATION_EXPORT double UTAPIObjCAdapter_VersionNumber;
 
-
+//! Project version string for UTAPIObjCAdapter.
+FOUNDATION_EXPORT const unsigned char UTAPIObjCAdapter_VersionString[];

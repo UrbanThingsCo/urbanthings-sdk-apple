@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitDetailedRouteInfo
+import UTAPI
 
 /// Contains detailed information for a transit route.
 ///
@@ -19,9 +19,9 @@ import protocol UrbanThingsAPI.TransitDetailedRouteInfo
 
 @objc public class UTTransitDetailedRouteInfo : UTTransitRouteInfo, TransitDetailedRouteInfo {
     
-    var transitDetailedRouteInfo: UrbanThingsAPI.TransitDetailedRouteInfo { return self.adapted as! UrbanThingsAPI.TransitDetailedRouteInfo }
+    var transitDetailedRouteInfo: UTAPI.TransitDetailedRouteInfo { return self.adapted as! UTAPI.TransitDetailedRouteInfo }
     
-    public init?(adapt: UrbanThingsAPI.TransitDetailedRouteInfo) {
+    public init?(adapt: UTAPI.TransitDetailedRouteInfo) {
         super.init(adapt: adapt)
     }
     

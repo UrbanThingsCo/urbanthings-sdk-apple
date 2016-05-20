@@ -21,8 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2C0CE2B51CE316E30054847C /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2AB1CE316E30054847C /* UrbanThingsAPI.framework */; };
-		2C0CE2DE1CE3178D0054847C /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2D41CE3178D0054847C /* UrbanThingsAPI.framework */; };
+		2C0CE2B51CE316E30054847C /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2AB1CE316E30054847C /* UTAPI.framework */; };
+		2C0CE2DE1CE3178D0054847C /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2D41CE3178D0054847C /* UTAPI.framework */; };
 		2C0CE2EB1CE317A70054847C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A15561CD1E9EF00C61B76 /* Error.swift */; };
 		2C0CE2EC1CE317A90054847C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A15561CD1E9EF00C61B76 /* Error.swift */; };
 		2C0CE2ED1CE317AA0054847C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A15561CD1E9EF00C61B76 /* Error.swift */; };
@@ -466,14 +466,34 @@
 		2C2A61C51CE3C40A0081C1EC /* CallingAtStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */; };
 		2C2A61C61CE3C40A0081C1EC /* CallingAtStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */; };
 		2C46A13C1CEB49300041B514 /* UrbanThingsAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2C46A13B1CEB49300041B514 /* UrbanThingsAPI.podspec */; };
+		2C46A17F1CEE30A40041B514 /* ImportSourceAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46A16A1CECFEFB0041B514 /* ImportSourceAdapterTests.m */; };
+		2C46A1801CEE30A40041B514 /* ImportSourceAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46A1711CECFF310041B514 /* ImportSourceAdapterTests.swift */; };
+		2C46A1811CEE30A50041B514 /* ImportSourceAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46A16A1CECFEFB0041B514 /* ImportSourceAdapterTests.m */; };
+		2C46A1821CEE30A50041B514 /* ImportSourceAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46A1711CECFF310041B514 /* ImportSourceAdapterTests.swift */; };
+		2C46A1831CEE30A50041B514 /* ImportSourceAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46A16A1CECFEFB0041B514 /* ImportSourceAdapterTests.m */; };
+		2C46A1841CEE30A50041B514 /* ImportSourceAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46A1711CECFF310041B514 /* ImportSourceAdapterTests.swift */; };
+		2C46A1871CEE352C0041B514 /* UTAPIObjCAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFFC9E01CE86A8D002D8AC4 /* UTAPIObjCAdapter.framework */; };
+		2C46A18A1CEE35410041B514 /* UTAPIObjCAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFFCA071CE86B46002D8AC4 /* UTAPIObjCAdapter.framework */; };
+		2C46A18D1CEE35520041B514 /* UTAPIObjCAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFFC9FA1CE86B2A002D8AC4 /* UTAPIObjCAdapter.framework */; };
+		2C46A18F1CEED8040041B514 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C46A1901CEED8080041B514 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C46A1911CEED8090041B514 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C46A1921CEED80A0041B514 /* UTAPIObjCAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C46A1931CEEDBC50041B514 /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UTAPI.framework */; };
+		2C46A1961CEEE24A0041B514 /* ObjCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46A1951CEEE24A0041B514 /* ObjCDemo.m */; };
+		2C46A1971CEEE2A40041B514 /* UTAPIObjCAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFFC9E01CE86A8D002D8AC4 /* UTAPIObjCAdapter.framework */; };
+		2C46A19E1CEEF5ED0041B514 /* UTAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5F2C081CCE9AA900999713 /* UTAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C46A19F1CEEF5F10041B514 /* UTAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5F2C081CCE9AA900999713 /* UTAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C46A1A01CEEF5F20041B514 /* UTAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5F2C081CCE9AA900999713 /* UTAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C46A1A11CEEF5F20041B514 /* UTAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5F2C081CCE9AA900999713 /* UTAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C4A15571CD1E9EF00C61B76 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A15561CD1E9EF00C61B76 /* Error.swift */; };
 		2C591E7A1CDA16F300B955A6 /* ResourceTrend+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E791CDA16F300B955A6 /* ResourceTrend+JSON.swift */; };
 		2C591E821CDA1D4A00B955A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E811CDA1D4A00B955A6 /* AppDelegate.swift */; };
 		2C591E891CDA1D4A00B955A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C591E871CDA1D4A00B955A6 /* Main.storyboard */; };
 		2C591E8B1CDA1D4A00B955A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C591E8A1CDA1D4A00B955A6 /* Assets.xcassets */; };
 		2C591E8E1CDA1D4A00B955A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C591E8C1CDA1D4A00B955A6 /* LaunchScreen.storyboard */; };
-		2C591E931CDA1D7500B955A6 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UrbanThingsAPI.framework */; };
-		2C591E941CDA1D7500B955A6 /* UrbanThingsAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UrbanThingsAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C591E931CDA1D7500B955A6 /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UTAPI.framework */; };
+		2C591E941CDA1D7500B955A6 /* UTAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UTAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C591E991CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E981CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift */; };
 		2C591E9B1CDB131C00B955A6 /* TestPlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E9A1CDB131C00B955A6 /* TestPlacePoint.swift */; };
 		2C5F2C211CCE9AC400999713 /* PlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C201CCE9AC400999713 /* PlacePoint.swift */; };
@@ -617,7 +637,7 @@
 		2CD690E71CD3398D00747E36 /* QueryKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690E61CD3398D00747E36 /* QueryKeys.swift */; };
 		2CD690E91CD341FB00747E36 /* UTTransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690E81CD341FB00747E36 /* UTTransitAgency.swift */; };
 		2CD690F11CD351D900747E36 /* UrbanThingsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690F01CD351D900747E36 /* UrbanThingsAPITests.swift */; };
-		2CD690F31CD351D900747E36 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UrbanThingsAPI.framework */; };
+		2CD690F31CD351D900747E36 /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UTAPI.framework */; };
 		2CD690FB1CD36C9600747E36 /* TransitTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690FA1CD36C9600747E36 /* TransitTrip.swift */; };
 		2CD690FD1CD36CF000747E36 /* TransitCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690FC1CD36CF000747E36 /* TransitCalendar.swift */; };
 		2CD690FF1CD3717100747E36 /* TransitStopScheduledCallSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690FE1CD3717100747E36 /* TransitStopScheduledCallSummary.swift */; };
@@ -734,10 +754,9 @@
 		2CFFCA741CE8C460002D8AC4 /* StopBoardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA721CE8C460002D8AC4 /* StopBoardColor.swift */; };
 		2CFFCA751CE8C460002D8AC4 /* StopBoardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA721CE8C460002D8AC4 /* StopBoardColor.swift */; };
 		2CFFCA761CE8C460002D8AC4 /* StopBoardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA721CE8C460002D8AC4 /* StopBoardColor.swift */; };
-		2CFFCA771CE8C572002D8AC4 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UrbanThingsAPI.framework */; };
-		2CFFCA781CE8C579002D8AC4 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2D41CE3178D0054847C /* UrbanThingsAPI.framework */; };
-		2CFFCA791CE8C581002D8AC4 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2AB1CE316E30054847C /* UrbanThingsAPI.framework */; };
-		2CFFCA7A1CE8C58F002D8AC4 /* UrbanThingsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2C71CE3176E0054847C /* UrbanThingsAPI.framework */; };
+		2CFFCA781CE8C579002D8AC4 /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2D41CE3178D0054847C /* UTAPI.framework */; };
+		2CFFCA791CE8C581002D8AC4 /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2AB1CE316E30054847C /* UTAPI.framework */; };
+		2CFFCA7A1CE8C58F002D8AC4 /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2C71CE3176E0054847C /* UTAPI.framework */; };
 		2CFFCA7C1CE8C5AC002D8AC4 /* StopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA7B1CE8C5AC002D8AC4 /* StopCall.swift */; };
 		2CFFCA7D1CE8C5AC002D8AC4 /* StopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA7B1CE8C5AC002D8AC4 /* StopCall.swift */; };
 		2CFFCA7E1CE8C5AC002D8AC4 /* StopCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFCA7B1CE8C5AC002D8AC4 /* StopCall.swift */; };
@@ -835,6 +854,27 @@
 			remoteGlobalIDString = 2C0CE2D31CE3178D0054847C;
 			remoteInfo = "UrbanThingsAPI-OSX";
 		};
+		2C46A1851CEE35200041B514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CFFC9DF1CE86A8D002D8AC4;
+			remoteInfo = "UTAPIObjCAdapter-iOS";
+		};
+		2C46A1881CEE35320041B514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CFFCA061CE86B46002D8AC4;
+			remoteInfo = "UTAPIObjCAdapter-OSX";
+		};
+		2C46A18B1CEE354A0041B514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CFFC9F91CE86B2A002D8AC4;
+			remoteInfo = "UTAPIObjCAdapter-tvOS";
+		};
 		2C591E951CDA1D7500B955A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
@@ -921,7 +961,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2C591E941CDA1D7500B955A6 /* UrbanThingsAPI.framework in Embed Frameworks */,
+				2C591E941CDA1D7500B955A6 /* UTAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -929,11 +969,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2C0CE2AB1CE316E30054847C /* UrbanThingsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UrbanThingsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C0CE2B41CE316E30054847C /* UrbanThingsAPITests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UrbanThingsAPITests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C0CE2C71CE3176E0054847C /* UrbanThingsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UrbanThingsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C0CE2D41CE3178D0054847C /* UrbanThingsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UrbanThingsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C0CE2DD1CE3178D0054847C /* UrbanThingsAPITests-OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UrbanThingsAPITests-OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0CE2AB1CE316E30054847C /* UTAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0CE2B41CE316E30054847C /* UnitTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0CE2C71CE3176E0054847C /* UTAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0CE2D41CE3178D0054847C /* UTAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0CE2DD1CE3178D0054847C /* UnitTests-OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTests-OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1CF7B01CE059E200F1E08A /* StopCallTests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StopCallTests.json; sourceTree = "<group>"; };
 		2C1CF7B21CE096E100F1E08A /* PlacePointListTests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PlacePointListTests.json; sourceTree = "<group>"; };
 		2C1CF7B41CE0974100F1E08A /* UTPlacePointListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTPlacePointListTests.swift; sourceTree = "<group>"; };
@@ -947,6 +987,14 @@
 		2C2A61BF1CE3C3D80081C1EC /* TransitStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TransitStops.json; sourceTree = "<group>"; };
 		2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CallingAtStops.json; sourceTree = "<group>"; };
 		2C46A13B1CEB49300041B514 /* UrbanThingsAPI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UrbanThingsAPI.podspec; sourceTree = "<group>"; };
+		2C46A1451CECFCDD0041B514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C46A16A1CECFEFB0041B514 /* ImportSourceAdapterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImportSourceAdapterTests.m; path = ../UTAPIObjCAdapter/ImportSourceAdapterTests.m; sourceTree = "<group>"; };
+		2C46A1711CECFF310041B514 /* ImportSourceAdapterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImportSourceAdapterTests.swift; path = ../UTAPIObjCAdapter/ImportSourceAdapterTests.swift; sourceTree = "<group>"; };
+		2C46A17E1CEE0F730041B514 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		2C46A18E1CEE3FA90041B514 /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C46A1941CEEE24A0041B514 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C46A1951CEEE24A0041B514 /* ObjCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCDemo.m; sourceTree = "<group>"; };
+		2C46A1981CEEE3A40041B514 /* ObjCDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCDemo.h; sourceTree = "<group>"; };
 		2C4A15561CD1E9EF00C61B76 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		2C591E771CD9CAD700B955A6 /* UTObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTObjectTests.swift; sourceTree = "<group>"; };
 		2C591E791CDA16F300B955A6 /* ResourceTrend+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResourceTrend+JSON.swift"; sourceTree = "<group>"; };
@@ -958,8 +1006,8 @@
 		2C591E8F1CDA1D4A00B955A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C591E981CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UrbanThingsAPI+Planning.swift"; sourceTree = "<group>"; };
 		2C591E9A1CDB131C00B955A6 /* TestPlacePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPlacePoint.swift; sourceTree = "<group>"; };
-		2C5F2C051CCE9AA900999713 /* UrbanThingsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UrbanThingsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C5F2C081CCE9AA900999713 /* UrbanThingsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.objj.h; path = UrbanThingsAPI.h; sourceTree = "<group>"; };
+		2C5F2C051CCE9AA900999713 /* UTAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C5F2C081CCE9AA900999713 /* UTAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UTAPI.h; sourceTree = "<group>"; };
 		2C5F2C0A1CCE9AA900999713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C5F2C201CCE9AC400999713 /* PlacePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePoint.swift; sourceTree = "<group>"; };
 		2C5F2C261CCF3CC500999713 /* TransitStopRTIReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStopRTIReport.swift; sourceTree = "<group>"; };
@@ -1062,9 +1110,8 @@
 		2CD690E01CD2BFBF00747E36 /* TransitRoutesByImportSourceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitRoutesByImportSourceRequest.swift; sourceTree = "<group>"; };
 		2CD690E61CD3398D00747E36 /* QueryKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryKeys.swift; sourceTree = "<group>"; };
 		2CD690E81CD341FB00747E36 /* UTTransitAgency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitAgency.swift; sourceTree = "<group>"; };
-		2CD690EE1CD351D900747E36 /* UrbanThingsAPITests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UrbanThingsAPITests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CD690EE1CD351D900747E36 /* UnitTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD690F01CD351D900747E36 /* UrbanThingsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanThingsAPITests.swift; sourceTree = "<group>"; };
-		2CD690F21CD351D900747E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD690FA1CD36C9600747E36 /* TransitTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitTrip.swift; sourceTree = "<group>"; };
 		2CD690FC1CD36CF000747E36 /* TransitCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitCalendar.swift; sourceTree = "<group>"; };
 		2CD690FE1CD3717100747E36 /* TransitStopScheduledCallSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStopScheduledCallSummary.swift; sourceTree = "<group>"; };
@@ -1178,7 +1225,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C0CE2B51CE316E30054847C /* UrbanThingsAPI.framework in Frameworks */,
+				2C46A18D1CEE35520041B514 /* UTAPIObjCAdapter.framework in Frameworks */,
+				2C0CE2B51CE316E30054847C /* UTAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1200,7 +1248,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C0CE2DE1CE3178D0054847C /* UrbanThingsAPI.framework in Frameworks */,
+				2C46A18A1CEE35410041B514 /* UTAPIObjCAdapter.framework in Frameworks */,
+				2C0CE2DE1CE3178D0054847C /* UTAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1208,7 +1257,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C591E931CDA1D7500B955A6 /* UrbanThingsAPI.framework in Frameworks */,
+				2C46A1971CEEE2A40041B514 /* UTAPIObjCAdapter.framework in Frameworks */,
+				2C591E931CDA1D7500B955A6 /* UTAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1223,7 +1273,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD690F31CD351D900747E36 /* UrbanThingsAPI.framework in Frameworks */,
+				2C46A1871CEE352C0041B514 /* UTAPIObjCAdapter.framework in Frameworks */,
+				2CD690F31CD351D900747E36 /* UTAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1231,7 +1282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CFFCA771CE8C572002D8AC4 /* UrbanThingsAPI.framework in Frameworks */,
+				2C46A1931CEEDBC50041B514 /* UTAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1239,7 +1290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CFFCA7A1CE8C58F002D8AC4 /* UrbanThingsAPI.framework in Frameworks */,
+				2CFFCA7A1CE8C58F002D8AC4 /* UTAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1247,7 +1298,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CFFCA791CE8C581002D8AC4 /* UrbanThingsAPI.framework in Frameworks */,
+				2CFFCA791CE8C581002D8AC4 /* UTAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1255,18 +1306,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CFFCA781CE8C579002D8AC4 /* UrbanThingsAPI.framework in Frameworks */,
+				2CFFCA781CE8C579002D8AC4 /* UTAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C46A1421CECFCDD0041B514 /* UTAPIObjCAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				2C46A16A1CECFEFB0041B514 /* ImportSourceAdapterTests.m */,
+				2C46A1711CECFF310041B514 /* ImportSourceAdapterTests.swift */,
+			);
+			name = UTAPIObjCAdapter;
+			path = UrbanThingsAPI;
+			sourceTree = "<group>";
+		};
+		2C46A17C1CEDB9D90041B514 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C46A1451CECFCDD0041B514 /* Info.plist */,
+				2CFFC9D71CE84830002D8AC4 /* Infrastructure */,
+				2C60AF051CDFC0ED00329630 /* JSON */,
+				2C46A1421CECFCDD0041B514 /* UTAPIObjCAdapter */,
+				2CD690EF1CD351D900747E36 /* UrbanThingsAPI */,
+				2C46A18E1CEE3FA90041B514 /* UnitTests-Bridging-Header.h */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		2C46A1991CEEE6950041B514 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				2C46A1941CEEE24A0041B514 /* Demo-Bridging-Header.h */,
+				2C46A1981CEEE3A40041B514 /* ObjCDemo.h */,
+				2C46A1951CEEE24A0041B514 /* ObjCDemo.m */,
+			);
+			path = ObjC;
+			sourceTree = "<group>";
+		};
 		2C591E801CDA1D4A00B955A6 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				2C60AEDB1CDCCDF400329630 /* ViewControllers */,
 				2C60AED11CDCC18100329630 /* Models */,
+				2C46A1991CEEE6950041B514 /* ObjC */,
 				2C591E811CDA1D4A00B955A6 /* AppDelegate.swift */,
 				2C1CF7BE1CE10BBB00F1E08A /* NSNotificationCenter+Extensions.swift */,
 				2C591E871CDA1D4A00B955A6 /* Main.storyboard */,
@@ -1284,9 +1369,9 @@
 				2C8048881CE4D49D00AE863A /* README.md */,
 				2C46A13B1CEB49300041B514 /* UrbanThingsAPI.podspec */,
 				2C5F2C071CCE9AA900999713 /* UrbanThingsAPI */,
-				2CD690EF1CD351D900747E36 /* UrbanThingsAPITests */,
 				2C591E801CDA1D4A00B955A6 /* Demo */,
 				2CFFCA0F1CE86B6B002D8AC4 /* UTAPIObjCAdapter */,
+				2C46A17C1CEDB9D90041B514 /* UnitTests */,
 				2C5F2C061CCE9AA900999713 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1294,14 +1379,14 @@
 		2C5F2C061CCE9AA900999713 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C5F2C051CCE9AA900999713 /* UrbanThingsAPI.framework */,
-				2CD690EE1CD351D900747E36 /* UrbanThingsAPITests-iOS.xctest */,
+				2C5F2C051CCE9AA900999713 /* UTAPI.framework */,
+				2CD690EE1CD351D900747E36 /* UnitTests-iOS.xctest */,
 				2C591E7F1CDA1D4A00B955A6 /* Demo.app */,
-				2C0CE2AB1CE316E30054847C /* UrbanThingsAPI.framework */,
-				2C0CE2B41CE316E30054847C /* UrbanThingsAPITests-tvOS.xctest */,
-				2C0CE2C71CE3176E0054847C /* UrbanThingsAPI.framework */,
-				2C0CE2D41CE3178D0054847C /* UrbanThingsAPI.framework */,
-				2C0CE2DD1CE3178D0054847C /* UrbanThingsAPITests-OSX.xctest */,
+				2C0CE2AB1CE316E30054847C /* UTAPI.framework */,
+				2C0CE2B41CE316E30054847C /* UnitTests-tvOS.xctest */,
+				2C0CE2C71CE3176E0054847C /* UTAPI.framework */,
+				2C0CE2D41CE3178D0054847C /* UTAPI.framework */,
+				2C0CE2DD1CE3178D0054847C /* UnitTests-OSX.xctest */,
 				2CFFC9E01CE86A8D002D8AC4 /* UTAPIObjCAdapter.framework */,
 				2CFFC9ED1CE86AEF002D8AC4 /* UTAPIObjCAdapter.framework */,
 				2CFFC9FA1CE86B2A002D8AC4 /* UTAPIObjCAdapter.framework */,
@@ -1315,7 +1400,7 @@
 			children = (
 				2C5F2C1F1CCE9AB000999713 /* Public */,
 				2CD691311CD6813F00747E36 /* Internal */,
-				2C5F2C081CCE9AA900999713 /* UrbanThingsAPI.h */,
+				2C5F2C081CCE9AA900999713 /* UTAPI.h */,
 				2C5F2C0A1CCE9AA900999713 /* Info.plist */,
 			);
 			path = UrbanThingsAPI;
@@ -1345,7 +1430,7 @@
 			children = (
 				2C60AED21CDCC21700329630 /* StopsModel.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2C60AEDB1CDCCDF400329630 /* ViewControllers */ = {
@@ -1356,21 +1441,7 @@
 				2C60AEE01CDCD06C00329630 /* ContainerViewController.swift */,
 				2C60AEE21CDCE1B200329630 /* StopCell.swift */,
 			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		2C60AEF91CDF92E900329630 /* UTObjectsTests */ = {
-			isa = PBXGroup;
-			children = (
-				2C591E771CD9CAD700B955A6 /* UTObjectTests.swift */,
-				2C60AEFF1CDFB8DE00329630 /* UTTransitAgencyTests.swift */,
-				2CD691B01CD9478A00747E36 /* UTImportSourceTests.swift */,
-				2C60AF081CDFC25800329630 /* UTPlacePointTests.swift */,
-				2C60AF0C1CDFD4DA00329630 /* UTTransitStopTests.swift */,
-				2C60AF101CDFDD2F00329630 /* UTResourceStatusTests.swift */,
-				2C1CF7B41CE0974100F1E08A /* UTPlacePointListTests.swift */,
-			);
-			name = UTObjectsTests;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		2C60AF051CDFC0ED00329630 /* JSON */ = {
@@ -1401,7 +1472,7 @@
 				2C9F52DF1CE72160004AF1FB /* RealtimeStatuses.json */,
 				2C9F52E31CE7238B004AF1FB /* Directions.json */,
 			);
-			name = JSON;
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		2CD690D21CD22B3C00747E36 /* JSON */ = {
@@ -1453,15 +1524,24 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
-		2CD690EF1CD351D900747E36 /* UrbanThingsAPITests */ = {
+		2CD690EF1CD351D900747E36 /* UrbanThingsAPI */ = {
 			isa = PBXGroup;
 			children = (
-				2CFFC9D71CE84830002D8AC4 /* Infrastructure */,
-				2C60AF051CDFC0ED00329630 /* JSON */,
-				2CFFC9D81CE84876002D8AC4 /* Tests */,
-				2CD690F21CD351D900747E36 /* Info.plist */,
+				2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */,
+				2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */,
+				2C9F52D31CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift */,
+				2C6A4E0E1CE3CB5800475C9F /* StaticResponseProcessingTests.swift */,
+				2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */,
+				2CD690F01CD351D900747E36 /* UrbanThingsAPITests.swift */,
+				2CD691B01CD9478A00747E36 /* UTImportSourceTests.swift */,
+				2C591E771CD9CAD700B955A6 /* UTObjectTests.swift */,
+				2C1CF7B41CE0974100F1E08A /* UTPlacePointListTests.swift */,
+				2C60AF081CDFC25800329630 /* UTPlacePointTests.swift */,
+				2C60AF101CDFDD2F00329630 /* UTResourceStatusTests.swift */,
+				2C60AEFF1CDFB8DE00329630 /* UTTransitAgencyTests.swift */,
+				2C60AF0C1CDFD4DA00329630 /* UTTransitStopTests.swift */,
 			);
-			path = UrbanThingsAPITests;
+			path = UrbanThingsAPI;
 			sourceTree = "<group>";
 		};
 		2CD691281CD611FD00747E36 /* GooglePolyline */ = {
@@ -1595,26 +1675,13 @@
 				2C60AF011CDFB8FC00329630 /* XCTestCase+Extensions.swift */,
 				2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */,
 			);
-			name = Infrastructure;
-			sourceTree = "<group>";
-		};
-		2CFFC9D81CE84876002D8AC4 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				2C60AEF91CDF92E900329630 /* UTObjectsTests */,
-				2CD690F01CD351D900747E36 /* UrbanThingsAPITests.swift */,
-				2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */,
-				2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */,
-				2C6A4E0E1CE3CB5800475C9F /* StaticResponseProcessingTests.swift */,
-				2C9F52D31CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift */,
-				2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */,
-			);
-			name = Tests;
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		2CFFCA0F1CE86B6B002D8AC4 /* UTAPIObjCAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				2C46A17E1CEE0F730041B514 /* Info.plist */,
 				2CFFC9E21CE86A8D002D8AC4 /* UTAPIObjCAdapter.h */,
 				2CFFCA101CE86BF8002D8AC4 /* Public */,
 			);
@@ -1671,6 +1738,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A1A01CEEF5F20041B514 /* UTAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1678,6 +1746,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A1A11CEEF5F20041B514 /* UTAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1685,6 +1754,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A19F1CEEF5F10041B514 /* UTAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1692,6 +1762,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A19E1CEEF5ED0041B514 /* UTAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1699,6 +1770,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A18F1CEED8040041B514 /* UTAPIObjCAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1706,6 +1778,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A1921CEED80A0041B514 /* UTAPIObjCAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1713,6 +1786,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A1911CEED8090041B514 /* UTAPIObjCAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1720,6 +1794,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A1901CEED8080041B514 /* UTAPIObjCAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1742,12 +1817,12 @@
 			);
 			name = "UrbanThingsAPI-tvOS";
 			productName = "UrbanThingsAPI-tvOS";
-			productReference = 2C0CE2AB1CE316E30054847C /* UrbanThingsAPI.framework */;
+			productReference = 2C0CE2AB1CE316E30054847C /* UTAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2C0CE2B31CE316E30054847C /* UrbanThingsAPITests-tvOS */ = {
+		2C0CE2B31CE316E30054847C /* UnitTests-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C0CE2BF1CE316E30054847C /* Build configuration list for PBXNativeTarget "UrbanThingsAPITests-tvOS" */;
+			buildConfigurationList = 2C0CE2BF1CE316E30054847C /* Build configuration list for PBXNativeTarget "UnitTests-tvOS" */;
 			buildPhases = (
 				2C0CE2B01CE316E30054847C /* Sources */,
 				2C0CE2B11CE316E30054847C /* Frameworks */,
@@ -1756,11 +1831,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				2C46A18C1CEE354A0041B514 /* PBXTargetDependency */,
 				2C0CE2B71CE316E30054847C /* PBXTargetDependency */,
 			);
-			name = "UrbanThingsAPITests-tvOS";
+			name = "UnitTests-tvOS";
 			productName = "UrbanThingsAPI-tvOSTests";
-			productReference = 2C0CE2B41CE316E30054847C /* UrbanThingsAPITests-tvOS.xctest */;
+			productReference = 2C0CE2B41CE316E30054847C /* UnitTests-tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2C0CE2C61CE3176E0054847C /* UrbanThingsAPI-watchOS */ = {
@@ -1779,7 +1855,7 @@
 			);
 			name = "UrbanThingsAPI-watchOS";
 			productName = "UrbanThingsAPI-watchOS";
-			productReference = 2C0CE2C71CE3176E0054847C /* UrbanThingsAPI.framework */;
+			productReference = 2C0CE2C71CE3176E0054847C /* UTAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2C0CE2D31CE3178D0054847C /* UrbanThingsAPI-OSX */ = {
@@ -1798,12 +1874,12 @@
 			);
 			name = "UrbanThingsAPI-OSX";
 			productName = "UrbanThingsAPI-OSX";
-			productReference = 2C0CE2D41CE3178D0054847C /* UrbanThingsAPI.framework */;
+			productReference = 2C0CE2D41CE3178D0054847C /* UTAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2C0CE2DC1CE3178D0054847C /* UrbanThingsAPITests-OSX */ = {
+		2C0CE2DC1CE3178D0054847C /* UnitTests-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C0CE2E81CE3178D0054847C /* Build configuration list for PBXNativeTarget "UrbanThingsAPITests-OSX" */;
+			buildConfigurationList = 2C0CE2E81CE3178D0054847C /* Build configuration list for PBXNativeTarget "UnitTests-OSX" */;
 			buildPhases = (
 				2C0CE2D91CE3178D0054847C /* Sources */,
 				2C0CE2DA1CE3178D0054847C /* Frameworks */,
@@ -1812,11 +1888,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				2C46A1891CEE35320041B514 /* PBXTargetDependency */,
 				2C0CE2E01CE3178D0054847C /* PBXTargetDependency */,
 			);
-			name = "UrbanThingsAPITests-OSX";
+			name = "UnitTests-OSX";
 			productName = "UrbanThingsAPI-OSXTests";
-			productReference = 2C0CE2DD1CE3178D0054847C /* UrbanThingsAPITests-OSX.xctest */;
+			productReference = 2C0CE2DD1CE3178D0054847C /* UnitTests-OSX.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2C591E7E1CDA1D4A00B955A6 /* Demo */ = {
@@ -1855,12 +1932,12 @@
 			);
 			name = "UrbanThingsAPI-iOS";
 			productName = FatAttitudeAPI;
-			productReference = 2C5F2C051CCE9AA900999713 /* UrbanThingsAPI.framework */;
+			productReference = 2C5F2C051CCE9AA900999713 /* UTAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2CD690ED1CD351D900747E36 /* UrbanThingsAPITests-iOS */ = {
+		2CD690ED1CD351D900747E36 /* UnitTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CD690F61CD351D900747E36 /* Build configuration list for PBXNativeTarget "UrbanThingsAPITests-iOS" */;
+			buildConfigurationList = 2CD690F61CD351D900747E36 /* Build configuration list for PBXNativeTarget "UnitTests-iOS" */;
 			buildPhases = (
 				2CD690EA1CD351D900747E36 /* Sources */,
 				2CD690EB1CD351D900747E36 /* Frameworks */,
@@ -1869,11 +1946,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				2C46A1861CEE35200041B514 /* PBXTargetDependency */,
 				2CD690F51CD351D900747E36 /* PBXTargetDependency */,
 			);
-			name = "UrbanThingsAPITests-iOS";
+			name = "UnitTests-iOS";
 			productName = UrbanThingsAPITests;
-			productReference = 2CD690EE1CD351D900747E36 /* UrbanThingsAPITests-iOS.xctest */;
+			productReference = 2CD690EE1CD351D900747E36 /* UnitTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2CFFC9DF1CE86A8D002D8AC4 /* UTAPIObjCAdapter-iOS */ = {
@@ -2016,19 +2094,19 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */,
 				2C5F2C041CCE9AA900999713 /* UrbanThingsAPI-iOS */,
 				2C0CE2D31CE3178D0054847C /* UrbanThingsAPI-OSX */,
 				2C0CE2AA1CE316E30054847C /* UrbanThingsAPI-tvOS */,
 				2C0CE2C61CE3176E0054847C /* UrbanThingsAPI-watchOS */,
-				2CD690ED1CD351D900747E36 /* UrbanThingsAPITests-iOS */,
-				2C0CE2DC1CE3178D0054847C /* UrbanThingsAPITests-OSX */,
-				2C0CE2B31CE316E30054847C /* UrbanThingsAPITests-tvOS */,
-				2C591E7E1CDA1D4A00B955A6 /* Demo */,
 				2CFFC9DF1CE86A8D002D8AC4 /* UTAPIObjCAdapter-iOS */,
 				2CFFCA061CE86B46002D8AC4 /* UTAPIObjCAdapter-OSX */,
 				2CFFC9F91CE86B2A002D8AC4 /* UTAPIObjCAdapter-tvOS */,
 				2CFFC9EC1CE86AEF002D8AC4 /* UTAPIObjCAdapter-watchOS */,
-				2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */,
+				2C591E7E1CDA1D4A00B955A6 /* Demo */,
+				2CD690ED1CD351D900747E36 /* UnitTests-iOS */,
+				2C0CE2DC1CE3178D0054847C /* UnitTests-OSX */,
+				2C0CE2B31CE316E30054847C /* UnitTests-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -2352,10 +2430,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A1831CEE30A50041B514 /* ImportSourceAdapterTests.m in Sources */,
 				2C9F52EA1CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift in Sources */,
 				2C0CE4901CE324300054847C /* UTPlacePointListTests.swift in Sources */,
 				2C0CE4931CE324300054847C /* TestPlacePoint.swift in Sources */,
 				2C9F52D61CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift in Sources */,
+				2C46A1841CEE30A50041B514 /* ImportSourceAdapterTests.swift in Sources */,
 				2C0CE48B1CE324300054847C /* UTTransitAgencyTests.swift in Sources */,
 				2C6A4E111CE3CB5800475C9F /* StaticResponseProcessingTests.swift in Sources */,
 				2C0CE48E1CE324300054847C /* UTTransitStopTests.swift in Sources */,
@@ -2648,10 +2728,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A1811CEE30A50041B514 /* ImportSourceAdapterTests.m in Sources */,
 				2C9F52E91CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift in Sources */,
 				2C0CE4841CE3242F0054847C /* UTPlacePointListTests.swift in Sources */,
 				2C0CE4871CE3242F0054847C /* TestPlacePoint.swift in Sources */,
 				2C9F52D51CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift in Sources */,
+				2C46A1821CEE30A50041B514 /* ImportSourceAdapterTests.swift in Sources */,
 				2C0CE47F1CE3242F0054847C /* UTTransitAgencyTests.swift in Sources */,
 				2C6A4E101CE3CB5800475C9F /* StaticResponseProcessingTests.swift in Sources */,
 				2C0CE4821CE3242F0054847C /* UTTransitStopTests.swift in Sources */,
@@ -2671,6 +2753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A1961CEEE24A0041B514 /* ObjCDemo.m in Sources */,
 				2C60AEDD1CDCCE0400329630 /* StopsListViewController.swift in Sources */,
 				2C60AED31CDCC21700329630 /* StopsModel.swift in Sources */,
 				2C60AEE11CDCD06C00329630 /* ContainerViewController.swift in Sources */,
@@ -2822,10 +2905,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C46A17F1CEE30A40041B514 /* ImportSourceAdapterTests.m in Sources */,
 				2C9F52E81CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift in Sources */,
 				2C60AF0D1CDFD4DA00329630 /* UTTransitStopTests.swift in Sources */,
 				2C60AF021CDFB8FC00329630 /* XCTestCase+Extensions.swift in Sources */,
 				2C9F52D41CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift in Sources */,
+				2C46A1801CEE30A40041B514 /* ImportSourceAdapterTests.swift in Sources */,
 				2C60AF001CDFB8DF00329630 /* UTTransitAgencyTests.swift in Sources */,
 				2C6A4E0F1CE3CB5800475C9F /* StaticResponseProcessingTests.swift in Sources */,
 				2C591E9B1CDB131C00B955A6 /* TestPlacePoint.swift in Sources */,
@@ -3022,6 +3107,21 @@
 			target = 2C0CE2D31CE3178D0054847C /* UrbanThingsAPI-OSX */;
 			targetProxy = 2C0CE2DF1CE3178D0054847C /* PBXContainerItemProxy */;
 		};
+		2C46A1861CEE35200041B514 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CFFC9DF1CE86A8D002D8AC4 /* UTAPIObjCAdapter-iOS */;
+			targetProxy = 2C46A1851CEE35200041B514 /* PBXContainerItemProxy */;
+		};
+		2C46A1891CEE35320041B514 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CFFCA061CE86B46002D8AC4 /* UTAPIObjCAdapter-OSX */;
+			targetProxy = 2C46A1881CEE35320041B514 /* PBXContainerItemProxy */;
+		};
+		2C46A18C1CEE354A0041B514 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CFFC9F91CE86B2A002D8AC4 /* UTAPIObjCAdapter-tvOS */;
+			targetProxy = 2C46A18B1CEE354A0041B514 /* PBXContainerItemProxy */;
+		};
 		2C591E961CDA1D7500B955A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2C5F2C041CCE9AA900999713 /* UrbanThingsAPI-iOS */;
@@ -3110,7 +3210,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.tvos.UrbanThingsAPI;
-				PRODUCT_NAME = UrbanThingsAPI;
+				PRODUCT_NAME = UTAPI;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -3129,7 +3229,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.tvos.UrbanThingsAPI;
-				PRODUCT_NAME = UrbanThingsAPI;
+				PRODUCT_NAME = UTAPI;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -3140,24 +3240,28 @@
 		2C0CE2C01CE316E30054847C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = UrbanThingsAPITests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.ios.UrbanThingsAPI-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UnitTests/UnitTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UnitTests-Swift.h";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
 		2C0CE2C11CE316E30054847C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = UrbanThingsAPITests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.ios.UrbanThingsAPI-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UnitTests/UnitTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UnitTests-Swift.h";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -3173,11 +3277,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.watchOS.UrbanThingsAPI-watchOS";
-				PRODUCT_NAME = UrbanThingsAPI;
+				PRODUCT_NAME = UTAPI;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -3193,11 +3297,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.watchOS.UrbanThingsAPI-watchOS";
-				PRODUCT_NAME = UrbanThingsAPI;
+				PRODUCT_NAME = UTAPI;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -3217,7 +3321,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.osx.UrbanThingsAPI-OSX";
-				PRODUCT_NAME = UrbanThingsAPI;
+				PRODUCT_NAME = UTAPI;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -3239,7 +3343,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.osx.UrbanThingsAPI-OSX";
-				PRODUCT_NAME = UrbanThingsAPI;
+				PRODUCT_NAME = UTAPI;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -3250,12 +3354,14 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = UrbanThingsAPITests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.osx.UrbanThingsAPI-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UnitTests/UnitTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UnitTests-Swift.h";
 			};
 			name = Debug;
 		};
@@ -3264,12 +3370,14 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = UrbanThingsAPITests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.osx.UrbanThingsAPI-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UnitTests/UnitTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UnitTests-Swift.h";
 			};
 			name = Release;
 		};
@@ -3277,12 +3385,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.ios.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/ObjC/Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3291,12 +3402,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.ios.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/ObjC/Demo-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -3406,7 +3519,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.urbanthings.ios.UrbanThingsAPI;
-				PRODUCT_NAME = UrbanThingsAPI;
+				PRODUCT_NAME = UTAPI;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -3426,7 +3539,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.urbanthings.ios.UrbanThingsAPI;
-				PRODUCT_NAME = UrbanThingsAPI;
+				PRODUCT_NAME = UTAPI;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -3434,20 +3547,24 @@
 		2CD690F71CD351D900747E36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = UrbanThingsAPITests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.ios.UrbanThingsAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UnitTests/UnitTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UnitTests-Swift.h";
 			};
 			name = Debug;
 		};
 		2CD690F81CD351D900747E36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = UrbanThingsAPITests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.ios.UrbanThingsAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UnitTests/UnitTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UnitTests-Swift.h";
 			};
 			name = Release;
 		};
@@ -3461,7 +3578,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.ios.UTAPIObjCAdapter;
 				PRODUCT_NAME = UTAPIObjCAdapter;
@@ -3480,7 +3597,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fatattitude.ios.UTAPIObjCAdapter;
 				PRODUCT_NAME = UTAPIObjCAdapter;
@@ -3506,7 +3623,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -3527,7 +3644,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -3548,7 +3665,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -3568,7 +3685,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -3586,7 +3703,7 @@
 				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.osx.UTAPIObjCAdapter-OSX";
 				PRODUCT_NAME = UTAPIObjCAdapter;
 				SDKROOT = macosx;
@@ -3609,7 +3726,7 @@
 				INFOPLIST_FILE = UTAPIObjCAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fatattitude.osx.UTAPIObjCAdapter-OSX";
 				PRODUCT_NAME = UTAPIObjCAdapter;
 				SDKROOT = macosx;
@@ -3643,7 +3760,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C0CE2BF1CE316E30054847C /* Build configuration list for PBXNativeTarget "UrbanThingsAPITests-tvOS" */ = {
+		2C0CE2BF1CE316E30054847C /* Build configuration list for PBXNativeTarget "UnitTests-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C0CE2C01CE316E30054847C /* Debug */,
@@ -3670,7 +3787,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C0CE2E81CE3178D0054847C /* Build configuration list for PBXNativeTarget "UrbanThingsAPITests-OSX" */ = {
+		2C0CE2E81CE3178D0054847C /* Build configuration list for PBXNativeTarget "UnitTests-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C0CE2E91CE3178D0054847C /* Debug */,
@@ -3706,7 +3823,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CD690F61CD351D900747E36 /* Build configuration list for PBXNativeTarget "UrbanThingsAPITests-iOS" */ = {
+		2CD690F61CD351D900747E36 /* Build configuration list for PBXNativeTarget "UnitTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CD690F71CD351D900747E36 /* Debug */,

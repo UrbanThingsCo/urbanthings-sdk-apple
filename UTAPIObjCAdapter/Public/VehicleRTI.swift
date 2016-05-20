@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.VehicleRTI
-
+import UTAPI
 
 @objc public protocol VehicleRTI {
     /// The unique identifier of the Agency operating this vehicle. If the information comes from our systems, a corresponding
@@ -32,9 +31,9 @@ import protocol UrbanThingsAPI.VehicleRTI
 
 @objc public class UTVehicleRTI : NSObject, VehicleRTI {
     
-    let adapted:UrbanThingsAPI.VehicleRTI
+    let adapted:UTAPI.VehicleRTI
     
-    public init(adapt:UrbanThingsAPI.VehicleRTI) {
+    public init(adapt:UTAPI.VehicleRTI) {
         self.adapted = adapt
     }
     

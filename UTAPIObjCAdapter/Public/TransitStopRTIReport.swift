@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitStopRTIReport
+import UTAPI
 
 /// `TransitStopRTIReport` provides a report for a particular stop. There may be multiple reports for a stop.
 @objc public protocol TransitStopRTIReport : Attribution {
@@ -33,9 +33,9 @@ import protocol UrbanThingsAPI.TransitStopRTIReport
 
 @objc public class UTTransitStopRTIReport : UTAttribution, TransitStopRTIReport {
     
-    var transitStopRTIReport:UrbanThingsAPI.TransitStopRTIReport { return self.adapted as! UrbanThingsAPI.TransitStopRTIReport }
+    var transitStopRTIReport:UTAPI.TransitStopRTIReport { return self.adapted as! UTAPI.TransitStopRTIReport }
     
-    public init(adapt: UrbanThingsAPI.TransitStopRTIReport) {
+    public init(adapt: UTAPI.TransitStopRTIReport) {
         self.upcomingCalls = adapt.upcomingCalls.map { UTMonitoredStopCall(adapt: $0) }
         self.disruptions = adapt.disruptions.map { UTDisruption(adapt: $0) }
         super.init(adapt: adapt)

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.Attribution
+import UTAPI
 
 @objc public protocol Attribution {
     /// An attribution label text for the data - clients MUST display either this label or the string contained at AttributionLabel to conform with the Terms and Conditions of using the API.
@@ -20,9 +20,9 @@ import protocol UrbanThingsAPI.Attribution
 
 @objc public class UTAttribution : NSObject, Attribution {
     
-    let adapted:UrbanThingsAPI.Attribution
+    let adapted:UTAPI.Attribution
     
-    public init(adapt:UrbanThingsAPI.Attribution) {
+    public init(adapt:UTAPI.Attribution) {
         self.adapted = adapt
     }
     

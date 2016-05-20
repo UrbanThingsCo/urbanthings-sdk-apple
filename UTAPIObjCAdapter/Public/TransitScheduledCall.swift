@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitScheduledCall
-import enum UrbanThingsAPI.TransitCallType
+import UTAPI
 
 /// `TransitCallType` details the types of transit call that can be made.
 @objc public enum TransitCallType:Int {
@@ -22,7 +21,7 @@ import enum UrbanThingsAPI.TransitCallType
     case ArrangeWithDriver = 3
     case Unknown = -1
     
-    init(_ value: UrbanThingsAPI.TransitCallType?) {
+    init(_ value: UTAPI.TransitCallType?) {
         self = TransitCallType(rawValue: value?.rawValue ?? -1) ?? .Unknown
     }
 }
@@ -40,9 +39,9 @@ import enum UrbanThingsAPI.TransitCallType
 
 @objc public class UTTransitScheduledCall : NSObject, TransitScheduledCall {
     
-    let adapted:UrbanThingsAPI.TransitScheduledCall
+    let adapted:UTAPI.TransitScheduledCall
     
-    public init(adapt: UrbanThingsAPI.TransitScheduledCall) {
+    public init(adapt: UTAPI.TransitScheduledCall) {
         self.adapted = adapt
         self.pickupType = TransitCallType(adapt.pickupType)
         self.dropoffType = TransitCallType(adapt.dropoffType)

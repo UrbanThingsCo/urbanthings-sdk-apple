@@ -7,15 +7,17 @@
 //
 
 import UIKit
-import UrbanThingsAPI
+import UTAPI
 import MapKit
+
+private let MarkerReuseIdentifier = "MarkerReuseIdentifier"
 
 /// Adapter to make a TransitStop usabled as a map MKAnnotation
 class TransitStopAdapter : NSObject, MKAnnotation {
     
-    let stop:TransitStop
+    let stop:UTAPI.TransitStop
     
-    init(stop:TransitStop) {
+    init(stop:UTAPI.TransitStop) {
         self.stop = stop
     }
     
@@ -83,14 +85,26 @@ class StopsMapViewController : UIViewController, MKMapViewDelegate {
                                                                       object: self,
                                                                       userInfo: [TransitStopPrimaryCode:annotation.stop.primaryCode])
             
+            self.resourceRequest?.cancel()
             self.resourceRequest = StopsModel.sharedInstance.getStopResources(annotation.stop) { msg in
                 NSOperationQueue.mainQueue().addOperationWithBlock {
                     (view.annotation as? TransitStopAdapter)?.subtitle = msg
                 }
-                self.resourceRequest?.cancel()
                 self.resourceRequest = nil
             }
         }
+    }
+    
+    @objc func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let view = mapView.dequeueReusableAnnotationViewWithIdentifier(MarkerReuseIdentifier) as? MKPinAnnotationView ?? MKPinAnnotationView(annotation: annotation, reuseIdentifier: MarkerReuseIdentifier)
+        view.annotation = annotation
+        view.canShowCallout = true
+        if (annotation as? TransitStopAdapter)?.stop.placePointType == PlacePointType.CycleHireDock {
+            view.pinTintColor = UIColor.redColor()
+        } else {
+            view.pinTintColor = UIColor.orangeColor()
+        }
+        return view
     }
     
     @objc func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {

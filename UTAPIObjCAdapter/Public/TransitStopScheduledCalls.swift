@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitStopScheduledCalls
+import UTAPI
 
 /// `TransitStopScheduledCalls` provides details of scheduled calls for a particular transit stop.
 @objc public protocol TransitStopScheduledCalls {
@@ -23,9 +23,9 @@ import protocol UrbanThingsAPI.TransitStopScheduledCalls
 
 @objc public class UTTransitStopScheduledCalls : NSObject, TransitStopScheduledCalls {
     
-    let adapted: UrbanThingsAPI.TransitStopScheduledCalls
+    let adapted: UTAPI.TransitStopScheduledCalls
     
-    public init(adapt: UrbanThingsAPI.TransitStopScheduledCalls) {
+    public init(adapt: UTAPI.TransitStopScheduledCalls) {
         self.adapted = adapt
         self.scheduledCalls = adapt.scheduledCalls.map { UTStopCall(adapt: $0) }
     }

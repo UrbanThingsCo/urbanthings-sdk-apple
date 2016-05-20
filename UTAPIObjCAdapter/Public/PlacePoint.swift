@@ -8,8 +8,7 @@
 
 import Foundation
 import CoreLocation
-import protocol UrbanThingsAPI.PlacePoint
-import enum UrbanThingsAPI.PlacePointType
+import UTAPI
 
 /// PlacePoint represents a place with a geo-location.
 ///
@@ -43,9 +42,9 @@ import enum UrbanThingsAPI.PlacePointType
 
 @objc public class UTPlacePoint : NSObject, PlacePoint {
     
-    let adapted:UrbanThingsAPI.PlacePoint
+    let adapted:UTAPI.PlacePoint
     
-    public init(adapt:UrbanThingsAPI.PlacePoint) {
+    public init(adapt:UTAPI.PlacePoint) {
         self.adapted = adapt
         self.location = CLLocationCoordinate2D(latitude: adapt.location.latitude, longitude: adapt.location.longitude)
     }

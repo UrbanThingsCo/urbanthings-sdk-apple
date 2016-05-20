@@ -8,7 +8,7 @@
 
 import XCTest
 import CoreLocation
-@testable import UrbanThingsAPI
+@testable import UTAPI
 
 // These tests inject an instance of MockRequestHandler into the UrbanThingsAPI instance under test to provide
 // local file of JSON as response to the request rather than needing a network call to be made and also risk change

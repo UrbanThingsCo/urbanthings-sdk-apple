@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.StopBoardMessage
-import enum UrbanThingsAPI.DisruptionSeverity
+import UTAPI
 
 /// `StopBoardMessage` details a message to display on a stop board.
 @objc public protocol StopBoardMessage : StopBoardColor {
@@ -28,9 +27,9 @@ import enum UrbanThingsAPI.DisruptionSeverity
 
 @objc public class UTStopBoardMessage : UTStopBoardColor, StopBoardMessage {
     
-    var stopBoardMessage: UrbanThingsAPI.StopBoardMessage { return self.adapted as! UrbanThingsAPI.StopBoardMessage }
+    var stopBoardMessage: UTAPI.StopBoardMessage { return self.adapted as! UTAPI.StopBoardMessage }
     
-    public init(adapt: UrbanThingsAPI.StopBoardMessage) {
+    public init(adapt: UTAPI.StopBoardMessage) {
         super.init(adapt: adapt)
     }
     

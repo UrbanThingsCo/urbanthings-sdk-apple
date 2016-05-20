@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitTrip
+import UTAPI
 
 /// `TransitTrip` details a transit route and one of the scheduled times that the route runs.
 @objc public protocol TransitTrip {
@@ -23,9 +23,9 @@ import protocol UrbanThingsAPI.TransitTrip
 
 @objc public class UTTransitTrip : NSObject, TransitTrip {
     
-    let adapted: UrbanThingsAPI.TransitTrip
+    let adapted: UTAPI.TransitTrip
     
-    public init(adapt: UrbanThingsAPI.TransitTrip) {
+    public init(adapt: UTAPI.TransitTrip) {
         self.adapted = adapt
         self.info = UTTransitTripInfo(adapt: adapt.info)!
         self.calendar = UTTransitCalendar(adapt: adapt.calendar)

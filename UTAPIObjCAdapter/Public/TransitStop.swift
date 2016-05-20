@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.TransitStop
-import enum UrbanThingsAPI.TransitMode
+import UTAPI
 
 /// Defines a transit stop
 ///
@@ -35,9 +34,9 @@ import enum UrbanThingsAPI.TransitMode
 
 @objc public class UTTransitStop : UTPlacePoint, TransitStop {
     
-    var transitStop:UrbanThingsAPI.TransitStop { return super.adapted as! UrbanThingsAPI.TransitStop }
+    var transitStop:UTAPI.TransitStop { return super.adapted as! UTAPI.TransitStop }
     
-    public init(adapt: UrbanThingsAPI.TransitStop) {
+    public init(adapt: UTAPI.TransitStop) {
         super.init(adapt: adapt)
     }
     

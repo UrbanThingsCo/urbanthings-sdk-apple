@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.JourneyLeg
-import enum UrbanThingsAPI.TransitMode
+import UTAPI
 
 /// `JourneyLeg` protocol describes a journey leg. `Inherited by TransitJourneyLeg`.
 @objc public protocol JourneyLeg {
@@ -34,9 +33,9 @@ import enum UrbanThingsAPI.TransitMode
 
 @objc public class UTJourneyLeg : NSObject, JourneyLeg {
     
-    let adapted:UrbanThingsAPI.JourneyLeg
+    let adapted:UTAPI.JourneyLeg
     
-    public init(adapt:UrbanThingsAPI.JourneyLeg) {
+    public init(adapt:UTAPI.JourneyLeg) {
         self.adapted = adapt
     }
     

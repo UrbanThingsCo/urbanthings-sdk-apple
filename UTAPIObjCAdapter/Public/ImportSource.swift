@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.ImportSource
+import UTAPI
 
 @objc public protocol ImportSource : Attribution {
     /// The unique identifier representing the source of the data. Used as a foreign key in some objects, e.g. TransitAgency.
@@ -24,9 +24,9 @@ import protocol UrbanThingsAPI.ImportSource
 
 @objc public class UTImportSource : UTAttribution, ImportSource {
     
-    var importSource:UrbanThingsAPI.ImportSource { return super.adapted as! UrbanThingsAPI.ImportSource }
+    var importSource:UTAPI.ImportSource { return super.adapted as! UTAPI.ImportSource }
 
-    public init(adapt:UrbanThingsAPI.ImportSource) {
+    public init(adapt:UTAPI.ImportSource) {
         super.init(adapt:adapt)
     }
     

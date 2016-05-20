@@ -7,9 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.ResourceStatus
-import enum UrbanThingsAPI.TransitMode
-import enum UrbanThingsAPI.ResourceTrend
+import UTAPI
 
 /// `ResourceTrend` details the trend for a resource that provides status.
 @objc public enum ResourceTrend: Int {
@@ -22,7 +20,7 @@ import enum UrbanThingsAPI.ResourceTrend
     /// Trend is emptying, that is more of the resource will be available as time progresses.
     case Emptying = 2
     
-    init(_ value: UrbanThingsAPI.ResourceTrend?) {
+    init(_ value: UTAPI.ResourceTrend?) {
         self = ResourceTrend(rawValue: value?.rawValue ?? -1) ?? .Unavailable
     }
 }
@@ -53,11 +51,11 @@ import enum UrbanThingsAPI.ResourceTrend
     var vehicleType:TransitMode { get }
 }
 
-@objc public class UTResourceStatus: UTAttribution {
+@objc public class UTResourceStatus: UTAttribution, ResourceStatus {
     
-    var resourceStatus: UrbanThingsAPI.ResourceStatus { return self.adapted as! UrbanThingsAPI.ResourceStatus }
+    var resourceStatus: UTAPI.ResourceStatus { return self.adapted as! UTAPI.ResourceStatus }
     
-    public init(adapt: UrbanThingsAPI.ResourceStatus) {
+    public init(adapt: UTAPI.ResourceStatus) {
         self.trend = ResourceTrend(adapt.trend)
         super.init(adapt: adapt)
     }

@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import protocol UrbanThingsAPI.StopBoardRow
-import enum UrbanThingsAPI.TransitMode
+import UTAPI
 
 /// `StopBoardRow` provides details of a row on a stop board.
 @objc public protocol StopBoardRow {
@@ -49,9 +48,9 @@ import enum UrbanThingsAPI.TransitMode
 
 @objc public class UTStopBoardRow : NSObject, StopBoardRow {
     
-    let adapted: UrbanThingsAPI.StopBoardRow
+    let adapted: UTAPI.StopBoardRow
     
-    public init(adapt: UrbanThingsAPI.StopBoardRow) {
+    public init(adapt: UTAPI.StopBoardRow) {
         self.adapted = adapt
     }
     
