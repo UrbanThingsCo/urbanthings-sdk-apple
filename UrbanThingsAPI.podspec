@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "UrbanThingsAPI"
-  s.version          = "0.9.2"
+  s.version          = "0.9.3"
   s.summary          = "UrbanThings SDK framework for UrbanThings Transport API"
   s.description      = <<-DESC
 Provides Swift framework for all Apple platforms to access the UrbanThings Transport API

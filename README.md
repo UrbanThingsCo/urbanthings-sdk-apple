@@ -1,7 +1,7 @@
 ![Logo](http://urbanthings.co/wp-content/themes/urbanthings/assets/images/urbanthings_logo_small.png)
 
 # UrbanThings API Framework for Apple Platforms
-[![Carthage compatible](https://img.shields.io/badge/Version-0.9.2-109480.svg?style=flat)]()
+[![Carthage compatible](https://img.shields.io/badge/Version-0.9.3-109480.svg?style=flat)]()
 [![CI Status](http://img.shields.io/travis/urbanthings/urbanthings-sdk-apple.svg?style=flat)](https://travis-ci.org/urbanthings/urbanthings-sdk-apple)
 
 ## Introduction

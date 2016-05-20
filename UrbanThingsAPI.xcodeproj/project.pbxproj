@@ -891,19 +891,19 @@
 			remoteGlobalIDString = 2CFFC9F91CE86B2A002D8AC4;
 			remoteInfo = "UTAPIObjCAdapter-tvOS";
 		};
-		2C591E951CDA1D7500B955A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C5F2C041CCE9AA900999713;
-			remoteInfo = UrbanThingsAPI;
-		};
 		2CD690F41CD351D900747E36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2C5F2C041CCE9AA900999713;
 			remoteInfo = UrbanThingsAPI;
+		};
+		2CD816391CEF61C200381CF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CFFC9DF1CE86A8D002D8AC4;
+			remoteInfo = "UTAPIObjCAdapter-iOS";
 		};
 		2CFFCA9E1CE8C888002D8AC4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -955,13 +955,6 @@
 			remoteInfo = BuildNumber;
 		};
 		2CFFCAF51CEAF0BF002D8AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CFFCAEA1CEAF030002D8AC4;
-			remoteInfo = BuildNumber;
-		};
-		2CFFCAF71CEAF231002D8AC4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
 			proxyType = 1;
@@ -1934,8 +1927,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFFCAF81CEAF231002D8AC4 /* PBXTargetDependency */,
-				2C591E961CDA1D7500B955A6 /* PBXTargetDependency */,
+				2CD8163A1CEF61C200381CF3 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -2310,7 +2302,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UrbanThingsAPI/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UTAPIObjCAdapter/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/Demo/Info.plist";
+			shellScript = "${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UrbanThingsAPI/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UTAPIObjCAdapter/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/Demo/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UnitTests/Info.plist";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -3164,15 +3156,15 @@
 			target = 2CFFC9F91CE86B2A002D8AC4 /* UTAPIObjCAdapter-tvOS */;
 			targetProxy = 2C46A18B1CEE354A0041B514 /* PBXContainerItemProxy */;
 		};
-		2C591E961CDA1D7500B955A6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C5F2C041CCE9AA900999713 /* UrbanThingsAPI-iOS */;
-			targetProxy = 2C591E951CDA1D7500B955A6 /* PBXContainerItemProxy */;
-		};
 		2CD690F51CD351D900747E36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2C5F2C041CCE9AA900999713 /* UrbanThingsAPI-iOS */;
 			targetProxy = 2CD690F41CD351D900747E36 /* PBXContainerItemProxy */;
+		};
+		2CD8163A1CEF61C200381CF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CFFC9DF1CE86A8D002D8AC4 /* UTAPIObjCAdapter-iOS */;
+			targetProxy = 2CD816391CEF61C200381CF3 /* PBXContainerItemProxy */;
 		};
 		2CFFCA9F1CE8C888002D8AC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3213,11 +3205,6 @@
 			isa = PBXTargetDependency;
 			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
 			targetProxy = 2CFFCAF51CEAF0BF002D8AC4 /* PBXContainerItemProxy */;
-		};
-		2CFFCAF81CEAF231002D8AC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
-			targetProxy = 2CFFCAF71CEAF231002D8AC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

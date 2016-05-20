@@ -14,7 +14,7 @@ public struct MockRequest : UrbanThingsAPIRequest {
     }
 }
 
-class MockRequestHandler : NSObject, RequestHandler {
+class MockRequestHandler : RequestHandler {
 
     let data:NSData?
     let json:AnyObject?
