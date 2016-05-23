@@ -10,8 +10,9 @@ import Foundation
 import UTAPI
 import CoreLocation
 
-// Replace string with your API key
-let ApiKey = "12345"
+// Replace string with your API key, available by registering at
+// https://portal-bristol.api.urbanthings.io/#/signup
+let ApiKey = "YOUR_API_KEY"
 
 /// Notification that is sent whenever there is a data update received from the server.
 let StopDataUpdated = "StopDataUpdated"
