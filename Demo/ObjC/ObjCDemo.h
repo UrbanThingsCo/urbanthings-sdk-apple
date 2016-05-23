@@ -11,6 +11,9 @@
 
 @import UTAPIObjCAdapter;
 
+// To demonstrate ObjC / Swift integration for the SDK this
+// simple ObjC class is included that provides a class method
+// to print a log message from a ResourceStatus instance.
 @interface ObjCDemo : NSObject
 + (void)logStatus:(id<ResourceStatus> )source;
 @end

@@ -191,7 +191,8 @@ class StopsModel {
                             var map = [String:RequestItem]()
                             self.deferred.forEach { map[$0.stopID] = $0 }
                             data.forEach {
-                                // Lets call some ObjC code
+                                // Lets call some ObjC code, so we adapt the pure swift object
+                                // and pass to ObjC method
                                 ObjCDemo.logStatus(UTAPIObjCAdapter.UTResourceStatus(adapt: $0))
                                 if let item = map[$0.primaryCode] {
                                     let msg = $0.statusText ?? Unavailable
