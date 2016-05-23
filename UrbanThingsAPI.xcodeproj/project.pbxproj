@@ -856,20 +856,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2C0CE2B61CE316E30054847C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C0CE2AA1CE316E30054847C;
-			remoteInfo = "UrbanThingsAPI-tvOS";
-		};
-		2C0CE2DF1CE3178D0054847C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C0CE2D31CE3178D0054847C;
-			remoteInfo = "UrbanThingsAPI-OSX";
-		};
 		2C46A1851CEE35200041B514 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
@@ -890,13 +876,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2CFFC9F91CE86B2A002D8AC4;
 			remoteInfo = "UTAPIObjCAdapter-tvOS";
-		};
-		2CD690F41CD351D900747E36 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C5F2C041CCE9AA900999713;
-			remoteInfo = UrbanThingsAPI;
 		};
 		2CD816391CEF61C200381CF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1851,7 +1830,6 @@
 			);
 			dependencies = (
 				2C46A18C1CEE354A0041B514 /* PBXTargetDependency */,
-				2C0CE2B71CE316E30054847C /* PBXTargetDependency */,
 			);
 			name = "UnitTests-tvOS";
 			productName = "UrbanThingsAPI-tvOSTests";
@@ -1908,7 +1886,6 @@
 			);
 			dependencies = (
 				2C46A1891CEE35320041B514 /* PBXTargetDependency */,
-				2C0CE2E01CE3178D0054847C /* PBXTargetDependency */,
 			);
 			name = "UnitTests-OSX";
 			productName = "UrbanThingsAPI-OSXTests";
@@ -1965,7 +1942,6 @@
 			);
 			dependencies = (
 				2C46A1861CEE35200041B514 /* PBXTargetDependency */,
-				2CD690F51CD351D900747E36 /* PBXTargetDependency */,
 			);
 			name = "UnitTests-iOS";
 			productName = UrbanThingsAPITests;
@@ -3131,16 +3107,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2C0CE2B71CE316E30054847C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C0CE2AA1CE316E30054847C /* UrbanThingsAPI-tvOS */;
-			targetProxy = 2C0CE2B61CE316E30054847C /* PBXContainerItemProxy */;
-		};
-		2C0CE2E01CE3178D0054847C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C0CE2D31CE3178D0054847C /* UrbanThingsAPI-OSX */;
-			targetProxy = 2C0CE2DF1CE3178D0054847C /* PBXContainerItemProxy */;
-		};
 		2C46A1861CEE35200041B514 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2CFFC9DF1CE86A8D002D8AC4 /* UTAPIObjCAdapter-iOS */;
@@ -3155,11 +3121,6 @@
 			isa = PBXTargetDependency;
 			target = 2CFFC9F91CE86B2A002D8AC4 /* UTAPIObjCAdapter-tvOS */;
 			targetProxy = 2C46A18B1CEE354A0041B514 /* PBXContainerItemProxy */;
-		};
-		2CD690F51CD351D900747E36 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C5F2C041CCE9AA900999713 /* UrbanThingsAPI-iOS */;
-			targetProxy = 2CD690F41CD351D900747E36 /* PBXContainerItemProxy */;
 		};
 		2CD8163A1CEF61C200381CF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
