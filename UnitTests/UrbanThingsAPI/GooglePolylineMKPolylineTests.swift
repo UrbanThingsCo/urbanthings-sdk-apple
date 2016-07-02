@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import MapKit
+@testable import UTAPI
 
 class GooglePolylineMKPolyiineTests: XCTestCase {
 

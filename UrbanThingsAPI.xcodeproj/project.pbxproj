@@ -456,9 +456,9 @@
 		2C1CF7BD1CE0D90300F1E08A /* UTTransitJourneyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CF7BC1CE0D90300F1E08A /* UTTransitJourneyLeg.swift */; };
 		2C1CF7BF1CE10BBB00F1E08A /* NSNotificationCenter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CF7BE1CE10BBB00F1E08A /* NSNotificationCenter+Extensions.swift */; };
 		2C1CF7C41CE1C0A800F1E08A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CF7C31CE1C0A800F1E08A /* Logger.swift */; };
-		2C27CF4E1D2800640003227A /* GooglePolylineMKPolyiineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27CF4A1D2800640003227A /* GooglePolylineMKPolyiineTests.swift */; };
-		2C27CF4F1D2800970003227A /* GooglePolylineMKPolyiineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27CF4A1D2800640003227A /* GooglePolylineMKPolyiineTests.swift */; };
-		2C27CF501D2800980003227A /* GooglePolylineMKPolyiineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27CF4A1D2800640003227A /* GooglePolylineMKPolyiineTests.swift */; };
+		2C27CF4E1D2800640003227A /* GooglePolylineMKPolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27CF4A1D2800640003227A /* GooglePolylineMKPolylineTests.swift */; };
+		2C27CF4F1D2800970003227A /* GooglePolylineMKPolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27CF4A1D2800640003227A /* GooglePolylineMKPolylineTests.swift */; };
+		2C27CF501D2800980003227A /* GooglePolylineMKPolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27CF4A1D2800640003227A /* GooglePolylineMKPolylineTests.swift */; };
 		2C2A61BC1CE3AAE70081C1EC /* MockRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */; };
 		2C2A61BD1CE3AAE70081C1EC /* MockRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */; };
 		2C2A61BE1CE3AAE70081C1EC /* MockRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */; };
@@ -974,7 +974,7 @@
 		2C1CF7BC1CE0D90300F1E08A /* UTTransitJourneyLeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitJourneyLeg.swift; sourceTree = "<group>"; };
 		2C1CF7BE1CE10BBB00F1E08A /* NSNotificationCenter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+Extensions.swift"; sourceTree = "<group>"; };
 		2C1CF7C31CE1C0A800F1E08A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		2C27CF4A1D2800640003227A /* GooglePolylineMKPolyiineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePolylineMKPolyiineTests.swift; sourceTree = "<group>"; };
+		2C27CF4A1D2800640003227A /* GooglePolylineMKPolylineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePolylineMKPolylineTests.swift; sourceTree = "<group>"; };
 		2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestHandler.swift; sourceTree = "<group>"; };
 		2C2A61BF1CE3C3D80081C1EC /* TransitStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TransitStops.json; sourceTree = "<group>"; };
 		2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CallingAtStops.json; sourceTree = "<group>"; };
@@ -1530,7 +1530,7 @@
 			children = (
 				2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */,
 				2C6A4E121CE4A35700475C9F /* GooglePolylineTests.swift */,
-				2C27CF4A1D2800640003227A /* GooglePolylineMKPolyiineTests.swift */,
+				2C27CF4A1D2800640003227A /* GooglePolylineMKPolylineTests.swift */,
 				2C9F52D31CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift */,
 				2C6A4E0E1CE3CB5800475C9F /* StaticResponseProcessingTests.swift */,
 				2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */,
@@ -2437,7 +2437,7 @@
 				2C9F52D61CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift in Sources */,
 				2C46A1841CEE30A50041B514 /* StaticAdapterTests.swift in Sources */,
 				2C0CE48B1CE324300054847C /* UTTransitAgencyTests.swift in Sources */,
-				2C27CF501D2800980003227A /* GooglePolylineMKPolyiineTests.swift in Sources */,
+				2C27CF501D2800980003227A /* GooglePolylineMKPolylineTests.swift in Sources */,
 				2C6A4E111CE3CB5800475C9F /* StaticResponseProcessingTests.swift in Sources */,
 				2CD8162B1CEF279700381CF3 /* RealtimeAdapterTests.swift in Sources */,
 				2C0CE48E1CE324300054847C /* UTTransitStopTests.swift in Sources */,
@@ -2740,7 +2740,7 @@
 				2C9F52D51CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift in Sources */,
 				2C46A1821CEE30A50041B514 /* StaticAdapterTests.swift in Sources */,
 				2C0CE47F1CE3242F0054847C /* UTTransitAgencyTests.swift in Sources */,
-				2C27CF4F1D2800970003227A /* GooglePolylineMKPolyiineTests.swift in Sources */,
+				2C27CF4F1D2800970003227A /* GooglePolylineMKPolylineTests.swift in Sources */,
 				2C6A4E101CE3CB5800475C9F /* StaticResponseProcessingTests.swift in Sources */,
 				2CD8162A1CEF279600381CF3 /* RealtimeAdapterTests.swift in Sources */,
 				2C0CE4821CE3242F0054847C /* UTTransitStopTests.swift in Sources */,
@@ -2922,7 +2922,7 @@
 				2C9F52D41CE70A6E004AF1FB /* RealtimeResponseProcessingTests.swift in Sources */,
 				2C46A1801CEE30A40041B514 /* StaticAdapterTests.swift in Sources */,
 				2C60AF001CDFB8DF00329630 /* UTTransitAgencyTests.swift in Sources */,
-				2C27CF4E1D2800640003227A /* GooglePolylineMKPolyiineTests.swift in Sources */,
+				2C27CF4E1D2800640003227A /* GooglePolylineMKPolylineTests.swift in Sources */,
 				2C6A4E0F1CE3CB5800475C9F /* StaticResponseProcessingTests.swift in Sources */,
 				2CD816291CEF279600381CF3 /* RealtimeAdapterTests.swift in Sources */,
 				2C591E9B1CDB131C00B955A6 /* TestPlacePoint.swift in Sources */,
