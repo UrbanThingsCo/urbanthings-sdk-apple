@@ -1,6 +1,4 @@
-{
-    "success": true,
-    "data": [
+[
              {
              "smsCode": "bthjtjt",
              "bearing": 135,
@@ -2305,5 +2303,4 @@
              "lat": 51.381750749,
              "lng": -2.358790164
              }
-             ]
-}
+]

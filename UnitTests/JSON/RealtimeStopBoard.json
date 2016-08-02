@@ -1,6 +1,4 @@
 {
-"success": true,
-"data": {
 "stopID": "490007418W",
 "timeStamp": 635988104750000000,
 "sourceName": "Tfl/Transix",
@@ -122,5 +120,4 @@
 ],
 "enableAutoRefresh": true,
 "autoRefreshDuration": 30
-}
 }

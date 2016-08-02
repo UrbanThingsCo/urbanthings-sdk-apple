@@ -1,6 +1,4 @@
-{
-    "success": true,
-    "data": [
+[
              {
              "routeDescription": "Lewins Mead - The Horseshoe",
              "agencyCode": "UK_TNDS_NOC_FBRI",
@@ -13,5 +11,4 @@
              "centrePointLat": 51.475049612,
              "centrePointLng": -2.548720263
              }
-             ]
-}
+]

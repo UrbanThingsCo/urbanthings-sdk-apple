@@ -1,7 +1,4 @@
-{
-    "success" : true,
-    "data" :
-    [{
+[{
      "agencyID" : "TFL",
      "agencyImportSource" : "TFL",
      "agencyName" : "TfL",
@@ -15,4 +12,3 @@
      "agencyTimeZone" : "Europe/Zurich",
      "agencyURL" : "http://www.abc.gov"
      }]
-}

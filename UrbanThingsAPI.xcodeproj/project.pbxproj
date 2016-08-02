@@ -626,6 +626,8 @@
 		2C9F52E81CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */; };
 		2C9F52E91CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */; };
 		2C9F52EA1CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */; };
+		2CBFCD481D50AD3800C93F86 /* AppSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFCD471D50AD3800C93F86 /* AppSearchRequest.swift */; };
+		2CBFCD4A1D50AD8A00C93F86 /* AppSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFCD491D50AD8A00C93F86 /* AppSearchResponse.swift */; };
 		2CD690CB1CD224DF00747E36 /* NSURL+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */; };
 		2CD690CD1CD2281200747E36 /* PlacePointType+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CC1CD2281200747E36 /* PlacePointType+JSON.swift */; };
 		2CD690CF1CD2296D00747E36 /* TransitMode+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CE1CD2296D00747E36 /* TransitMode+JSON.swift */; };
@@ -1089,6 +1091,8 @@
 		2C9F52DF1CE72160004AF1FB /* RealtimeStatuses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RealtimeStatuses.json; sourceTree = "<group>"; };
 		2C9F52E31CE7238B004AF1FB /* Directions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Directions.json; sourceTree = "<group>"; };
 		2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsResponseProcessingTests.swift; sourceTree = "<group>"; };
+		2CBFCD471D50AD3800C93F86 /* AppSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchRequest.swift; sourceTree = "<group>"; };
+		2CBFCD491D50AD8A00C93F86 /* AppSearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchResponse.swift; sourceTree = "<group>"; };
 		2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+JSON.swift"; sourceTree = "<group>"; };
 		2CD690CC1CD2281200747E36 /* PlacePointType+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacePointType+JSON.swift"; sourceTree = "<group>"; };
 		2CD690CE1CD2296D00747E36 /* TransitMode+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransitMode+JSON.swift"; sourceTree = "<group>"; };
@@ -1521,6 +1525,7 @@
 				2CD690D61CD2511600747E36 /* TransitStopsRequest.swift */,
 				2C60AEF21CDF5AAD00329630 /* TransitTripGroupsRequest.swift */,
 				2CD691201CD50BD800747E36 /* TransitTripsRequest.swift */,
+				2CBFCD471D50AD3800C93F86 /* AppSearchRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1563,6 +1568,7 @@
 				2C5F2C361CCF425100999713 /* DirectionsResponse.swift */,
 				2C5F2C3C1CCF446400999713 /* DirectionsResponseStatus.swift */,
 				2C5F2C2A1CCF3EA000999713 /* Disruption.swift */,
+				2CBFCD491D50AD8A00C93F86 /* AppSearchResponse.swift */,
 				2C5F2C421CCF46C400999713 /* ImportSource.swift */,
 				2C5F2C381CCF431400999713 /* Journey.swift */,
 				2C5F2C3A1CCF439200999713 /* JourneyLeg.swift */,
@@ -2798,6 +2804,7 @@
 				2C5F2C501CCF549200999713 /* StopBoardRow.swift in Sources */,
 				2CD690DF1CD26FCA00747E36 /* PlacesListRequest.swift in Sources */,
 				2CD691811CD8916800747E36 /* UTStopBoardResponse.swift in Sources */,
+				2CBFCD481D50AD3800C93F86 /* AppSearchRequest.swift in Sources */,
 				2CD691A81CD916C300747E36 /* RealtimeReportRequest.swift in Sources */,
 				2C5F2C2D1CCF3F0E00999713 /* VehicleRTI.swift in Sources */,
 				2CD690E71CD3398D00747E36 /* QueryKeys.swift in Sources */,
@@ -2860,6 +2867,7 @@
 				2CD691351CD684DB00747E36 /* String+JSON.swift in Sources */,
 				2C5F2C6B1CD00A0000999713 /* JSONKey.swift in Sources */,
 				2C5F2C2F1CCF3FA800999713 /* TransitTripInfo.swift in Sources */,
+				2CBFCD4A1D50AD8A00C93F86 /* AppSearchResponse.swift in Sources */,
 				2C5F2C561CCF582300999713 /* StopBoardMessage.swift in Sources */,
 				2C5F2C481CCF51AA00999713 /* APIResponseType.swift in Sources */,
 				2CD690E11CD2BFBF00747E36 /* TransitRoutesByImportSourceRequest.swift in Sources */,

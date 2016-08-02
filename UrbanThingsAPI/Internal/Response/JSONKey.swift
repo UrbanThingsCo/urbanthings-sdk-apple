@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum JSONKey : String {
-    
+enum JSONKey: String {
+
     case Success = "success"
     case Data = "data"
     case LocalizedErrorMessage = "localizedErrorMessage"
@@ -42,6 +42,7 @@ enum JSONKey : String {
     case PlacePointType = "placePointType"
     case SubclassType = "subClassType"
     case AgencyID = "agencyID"
+    case AgencyId = "agencyId"
     case AgencyName = "agencyName"
     case AgencyURL = "agencyURL"
     case AgencyTimeZone = "agencyTimeZone"
@@ -66,8 +67,10 @@ enum JSONKey : String {
     case RouteInfo = "routeInfo"
     case ScheduledCall = "scheduledCall"
     case RouteDescription = "routeDescription"
+    case CenterPoint = "centerPoint"
     case AgencyCode = "agencyCode"
     case RouteID = "routeID"
+    case RouteId = "routeId"
     case LineName = "lineName"
     case LineColor = "lineColor"
     case LineTextColor = "lineTextColor"
@@ -157,6 +160,7 @@ enum JSONKey : String {
     case MainText = "mainText"
     case LinkText = "linkText"
     case IconURL = "iconURL"
+    case IconUrl = "iconUrl"
     case LinkURL = "linkURL"
     case AvailablePlaces = "availablePlaces"
     case TakenPlaces = "takenPlaces"
@@ -185,10 +189,22 @@ enum JSONKey : String {
     case LinkedTransitRouteInfo = "linkedTransitRouteInfo"
     case LinkedTransitTripInfo = "linkedTransitTripInfo"
     case ScheduledStopCalls = "scheduledStopCalls"
+    case Location = "location"
+    case Locality = "locality"
+    case PlaceSearchResults = "placeSearchResults"
+    case RouteSearchResults = "routeSearchResults"
+    case Results = "results"
+    case PrimaryColor = "primaryColor"
+    case PrimaryColorCompliment = "primaryColorCompliment"
+    case Branding = "branding"
+    case DisplayName = "displayName"
+    case OperatingAreaName = "operatingAreaName"
+    case Agencies = "agencies"
+    case ReferenceData = "referenceData"
 }
 
 extension Dictionary where Key: StringLiteralConvertible, Value: AnyObject {
-    subscript(key:JSONKey) -> AnyObject? {
+    subscript(key: JSONKey) -> AnyObject? {
         get {
             if let dict = (self as? AnyObject) as? [String:AnyObject] {
                 return dict[key.rawValue]
