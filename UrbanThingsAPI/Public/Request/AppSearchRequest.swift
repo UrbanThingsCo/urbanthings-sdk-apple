@@ -39,7 +39,7 @@ public struct UTAppSearchRequest: AppSearchRequest {
     /// Parser to use when processing response to the request
     public let parser: Parser
 
-    init(query: String, location: Location, parser: Parser = urbanThingsParser) {
+    public init(query: String, location: Location, parser: Parser = urbanThingsParser) {
         self.query = query
         self.location = location
         self.parser = parser

@@ -201,6 +201,9 @@ enum JSONKey: String {
     case OperatingAreaName = "operatingAreaName"
     case Agencies = "agencies"
     case ReferenceData = "referenceData"
+    case LogoUrl = "logoUrl"
+    case AttributionText = "attributionText"
+    case AttributionImageUrl = "attributionImageUrl"
 }
 
 extension Dictionary where Key: StringLiteralConvertible, Value: AnyObject {
