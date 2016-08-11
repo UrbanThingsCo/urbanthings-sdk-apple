@@ -68,7 +68,7 @@ extension Error {
     ///    - file: Filename path, use #file for this parameter
     ///    - function: Function name, use #function for this parameter or provide other string detailing function or class information
     ///    - line: Line number of error, use #line for this parameter
-    init<T>(enumType:T.Type, invalidRawValue:Int, file:String, function:String, line:Int) {
+    init<T,V>(enumType:T.Type, invalidRawValue:V, file:String, function:String, line:Int) {
         self.init(jsonParseError:"Invalid \(enumType) raw value \(invalidRawValue)", file:#file, function:#function, line:#line)
     }
     

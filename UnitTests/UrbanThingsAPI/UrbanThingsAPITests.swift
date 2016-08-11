@@ -223,4 +223,22 @@ class UrbanThingsAPITests: XCTestCase {
         waitForExpectationsWithTimeout(30) { error in
         }
     }
+
+    func testAppAgencies() {
+
+        struct ExampleService: Service {
+            let endpoint: String = "http://example.dev.api.urbanthings.io/api"
+            let version: String = "3-a"
+        }
+
+        let sut = UrbanThingsAPI(apiKey:ApiTestKey, service: ExampleService())
+        let expectation = expectationWithDescription("Waiting for API response")
+        let _ = sut.sendRequest(UTAppAgenciesRequest()) { data, error in
+            expectation.fulfill()
+        }
+
+        waitForExpectationsWithTimeout(30) { error in
+        }
+    }
+
 }

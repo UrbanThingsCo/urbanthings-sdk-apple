@@ -205,4 +205,20 @@ extension UrbanThingsAPI {
                                 completionHandler: completionHandler)
     }
 
+
+    /// Make an asynchronous request to the server for trips grouped by calendar
+    ///
+    ///  - parameters:
+    ///    - request: An object that implements the `TransitTripGroupsRequest` protocol, see `UTTransitTripGroupsRequest` for concrete
+    /// implementation that can be used, alternatively provide your own.
+    ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
+    /// data as a `TransitTripCalendarGroup` object or an error, but never both.
+    @warn_unused_result(message="Returned request object needed to cancel async operation")
+    public func sendRequest<R: AppAgenciesRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest {
+        return self.makeRequest("appAgencies",
+                                request: request,
+                                parameters: request.queryParameters,
+                                completionHandler: completionHandler)
+    }
+
 }

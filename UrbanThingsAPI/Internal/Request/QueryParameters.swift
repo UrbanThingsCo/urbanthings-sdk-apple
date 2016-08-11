@@ -277,3 +277,22 @@ extension AppSearchRequest {
                 QueryKey.Longitude: QueryParameter(self.location.longitude)]
     }
 }
+
+extension AppAgenciesRequest {
+    var queryParameters: QueryParameters {
+        guard let filter = self.areaFilter else {
+            return QueryParameters()
+        }
+        switch filter {
+        case .Circle(let center, let radius):
+            return [QueryKey.Lat:QueryParameter(center.latitude),
+                    QueryKey.Lng:QueryParameter(center.longitude),
+                    QueryKey.Radius:QueryParameter(radius)]
+        case .Rectangle(let topLeft, let bottomRight):
+            return [QueryKey.MinLat:QueryParameter(min(topLeft.latitude, bottomRight.latitude)),
+                    QueryKey.MinLng:QueryParameter(max(topLeft.longitude, bottomRight.longitude)),
+                    QueryKey.MaxLat:QueryParameter(max(topLeft.latitude, bottomRight.latitude)),
+                    QueryKey.MaxLng:QueryParameter(max(topLeft.longitude, bottomRight.longitude))]
+        }
+    }
+}

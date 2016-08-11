@@ -12,17 +12,44 @@ public protocol Branding {
     var logoUrl: NSURL? { get }
     var primaryColor: UIColor { get }
     var primaryColorCompliment: UIColor { get }
+    var secondaryColor: UIColor? { get }
+    var secondaryColorCompliment: UIColor? { get }
 }
 
 class UTBranding: UTObject, Branding {
     let logoUrl: NSURL?
     let primaryColor: UIColor
     let primaryColorCompliment: UIColor
-
+    let secondaryColor: UIColor?
+    let secondaryColorCompliment: UIColor?
     override init(json: [String : AnyObject]) throws {
         self.logoUrl = try parse(optional:json, key: .LogoUrl, type: UTBranding.self) { try NSURL.fromJSON(required:$0) }
         self.primaryColor = try parse(required: json, key:.PrimaryColor, type: UTBranding.self) { try UTColor.fromJSON(required: $0) }
         self.primaryColorCompliment = try parse(required: json, key: .PrimaryColorCompliment, type: UTBranding.self) { try UTColor.fromJSON(required: $0) }
+        self.secondaryColor = try parse(optional: json, key: .PrimaryColorCompliment, type: UTBranding.self) { try UTColor.fromJSON(optional: $0) }
+        self.secondaryColorCompliment = try parse(optional: json, key: .PrimaryColorCompliment, type: UTBranding.self) { try UTColor.fromJSON(optional: $0) }
+        try super.init(json: json)
+    }
+}
+
+public protocol AgencyPresence {
+    var kind: AgencyPresenceKind { get }
+    var nature: AgencyPresenceNature { get }
+    var value: String { get }
+    var modifier: String? { get }
+}
+
+class UTAgencyPresence: UTObject, AgencyPresence {
+    let kind: AgencyPresenceKind
+    let nature: AgencyPresenceNature
+    let value: String
+    let modifier: String?
+
+    override init(json: [String: AnyObject]) throws {
+        self.kind = try parse(required: json, key: .Kind, type: UTAgencyPresence.self) { try AgencyPresenceKind(required: $0) }
+        self.nature = try parse(required: json, key: .Nature, type: UTAgencyPresence.self) { try AgencyPresenceNature(required: $0) }
+        self.value = try parse(required: json, key: .Value, type: UTAgencyPresence.self)
+        self.modifier = try parse(optional: json, key: .Modifier, type: UTAgencyPresence.self)
         try super.init(json: json)
     }
 }
@@ -30,23 +57,42 @@ class UTBranding: UTObject, Branding {
 public protocol Agency {
     var agencyId: String { get }
     var name: String { get }
-    var branding: Branding { get }
     var displayName: String { get }
+    var marketingDescription: String? { get }
+    var timeZone: NSTimeZone? { get }
+    var language: NSLocale? { get }
+    var region: String? { get }
+    var importSource: String? { get }
+    var branding: Branding? { get }
+    var presences: [AgencyPresence]? { get }
     var operatingAreaName: String? { get }
+//    var operatingArea: GeoJSON { get }
 }
 
 class UTAgency: UTObject, Agency {
     let agencyId: String
     let name: String
-    let branding: Branding
     let displayName: String
+    let marketingDescription: String?
+    let timeZone: NSTimeZone?
+    let language: NSLocale?
+    let region: String?
+    let importSource: String?
+    let branding: Branding?
+    let presences: [AgencyPresence]?
     let operatingAreaName: String?
 
     override init(json: [String : AnyObject]) throws {
         self.agencyId = try parse(required: json, key: .AgencyId, type: UTAgency.self)
         self.name = try parse(required: json, key: .Name, type: UTAgency.self)
-        self.branding = try parse(required: json, key: .Branding, type: UTAgency.self) { try UTBranding(required: $0) as Branding }
         self.displayName = try parse(required: json, key: .DisplayName, type: UTAgency.self)
+        self.marketingDescription = try parse(optional: json, key: .MarketingDescription, type: UTAgency.self)
+        self.timeZone = try parse(optional: json, key: .TimeZone, type: UTAgency.self) { try NSTimeZone(optional: $0) }
+        self.language = try parse(optional: json, key: .Language, type: UTAgency.self) { try NSLocale(optional: $0) }
+        self.region = try parse(optional: json, key: .Region, type: UTAgency.self)
+        self.importSource = try parse(optional: json, key: .ImportSource, type: UTAgency.self)
+        self.branding = try parse(optional: json, key: .Branding, type: UTAgency.self) { try UTBranding(required: $0) as Branding }
+        self.presences = try [UTAgencyPresence](optional: json[.Presences])?.map { $0 as AgencyPresence }
         self.operatingAreaName = try parse(optional: json, key: .OperatingAreaName, type: UTAgency.self)
         try super.init(json: json)
     }

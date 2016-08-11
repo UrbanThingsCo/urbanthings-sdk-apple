@@ -21,11 +21,11 @@ public protocol UrbanThingsAPIRequest {
 /// error.
 ///
 /// ````
-/// apiInstance.sendRequest(UTImportSourceRequest()) 
+/// apiInstance.sendRequest(UTImportSourceRequest())
 ///         { data, error in //... }
 /// ````
 public protocol UrbanThingsAPIType {
-    
+
     /// Make an asynchronous request to the server for a list of import sources.
     ///
     ///  - parameters:
@@ -34,7 +34,7 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as an array of `ImportSource` objects or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : ImportSourcesRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: ImportSourcesRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
     /// Make an asynchronous request to the server for a list of transport stops
     ///
@@ -44,7 +44,7 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as an array of `TransitStop` objects or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : TransitStopsRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: TransitStopsRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
     /// Make an asynchronous request to the server for a list of place points
     ///
@@ -54,7 +54,7 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as a `PlacePointList` object or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : PlacePointsRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: PlacePointsRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
     /// Make an asynchronous request to the server for a list of places
     ///
@@ -64,7 +64,7 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as a `PlacePointList` object or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : PlacesListRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: PlacesListRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
     /// Make an asynchronous request to the server for a list of transit routes for a given transit line name.
     ///
@@ -74,7 +74,7 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as a `TransitDetailedRouteInfo` object or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : TransitRoutesByLineNameRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: TransitRoutesByLineNameRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
     /// Make an asynchronous request to the server for a list of transit routes for a given source
     ///
@@ -84,8 +84,8 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as a `TransitDetailedRouteInfo` object or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : TransitRoutesByImportSourceRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
-    
+    func sendRequest<R: TransitRoutesByImportSourceRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
     /// Make an asynchronous request to the server for a list of transit routes calling at a specific transit stop
     ///
     ///  - parameters:
@@ -94,7 +94,7 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as a `TransitDetailedRouteInfo` object or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : TransitRoutesByStopRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: TransitRoutesByStopRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
     /// Make an asynchronous request to the server for a transit agency
     ///
@@ -104,7 +104,7 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as a `TransitAgency` object or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : TransitAgencyRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: TransitAgencyRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
     /// Make an asynchronous request to the server for list of transit agencies
     ///
@@ -114,8 +114,8 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as an array of `TransitAgency` objects or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : TransitAgenciesRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
-    
+    func sendRequest<R: TransitAgenciesRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
     /// Make an asynchronous request to the server for a transit agency
     ///
     ///  - parameters:
@@ -124,8 +124,8 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as a `TransitDetailedRouteInfo` object or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : TransitTripsRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
-    
+    func sendRequest<R: TransitTripsRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
     /// Make an asynchronous request to the server for list of scheduled stop calls
     ///
     ///  - parameters:
@@ -134,8 +134,8 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as a `TransitStopScheduledCalls` object or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : TransitStopCallsRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
-    
+    func sendRequest<R: TransitStopCallsRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
     /// Make an asynchronous request to the server for trips grouped by calendar
     ///
     ///  - parameters:
@@ -144,8 +144,8 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
     /// data as a `TransitTripCalendarGroup` object or an error, but never both.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : TransitTripGroupsRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
-    
+    func sendRequest<R: TransitTripGroupsRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
     /// Make an asynchronous request to the server for a realtime report.
     ///
     ///  - parameters:
@@ -154,7 +154,7 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the data as `TransitStopRTIResponse` object or an error, but never both.
     ///  - returns: `UrbanThingsAPIRequest` instance which can be used to cancel the asynchronous request.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : RealtimeReportRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: RealtimeReportRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
     /// Make an asynchronous request to the server for realtime stopboard information.
     ///
@@ -164,8 +164,8 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the data as `StopBoardResponse` object or an error, but never both.
     ///  - returns: `UrbanThingsAPIRequest` instance which can be used to cancel the asynchronous request.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : RealtimeStopboardRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
-    
+    func sendRequest<R: RealtimeStopboardRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
     /// Make an asynchronous request to the server for realtime resource status information.
     ///
     ///  - parameters:
@@ -173,7 +173,7 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the data as a `ResourceStatus` object or an error, but never both.
     ///  - returns: `UrbanThingsAPIRequest` instance which can be used to cancel the asynchronous request.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : RealtimeResourceStatusRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: RealtimeResourceStatusRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
     /// Make an asynchronous request to the server for realtime resource status information.
     ///
@@ -182,8 +182,8 @@ public protocol UrbanThingsAPIType {
     ///    - result: Closure that is called when call has completed and response processed. Will either provide the data as an array of `ResourceStatus` objects or an error, but never both.
     ///  - returns: `UrbanThingsAPIRequest` instance which can be used to cancel the asynchronous request.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : RealtimeResourcesStatusRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
-    
+    func sendRequest<R: RealtimeResourcesStatusRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
     /// Make an asynchronous request to the server for directions.
     ///
     ///  - parameters:
@@ -192,5 +192,26 @@ public protocol UrbanThingsAPIType {
     ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the data as an array of `ResourceStatus` objects or an error, but never both.
     ///  - returns: `UrbanThingsAPIRequest` instance which can be used to cancel the asynchronous request.
     @warn_unused_result(message="Returned request object needed to cancel async operation")
-    func sendRequest<R : DirectionsRequest>(request:R, completionHandler:(data:R.Result?, error:ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: DirectionsRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
+    /// Make an asynchronous request to the server for app search
+    ///
+    ///  - parameters:
+    ///    - request: An object that implements the `AppSearchRequest` protocol, see `UTAppSearchRequest` for concrete
+    /// implementation that can be used, alternatively provide your own.
+    ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the
+    /// data as a `AppSearchResponse` object or an error, but never both.
+    @warn_unused_result(message="Returned request object needed to cancel async operation")
+    func sendRequest<R: AppSearchRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
+    /// Make an asynchronous request to the server for app agencies.
+    ///
+    ///  - parameters:
+    ///    - request: An object that implements the `AppAgenciesRequest` protocol, see `UTAppAgenciesRequest` for concrete
+    /// implementation that can be used, alternatively provide your own.
+    ///    - completionHandler: Closure that is called when call has completed and response processed. Will either provide the data as an array of `Agency` objects or an error, but never both.
+    ///  - returns: `UrbanThingsAPIRequest` instance which can be used to cancel the asynchronous request.
+    @warn_unused_result(message="Returned request object needed to cancel async operation")
+    func sendRequest<R: AppAgenciesRequest>(request: R, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+
 }

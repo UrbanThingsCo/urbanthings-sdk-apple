@@ -196,6 +196,9 @@ enum JSONKey: String {
     case Results = "results"
     case PrimaryColor = "primaryColor"
     case PrimaryColorCompliment = "primaryColorCompliment"
+    case SecondaryColor = "secondaryColor"
+    case SecondaryColorCompliment = "secondaryColorCompliment"
+    case MarketingDescription = "marketingDescription"
     case Branding = "branding"
     case DisplayName = "displayName"
     case OperatingAreaName = "operatingAreaName"
@@ -204,6 +207,15 @@ enum JSONKey: String {
     case LogoUrl = "logoUrl"
     case AttributionText = "attributionText"
     case AttributionImageUrl = "attributionImageUrl"
+    case Kind = "kind"
+    case Nature = "nature"
+    case Value = "value"
+    case Modifier = "modifier"
+    case TimeZone = "timeZone"
+    case Language = "language"
+    case Region = "region"
+    case Presences = "presences"
+    case Items = "items"
 }
 
 extension Dictionary where Key: StringLiteralConvertible, Value: AnyObject {
