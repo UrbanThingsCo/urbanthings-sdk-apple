@@ -17,7 +17,7 @@ extension PlacePointType : JSONInitialization {
     ///  - parameters:
     ///    - required: Input JSON object that is required to be parsed into a `PlacePointType`.
     ///  - throws: Error.JSONParseError if unable to parse into `PlacePointType`.
-    init(required:AnyObject?) throws {
+    public init(required:AnyObject?) throws {
         guard let rawValue = required as? Int else {
             throw Error(expected:Int.self, not:required, file:#file, function:#function, line:#line)
         }
@@ -27,7 +27,7 @@ extension PlacePointType : JSONInitialization {
         self = value
     }
     
-    init?(optional:AnyObject?) throws {
+    public init?(optional:AnyObject?) throws {
         guard let rawValue = optional as? Int else {
             return nil
         }

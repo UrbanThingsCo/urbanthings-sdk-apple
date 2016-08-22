@@ -93,24 +93,4 @@ extension UrbanThingsAPI {
             return taskCompletionHandler
     }
 
-    func makeRequest<R: Request>(call: String, request: R, parameters: QueryParameters = QueryParameters(), completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest {
-        let requestStr = "\(self.service.baseURLString)/\(call)\(parameters.description)"
-        let urlRequest = NSURLRequest(URL:NSURL(string:requestStr)!)
-        let modifiedRequest = self.requestModifier?.getRequest(urlRequest, logger:logger) ?? urlRequest
-        return self.requestHandler.makeRequest(modifiedRequest, logger:logger, completion: handleResponse(request.parser, result: completionHandler))
-    }
-
-    func makePostRequest<R: Request>(call: String, request: R, body: NSData? = nil, completionHandler:(data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest {
-
-        let requestStr = "\(self.service.baseURLString)/\(call)"
-        let urlRequest = NSMutableURLRequest(URL:NSURL(string:requestStr)!)
-        urlRequest.HTTPMethod = "POST"
-        urlRequest.HTTPBody = body
-        urlRequest.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-
-        let modifiedRequest = self.requestModifier?.getRequest(urlRequest, logger:logger) ?? urlRequest
-
-        return self.requestHandler.makeRequest(modifiedRequest, logger:logger, completion: handleResponse(request.parser, result: completionHandler))
-    }
-
 }

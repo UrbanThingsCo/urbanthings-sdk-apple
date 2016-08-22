@@ -10,7 +10,7 @@ import Foundation
 
 extension NSURL {
     
-    class func fromJSON(required required:AnyObject?) throws -> NSURL {
+    public class func fromJSON(required required:AnyObject?) throws -> NSURL {
         guard let urlString = required as? String else {
             throw Error(jsonParseError:"Expected String, not \(required)", file:#file, function:#function, line:#line)
         }
@@ -20,7 +20,7 @@ extension NSURL {
         return url
     }
     
-    class func fromJSON(optional optional:AnyObject?) throws -> NSURL? {
+    public class func fromJSON(optional optional:AnyObject?) throws -> NSURL? {
         guard optional != nil else {
             return nil
         }

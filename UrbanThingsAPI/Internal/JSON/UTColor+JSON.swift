@@ -16,7 +16,7 @@
 
 extension UTColor {
     
-    class func fromJSON(required required:AnyObject?) throws -> UTColor {
+    public class func fromJSON(required required:AnyObject?) throws -> UTColor {
         guard let string = required as? String else {
             throw Error(expected:String.self, not:required, file:#file, function:#function, line:#line)
         }
@@ -26,7 +26,7 @@ extension UTColor {
         return UTColor(rgb:value)
     }
     
-    class func fromJSON(optional optional:AnyObject?) throws -> UTColor? {
+    public class func fromJSON(optional optional:AnyObject?) throws -> UTColor? {
         guard let required = optional else {
             return nil
         }

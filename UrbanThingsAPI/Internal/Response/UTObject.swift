@@ -8,22 +8,22 @@
 
 import Foundation
 
-class UTObject: JSONInitialization {
-    convenience required init?(optional: AnyObject?) throws {
+public class UTObject: JSONInitialization {
+    convenience required public init?(optional: AnyObject?) throws {
         guard optional != nil else {
             return nil
         }
         try self.init(required: optional)
     }
 
-    convenience required init(required: AnyObject?) throws {
+    convenience required public init(required: AnyObject?) throws {
         guard let json = required as? [String:AnyObject] else {
             throw Error(expected: [String:AnyObject].self, not: required, file:#file, function:#function, line:#line)
         }
         try self.init(json:json)
     }
 
-    init(json: [String:AnyObject]) throws {
+    public init(json: [String:AnyObject]) throws {
     }
 
     class var className: String {
@@ -31,7 +31,7 @@ class UTObject: JSONInitialization {
     }
 }
 
-func parse<T: JSONInitialization>(required json: [String:AnyObject], type: Any.Type, property: String) throws -> T {
+public func parse<T: JSONInitialization>(required json: [String:AnyObject], type: Any.Type, property: String) throws -> T {
     do {
         return try T(required:json)
     } catch {
@@ -39,7 +39,7 @@ func parse<T: JSONInitialization>(required json: [String:AnyObject], type: Any.T
     }
 }
 
-func parse<T: JSONInitialization>(optional json: [String:AnyObject], type: Any.Type, property: String) throws -> T? {
+public func parse<T: JSONInitialization>(optional json: [String:AnyObject], type: Any.Type, property: String) throws -> T? {
     do {
         return try T(optional:json)
     } catch {
@@ -47,7 +47,7 @@ func parse<T: JSONInitialization>(optional json: [String:AnyObject], type: Any.T
     }
 }
 
-func parse<T: JSONInitialization>(required json: [String:AnyObject], key: JSONKey, type: Any.Type) throws -> T {
+public func parse<T: JSONInitialization>(required json: [String:AnyObject], key: JSONKey, type: Any.Type) throws -> T {
     do {
         return try T(required:json[key])
     } catch {
@@ -55,7 +55,7 @@ func parse<T: JSONInitialization>(required json: [String:AnyObject], key: JSONKe
     }
 }
 
-func parse<T: JSONInitialization>(optional json: [String:AnyObject], key: JSONKey, type: Any.Type) throws -> T? {
+public func parse<T: JSONInitialization>(optional json: [String:AnyObject], key: JSONKey, type: Any.Type) throws -> T? {
     do {
         return try T(optional:json[key])
     } catch {
@@ -63,7 +63,7 @@ func parse<T: JSONInitialization>(optional json: [String:AnyObject], key: JSONKe
     }
 }
 
-func parse<T>(required json: [String:AnyObject], key: JSONKey, type: Any.Type, parser: (AnyObject?) throws -> T) throws -> T {
+public func parse<T>(required json: [String:AnyObject], key: JSONKey, type: Any.Type, parser: (AnyObject?) throws -> T) throws -> T {
     do {
         return try parser(json[key])
     } catch {
@@ -71,7 +71,7 @@ func parse<T>(required json: [String:AnyObject], key: JSONKey, type: Any.Type, p
     }
 }
 
-func parse<T>(optional json: [String:AnyObject], key: JSONKey, type: Any.Type, parser: (AnyObject?) throws -> T?) throws -> T? {
+public func parse<T>(optional json: [String:AnyObject], key: JSONKey, type: Any.Type, parser: (AnyObject?) throws -> T?) throws -> T? {
     do {
         return try parser(json[key])
     } catch {
@@ -79,7 +79,7 @@ func parse<T>(optional json: [String:AnyObject], key: JSONKey, type: Any.Type, p
     }
 }
 
-func parse<T>(required json: [String:AnyObject], type: Any.Type, property: String, parser: (AnyObject?) throws -> T) throws -> T {
+public func parse<T>(required json: [String:AnyObject], type: Any.Type, property: String, parser: (AnyObject?) throws -> T) throws -> T {
     do {
         return try parser(json)
     } catch {
@@ -87,7 +87,7 @@ func parse<T>(required json: [String:AnyObject], type: Any.Type, property: Strin
     }
 }
 
-func parse<T>(optional json: [String:AnyObject], type: Any.Type, property: String, parser: (AnyObject?) throws -> T?) throws -> T? {
+public func parse<T>(optional json: [String:AnyObject], type: Any.Type, property: String, parser: (AnyObject?) throws -> T?) throws -> T? {
     do {
         return try parser(json)
     } catch {

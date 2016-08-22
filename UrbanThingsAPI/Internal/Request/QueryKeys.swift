@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum QueryKey: String {
+public enum QueryKey: String {
     case LineName = "lineName"
     case ExactMatch = "exactMatch"
     case ImportSource = "importsource"
@@ -75,7 +75,7 @@ enum QueryKey: String {
 }
 
 extension QueryKey : CustomStringConvertible {
-    var description: String {
+    public var description: String {
         return self.rawValue
     }
 }

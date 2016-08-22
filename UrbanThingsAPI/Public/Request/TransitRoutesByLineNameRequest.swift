@@ -23,39 +23,40 @@ public enum TransitRoutesByLineRequiredParameters {
 ///
 /// You may use the provided default implementation of the protocol `UTTransitRouteLineNameRequest` or provide
 /// a separate implementation if desireable.
-public protocol TransitRoutesByLineNameRequest : Request {
-    
+public protocol TransitRoutesByLineNameRequest: GetRequest {
+
     associatedtype Result = [TransitDetailedRouteInfo]
 
     /// Line name to request routes for
-    var lineName:String { get }
+    var lineName: String { get }
     /// Additional parameters needed for request
-    var requiredParameters:TransitRoutesByLineRequiredParameters { get }
+    var requiredParameters: TransitRoutesByLineRequiredParameters { get }
     /// Indicates whether an exact match is needed or not
-    var exactMatch:Bool? { get }
+    var exactMatch: Bool? { get }
     /// Additional optional limit by agency region
-    var agencyRegion:String? { get }
+    var agencyRegion: String? { get }
 }
 
 /// Default implementation of `TransitRouteLineNameRequest` protocol provided by the API as default means
 /// of passing parameters to API request methods. You may provide your own implementation if needed to pass to the API
 /// request methods.
-public struct UTTransitRoutesByLineNameRequest : TransitRoutesByLineNameRequest {
-    
+public struct UTTransitRoutesByLineNameRequest: TransitRoutesByLineNameRequest {
+
     public typealias Result = [TransitDetailedRouteInfo]
-    public typealias Parser = (json:AnyObject?, logger:Logger) throws -> Result
+    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public let endpoint = "static/routes/info/LineName"
 
     /// Line name to request routes for
-    public let lineName:String
+    public let lineName: String
     /// Additional parameters needed for request
-    public let requiredParameters:TransitRoutesByLineRequiredParameters
+    public let requiredParameters: TransitRoutesByLineRequiredParameters
     /// Indicates whether an exact match is needed or not
-    public let exactMatch:Bool?
+    public let exactMatch: Bool?
     /// Additional optional limit by agency region
-    public let agencyRegion:String?
-    
+    public let agencyRegion: String?
+
     /// Parser to use when processing response to the request
-    public let parser:Parser
+    public let parser: Parser
 
     /// Initialize a request based on name and location within a country
     ///
@@ -66,10 +67,10 @@ public struct UTTransitRoutesByLineNameRequest : TransitRoutesByLineNameRequest 
     ///   - importSource: Optional import source to include in request
     ///   - agencyRegion: Optional agency region to include in request
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(lineName:String, location:CLLocationCoordinate2D, agencyID:String? = nil, importSource:String? = nil, agencyRegion:String? = nil, exactMatch:Bool? = nil, parser:Parser = urbanThingsParser) {
+    public init(lineName: String, location: CLLocationCoordinate2D, agencyID: String? = nil, importSource: String? = nil, agencyRegion: String? = nil, exactMatch: Bool? = nil, parser: Parser = urbanThingsParser) {
         self.init(lineName:lineName, requiredParameters: .Location(location, agencyID, importSource), agencyRegion: agencyRegion, exactMatch: exactMatch)
     }
-    
+
     /// Initialize a request based on name and agency ID
     ///
     /// - parameters:
@@ -79,10 +80,10 @@ public struct UTTransitRoutesByLineNameRequest : TransitRoutesByLineNameRequest 
     ///   - importSource: Optional import source to include in request
     ///   - agencyRegion: Optional agency region to include in request
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(lineName:String, agencyID:String, location:CLLocationCoordinate2D? = nil, importSource:String? = nil, agencyRegion:String? = nil, exactMatch:Bool? = nil, parser:Parser = urbanThingsParser) {
+    public init(lineName: String, agencyID: String, location: CLLocationCoordinate2D? = nil, importSource: String? = nil, agencyRegion: String? = nil, exactMatch: Bool? = nil, parser: Parser = urbanThingsParser) {
         self.init(lineName:lineName, requiredParameters: .AgencyID(agencyID, location, importSource), agencyRegion: agencyRegion, exactMatch: exactMatch)
     }
-    
+
     /// Initialize a request based on name and agency ID
     ///
     /// - parameters:
@@ -92,11 +93,11 @@ public struct UTTransitRoutesByLineNameRequest : TransitRoutesByLineNameRequest 
     ///   - agencyID: Optional agency ID to include in request
     ///   - agencyRegion: Optional agency region to include in request
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(lineName:String, importSource:String, location:CLLocationCoordinate2D? = nil, agencyID:String? = nil, agencyRegion:String? = nil, exactMatch:Bool? = nil, parser:Parser = urbanThingsParser) {
+    public init(lineName: String, importSource: String, location: CLLocationCoordinate2D? = nil, agencyID: String? = nil, agencyRegion: String? = nil, exactMatch: Bool? = nil, parser: Parser = urbanThingsParser) {
         self.init(lineName:lineName, requiredParameters: .ImportSource(importSource, location, agencyID), agencyRegion: agencyRegion, exactMatch: exactMatch)
     }
-    
-    init(lineName:String, requiredParameters:TransitRoutesByLineRequiredParameters, agencyRegion:String? = nil, exactMatch:Bool? = nil, parser:Parser = urbanThingsParser) {
+
+    init(lineName: String, requiredParameters: TransitRoutesByLineRequiredParameters, agencyRegion: String? = nil, exactMatch: Bool? = nil, parser: Parser = urbanThingsParser) {
         self.parser = parser
         self.lineName = lineName
         self.requiredParameters = requiredParameters
@@ -104,4 +105,3 @@ public struct UTTransitRoutesByLineNameRequest : TransitRoutesByLineNameRequest 
         self.exactMatch = exactMatch
     }
 }
-

@@ -36,7 +36,7 @@ public protocol MonitoredStopCall : StopCall {
 
 extension MonitoredStopCallDisplayFormat : JSONInitialization {
     
-    init(required:AnyObject?) throws {
+    public init(required:AnyObject?) throws {
         guard let rawValue = required as? Int else {
             throw Error(expected: Int.self, not: required, file:#file, function:#function, line:#line)
         }
@@ -46,7 +46,7 @@ extension MonitoredStopCallDisplayFormat : JSONInitialization {
         self = value
     }
     
-    init?(optional:AnyObject?) throws {
+    public init?(optional:AnyObject?) throws {
         guard optional != nil else {
             return nil
         }

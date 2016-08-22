@@ -13,39 +13,40 @@ import CoreLocation
 ///
 /// You may use the provided default implementation of the protocol `UTPlacesListRequest` or provide
 /// a separate implementation if desireable.
-public protocol PlacesListRequest : Request {
-    
+public protocol PlacesListRequest: GetRequest {
+
     associatedtype Result = PlacePointList
 
     /// The name of the item being searched for.
-    var name:String { get }
+    var name: String { get }
     /// Location to base search from, either geo location point (with optional country code), or just a country code
-    var location:LocationFilter { get }
+    var location: LocationFilter { get }
     /// Optional list of place point types to search for
-    var placePointTypes:[PlacePointType]? { get }
+    var placePointTypes: [PlacePointType]? { get }
     /// The maximum number of results of each PlacePointType to return. This cannot be more than 40. Defaults to 6.
-    var maximumResultsPerType:UInt? { get }
+    var maximumResultsPerType: UInt? { get }
 }
 
 /// Default implementation of `PlacesListRequestType` protocol provided by the API as default means
 /// of passing parameters to API request methods. You may provide your own implementation if needed to pass to the API
 /// request methods.
-public struct UTPlacesListRequest : PlacesListRequest {
-    
+public struct UTPlacesListRequest: PlacesListRequest {
+
     public typealias Result = PlacePointList
-    public typealias Parser = (json:AnyObject?, logger:Logger) throws -> Result
+    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public let endpoint = "static/places/List"
 
     /// The name of the item being searched for.
-    public let name:String
+    public let name: String
     /// Location to base search from, either geo location point (with optional country code), or just a country code
-    public let location:LocationFilter
+    public let location: LocationFilter
     /// Optional list of place point types to search for
-    public let placePointTypes:[PlacePointType]?
+    public let placePointTypes: [PlacePointType]?
     /// The maximum number of results of each PlacePointType to return. This cannot be more than 40. Defaults to 6.
-    public let maximumResultsPerType:UInt?
-    
+    public let maximumResultsPerType: UInt?
+
     /// Parser to be used to process the response to the request.
-    public let parser:Parser
+    public let parser: Parser
 
     /// Initialize an instance of `UTPlacesListRequest` with location based filtering.
     ///
@@ -55,7 +56,7 @@ public struct UTPlacesListRequest : PlacesListRequest {
     ///    - country: Optional optional country to limit search to.
     ///    - placePointTypes: Optional list of place point types to search for.
     ///    - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(name:String, location:CLLocationCoordinate2D, country:String? = nil, placePointTypes:[PlacePointType]? = nil, maximumResultsPerType:UInt? = nil, parser:Parser = urbanThingsParser) {
+    public init(name: String, location: CLLocationCoordinate2D, country: String? = nil, placePointTypes: [PlacePointType]? = nil, maximumResultsPerType: UInt? = nil, parser: Parser = urbanThingsParser) {
         self.init(name:name, location:LocationFilter.Point(location, country), placePointTypes: placePointTypes, maximumResultsPerType: maximumResultsPerType, parser:parser)
     }
 
@@ -66,11 +67,11 @@ public struct UTPlacesListRequest : PlacesListRequest {
     ///    - country: Optional optional country to limit search to.
     ///    - placePointTypes: Optional list of place point types to search for.
     ///    - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(name:String, country:String, placePointTypes:[PlacePointType]? = nil, maximumResultsPerType:UInt? = nil, parser:Parser = urbanThingsParser) {
+    public init(name: String, country: String, placePointTypes: [PlacePointType]? = nil, maximumResultsPerType: UInt? = nil, parser: Parser = urbanThingsParser) {
         self.init(name:name, location:LocationFilter.Country(country), placePointTypes: placePointTypes, maximumResultsPerType: maximumResultsPerType, parser:parser)
     }
-    
-    init(name:String, location:LocationFilter, placePointTypes:[PlacePointType]? = nil, maximumResultsPerType:UInt? = nil, parser:Parser = urbanThingsParser) {
+
+    init(name: String, location: LocationFilter, placePointTypes: [PlacePointType]? = nil, maximumResultsPerType: UInt? = nil, parser: Parser = urbanThingsParser) {
         self.parser = parser
         self.name = name
         self.location = location

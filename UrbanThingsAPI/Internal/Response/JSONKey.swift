@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum JSONKey: String {
+public enum JSONKey: String {
 
     case Success = "success"
     case Data = "data"

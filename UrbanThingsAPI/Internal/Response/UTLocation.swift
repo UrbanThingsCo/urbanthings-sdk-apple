@@ -11,11 +11,11 @@ import CoreLocation
 
 extension CLLocationCoordinate2D : Location {}
 
-typealias UTLocation = CLLocationCoordinate2D
+public typealias UTLocation = CLLocationCoordinate2D
 
 extension CLLocationCoordinate2D: JSONInitialization {
 
-    init?(latitude: Double?, longitude: Double?) {
+    public init?(latitude: Double?, longitude: Double?) {
         guard let latitude = latitude, let longitude = longitude else {
             return nil
         }
@@ -24,7 +24,7 @@ extension CLLocationCoordinate2D: JSONInitialization {
         self.longitude = longitude
     }
 
-    init(required: AnyObject?, latitude: JSONKey, longitude: JSONKey) throws {
+    public init(required: AnyObject?, latitude: JSONKey, longitude: JSONKey) throws {
         guard let json = required as? [String:AnyObject] else {
             throw Error(expected: [String:AnyObject].self, not: required, file:#file, function:#function, line:#line)
         }
@@ -36,7 +36,7 @@ extension CLLocationCoordinate2D: JSONInitialization {
         self.longitude = lng
     }
 
-    init?(optional: AnyObject?, latitude: JSONKey, longitude: JSONKey) throws {
+    public init?(optional: AnyObject?, latitude: JSONKey, longitude: JSONKey) throws {
         guard let json = optional as? [String:AnyObject] else {
             return nil
         }
@@ -55,18 +55,18 @@ extension CLLocationCoordinate2D: JSONInitialization {
         self.longitude = lng!
     }
 
-    init(required: AnyObject?) throws {
+    public init(required: AnyObject?) throws {
         try self.init(required: required, latitude: .Latitude, longitude: .Longitude)
     }
 
-    init?(optional: AnyObject?) throws {
+    public init?(optional: AnyObject?) throws {
         guard let json = optional as? [String:AnyObject] else {
             return nil
         }
         try self.init(required: json)
     }
 
-    init(required: [String: AnyObject], key: JSONKey) throws {
+    public init(required: [String: AnyObject], key: JSONKey) throws {
         try self.init(required: required[key])
     }
 }

@@ -33,7 +33,7 @@ public protocol TransitScheduledCall {
 }
 
 extension TransitCallType : JSONInitialization {
-    init(required:AnyObject?) throws {
+    public init(required:AnyObject?) throws {
         guard let raw = required as? Int else {
             throw Error(expected: Int.self, not: required, file:#file, function:#function, line:#line)
         }
@@ -43,7 +43,7 @@ extension TransitCallType : JSONInitialization {
         self = call
     }
     
-    init?(optional:AnyObject?) throws {
+    public init?(optional:AnyObject?) throws {
         guard optional != nil else {
             return nil
         }

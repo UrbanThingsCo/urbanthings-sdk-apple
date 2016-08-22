@@ -157,4 +157,30 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
         self.service = service ?? UTDefaultService()
         self.logger = logger ?? UTLogger()
     }
+
+    public func sendRequest<R: GetRequest>(request: R, completionHandler: (data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest {
+
+        let requestStr = "\(self.service.baseURLString)/\(request.endpoint)\(request.queryParameters.description)"
+        let urlRequest = NSURLRequest(URL:NSURL(string:requestStr)!)
+        let modifiedRequest = self.requestModifier?.getRequest(urlRequest, logger:logger) ?? urlRequest
+        return self.requestHandler.makeRequest(modifiedRequest, logger:logger, completion: handleResponse(request.parser, result: completionHandler))
+    }
+
+    public func sendRequest<R: PostRequest>(request: R, completionHandler: (data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest {
+
+        let requestStr = "\(self.service.baseURLString)/\(request.endpoint)\(request.queryParameters.description)"
+        let urlRequest = NSMutableURLRequest(URL:NSURL(string:requestStr)!)
+        urlRequest.HTTPMethod = "POST"
+
+        do {
+            urlRequest.HTTPBody = try request.getBody()
+        } catch {
+            completionHandler(data: nil, error: error as ErrorType)
+        }
+        
+        let modifiedRequest = self.requestModifier?.getRequest(urlRequest, logger:logger) ?? urlRequest
+
+        return self.requestHandler.makeRequest(modifiedRequest, logger:logger, completion: handleResponse(request.parser, result: completionHandler))
+    }
+
 }

@@ -8,17 +8,17 @@
 
 import Foundation
 
-class UTAttribution : UTObject, Attribution {
+public class UTAttribution : UTObject, Attribution {
     
-    let attributionLabel: String?
-    let attributionImageURL: NSURL?
-    let attributionNotes: String?
+    public let attributionLabel: String?
+    public let attributionImageURL: NSURL?
+    public let attributionNotes: String?
     
     override class var className:String {
         return "\(self)"
     }
     
-    override init(json: [String : AnyObject]) throws {
+    public override init(json: [String : AnyObject]) throws {
         self.attributionLabel = try parse(optional: json, key:.AttributionLabel, type: UTAttribution.self)
         self.attributionNotes = try parse(optional: json, key:.AttributionNotes, type: UTAttribution.self)
         self.attributionImageURL = try parse(optional:json, key:. AttributionImageURL, type: UTAttribution.self) { try NSURL.fromJSON(optional:$0) }
