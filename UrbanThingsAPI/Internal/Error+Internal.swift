@@ -11,6 +11,21 @@ import Foundation
 let ReportErrorMessage = "This should not have occurred, please report to apisupport@urbanthings.io giving as much detail as you can."
 
 extension Error : CustomStringConvertible {
+    public var message: String {
+        switch self {
+        case .APIError(let message):
+            return message ?? "Unknown error"
+        case .JSONParseError(let message, let debug):
+            return "Error parsing JSON @ \(debug) - \(message). \(ReportErrorMessage)"
+        case .HTTPStatusError(let code, let message):
+            return message ?? NSHTTPURLResponse.localizedStringForStatusCode(code)
+        case .Unexpected(let message, let debug):
+            return "Unexpected error @ \(debug) - \(message). \(ReportErrorMessage)"
+        case .Rethrown(let message, let inner):
+            return "\(message). Inner error: \(inner)"
+        }
+    }
+
     public var description: String {
         switch self {
         case .APIError(let message):
