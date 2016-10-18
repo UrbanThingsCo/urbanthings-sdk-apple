@@ -63,10 +63,15 @@ extension UrbanThingsAPI {
         #if DEBUG
         if let utf8 = String(data: data, encoding: NSUTF8StringEncoding) {
             logger.log(.Debug, utf8)
+            print("\(utf8)")
         }
         #endif
         let json = try NSJSONSerialization.JSONObjectWithData(data, options: [])
-        return try parser(json: json, logger: logger)
+        var v2or3: AnyObject? = json["data"]
+        if v2or3 == nil {
+            v2or3 = json
+        }
+        return try parser(json: v2or3, logger: logger)
     }
 
     func handleResponse<T>(parser:(json: AnyObject?, logger: Logger) throws -> T, result:(data: T?, error: ErrorType?) -> Void)
@@ -93,4 +98,9 @@ extension UrbanThingsAPI {
             return taskCompletionHandler
     }
 
+    func buildURL<R: Request>(request: R) -> String {
+        let parameters = request.queryParameters.description
+        let separator = parameters.characters.count > 0 ? "&" : "?"
+        return "\(self.service.baseURLString)/\(request.endpoint)\(request.queryParameters.description)\(separator)apikey=\(self.apiKey!)"
+    }
 }

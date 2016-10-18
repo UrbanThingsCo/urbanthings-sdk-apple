@@ -114,7 +114,8 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
     let requestModifier: RequestModifier?
     let service: Service
     let logger: Logger
-
+    var apiKey: String?
+    
     /// Initialize an instance of the UrbanThingsAPI.
     ///
     ///  - parameters:
@@ -129,6 +130,7 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
     public convenience init(apiKey: String, service: Service? = nil, requestModifier: RequestModifier? = nil, logger: Logger? = nil) {
         let session = NSURLSession(configuration: NSURLSessionConfiguration.sessionConfigurationForUrbanThingsAPI(apiKey: apiKey))
         self.init(session:session, service:service, requestHandler:nil, requestModifier:requestModifier, logger:logger)
+        self.apiKey = apiKey
     }
 
     /// Initialize an instance of the UrbanThingsAPI.
@@ -160,7 +162,7 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
 
     public func sendRequest<R: GetRequest>(request: R, completionHandler: (data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest {
 
-        let requestStr = "\(self.service.baseURLString)/\(request.endpoint)\(request.queryParameters.description)"
+        let requestStr = self.buildURL(request)
         let urlRequest = NSURLRequest(URL:NSURL(string:requestStr)!)
         let modifiedRequest = self.requestModifier?.getRequest(urlRequest, logger:logger) ?? urlRequest
         return self.requestHandler.makeRequest(modifiedRequest, logger:logger, completion: handleResponse(request.parser, result: completionHandler))
@@ -168,16 +170,19 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
 
     public func sendRequest<R: PostRequest>(request: R, completionHandler: (data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest {
 
-        let requestStr = "\(self.service.baseURLString)/\(request.endpoint)\(request.queryParameters.description)"
+        let requestStr = self.buildURL(request)
         let urlRequest = NSMutableURLRequest(URL:NSURL(string:requestStr)!)
         urlRequest.HTTPMethod = "POST"
 
         do {
             urlRequest.HTTPBody = try request.getBody()
+            urlRequest.allHTTPHeaderFields = ["Content-Type": "application/json"]
         } catch {
             completionHandler(data: nil, error: error as ErrorType)
         }
         
+        let str = NSString(data: urlRequest.HTTPBody!, encoding: NSUTF8StringEncoding)
+        print("\(str)")
         let modifiedRequest = self.requestModifier?.getRequest(urlRequest, logger:logger) ?? urlRequest
 
         return self.requestHandler.makeRequest(modifiedRequest, logger:logger, completion: handleResponse(request.parser, result: completionHandler))

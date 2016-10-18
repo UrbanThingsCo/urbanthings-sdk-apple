@@ -20,7 +20,7 @@ class UTTransitJourneyLeg : UTJourneyLeg, TransitJourneyLeg {
     override init(json: [String : AnyObject]) throws {
         self.linkedTransitRouteInfo = try parse(optional: json, key: .LinkedTransitRouteInfo, type: UTTransitJourneyLeg.self) as UTTransitRouteInfo?
         self.linkedTransitTripInfo = try parse(optional: json, key: .LinkedTransitTripInfo, type: UTTransitJourneyLeg.self) as UTTransitTripInfo?
-        self.scheduledStopCalls = try parse(optional:json, key: .ScheduledStopCalls, type:UTTransitJourneyLeg.self) { try [UTTransitScheduledCall](required:$0) }?.map { $0 as TransitScheduledCall }
+        self.scheduledStopCalls = try parse(optional:json, key: .ScheduledStopCalls, type:UTTransitJourneyLeg.self) { try [UTTransitScheduledCall](optional:$0) }?.map { $0 as TransitScheduledCall }
         try super.init(json: json)
     }
 }
