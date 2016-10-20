@@ -26,8 +26,8 @@ public protocol UrbanThingsAPIRequest {
 /// ````
 public protocol UrbanThingsAPIType {
 
-    func sendRequest<R: GetRequest>(request: R, completionHandler: (data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: GetRequest>(request: R, completionHandler: (R.Result?, ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
-    func sendRequest<R: PostRequest>(request: R, completionHandler: (data: R.Result?, error: ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func sendRequest<R: PostRequest>(request: R, completionHandler: (R.Result?, ErrorType?) -> Void) -> UrbanThingsAPIRequest
 
 }

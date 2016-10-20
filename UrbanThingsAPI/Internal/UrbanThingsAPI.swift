@@ -101,6 +101,6 @@ extension UrbanThingsAPI {
     func buildURL<R: Request>(request: R) -> String {
         let parameters = request.queryParameters.description
         let separator = parameters.characters.count > 0 ? "&" : "?"
-        return "\(self.service.baseURLString)/\(request.endpoint)\(request.queryParameters.description)\(separator)apikey=\(self.apiKey!)"
+        return "\(self.service.baseURLString)/\(request.endpoint)\(request.queryParameters.description)\(separator)apikey=\(self.service.key)"
     }
 }
