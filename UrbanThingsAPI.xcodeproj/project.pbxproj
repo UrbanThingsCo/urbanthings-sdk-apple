@@ -3276,6 +3276,7 @@
 				PRODUCT_NAME = UTAPI;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -3526,6 +3527,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.urbanthings.ios.UrbanThingsAPI;
 				PRODUCT_NAME = UTAPI;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
