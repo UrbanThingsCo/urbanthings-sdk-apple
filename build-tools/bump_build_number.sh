@@ -16,9 +16,9 @@ if [ -n "$(find "$dir" \! -path "*xcuserdata*" \! -path "*.git" -newer "$plist")
         echo "No build number in $plist"
         exit 2
     fi
-    buildnum=`printf "%d" 0x$buildnum`
+    buildnum=`printf "%d" $buildnum`
     buildnum=$(expr $buildnum + 1)
-    buildnum=`printf "%04x" $buildnum`
+    buildnum=`printf "%d" $buildnum`
     /usr/libexec/Plistbuddy -c "Set CFBundleVersion $buildnum" "$plist"
     echo "Incremented $prod build number to $buildnum"
 else
