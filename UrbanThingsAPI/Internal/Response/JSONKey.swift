@@ -30,6 +30,7 @@ public enum JSONKey: String {
     case Latitude = "lat"
     case Longitude = "lng"
     case StopMode = "stopMode"
+    case HasStopboard = "hasStopBoard"
     case AdditionalCode = "additionalCode"
     case ParentPrimaryCode = "parentPrimaryCode"
     case SmsCode = "smsCode"

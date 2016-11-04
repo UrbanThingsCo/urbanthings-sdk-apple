@@ -20,6 +20,7 @@ class UTTransitStop : UTPlacePoint, TransitStop {
     let isClosed:Bool
     let stopMode:TransitMode
     let parentPrimaryCode: String?
+    let hasStopboard: Bool
     
     override init(json:[String:AnyObject]) throws {
         self.additionalCode = try parse(optional:json, key: .AdditionalCode, type: UTTransitStop.self)
@@ -29,6 +30,7 @@ class UTTransitStop : UTPlacePoint, TransitStop {
         self.stopIndicator = try parse(optional:json, key: .StopIndicator, type: UTTransitStop.self)
         self.isClosed = try parse(required:json, key: .IsClosed, type: UTTransitStop.self)
         self.stopMode = try parse(required:json, key: .StopMode, type: UTTransitStop.self)
+        self.hasStopboard = (try? parse(required: json, key: .HasStopboard, type: UTTransitStop.self)) ?? true
         self.parentPrimaryCode = try parse(optional:json, key: .ParentPrimaryCode, type: UTTransitStop.self)
         try super.init(json:json)
     }

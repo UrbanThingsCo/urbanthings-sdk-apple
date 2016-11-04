@@ -36,3 +36,27 @@ extension Array where Element : JSONInitialization {
         try self.init(required: optional)
     }
 }
+
+extension Array where Element: PlacePoint {
+    
+    public static func fromJSON(required: AnyObject?) throws -> Array {
+        guard let array = required as? [[String: AnyObject]] else {
+            throw Error(expected: [[String: AnyObject]].self, not: required, file:#file, function:#function, line:#line)
+        }
+
+        var result = [Element]()
+        try array.forEach {
+            var pp: Element?
+            if let subType = $0["subClassType"] as? String where subType == "TransitStop" {
+                pp = try UTTransitStop(json: $0) as? Element
+            } else {
+                pp = try UTPlacePoint(json: $0) as? Element
+            }
+
+            result.append(pp!)
+        }
+ 
+        return result
+    }
+
+}

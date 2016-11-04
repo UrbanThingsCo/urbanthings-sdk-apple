@@ -33,4 +33,5 @@ class UTPlacePoint : UTObject, PlacePoint {
         self.placePointType = try parse(required:json, key:.PlacePointType, type:UTPlacePoint.self)
         try super.init(json:json)
     }
+    
 }
