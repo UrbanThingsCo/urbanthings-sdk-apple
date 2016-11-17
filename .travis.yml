@@ -3,9 +3,9 @@ osx_image: xcode8.1
 before_install:
   - gem install xcpretty
 script:
-  - set -o pipefail && xcodebuild test -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-iOS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
-  - set -o pipefail && xcodebuild test -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-OSX -sdk macosx ONLY_ACTIVE_ARCH=NO | xcpretty -c
-  - set -o pipefail && xcodebuild test -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-tvOS -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - set -o pipefail && xcodebuild -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-iOS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - set -o pipefail && xcodebuild -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-OSX -sdk macosx ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - set -o pipefail && xcodebuild -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-tvOS -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
   - set -o pipefail && xcodebuild -project UrbanThingsAPI.xcodeproj -scheme UrbanThingsAPI-watchOS -sdk watchsimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
   - set -o pipefail && xcodebuild -project UrbanThingsAPI.xcodeproj -scheme UTAPIObjCAdapter-iOS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO  xcpretty -c
   - set -o pipefail && xcodebuild -project UrbanThingsAPI.xcodeproj -scheme UTAPIObjCAdapter-OSX -sdk macosx ONLY_ACTIVE_ARCH=NO | xcpretty -c
