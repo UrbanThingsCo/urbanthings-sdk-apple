@@ -17,9 +17,9 @@ public protocol JourneyLeg {
     /// Place point ID of the destination point for the leg
     var destinationPlacePointID:String? { get }
     /// Time of arrival at the destination point
-    var arrivalTime:NSDate? { get }
+    var arrivalTime:Date? { get }
     /// Time of departure from the origin point
-    var departureTime:NSDate? { get }
+    var departureTime:Date? { get }
     /// Type of vehicle used for the leg, eg bus, car etc.
     var vehicleType:TransitMode { get }
     /// Estimated duration of the leg in seconds, if available.

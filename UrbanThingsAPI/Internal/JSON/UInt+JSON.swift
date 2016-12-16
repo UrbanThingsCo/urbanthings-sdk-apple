@@ -16,14 +16,14 @@ extension UInt : JSONInitialization {
     ///  - parameters:
     ///    - required: Input JSON object that is required to be parsed into a `UInt`.
     ///  - throws: Error.JSONParseError if unable to parse into `Uint`.
-    public init(required:AnyObject?) throws {
+    public init(required:Any?) throws {
         guard let value = required as? UInt else {
-            throw Error(expected:UInt.self, not:required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected:UInt.self, not:required, file:#file, function:#function, line:#line)
         }
         self = value
     }
     
-    public init?(optional:AnyObject?) throws {
+    public init?(optional:Any?) throws {
         guard optional != nil else {
             return nil
         }

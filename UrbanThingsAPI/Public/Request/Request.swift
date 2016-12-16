@@ -20,7 +20,7 @@ public protocol Request {
     var endpoint: String { get }
 
     /// Parser to use when processing response to the request
-    var parser:(json: AnyObject?, logger: Logger) throws -> Result { get }
+    var parser:(_ json: Any?, _ logger: Logger) throws -> Result { get }
 
     /**
      Parameters to add to url request
@@ -35,5 +35,5 @@ public protocol GetRequest: Request {
 public protocol PostRequest: Request {
 
     var contentType: String { get }
-    func getBody() throws -> NSData
+    func getBody() throws -> Data
 }

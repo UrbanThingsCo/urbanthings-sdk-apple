@@ -186,7 +186,7 @@ public enum JSONKey: String {
     case Duration = "duration"
     case Distance = "distance"
     case Stop = "stop"
-    case Type = "type"
+    case `Type` = "type"
     case LinkedTransitRouteInfo = "linkedTransitRouteInfo"
     case LinkedTransitTripInfo = "linkedTransitTripInfo"
     case ScheduledStopCalls = "scheduledStopCalls"
@@ -219,10 +219,10 @@ public enum JSONKey: String {
     case Items = "items"
 }
 
-extension Dictionary where Key: StringLiteralConvertible, Value: AnyObject {
-    subscript(key: JSONKey) -> AnyObject? {
+extension Dictionary where Key: ExpressibleByStringLiteral, Value: Any {
+    subscript(key: JSONKey) -> Any? {
         get {
-            if let dict = (self as? AnyObject) as? [String:AnyObject] {
+            if let dict = (self as Any) as? [String:Any] {
                 return dict[key.rawValue]
             }
             return nil

@@ -10,15 +10,15 @@ import Foundation
 
 class UTMonitoredStopCall : UTStopCall, MonitoredStopCall {
     
-    let expectedArrivalTime: NSDate?
-    let expectedDepartureTime: NSDate?
+    let expectedArrivalTime: Date?
+    let expectedDepartureTime: Date?
     let distanceMetres: Int?
     let masterDisplayFormat: MonitoredStopCallDisplayFormat
     let vehicleRTI: VehicleRTI
     let platform: String?
     let isCancelled: Bool
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.expectedArrivalTime = try String(optional: json[.ExpectedArrivalTime])?.requiredDate()
         self.expectedDepartureTime = try String(optional: json[.ExpectedDepartureTime])?.requiredDate()
         self.platform = try parse(optional: json, key: .Platform, type: UTMonitoredStopCall.self)

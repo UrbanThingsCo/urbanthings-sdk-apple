@@ -10,14 +10,14 @@ import Foundation
 
 class UTJourneyCore : UTObject {
     
-    let arrivalTime:NSDate?
-    let departureTime:NSDate?
+    let arrivalTime:Date?
+    let departureTime:Date?
     let summaryHTML:String?
     let duration:UInt?
     let originPlacePointID:String?
     let destinationPlacePointID:String?
     
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.arrivalTime = try parse(required:json, key: .ArrivalTime, type:UTJourneyCore.self) { try String(optional: $0)?.requiredDate() }
         self.departureTime = try parse(required:json, key: .DepartureTime, type:UTJourneyCore.self) { try String(optional: $0)?.requiredDate() }
         self.summaryHTML = try parse(optional: json, key: .SummaryHTML, type:UTJourneyCore.self)

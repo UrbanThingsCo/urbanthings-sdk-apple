@@ -13,7 +13,7 @@ class UTStopBoardGroup : UTObject, StopBoardGroup {
     let color:UTColor?
     let colorCompliment:UTColor?
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.groupID = try parse(required: json, key: .GroupID, type: UTStopBoardGroup.self)
         self.label = try parse(required: json, key: .Label, type: UTStopBoardGroup.self)
         self.color = try parse(optional: json, key: .Color, type: UTStopBoardGroup.self) { try UTColor.fromJSON(optional: $0) }

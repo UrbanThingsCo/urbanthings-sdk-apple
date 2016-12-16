@@ -11,27 +11,27 @@ import Foundation
 /// Extend `String` to support JSONInitialization protocol for JSON parsing.
 extension String : JSONInitialization {
 
-    public init?(optional: AnyObject?) throws {
+    public init?(optional: Any?) throws {
         guard optional != nil else {
             return nil
         }
         try self.init(required: optional)
     }
 
-    public init(required: AnyObject?) throws {
+    public init(required: Any?) throws {
         guard let value = required as? String else {
-            throw Error(expected:String.self, not:required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected:String.self, not:required, file:#file, function:#function, line:#line)
         }
         self = value
     }
 
     public var hexValue: UInt32? {
 
-        let trimmed = self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        let trimmed = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         if trimmed.characters.first == "#" {
-            return trimmed.substringFromIndex(trimmed.startIndex.successor()).hexValue
+            return trimmed.substring(from: trimmed.characters.index(after: trimmed.characters.startIndex)).hexValue
         } else if trimmed.hasPrefix("0x") || trimmed.hasPrefix("0X") {
-            return trimmed.substringFromIndex(trimmed.startIndex.advancedBy(2)).hexValue
+            return trimmed.substring(from: trimmed.characters.index(trimmed.characters.startIndex, offsetBy:2)).hexValue
         }
 
         return UInt32(trimmed, radix:16)

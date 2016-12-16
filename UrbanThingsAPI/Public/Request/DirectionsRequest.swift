@@ -11,9 +11,9 @@ import Foundation
 /// Enum that defines time for directions query
 public enum DirectionsTime {
     /// Specifies a departure time for the directions query
-    case Departure(NSDate)
+    case Departure(Date)
     /// Specifies an arrival time for the directions query
-    case Arrival(NSDate)
+    case Arrival(Date)
 }
 
 /// Enum that defines the travel mode for the directions query
@@ -97,7 +97,7 @@ public protocol DirectionsRequest: PostRequest {
     var accessibility: DirectionsRequestAccessibilityOptions? { get }
     /// General purpose dictionary for any parameters specific to a particular routing engine. Note that the values must be
     /// encodable as JSON.
-    var customOptions: [String:AnyObject]? { get }
+    var customOptions: [String:Any]? { get }
     /// The maximum number of journeys to find that fulfill the request.
     var maximumJourneys: UInt? { get }
 }
@@ -191,7 +191,7 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
     /// option may not be respected by all planning engines.
     ///    - enableFareResults: Set to `true` to attempt to return any available information regarding fares and ticketing. This
     /// option may not be respected by all planning engines.
-    public init(departureTime: NSDate,
+    public init(departureTime: Date,
                 agencyCode: String? = nil,
                 travelContext: TravelMode = .Transit,
                 maximumLegs: UInt? = nil,
@@ -237,7 +237,7 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
     /// option may not be respected by all planning engines.
     ///    - enableFareResults: Set to `true` to attempt to return any available information regarding fares and ticketing. This
     /// option may not be respected by all planning engines.
-    public init(arrivalTime: NSDate,
+    public init(arrivalTime: Date,
                 agencyCode: String? = nil,
                 travelContext: TravelMode = .Transit,
                 maximumLegs: UInt? = nil,
@@ -310,7 +310,7 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
                   enableFareResults: enableFareResults)
     }
 
-    init(time: DirectionsTime? = .Departure(NSDate()),
+    init(time: DirectionsTime? = .Departure(Date()),
          agencyCode: String? = nil,
          travelContext: TravelMode = .Transit,
          maximumLegs: UInt? = nil,
@@ -346,13 +346,13 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
 public struct UTDirectionsRequest: DirectionsRequest {
 
     public typealias Result = DirectionsResponse
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "plan/directions"
     public let queryParameters: QueryParameters = [:]
 
     public let contentType = "application/json; charset=utf-8"
 
-    public func getBody() throws -> NSData {
+    public func getBody() throws -> Data {
         return try self.toJSON()
     }
 
@@ -366,7 +366,7 @@ public struct UTDirectionsRequest: DirectionsRequest {
     public let accessibility: DirectionsRequestAccessibilityOptions?
     /// General purpose dictionary for any parameters specific to a particular routing engine. Note that the values must be
     /// encodable as JSON.
-    public let customOptions: [String:AnyObject]?
+    public let customOptions: [String:Any]?
     /// The maximum number of journeys to find that fulfill the request.
     public let maximumJourneys: UInt?
 
@@ -384,7 +384,7 @@ public struct UTDirectionsRequest: DirectionsRequest {
     ///    - customOptions: Optional general purpose dictionary for any parameters specific to a particular routing
     /// engine. Note that the values must be encodable as JSON.
     ///    - maximumJourneys: The maximum number of journeys to find that fulfill the request.
-    public init(origin: PlacePoint, destination: PlacePoint, options: DirectionsRequestOptions? = nil, accessibility: DirectionsRequestAccessibilityOptions? = nil, customOptions: [String:AnyObject]? = nil, maximumJourneys: UInt? = nil, parser: Parser = urbanThingsParser) {
+    public init(origin: PlacePoint, destination: PlacePoint, options: DirectionsRequestOptions? = nil, accessibility: DirectionsRequestAccessibilityOptions? = nil, customOptions: [String:Any]? = nil, maximumJourneys: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
 
         self.parser = parser
         self.origin = origin
@@ -396,7 +396,7 @@ public struct UTDirectionsRequest: DirectionsRequest {
     }
 }
 
-extension Dictionary where Key : StringLiteralConvertible, Value : AnyObject {
+extension Dictionary where Key : ExpressibleByStringLiteral, Value : Any {
 
     subscript(key: QueryKey) -> Value? {
         get {
@@ -412,8 +412,8 @@ extension Dictionary where Key : StringLiteralConvertible, Value : AnyObject {
 }
 
 extension PlacePoint {
-    func toJSONObject() throws -> [String:AnyObject] {
-        var json: [String:AnyObject] = [:]
+    func toJSONObject() throws -> [String:Any] {
+        var json: [String:Any] = [:]
         json[.Lat] = self.location.latitude
         json[.Lng] = self.location.longitude
         json[.Name] = self.name
@@ -422,26 +422,23 @@ extension PlacePoint {
     }
 }
 
-extension NSDate {
+extension Date {
 
-    private static var token: dispatch_once_t = 0
-    private static var dateFormatter: NSDateFormatter?
-
+    private static var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        return formatter
+    }()
+    
     var asISO8601: String {
-        dispatch_once(&NSDate.token) {
-            let formatter = NSDateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-            NSDate.dateFormatter = formatter
-        }
-
-        return NSDate.dateFormatter!.stringFromDate(self)
+        return Date.dateFormatter.string(from: self)
     }
 }
 
 extension DirectionsRequest {
 
-    func toJSON() throws -> NSData {
-        var json: [String:AnyObject] = [:]
+    func toJSON() throws -> Data {
+        var json: [String:Any] = [:]
         json[.Origin] = try self.origin.toJSONObject()
         json[.Destination] = try self.destination.toJSONObject()
         if let time = self.options?.time {
@@ -454,10 +451,10 @@ extension DirectionsRequest {
                 break
             }
         } else {
-            json[.DepartureTime] = NSDate().asISO8601
+            json[.DepartureTime] = Date().asISO8601
         }
         json[.AgencyCode] = self.options?.agencyCode
-        var custom = [String:AnyObject]()
+        var custom = [String:Any]()
         custom[.KeyValues] = self.customOptions
         json[.CustomOptions] = custom
         json[.EnableRouteGeometry] = self.options?.enableRouteGeometry
@@ -465,7 +462,7 @@ extension DirectionsRequest {
         json[.EnableFareResults] = self.options?.enableFareResults
         json[.TravelContext] = self.options?.travelContext.rawValue
         json[.MaximumJourneys] = self.maximumJourneys
-        var options = [String:AnyObject]()
+        var options = [String:Any]()
         options[.MaximumLegs] = self.options?.maximumLegs
         options[.WalkSpeed] = self.options?.walkSpeed
         options[.MaximumWalkingLegTime] = self.options?.maximumWalkingLegTime
@@ -479,6 +476,6 @@ extension DirectionsRequest {
         options[.AccessibilityNoStepsToVehicle] = self.accessibility?.noStepsToVehicle
         options[.AccessibilityNoStepsToPlatform] = self.accessibility?.noStepsToPlatform
         json[.Options] = options
-        return try NSJSONSerialization.dataWithJSONObject(json, options:[])
+        return try JSONSerialization.data(withJSONObject: json, options:[])
     }
 }

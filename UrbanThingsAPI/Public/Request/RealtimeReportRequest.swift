@@ -30,7 +30,7 @@ public protocol RealtimeReportRequest: GetRequest {
 public struct UTRealtimeReportRequest: RealtimeReportRequest {
 
     public typealias Result = TransitStopRTIResponse
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "rti/report"
 
     /// Stop ID of the report being requested
@@ -49,7 +49,7 @@ public struct UTRealtimeReportRequest: RealtimeReportRequest {
     ///   - maximumItems: Maximum number of items to include in the report
     ///   - lookAheadMinutes: Number of minutes into the future for which to return results
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(stopID: String, maximumItems: UInt? = nil, lookAheadMinutes: UInt? = nil, parser: Parser = urbanThingsParser) {
+    public init(stopID: String, maximumItems: UInt? = nil, lookAheadMinutes: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.stopID = stopID
         self.maximumItems = maximumItems

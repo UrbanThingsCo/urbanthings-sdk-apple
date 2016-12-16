@@ -44,7 +44,7 @@ public protocol TransitTripsRequest: GetRequest {
 public struct UTTransitTripsRequest: TransitTripsRequest {
 
     public typealias Result = [TransitTrip]
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/trips"
 
     /// Route or trip ID to base search on
@@ -101,7 +101,7 @@ public struct UTTransitTripsRequest: TransitTripsRequest {
                   includeStopCoordinates: includeStopCoordinates)
     }
 
-    init(routeOrTripID: RouteOrTripID, originStopID: String? = nil, destinationStopID: String? = nil, includePolylines: Bool = false, includeStopCoordinates: Bool = false, parser: Parser = urbanThingsParser) {
+    init(routeOrTripID: RouteOrTripID, originStopID: String? = nil, destinationStopID: String? = nil, includePolylines: Bool = false, includeStopCoordinates: Bool = false, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.routeOrTripID = routeOrTripID
         self.originStopID = originStopID

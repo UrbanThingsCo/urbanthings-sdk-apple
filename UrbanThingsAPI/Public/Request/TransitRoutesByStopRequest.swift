@@ -23,7 +23,7 @@ public protocol TransitRoutesByStopRequest: GetRequest {
 public struct UTTransitRoutesByStopRequest: TransitRoutesByStopRequest {
 
     public typealias Result = [TransitDetailedRouteInfo]
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/routes/info/CallingAtStop"
 
     /// Transit stop ID to get routes for
@@ -37,7 +37,7 @@ public struct UTTransitRoutesByStopRequest: TransitRoutesByStopRequest {
     /// - parameters:
     ///   - stopID: Transit stop ID to get routes for.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(stopID: String, parser: Parser = urbanThingsParser) {
+    public init(stopID: String, parser: @escaping Parser = urbanThingsParser) {
         self.stopID = stopID
         self.parser = parser
     }

@@ -33,7 +33,7 @@ public protocol PlacePointsRequest: GetRequest {
 public struct UTPlacePointsRequest: PlacePointsRequest {
 
     public typealias Result = PlacePointList
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/placepoints"
 
     /// Defines the geographical area of the search.
@@ -57,7 +57,7 @@ public struct UTPlacePointsRequest: PlacePointsRequest {
     ///    - placepointTypes: An optional list of PlacePointTypes to filter the results by.
     ///    - maximumResults: Maximum number of results, if not provided defaults to 1000.
     ///    - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(center: Location, radius: UInt, name: String? = nil, placepointTypes: [PlacePointType]? = nil, maximumResults: UInt? = nil, parser: Parser = urbanThingsParser) {
+    public init(center: Location, radius: UInt, name: String? = nil, placepointTypes: [PlacePointType]? = nil, maximumResults: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.init(filter:AreaFilter.Circle(center, radius), name:name, placepointTypes:placepointTypes, maximumResults: maximumResults, parser: parser)
     }
 
@@ -70,11 +70,11 @@ public struct UTPlacePointsRequest: PlacePointsRequest {
     ///    - placepointTypes: An optional list of PlacePointTypes to filter the results by.
     ///    - maximumResults: Maximum number of results, if not provided defaults to 1000.
     ///    - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(topLeft: Location, bottomRight: Location, name: String? = nil, placepointTypes: [PlacePointType]? = nil, importSource: String? = nil, maximumResults: UInt? = nil, parser: Parser = urbanThingsParser) {
+    public init(topLeft: Location, bottomRight: Location, name: String? = nil, placepointTypes: [PlacePointType]? = nil, importSource: String? = nil, maximumResults: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.init(filter:AreaFilter.Rectangle(topLeft, bottomRight), name:name, placepointTypes:placepointTypes, maximumResults: maximumResults, parser: parser)
     }
 
-    init(filter: AreaFilter, name: String? = nil, placepointTypes: [PlacePointType]? = nil, maximumResults: UInt? = nil, parser: Parser = urbanThingsParser) {
+    init(filter: AreaFilter, name: String? = nil, placepointTypes: [PlacePointType]? = nil, maximumResults: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.area = filter
         self.maximumResults = maximumResults

@@ -16,7 +16,7 @@ public protocol JSONInitialization {
     ///  - parameters:
     ///    - required: Input JSON object that is required to be parsed into instance of type.
     ///  - throws: Error.JSONParseError if unable to parse into instance of type.
-    init(required: AnyObject?) throws
+    init(required: Any?) throws
 
     /// Parse input into optional instance of type implementing the protocol. A nil optional will result if
     /// nil is passed in as `optional`. If none nil `optional` passed and an instance of the type cannot be
@@ -24,5 +24,5 @@ public protocol JSONInitialization {
     ///  - parameters:
     ///    - required: Input JSON object that is required to be parsed into instance of type.
     ///  - throws: Error.JSONParseError if unable to parse into instance of type.
-    init?(optional: AnyObject?) throws
+    init?(optional: Any?) throws
 }

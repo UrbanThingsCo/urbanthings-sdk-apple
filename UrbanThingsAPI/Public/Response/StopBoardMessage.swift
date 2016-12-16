@@ -15,9 +15,9 @@ public protocol StopBoardMessage : StopBoardColor {
     /// The main text of the message.
     var mainText:String? { get }
     /// The URL of an graphic that represents this message, if available.
-    var iconURL:NSURL? { get }
+    var iconURL:URL? { get }
     /// The URL of a web page with further information relating to this message, if available.
-    var linkURL:NSURL? { get }
+    var linkURL:URL? { get }
     /// A piece of text that describes the content of the web page referred to in the linkURL field if applicable.
     var linkText:String? { get }
     /// Severity of distruption associated with the message.

@@ -30,7 +30,7 @@ public protocol TransitStopCallsRequest: GetRequest {
 public struct UTTransitStopCallsRequest: TransitStopCallsRequest {
 
     public typealias Result = TransitStopScheduledCalls
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/stopcalls"
 
     /// The primary code of the stop to retrieve a timetable for.
@@ -50,7 +50,7 @@ public struct UTTransitStopCallsRequest: TransitStopCallsRequest {
     ///   - queryTime: Point of time to produce the report for, defaults to now.
     ///   - lookAheadMinutes: The number of minutes beyond the queryTime for which to return results. Defaults to 2 hours.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(stopID: String, queryTime: NSDate? = nil, lookAheadMinutes: Int? = nil, parser: Parser = urbanThingsParser) {
+    public init(stopID: String, queryTime: NSDate? = nil, lookAheadMinutes: Int? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.stopID = stopID
         self.queryTime = queryTime

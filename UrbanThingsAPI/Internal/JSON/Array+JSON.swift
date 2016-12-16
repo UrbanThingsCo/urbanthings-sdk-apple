@@ -16,12 +16,12 @@ extension Array where Element : JSONInitialization {
     ///  - parameters:
     ///    - required: Object to be parsed into array. This should be an array of AnyObject or will throw.
     ///  - throws: Error.JSONParseError if unable to provide a parsed array result
-    public init(required: AnyObject?) throws {
-        guard let array = required as? [AnyObject] else {
-            throw Error(expected: [AnyObject].self, not: required, file:#file, function:#function, line:#line)
+    public init(required: Any?) throws {
+        guard let array = required as? [Any] else {
+            throw UTAPIError(expected: [Any].self, not: required, file:#file, function:#function, line:#line)
         }
         self.init()
-        self.appendContentsOf(try array.map { try Element(required: $0) })
+        self.append(contentsOf: try array.map { try Element(required: $0) })
     }
 
     /// Initialize an array of objects from a JSON object. If passed nil will initialize to `Optional(nil)` instance, otherwise if unable
@@ -29,7 +29,7 @@ extension Array where Element : JSONInitialization {
     ///  - parameters:
     ///    - optional: Object to be parsed into array, if nil will initialize to `Optional(nil)`. If non-nil will throw if unable to parse.
     ///  - throws: Error.JSONParseError if unable to provide a parsed array result and `optional` non-nil.
-    public init?(optional: AnyObject?) throws {
+    public init?(optional: Any?) throws {
         guard optional != nil else {
             return nil
         }
@@ -39,15 +39,15 @@ extension Array where Element : JSONInitialization {
 
 extension Array where Element: PlacePoint {
     
-    public static func fromJSON(required: AnyObject?) throws -> Array {
-        guard let array = required as? [[String: AnyObject]] else {
-            throw Error(expected: [[String: AnyObject]].self, not: required, file:#file, function:#function, line:#line)
+    public static func fromJSON(required: Any?) throws -> Array {
+        guard let array = required as? [[String: Any]] else {
+            throw UTAPIError(expected: [[String: Any]].self, not: required, file:#file, function:#function, line:#line)
         }
 
         var result = [Element]()
         try array.forEach {
             var pp: Element?
-            if let subType = $0["subClassType"] as? String where subType == "TransitStop" {
+            if let subType = $0["subClassType"] as? String, subType == "TransitStop" {
                 pp = try UTTransitStop(json: $0) as? Element
             } else {
                 pp = try UTPlacePoint(json: $0) as? Element

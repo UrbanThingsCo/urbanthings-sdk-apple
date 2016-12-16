@@ -33,7 +33,7 @@ public protocol PlacesListRequest: GetRequest {
 public struct UTPlacesListRequest: PlacesListRequest {
 
     public typealias Result = PlacePointList
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/places/List"
 
     /// The name of the item being searched for.
@@ -56,7 +56,7 @@ public struct UTPlacesListRequest: PlacesListRequest {
     ///    - country: Optional optional country to limit search to.
     ///    - placePointTypes: Optional list of place point types to search for.
     ///    - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(name: String, location: CLLocationCoordinate2D, country: String? = nil, placePointTypes: [PlacePointType]? = nil, maximumResultsPerType: UInt? = nil, parser: Parser = urbanThingsParser) {
+    public init(name: String, location: CLLocationCoordinate2D, country: String? = nil, placePointTypes: [PlacePointType]? = nil, maximumResultsPerType: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.init(name:name, location:LocationFilter.Point(location, country), placePointTypes: placePointTypes, maximumResultsPerType: maximumResultsPerType, parser:parser)
     }
 
@@ -67,11 +67,11 @@ public struct UTPlacesListRequest: PlacesListRequest {
     ///    - country: Optional optional country to limit search to.
     ///    - placePointTypes: Optional list of place point types to search for.
     ///    - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(name: String, country: String, placePointTypes: [PlacePointType]? = nil, maximumResultsPerType: UInt? = nil, parser: Parser = urbanThingsParser) {
+    public init(name: String, country: String, placePointTypes: [PlacePointType]? = nil, maximumResultsPerType: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.init(name:name, location:LocationFilter.Country(country), placePointTypes: placePointTypes, maximumResultsPerType: maximumResultsPerType, parser:parser)
     }
 
-    init(name: String, location: LocationFilter, placePointTypes: [PlacePointType]? = nil, maximumResultsPerType: UInt? = nil, parser: Parser = urbanThingsParser) {
+    init(name: String, location: LocationFilter, placePointTypes: [PlacePointType]? = nil, maximumResultsPerType: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.name = name
         self.location = location

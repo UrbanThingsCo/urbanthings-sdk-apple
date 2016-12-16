@@ -37,7 +37,7 @@ public protocol TransitStopsRequest: GetRequest {
 public struct UTTransitStopsRequest: TransitStopsRequest {
 
     public typealias Result = [TransitStop]
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/transitstops"
 
     /// Defines the geographical area of the search.
@@ -67,7 +67,7 @@ public struct UTTransitStopsRequest: TransitStopsRequest {
     ///   - importSource: Optional import source to limit search to.
     ///   - maximumResults: Optional maximum number of results to return, defaults to 1000.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(center: Location, radius: UInt, stopName: String? = nil, stopModes: [TransitMode]? = nil, stopIDs: [String]? = nil, importSource: String? = nil, maximumResults: UInt? = nil, parser: Parser = urbanThingsParser) {
+    public init(center: Location, radius: UInt, stopName: String? = nil, stopModes: [TransitMode]? = nil, stopIDs: [String]? = nil, importSource: String? = nil, maximumResults: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.init(filter:AreaFilter.Circle(center, radius), stopName:stopName, stopModes:stopModes, stopIDs:stopIDs, importSource:importSource, maximumResults: maximumResults, parser: parser)
     }
 
@@ -82,11 +82,11 @@ public struct UTTransitStopsRequest: TransitStopsRequest {
     ///   - importSource: Optional import source to limit search to.
     ///   - maximumResults: Optional maximum number of results to return, defaults to 1000.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(topLeft: Location, bottomRight: Location, stopName: String? = nil, stopModes: [TransitMode]? = nil, stopIDs: [String]? = nil, importSource: String? = nil, maximumResults: UInt? = nil, parser: Parser = urbanThingsParser) {
+    public init(topLeft: Location, bottomRight: Location, stopName: String? = nil, stopModes: [TransitMode]? = nil, stopIDs: [String]? = nil, importSource: String? = nil, maximumResults: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.init(filter:AreaFilter.Rectangle(topLeft, bottomRight), stopName:stopName, stopModes:stopModes, stopIDs:stopIDs, importSource:importSource, maximumResults: maximumResults, parser: parser)
     }
 
-    init(filter: AreaFilter, stopName: String? = nil, stopModes: [TransitMode]? = nil, stopIDs: [String]? = nil, importSource: String? = nil, maximumResults: UInt? = nil, parser: Parser = urbanThingsParser) {
+    init(filter: AreaFilter, stopName: String? = nil, stopModes: [TransitMode]? = nil, stopIDs: [String]? = nil, importSource: String? = nil, maximumResults: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.area = filter
         self.maximumResults = maximumResults

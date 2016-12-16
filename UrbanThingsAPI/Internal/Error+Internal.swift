@@ -10,7 +10,7 @@ import Foundation
 
 let ReportErrorMessage = "This should not have occurred, please report to apisupport@urbanthings.io giving as much detail as you can."
 
-extension Error : CustomStringConvertible {
+extension UTAPIError : CustomStringConvertible {
     public var message: String {
         switch self {
         case .APIError(let message):
@@ -18,7 +18,7 @@ extension Error : CustomStringConvertible {
         case .JSONParseError(let message, let debug):
             return "Error parsing JSON @ \(debug) - \(message). \(ReportErrorMessage)"
         case .HTTPStatusError(let code, let message):
-            return message ?? NSHTTPURLResponse.localizedStringForStatusCode(code)
+            return message ?? HTTPURLResponse.localizedString(forStatusCode: code)
         case .Unexpected(let message, let debug):
             return "Unexpected error @ \(debug) - \(message). \(ReportErrorMessage)"
         case .Rethrown(let message, let inner):
@@ -33,7 +33,7 @@ extension Error : CustomStringConvertible {
         case .JSONParseError(let message, let debug):
             return "Error parsing JSON @ \(debug) - \(message). \(ReportErrorMessage)"
         case .HTTPStatusError(let code, let message):
-            return "HTTP Error \(code) - \(message ?? NSHTTPURLResponse.localizedStringForStatusCode(code))"
+            return "HTTP Error \(code) - \(message ?? HTTPURLResponse.localizedString(forStatusCode: code))"
         case .Unexpected(let message, let debug):
             return "Unexpected error @ \(debug) - \(message). \(ReportErrorMessage)"
         case .Rethrown(let message, let inner):
@@ -43,7 +43,7 @@ extension Error : CustomStringConvertible {
 }
 
 // Extend Error with initializers for specific message cases
-extension Error {
+extension UTAPIError {
 
     /// Constructs Error for a JSON parsing error.
     ///  - parameters:
@@ -52,7 +52,7 @@ extension Error {
     ///    - function: Function name, use #function for this parameter or provide other string detailing function or class information
     ///    - line: Line number of error, use #line for this parameter
     public init(jsonParseError: String, file: String, function: String, line: Int) {
-        self = .JSONParseError(message: jsonParseError, debugInfo: Error.debugInfoString(file, function: function, line: line))
+        self = .JSONParseError(message: jsonParseError, debugInfo: UTAPIError.debugInfoString(file: file, function: function, line: line))
     }
 
     /// Constructs Error for an unexpected error
@@ -62,7 +62,7 @@ extension Error {
     ///    - function: Function name, use #function for this parameter or provide other string detailing function or class information
     ///    - line: Line number of error, use #line for this parameter
     public init(unexpected: String, file: String, function: String, line: Int) {
-        self = .Unexpected(message: unexpected, debugInfo: Error.debugInfoString(file, function: function, line: line))
+        self = .Unexpected(message: unexpected, debugInfo: UTAPIError.debugInfoString(file: file, function: function, line: line))
     }
 
     /// Constructs Error for unexpected input value for JSON parsing
@@ -72,7 +72,7 @@ extension Error {
     ///    - file: Filename path, use #file for this parameter
     ///    - function: Function name, use #function for this parameter or provide other string detailing function or class information
     ///    - line: Line number of error, use #line for this parameter
-    public init<T>(expected: T.Type, not: AnyObject?, file: String, function: String, line: Int) {
+    public init<T>(expected: T.Type, not: Any?, file: String, function: String, line: Int) {
         self.init(jsonParseError:"Expected \(expected) value, not \(not)", file:file, function:function, line:line)
     }
 
@@ -93,10 +93,10 @@ extension Error {
     ///    - function: Function name, use #function for this parameter or provide other string detailing function or class information
     ///    - line: Line number of error, use #line for this parameter
     private static func debugInfoString(file: String, function: String, line: Int) -> String {
-        let bundle = NSBundle(forClass: UrbanThingsAPI.self)
-        let name = bundle.objectForInfoDictionaryKey("CFBundleName") ?? "#missing#"
-        let version = bundle.objectForInfoDictionaryKey("CFBundleShortVersionString") ?? "#missing#"
-        let build = bundle.objectForInfoDictionaryKey("CFBundleVersion") ?? "#missing#"
-        return "\(name!) \(version!)(\(build!)) \((file as NSString).lastPathComponent) \(function):\(line)"
+        let bundle = Bundle(for: UrbanThingsAPI.self)
+        let name = bundle.object(forInfoDictionaryKey: "CFBundleName") ?? "#missing#"
+        let version = bundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "#missing#"
+        let build = bundle.object(forInfoDictionaryKey: "CFBundleVersion") ?? "#missing#"
+        return "\(name) \(version)(\(build)) \((file as NSString).lastPathComponent) \(function):\(line)"
     }
 }

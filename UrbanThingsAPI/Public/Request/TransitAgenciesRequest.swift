@@ -23,7 +23,7 @@ public protocol TransitAgenciesRequest: GetRequest {
 public struct UTTransitAgenciesRequest: TransitAgenciesRequest {
 
     public typealias Result = [TransitAgency]
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/agencies"
 
     /// The import source to obtain transit agencies for.
@@ -36,7 +36,7 @@ public struct UTTransitAgenciesRequest: TransitAgenciesRequest {
     /// - parameters:
     ///   - importSource: The import source to obtain transit agencies for.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(importSource: String, parser: Parser = urbanThingsParser) {
+    public init(importSource: String, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.importSource = importSource
     }

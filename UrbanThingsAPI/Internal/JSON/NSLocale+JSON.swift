@@ -10,16 +10,16 @@ import Foundation
 
 extension NSLocale {
 
-    public convenience init?(optional: AnyObject?) throws {
+    public convenience init?(optional: Any?) throws {
         guard optional != nil else {
             return nil
         }
         try self.init(required: optional)
     }
 
-    public convenience init(required: AnyObject?) throws {
+    public convenience init(required: Any?) throws {
         guard let value = required as? String else {
-            throw Error(expected:String.self, not:required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected:String.self, not:required, file:#file, function:#function, line:#line)
         }
         self.init(localeIdentifier: value)
     }

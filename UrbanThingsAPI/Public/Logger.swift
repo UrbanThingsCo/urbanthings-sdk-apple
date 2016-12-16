@@ -38,7 +38,7 @@ public protocol Logger {
 /// UTLogger is the standard logger provided by the API framework. An instance will be used by the API object
 /// if no custom logger provided when instantiating the API instance.
 public struct UTLogger : Logger {
-    public func log(message:String) { log(.Info, message) }
+    public func log(message:String) { log(level: .Info, message) }
     public func log(level:LoggerLevel, _ message:String) {
         #if !DEBUG
             if level == .Debug {

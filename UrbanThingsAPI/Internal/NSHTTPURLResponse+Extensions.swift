@@ -11,9 +11,9 @@ import Foundation
 private let ContentTypeHTTPHeaderKey = "Content-Type"
 private let ContentTypeJSON = "application/json"
 
-extension NSHTTPURLResponse {
+extension HTTPURLResponse {
     
     var hasJSONBody:Bool {
-        return self.allHeaderFields[ContentTypeHTTPHeaderKey]?.hasPrefix(ContentTypeJSON) ?? false
+        return (self.allHeaderFields[ContentTypeHTTPHeaderKey] as AnyObject).hasPrefix(ContentTypeJSON) 
     }
 }

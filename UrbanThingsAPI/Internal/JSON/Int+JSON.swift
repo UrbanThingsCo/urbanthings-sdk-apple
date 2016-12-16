@@ -16,14 +16,14 @@ extension Int : JSONInitialization {
     ///  - parameters:
     ///    - required: Input JSON object that is required to be parsed into a `Int`.
     ///  - throws: Error.JSONParseError if unable to parse into `Int`.
-    public init(required:AnyObject?) throws {
+    public init(required:Any?) throws {
         guard let value = required as? Int else {
-            throw Error(expected:Int.self, not:required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected:Int.self, not:required, file:#file, function:#function, line:#line)
         }
         self = value
     }
     
-    public init?(optional:AnyObject?) throws {
+    public init?(optional:Any?) throws {
         guard optional != nil else {
             return nil
         }

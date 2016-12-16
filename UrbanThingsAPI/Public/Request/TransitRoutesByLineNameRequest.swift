@@ -43,7 +43,7 @@ public protocol TransitRoutesByLineNameRequest: GetRequest {
 public struct UTTransitRoutesByLineNameRequest: TransitRoutesByLineNameRequest {
 
     public typealias Result = [TransitDetailedRouteInfo]
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/routes/info/LineName"
 
     /// Line name to request routes for
@@ -97,7 +97,7 @@ public struct UTTransitRoutesByLineNameRequest: TransitRoutesByLineNameRequest {
         self.init(lineName:lineName, requiredParameters: .ImportSource(importSource, location, agencyID), agencyRegion: agencyRegion, exactMatch: exactMatch)
     }
 
-    init(lineName: String, requiredParameters: TransitRoutesByLineRequiredParameters, agencyRegion: String? = nil, exactMatch: Bool? = nil, parser: Parser = urbanThingsParser) {
+    init(lineName: String, requiredParameters: TransitRoutesByLineRequiredParameters, agencyRegion: String? = nil, exactMatch: Bool? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.lineName = lineName
         self.requiredParameters = requiredParameters

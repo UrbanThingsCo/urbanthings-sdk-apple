@@ -43,9 +43,9 @@ public extension MKPolyline {
     ///
     ///  - parameters:
     ///    - sequence: SequenceType providing CLLocationCoordinate2D instances
-    public convenience init<S:SequenceType where S.Generator.Element == CLLocationCoordinate2D>(sequence:S) {
+    public convenience init<S:Sequence>(sequence:S) where S.Iterator.Element == CLLocationCoordinate2D {
         let array = Array<CLLocationCoordinate2D>(sequence)
-        self.init(coordinates: UnsafeMutablePointer(array), count: array.count)
+        self.init(coordinates: UnsafeMutablePointer(mutating: array), count: array.count)
     }
 }
 

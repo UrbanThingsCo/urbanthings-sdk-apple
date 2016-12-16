@@ -18,11 +18,11 @@ class UTDirectionsResponse : UTObject, DirectionsResponse {
     let attributionsHTML:String?
     let warningsHTML:String?
     
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.responseID = try parse(optional: json, key:.ResponseID, type: UTDirectionsResponse.self)
         self.status = try parse(required: json, key: .Status, type: UTDirectionsResponse.self) as UTDirectionsResponseStatus
         self.journeys = try parse(required:json, key: .Journeys, type:UTDirectionsResponse.self) { try [UTJourney](required:$0) }.map { $0 as Journey }
-        self.placePoints = try parse(required:json, key: .PlacePoints, type:UTDirectionsResponse.self) { try [UTPlacePoint].fromJSON($0).map { $0 as PlacePoint } }
+        self.placePoints = try parse(required:json, key: .PlacePoints, type:UTDirectionsResponse.self) { try [UTPlacePoint].fromJSON(required: $0).map { $0 as PlacePoint } }
         self.sourceName = try parse(optional: json, key: .SourceName, type: UTDirectionsResponse.self)
         self.attributionsHTML = try parse(optional: json, key: .AttributionsHTML, type: UTDirectionsResponse.self)
         self.warningsHTML = try parse(optional: json, key: .WarningsHTML, type: UTDirectionsResponse.self)

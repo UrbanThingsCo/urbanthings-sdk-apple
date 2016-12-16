@@ -22,7 +22,7 @@ class UTTransitStop : UTPlacePoint, TransitStop {
     let parentPrimaryCode: String?
     let hasStopboard: Bool
     
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.additionalCode = try parse(optional:json, key: .AdditionalCode, type: UTTransitStop.self)
         self.smsCode = try parse(optional:json, key: .SmsCode, type: UTTransitStop.self)
         self.bearing = try parse(optional: json, key: .Bearing, type: UTTransitStop.self)

@@ -10,12 +10,12 @@ import Foundation
 
 class UTTransitScheduledCall : UTObject, TransitScheduledCall {
 
-    let scheduledArrivalTime:NSDate?
-    let scheduledDepartureTime:NSDate?
+    let scheduledArrivalTime:Date?
+    let scheduledDepartureTime:Date?
     let pickupType:TransitCallType?
     let dropoffType:TransitCallType?
 
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.scheduledArrivalTime = try String(optional: json[.ScheduledArrivalTime])?.requiredDate()
         self.scheduledDepartureTime = try String(optional: json[.ScheduledDepartureTime])?.requiredDate()
         self.pickupType = try parse(optional:json, key: .PickUpType, type: UTTransitScheduledCall.self)

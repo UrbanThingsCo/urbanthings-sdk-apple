@@ -33,7 +33,7 @@ public protocol TransitTripGroupsRequest: GetRequest {
 public struct UTTransitTripGroupRequest: TransitTripGroupsRequest {
 
     public typealias Result = [TransitTripCalendarGroup]
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/tripgroups/bycalendar"
 
     /// Route ID to make request for.
@@ -57,7 +57,7 @@ public struct UTTransitTripGroupRequest: TransitTripGroupsRequest {
     ///   - includeStopCoordinates: If set to `true`, each `TransitStopScheduledCallSummary` will include the latitude and longitude of the
     /// stop - this can increase response size.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(routeID: String, includePolylines: Bool = false, includeStopCoordinates: Bool = false, parser: Parser = urbanThingsParser) {
+    public init(routeID: String, includePolylines: Bool = false, includeStopCoordinates: Bool = false, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.routeID = routeID
         self.includePolylines = includePolylines

@@ -16,12 +16,12 @@
 
 extension UTColor {
 
-    public class func fromJSON(required required: AnyObject?) throws -> UTColor {
+    public class func fromJSON(required: Any?) throws -> UTColor {
         guard let string = required as? String else {
-            throw Error(expected:String.self, not:required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected:String.self, not:required, file:#file, function:#function, line:#line)
         }
         guard let value = string.hexValue else {
-            throw Error(jsonParseError:"Invalid hex string \(string)", file:#file, function:#function, line:#line)
+            throw UTAPIError(jsonParseError:"Invalid hex string \(string)", file:#file, function:#function, line:#line)
         }
 
         #if os(OSX)
@@ -37,7 +37,7 @@ extension UTColor {
         #endif
     }
 
-    public class func fromJSON(optional optional: AnyObject?) throws -> UTColor? {
+    public class func fromJSON(optional: Any?) throws -> UTColor? {
         guard let required = optional else {
             return nil
         }

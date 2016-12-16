@@ -18,7 +18,7 @@ class UTVehicleRTI : UTObject, VehicleRTI {
     let vehicleOccupancyPassengers:UInt?
     let isCancelled:Bool?
     
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.agencyCode = try parse(optional: json, key: .AgencyCode, type: UTVehicleRTI.self)
         self.vehicleID = try parse(required: json, key: .VehicleID, type: UTVehicleRTI.self)
         self.vehicleRegistrationCode = try parse(optional:json, key: .VehicleRegistrationCode, type: UTVehicleRTI.self)

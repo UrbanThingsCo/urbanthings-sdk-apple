@@ -14,7 +14,7 @@ class UTStopCall : UTObject, StopCall {
     let routeInfo:TransitRouteInfo
     let scheduledCall:TransitScheduledCall
     
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.tripInfo = try parse(required: json, key: .TripInfo, type: UTStopCall.self) as UTTransitTripInfo
         self.routeInfo = try parse(required: json, key: .RouteInfo, type: UTStopCall.self) as UTTransitRouteInfo
         self.scheduledCall = try parse(required:json, key: .ScheduledCall, type: UTStopCall.self) as UTTransitScheduledCall

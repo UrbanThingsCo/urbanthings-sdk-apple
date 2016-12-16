@@ -40,7 +40,7 @@ extension QueryParameter : CustomStringConvertible {
         case .Value(let v):
             return "\(v)"
         case .Array(let a):
-            return a.map { "\($0)" }.joinWithSeparator(",")
+            return a.map { "\($0)" }.joined(separator: ",")
         }
     }
 }
@@ -52,7 +52,7 @@ extension Dictionary {
             .map { (k, v) in ("\(k)", "\(v)") }
             .filter { (k, v) in v.characters.count > 0 }
             .map { (k, v) in "\(k)=\(v.stringByURLEncodingAsQueryParameterValue())" }
-            .joinWithSeparator("&")
+            .joined(separator: "&")
         if params.characters.count > 0 {
             return "?" + params
         }
@@ -94,9 +94,9 @@ extension TransitRoutesByLineNameRequest {
 extension TransitRoutesImportSource {
     public var queryParameters: QueryParameters {
         switch self {
-        case AgencyID(let agencyID):
+        case .AgencyID(let agencyID):
             return [QueryKey.AgencyID: QueryParameter(agencyID)]
-        case ImportSource(let source):
+        case .ImportSource(let source):
             return [QueryKey.ImportSource: QueryParameter(source)]
         }
     }
@@ -251,17 +251,17 @@ extension RealtimeStopboardRequest {
 extension TransitRoutesByLineRequiredParameters {
     public var queryParameters: QueryParameters {
         switch self {
-        case Location(let location, let agencyID, let importSource):
+        case .Location(let location, let agencyID, let importSource):
             return [QueryKey.Lat: QueryParameter(location.latitude),
                     QueryKey.Lng: QueryParameter(location.longitude),
                     QueryKey.AgencyID: QueryParameter(agencyID),
                     QueryKey.ImportSource: QueryParameter(importSource)]
-        case AgencyID(let agencyID, let location, let importSource):
+        case .AgencyID(let agencyID, let location, let importSource):
             return [QueryKey.Lat: QueryParameter(location?.latitude),
                     QueryKey.Lng: QueryParameter(location?.longitude),
                     QueryKey.AgencyID: QueryParameter(agencyID),
                     QueryKey.ImportSource: QueryParameter(importSource)]
-        case ImportSource(let importSource, let location, let agencyID):
+        case .ImportSource(let importSource, let location, let agencyID):
             return [QueryKey.Lat: QueryParameter(location?.latitude),
                     QueryKey.Lng: QueryParameter(location?.longitude),
                     QueryKey.AgencyID: QueryParameter(agencyID),

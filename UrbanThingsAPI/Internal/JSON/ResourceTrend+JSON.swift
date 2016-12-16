@@ -11,7 +11,7 @@ import Foundation
 /// Extend `ResourceTrend` enum to support JSONInitialization protocol for JSON parsing.
 extension ResourceTrend : JSONInitialization {
     
-    public init?(optional:AnyObject?) throws {
+    public init?(optional:Any?) throws {
         guard optional != nil else {
             return nil
         }
@@ -23,12 +23,12 @@ extension ResourceTrend : JSONInitialization {
     ///  - parameters:
     ///    - required: Input JSON object that is required to be parsed into a `ResourceTrend`.
     ///  - throws: Error.JSONParseError if unable to parse into `ResourceTrend`.
-    public init(required:AnyObject?) throws {
+    public init(required:Any?) throws {
         guard let rawValue = required as? Int else {
-            throw Error(expected:Int.self, not:required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected:Int.self, not:required, file:#file, function:#function, line:#line)
         }
         guard let value = ResourceTrend(rawValue:rawValue) else {
-            throw Error(enumType: ResourceTrend.self, invalidRawValue: rawValue, file:#file, function:#function, line:#line)
+            throw UTAPIError(enumType: ResourceTrend.self, invalidRawValue: rawValue, file:#file, function:#function, line:#line)
         }
         
         self = value

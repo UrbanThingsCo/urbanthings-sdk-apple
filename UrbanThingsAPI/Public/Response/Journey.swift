@@ -11,9 +11,9 @@ import Foundation
 /// `Journey` defines a journey that fulfills a directions request
 public protocol Journey {
     /// Arrival time for the journey.
-    var arrivalTime:NSDate? { get }
+    var arrivalTime:Date? { get }
     /// Departure time for the journey.
-    var departureTime:NSDate? { get }
+    var departureTime:Date? { get }
     /// Summary text for the journey with HTML formatting.
     var summaryHTML:String? { get }
     /// Duration of the journey in seconds if available.

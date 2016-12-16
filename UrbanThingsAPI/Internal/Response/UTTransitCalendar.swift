@@ -11,19 +11,19 @@ import Foundation
 class UTTransitCalendar : UTObject, TransitCalendar {
     
     let calendarID:String
-    let startDate:NSDate
-    let endDate:NSDate
+    let startDate:Date
+    let endDate:Date
     let runsOn:Set<WeekDay>
-    let additionalRunningDates:[NSDate]
-    let excludedRunningDates:[NSDate]
+    let additionalRunningDates:[Date]
+    let excludedRunningDates:[Date]
 
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.calendarID = try parse(required:json, key:.ID, type:UTTransitCalendar.self)
         self.startDate = try parse(required:json, key: .StartDate, type:UTTransitCalendar.self) { try String(required: $0).requiredDate() }
         self.endDate = try parse(required:json, key: .EndDate, type:UTTransitCalendar.self) { try String(required: $0).requiredDate() }
         self.runsOn = try Set<WeekDay>(WeekDay.week.filter { try parse(optional: json, key:$0.jsonKey, type: UTTransitCalendar.self) ?? false })
-        self.additionalRunningDates = try parse(required:json, key: .AdditionalRunningDates, type: UTTransitCalendar.self) { try UTTransitCalendar.dateArray($0) }
-        self.excludedRunningDates = try parse(required:json, key: .ExcludedRunningDates, type: UTTransitCalendar.self) { try UTTransitCalendar.dateArray($0) }
+        self.additionalRunningDates = try parse(required:json, key: .AdditionalRunningDates, type: UTTransitCalendar.self) { try UTTransitCalendar.dateArray(json: $0) }
+        self.excludedRunningDates = try parse(required:json, key: .ExcludedRunningDates, type: UTTransitCalendar.self) { try UTTransitCalendar.dateArray(json: $0) }
         try super.init(json:json)
     }
     
@@ -31,7 +31,7 @@ class UTTransitCalendar : UTObject, TransitCalendar {
         return self.runsOn.contains(weekday)
     }
 
-    static func dateArray(json:AnyObject?) throws -> [NSDate] {
+    static func dateArray(json:Any?) throws -> [Date] {
         guard let array = json as? [String] else {
             return []
         }

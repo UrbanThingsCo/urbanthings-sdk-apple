@@ -67,7 +67,7 @@ public protocol RealtimeStopboardRequest: GetRequest {
 public struct UTRealtimeStopboardRequest: RealtimeStopboardRequest {
 
     public typealias Result = StopBoardResponse
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "rti/stopboard"
 
     /// Stop ID of the stop board information required
@@ -104,18 +104,18 @@ public struct UTRealtimeStopboardRequest: RealtimeStopboardRequest {
     ///   - use24HourClock: Indicates whether returned result time strings should be in 12 or 24 hour format. Defaults to the format of the current locale for the app.
     ///   - maximumItems: Maximum number of rows to include in the results set for a stop board.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(stopID: String, vehiclePassingType: VehiclePassing = .AllVehicles, use24HourClock: Bool? = nil, maximumItems: UInt? = nil, parser: Parser = urbanThingsParser) {
+    public init(stopID: String, vehiclePassingType: VehiclePassing = .AllVehicles, use24HourClock: Bool? = nil, maximumItems: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.stopID = stopID
         self.vehiclePassingType = vehiclePassingType
-        self.use24HourClock = use24HourClock ?? NSLocale.currentLocale().localeIs24HourClockFormat
+        self.use24HourClock = use24HourClock ?? Locale.current.localeIs24HourClockFormat
         self.maximumItems = maximumItems
     }
 }
 
 // Extension to NSLocale to determine whether the locale by default formats times in 24 or 12 hour format
-extension NSLocale {
+extension Locale {
     var localeIs24HourClockFormat: Bool {
-        return NSDateFormatter.dateFormatFromTemplate("j", options: 0, locale: self) == "HH"
+        return DateFormatter.dateFormat(fromTemplate: "j", options: 0, locale: self) == "HH"
     }
 }

@@ -32,7 +32,7 @@ public protocol TransitRoutesByImportSourceRequest: GetRequest {
 public struct UTTransitRoutesByImportSourceRequest: TransitRoutesByImportSourceRequest {
 
     public typealias Result = [TransitDetailedRouteInfo]
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "static/routes/info/Source"
 
     /// Source for transit routes
@@ -45,7 +45,7 @@ public struct UTTransitRoutesByImportSourceRequest: TransitRoutesByImportSourceR
     /// - parameters:
     ///   - agencyID: The agency ID for the transit agency to fetch data for.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(agencyID: String, parser: Parser = urbanThingsParser) {
+    public init(agencyID: String, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.source = .AgencyID(agencyID)
     }
@@ -54,7 +54,7 @@ public struct UTTransitRoutesByImportSourceRequest: TransitRoutesByImportSourceR
     /// - parameters:
     ///   - importSource: The import source to fetch data for.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(importSource: String, parser: Parser = urbanThingsParser) {
+    public init(importSource: String, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.source = .ImportSource(importSource)
     }

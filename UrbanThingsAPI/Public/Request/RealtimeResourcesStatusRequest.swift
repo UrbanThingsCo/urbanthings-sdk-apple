@@ -23,7 +23,7 @@ public protocol RealtimeResourcesStatusRequest: GetRequest {
 public struct UTRealtimeResourcesStatusRequest: RealtimeResourcesStatusRequest {
 
     public typealias Result = [ResourceStatus]
-    public typealias Parser = (json: AnyObject?, logger: Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
     public let endpoint = "rti/resources/status"
 
     /// Array of stop IDs to obtain resource status for.
@@ -37,7 +37,7 @@ public struct UTRealtimeResourcesStatusRequest: RealtimeResourcesStatusRequest {
     /// - parameters:
     ///   - stopIDs: An array of stop IDs to obtain resource status for.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(stopIDs: [String], parser: Parser = urbanThingsParser) {
+    public init(stopIDs: [String], parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.stopIDs = stopIDs
     }
