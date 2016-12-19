@@ -159,7 +159,7 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
         self.logger = logger ?? UTLogger()
     }
 
-    public func sendRequest<R: GetRequest>(request: R, completionHandler: @escaping (R.Result?,Error?) -> Void) -> UrbanThingsAPIRequest {
+    public func send<R: GetRequest>(request: R, completionHandler: @escaping (R.Result?,Error?) -> Void) -> UrbanThingsAPIRequest {
 
         let requestStr = self.buildURL(request: request)
         var urlRequest = URLRequest(url:URL(string:requestStr)!)
@@ -170,7 +170,7 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
         return self.requestHandler.makeRequest(request: modifiedRequest as URLRequest, logger:logger, completion: handleResponse(parser: request.parser, result: completionHandler))
     }
 
-    public func sendRequest<R: PostRequest>(request: R, completionHandler: @escaping (R.Result?, Error?) -> Void) -> UrbanThingsAPIRequest {
+    public func send<R: PostRequest>(request: R, completionHandler: @escaping (R.Result?, Error?) -> Void) -> UrbanThingsAPIRequest {
 
         let requestStr = self.buildURL(request: request)
         var urlRequest = URLRequest(url:URL(string:requestStr)! as URL)

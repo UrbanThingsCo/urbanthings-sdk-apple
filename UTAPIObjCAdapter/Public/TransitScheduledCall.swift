@@ -28,9 +28,9 @@ import UTAPI
 
 @objc public protocol TransitScheduledCall : NSObjectProtocol {
     /// The scheduled arrival time of the vehicle, if available.
-    var scheduledArrivalTime:NSDate? { get }
+    var scheduledArrivalTime:Date? { get }
     /// The scheduled departure time of the vehicle, if available.
-    var scheduledDepartureTime:NSDate? { get }
+    var scheduledDepartureTime:Date? { get }
     /// How the vehicle picks up passengers at this stop, if at all. See GTFS specification. Note - if this value is omitted, the default value of `RegularlyScheduled` should be assumed
     var pickupType:TransitCallType { get }
     /// How the vehicle drops off passengers at this stop, if at all. See GTFS specification. Note - if this value is omitted, the default value of `RegularlyScheduled` should be assumed
@@ -47,8 +47,8 @@ import UTAPI
         self.dropoffType = TransitCallType(adapt.dropoffType)
     }
 
-    public var scheduledArrivalTime: NSDate? { return self.adapted.scheduledArrivalTime }
-    public var scheduledDepartureTime: NSDate? { return self.adapted.scheduledDepartureTime }
+    public var scheduledArrivalTime: Date? { return self.adapted.scheduledArrivalTime }
+    public var scheduledDepartureTime: Date? { return self.adapted.scheduledDepartureTime }
     public let pickupType: TransitCallType
     public let dropoffType: TransitCallType
 }

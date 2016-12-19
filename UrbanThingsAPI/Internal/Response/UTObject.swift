@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class UTObject: JSONInitialization {
+open class UTObject: JSONInitialization {
     convenience required public init?(optional: Any?) throws {
         guard optional != nil else {
             return nil

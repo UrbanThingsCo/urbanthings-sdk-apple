@@ -14,9 +14,9 @@ import UTAPI
     /// The primary code of the TransitStop that this list relates to
     var stopID:String { get }
     /// The beginning of the time period to which this list of stop calls relates.
-    var startTime:NSDate? { get }
+    var startTime:Date? { get }
     /// The end of the time period to which this list of stop calls relates.
-    var endTime:NSDate? { get }
+    var endTime:Date? { get }
     /// A list of vehicles calling at this TransitStop within the specified time period.
     var scheduledCalls:[StopCall] { get }
 }
@@ -31,7 +31,7 @@ import UTAPI
     }
     
     public var stopID:String { return self.adapted.stopID }
-    public var startTime:NSDate? { return self.adapted.startTime }
-    public var endTime:NSDate? { return self.adapted.endTime }
+    public var startTime:Date? { return self.adapted.startTime }
+    public var endTime:Date? { return self.adapted.endTime }
     public let scheduledCalls:[StopCall]
 }

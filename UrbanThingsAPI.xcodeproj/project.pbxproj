@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 2CFFCAEB1CEAF030002D8AC4 /* Build configuration list for PBXAggregateTarget "BuildNumber" */;
-			buildPhases = (
-				2CFFCAEE1CEAF042002D8AC4 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = BuildNumber;
-			productName = BuildNumber;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		2C0CE2B51CE316E30054847C /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2AB1CE316E30054847C /* UTAPI.framework */; };
 		2C0CE2DE1CE3178D0054847C /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2D41CE3178D0054847C /* UTAPI.framework */; };
@@ -904,34 +890,6 @@
 			remoteGlobalIDString = 2C0CE2C61CE3176E0054847C;
 			remoteInfo = "UrbanThingsAPI-watchOS";
 		};
-		2CFFCAEF1CEAF0B0002D8AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CFFCAEA1CEAF030002D8AC4;
-			remoteInfo = BuildNumber;
-		};
-		2CFFCAF11CEAF0B5002D8AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CFFCAEA1CEAF030002D8AC4;
-			remoteInfo = BuildNumber;
-		};
-		2CFFCAF31CEAF0B9002D8AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CFFCAEA1CEAF030002D8AC4;
-			remoteInfo = BuildNumber;
-		};
-		2CFFCAF51CEAF0BF002D8AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CFFCAEA1CEAF030002D8AC4;
-			remoteInfo = BuildNumber;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1801,7 +1759,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFFCAF21CEAF0B5002D8AC4 /* PBXTargetDependency */,
 			);
 			name = "UrbanThingsAPI-tvOS";
 			productName = "UrbanThingsAPI-tvOS";
@@ -1838,7 +1795,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFFCAF61CEAF0BF002D8AC4 /* PBXTargetDependency */,
 			);
 			name = "UrbanThingsAPI-watchOS";
 			productName = "UrbanThingsAPI-watchOS";
@@ -1857,7 +1813,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFFCAF41CEAF0B9002D8AC4 /* PBXTargetDependency */,
 			);
 			name = "UrbanThingsAPI-OSX";
 			productName = "UrbanThingsAPI-OSX";
@@ -1913,7 +1868,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFFCAF01CEAF0B0002D8AC4 /* PBXTargetDependency */,
 			);
 			name = "UrbanThingsAPI-iOS";
 			productName = FatAttitudeAPI;
@@ -2060,9 +2014,6 @@
 					2CFFCA061CE86B46002D8AC4 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
-					2CFFCAEA1CEAF030002D8AC4 = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
 				};
 			};
 			buildConfigurationList = 2C5F2BFF1CCE9AA900999713 /* Build configuration list for PBXProject "UrbanThingsAPI" */;
@@ -2078,7 +2029,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */,
 				2C5F2C041CCE9AA900999713 /* UrbanThingsAPI-iOS */,
 				2C0CE2D31CE3178D0054847C /* UrbanThingsAPI-OSX */,
 				2C0CE2AA1CE316E30054847C /* UrbanThingsAPI-tvOS */,
@@ -2255,22 +2205,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2CFFCAEE1CEAF042002D8AC4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UrbanThingsAPI/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UTAPIObjCAdapter/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/Demo/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UnitTests/Info.plist";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C0CE2A61CE316E30054847C /* Sources */ = {
@@ -3129,26 +3063,6 @@
 			target = 2C0CE2C61CE3176E0054847C /* UrbanThingsAPI-watchOS */;
 			targetProxy = 2CFFCAA41CE8C897002D8AC4 /* PBXContainerItemProxy */;
 		};
-		2CFFCAF01CEAF0B0002D8AC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
-			targetProxy = 2CFFCAEF1CEAF0B0002D8AC4 /* PBXContainerItemProxy */;
-		};
-		2CFFCAF21CEAF0B5002D8AC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
-			targetProxy = 2CFFCAF11CEAF0B5002D8AC4 /* PBXContainerItemProxy */;
-		};
-		2CFFCAF41CEAF0B9002D8AC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
-			targetProxy = 2CFFCAF31CEAF0B9002D8AC4 /* PBXContainerItemProxy */;
-		};
-		2CFFCAF61CEAF0BF002D8AC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
-			targetProxy = 2CFFCAF51CEAF0BF002D8AC4 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -3733,20 +3647,6 @@
 			};
 			name = Release;
 		};
-		2CFFCAEC1CEAF030002D8AC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		2CFFCAED1CEAF030002D8AC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3863,15 +3763,6 @@
 			buildConfigurations = (
 				2CFFCA0D1CE86B46002D8AC4 /* Debug */,
 				2CFFCA0E1CE86B46002D8AC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CFFCAEB1CEAF030002D8AC4 /* Build configuration list for PBXAggregateTarget "BuildNumber" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CFFCAEC1CEAF030002D8AC4 /* Debug */,
-				2CFFCAED1CEAF030002D8AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

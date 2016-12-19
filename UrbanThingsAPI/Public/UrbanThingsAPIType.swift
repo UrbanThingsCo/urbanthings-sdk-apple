@@ -26,8 +26,8 @@ public protocol UrbanThingsAPIRequest {
 /// ````
 public protocol UrbanThingsAPIType {
 
-    func sendRequest<R: GetRequest>(request: R, completionHandler: @escaping (R.Result?, Error?) -> Void) -> UrbanThingsAPIRequest
+    func send<R: GetRequest>(request: R, completionHandler: @escaping (R.Result?, Error?) -> Void) -> UrbanThingsAPIRequest
 
-    func sendRequest<R: PostRequest>(request: R, completionHandler: @escaping (R.Result?, Error?) -> Void) -> UrbanThingsAPIRequest
+    func send<R: PostRequest>(request: R, completionHandler: @escaping (R.Result?, Error?) -> Void) -> UrbanThingsAPIRequest
 
 }

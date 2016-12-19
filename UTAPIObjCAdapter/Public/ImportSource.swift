@@ -17,9 +17,9 @@ import UTAPI
     /// Optional comments to clarify the source of the data or explain its origin.
     var comments:String? { get }
     /// Optional URL to a web page describing the source of the data.
-    var sourceInfoURL:NSURL? { get }
+    var sourceInfoURL:URL? { get }
     /// Optional URL linking to the external data itself.
-    var sourceDataURL:NSURL? { get }
+    var sourceDataURL:URL? { get }
 }
 
 @objc public class UTImportSource : UTAttribution, ImportSource {
@@ -33,6 +33,6 @@ import UTAPI
     public var importSourceID:String { return self.importSource.importSourceID }
     public var name:String { return self.importSource.name }
     public var comments:String? { return self.importSource.comments }
-    public var sourceInfoURL:NSURL? { return self.importSource.sourceInfoURL }
-    public var sourceDataURL:NSURL? { return self.importSource.sourceDataURL }
+    public var sourceInfoURL:URL? { return self.importSource.sourceInfoURL }
+    public var sourceDataURL:URL? { return self.importSource.sourceDataURL }
 }

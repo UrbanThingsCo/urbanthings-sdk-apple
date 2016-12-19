@@ -16,7 +16,7 @@ import UTAPI
     /// The source of the location lookup which should be displayed to end-users
     var sourceName:String { get }
     /// A URL to a graphic representing the source of the location lookup which should be displayed to end-users
-    var sourceIconURL:NSURL { get }
+    var sourceIconURL:URL { get }
 }
 
 @objc public class UTPlacePointList : NSObject, PlacePointList {
@@ -30,5 +30,5 @@ import UTAPI
     
     public let placePoints:[PlacePoint]
     public var sourceName:String { return self.adapted.sourceName }
-    public var sourceIconURL:NSURL { return self.adapted.sourceIconURL }
+    public var sourceIconURL:URL { return self.adapted.sourceIconURL }
 }

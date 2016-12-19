@@ -14,7 +14,7 @@ extension URL {
         guard let urlString = required as? String else {
             throw UTAPIError(jsonParseError:"Expected String, not \(required)", file:#file, function:#function, line:#line)
         }
-        guard let url = URL(string:urlString) else {
+        guard let url = URL(string: urlString) else {
             throw UTAPIError(jsonParseError:"Invalid url string \(urlString)", file:#file, function:#function, line:#line)
         }
         return url
