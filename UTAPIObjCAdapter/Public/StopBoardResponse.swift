@@ -12,7 +12,7 @@ import UTAPI
 /// `StopBoardResponse` provides high level details for a stop board reques, extends `RTIResponse`.
 @objc public protocol StopBoardResponse : RTIResponse {
     /// The time at which this data was generated.
-    var timestamp:NSDate? { get }
+    var timestamp:Date? { get }
     /// One or more StopBoard objects that make up the main data contained within this `StopBoardResponse`.
     var stopBoards:[StopBoard]? { get }
 }
@@ -26,6 +26,6 @@ import UTAPI
         super.init(adapt: adapt)
     }
 
-    public var timestamp:NSDate? { return self.stopBoardResponse.timestamp }
+    public var timestamp:Date? { return self.stopBoardResponse.timestamp }
     public let stopBoards:[StopBoard]?
 }

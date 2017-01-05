@@ -16,7 +16,7 @@ extension String {
      - returns: encoded string
      */
     public func stringByURLEncodingAsQueryParameterValue() -> String {
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryParameterValueAllowedCharacterSet())!
+        return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.URLQueryParameterValueAllowedCharacterSet())!
     }
 }
 

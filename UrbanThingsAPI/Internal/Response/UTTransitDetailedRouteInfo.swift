@@ -12,7 +12,7 @@ class UTTransitDetailedRouteInfo : UTTransitRouteInfo, TransitDetailedRouteInfo 
     
     let routeDescription:String?
     
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.routeDescription = try parse(optional:json, key: .RouteDescription, type: UTTransitDetailedRouteInfo.self)
         try super.init(json:json)
     }

@@ -29,4 +29,6 @@ public protocol TransitStop : PlacePoint {
     var stopMode:TransitMode { get }
     /// Primary code of parent object
     var parentPrimaryCode:String? { get }
+    /// Indicates whether there is a stop board available for the stop
+    var hasStopboard: Bool { get }
 }

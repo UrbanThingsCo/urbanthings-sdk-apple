@@ -14,7 +14,7 @@ class UTDirectionsResponseStatus : UTObject, DirectionsResponseStatus {
     let errorCode:Int
     let errorMessage:String?
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.statusCode = try parse(required: json, key: .StatusCode, type: UTDirectionsResponseStatus.self)
         self.errorCode = try parse(required: json, key: .ErrorCode, type: UTDirectionsResponseStatus.self)
         self.errorMessage = try parse(optional: json, key: .ErrorMessage, type: UTDirectionsResponseStatus.self)

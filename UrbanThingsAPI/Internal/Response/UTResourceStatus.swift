@@ -12,7 +12,7 @@ class UTResourceStatus : UTAttribution, ResourceStatus {
     
     let primaryCode:String 
     let importSourceID:String 
-    let timestamp:NSDate 
+    let timestamp:Date 
     let statusText:String? 
     let availablePlaces:Int?
     let takenPlaces:Int?
@@ -21,7 +21,7 @@ class UTResourceStatus : UTAttribution, ResourceStatus {
     let customStatusCode:Int?
     let vehicleType:TransitMode
     
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.primaryCode = try parse(required: json, key: .PrimaryCode, type: UTResourceStatus.self)
         self.importSourceID = try parse(required: json, key: .ImportSourceID, type: UTResourceStatus.self)
         self.statusText = try parse(optional: json, key: .StatusText, type: UTResourceStatus.self)

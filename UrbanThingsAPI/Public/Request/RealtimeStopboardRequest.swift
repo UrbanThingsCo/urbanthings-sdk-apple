@@ -21,7 +21,7 @@ public enum VehiclePassing: Int {
 }
 
 extension VehiclePassing : CustomStringConvertible {
-    public var description:String {
+    public var description: String {
         switch self {
         case .AllVehicles:
             return "AllVehicles"
@@ -42,45 +42,46 @@ extension VehiclePassing : CustomStringConvertible {
 /// ````
 /// let api = UTUrbanThingsAPI(apiKey:APIKey)
 /// let _ = api.sendRequest(UTRealtimeStopboardRequest(
-///                 stopID: aStopID) 
+///                 stopID: aStopID)
 /// { data:StopBoardResponse?, error:Error in
 ///     // Process data or handle error
 /// }
 /// ````
-public protocol RealtimeStopboardRequest : Request {
-    
+public protocol RealtimeStopboardRequest: GetRequest {
+
     associatedtype Result = StopBoardResponse
-    
+
     /// Stop ID of the stop board information required
-    var stopID:String { get }
+    var stopID: String { get }
     /// Used when necessary to specify an 'Arrivals', 'Departure' or mixed type of board. Mainly relevant to trains.
-    var vehiclePassingType:VehiclePassing { get }
+    var vehiclePassingType: VehiclePassing { get }
     /// The maximum number of StopBoardRows to return in the StopBoard
-    var maximumItems:UInt? { get }
+    var maximumItems: UInt? { get }
     /// Whether or not to return time strings in 12 or 24 hour format
-    var use24HourClock:Bool { get }
+    var use24HourClock: Bool { get }
 }
 
 /// Default implementation of `RealtimeStopboardRequest` protocol provided by the API as standard means
 /// of passing parameters to API request methods. You may provide your own implementation if needed to pass to the API
 /// request methods.
-public struct UTRealtimeStopboardRequest : RealtimeStopboardRequest {
-    
+public struct UTRealtimeStopboardRequest: RealtimeStopboardRequest {
+
     public typealias Result = StopBoardResponse
-    public typealias Parser = (json:AnyObject?, logger:Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
+    public let endpoint = "rti/stopboard"
 
     /// Stop ID of the stop board information required
-    public let stopID:String
+    public let stopID: String
     /// Used when necessary to specify an 'Arrivals', 'Departure' or mixed type of board. Mainly relevant to trains.
-    public let vehiclePassingType:VehiclePassing
+    public let vehiclePassingType: VehiclePassing
     /// The maximum number of StopBoardRows to return in the StopBoard
-    public let maximumItems:UInt?
+    public let maximumItems: UInt?
     /// Whether or not to return time strings in 12 or 24 hour format
-    public let use24HourClock:Bool
-    
+    public let use24HourClock: Bool
+
     /// Parser to use when processing response to the request
-    public let parser:Parser
-    
+    public let parser: Parser
+
     /// Initialization of request object to pass into the API `sendRequest` method. A basic request provides
     /// the required stopID parameter. More complex requests can provide additional options along with a custom parser
     /// if a different means of processing the response JSON into an object that implements the `StopBoardResponse`.
@@ -91,9 +92,9 @@ public struct UTRealtimeStopboardRequest : RealtimeStopboardRequest {
     ///
     /// let complexRequest = UTRealtimeStopboardRequest(
     ///                             stopID:"123",
-    ///                             vehiclePassingType:.Bus, 
-    ///                             use24HourClock = false, 
-    ///                             maximumItems: 100, 
+    ///                             vehiclePassingType:.Bus,
+    ///                             use24HourClock = false,
+    ///                             maximumItems: 100,
     ///                             parser: myCustomParserFunc)
     /// ````
     ///
@@ -103,19 +104,18 @@ public struct UTRealtimeStopboardRequest : RealtimeStopboardRequest {
     ///   - use24HourClock: Indicates whether returned result time strings should be in 12 or 24 hour format. Defaults to the format of the current locale for the app.
     ///   - maximumItems: Maximum number of rows to include in the results set for a stop board.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(stopID:String, vehiclePassingType:VehiclePassing = .AllVehicles, use24HourClock:Bool? = nil, maximumItems:UInt? = nil, parser:Parser = urbanThingsParser) {
+    public init(stopID: String, vehiclePassingType: VehiclePassing = .AllVehicles, use24HourClock: Bool? = nil, maximumItems: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.stopID = stopID
         self.vehiclePassingType = vehiclePassingType
-        self.use24HourClock = use24HourClock ?? NSLocale.currentLocale().localeIs24HourClockFormat
+        self.use24HourClock = use24HourClock ?? Locale.current.localeIs24HourClockFormat
         self.maximumItems = maximumItems
     }
 }
 
 // Extension to NSLocale to determine whether the locale by default formats times in 24 or 12 hour format
-extension NSLocale {
-    var localeIs24HourClockFormat:Bool {
-        return NSDateFormatter.dateFormatFromTemplate("j", options: 0, locale: self) == "HH"
+extension Locale {
+    var localeIs24HourClockFormat: Bool {
+        return DateFormatter.dateFormat(fromTemplate: "j", options: 0, locale: self) == "HH"
     }
 }
-

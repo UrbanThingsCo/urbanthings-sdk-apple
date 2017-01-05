@@ -10,14 +10,14 @@ import Foundation
 
 class UTDisruption : UTObject, Disruption {
     
-    let startDate:NSDate?
-    let endDate:NSDate?
+    let startDate:Date?
+    let endDate:Date?
     let localizedSummary:String?
     let localizedDescription:String?
     let localizedAdditionalInfo:String?
     let severity:DisruptionSeverity
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.startDate = try parse(optional:json, key: .StartDate, type:UTDisruption.self) { try String(optional: $0)?.requiredDate() }
         self.endDate = try parse(optional:json, key: .EndDate, type:UTDisruption.self) { try String(optional: $0)?.requiredDate() }
         self.localizedSummary = try parse(optional: json, key: .LocalizedSummary, type:UTDisruption.self)

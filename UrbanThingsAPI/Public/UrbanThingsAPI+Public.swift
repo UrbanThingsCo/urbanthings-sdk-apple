@@ -19,6 +19,8 @@ public protocol Service {
     var endpoint: String { get }
     /// Details the version of the API to use at the endpoint, for example `2.0`
     var version: String { get }
+    /// Provides the api key to use with the endpoint
+    var key: String { get }
 }
 
 
@@ -31,7 +33,7 @@ public protocol RequestModifier {
     ///  - returns: The request that should be issued, either passing though the passed in instance or
     /// returning a alternative instance altered as needed. A mutable copy of the passed instance can be
     /// obtained by `request.mutableCopy()`.
-    func getRequest(request: NSURLRequest, logger: Logger) -> NSURLRequest
+    func getRequest(request: URLRequest, logger: Logger) -> URLRequest
 }
 
 /// Protocol defining the request handler used within the API implementation. Custom implementation can be provided
@@ -48,19 +50,19 @@ public protocol RequestHandler {
     ///    - logger: The Logger instance in use by the API instance, provided for any logging requirements.
     ///    - completion: Closure to be called with results of request
     ///  - returns: `UrbanThingsAPIRequest` instance that can be used to cancel the asynchronous operation
-    func makeRequest(request: NSURLRequest, logger: Logger, completion: (NSData?, NSURLResponse?, ErrorType?) -> Void) -> UrbanThingsAPIRequest
+    func makeRequest(request: URLRequest, logger: Logger, completion: @escaping (Data?, URLResponse?, Error?) -> Void) -> UrbanThingsAPIRequest
 }
 
 struct UTRequestHandler: RequestHandler {
 
-    let session: NSURLSession
+    let session: URLSession
 
-    init(session: NSURLSession) {
+    init(session: URLSession) {
         self.session = session
     }
 
-    func makeRequest(request: NSURLRequest, logger: Logger, completion: (NSData?, NSURLResponse?, ErrorType?) -> Void) -> UrbanThingsAPIRequest {
-        let task = self.session.dataTaskWithRequest(request, completionHandler: completion)
+    func makeRequest(request: URLRequest, logger: Logger, completion: @escaping (Data?, URLResponse?, Error?) -> Void) -> UrbanThingsAPIRequest {
+        let task = self.session.dataTask(with: request as URLRequest, completionHandler: completion)
         task.resume()
         return task
     }
@@ -69,12 +71,13 @@ struct UTRequestHandler: RequestHandler {
 private let Endpoint = "http://dev.app-api.urbanthings.cloud/api"
 private let CurrentVersion = "3-a"
 
-struct UTDefaultService: Service {
-    let endpoint = Endpoint
-    let version = CurrentVersion
+public struct UTService: Service {
+    public let endpoint: String
+    public let version: String
+    public let key: String
 }
 
-public extension NSURLSessionConfiguration {
+public extension URLSessionConfiguration {
     /// Creates an `NSURLSessionConfiguration` instance setup with an api key. This has been provided
     /// for uses who want to provide their own customised session to pass into the `UrbanThingsAPI`
     /// instance. The session configuration returned can be further modified and then passed into
@@ -82,18 +85,16 @@ public extension NSURLSessionConfiguration {
     ///
     ///  - parameters:
     ///    - apiKey: String containing the users API key assigned by UrbanThings for API access.
-    public class func sessionConfigurationForUrbanThingsAPI(apiKey apiKey: String) -> NSURLSessionConfiguration {
-        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        var headers: [NSObject:AnyObject] = configuration.HTTPAdditionalHeaders ?? [:]
-        // Set the API key into default request header
-        headers[APIKeyHTTPHeaderKey] = apiKey
+    public class func sessionConfigurationForUrbanThingsAPI() -> URLSessionConfiguration {
+        let configuration = URLSessionConfiguration.default
+        var headers: [AnyHashable:Any] = configuration.httpAdditionalHeaders ?? [:]
         // Indicate that JSON results wanted
         headers[AcceptHTTPHeaderKey] = ApplicationJSON
         // If supplied configuration doesn't have accept languages add based on device locale
         if headers[AcceptLanguageHTTPHeaderKey] == nil {
             headers[AcceptLanguageHTTPHeaderKey] = NSLocale.httpAcceptLanguage
         }
-        configuration.HTTPAdditionalHeaders = headers
+        configuration.httpAdditionalHeaders = headers
         return configuration
     }
 }
@@ -109,12 +110,12 @@ public extension NSURLSessionConfiguration {
 /// ````
 public final class UrbanThingsAPI: UrbanThingsAPIType {
 
-    let urlSession: NSURLSession
+    let urlSession: URLSession
     let requestHandler: RequestHandler
     let requestModifier: RequestModifier?
     let service: Service
     let logger: Logger
-
+    
     /// Initialize an instance of the UrbanThingsAPI.
     ///
     ///  - parameters:
@@ -126,8 +127,8 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
     ///    - logger: Optional instance implementing the Logger protocol. Any messages that the API logs will be presented to
     /// this instance for logging purposes. If omitted the default logger will write all messages to the console using the
     /// NSLog function.
-    public convenience init(apiKey: String, service: Service? = nil, requestModifier: RequestModifier? = nil, logger: Logger? = nil) {
-        let session = NSURLSession(configuration: NSURLSessionConfiguration.sessionConfigurationForUrbanThingsAPI(apiKey: apiKey))
+    public convenience init(service: Service, requestModifier: RequestModifier? = nil, logger: Logger? = nil) {
+        let session = URLSession(configuration: URLSessionConfiguration.sessionConfigurationForUrbanThingsAPI())
         self.init(session:session, service:service, requestHandler:nil, requestModifier:requestModifier, logger:logger)
     }
 
@@ -149,12 +150,47 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
     ///    - logger: Optional instance implementing the Logger protocol. Any messages that the API logs will be presented to
     /// this instance for logging purposes. If omitted the default logger will write all messages to the console using the
     /// NSLog function.
-    public init(session: NSURLSession, service: Service? = nil, requestHandler: RequestHandler? = nil, requestModifier: RequestModifier? = nil, logger: Logger? = nil) {
+    public init(session: URLSession, service: Service, requestHandler: RequestHandler? = nil, requestModifier: RequestModifier? = nil, logger: Logger? = nil) {
 
         self.urlSession = session
         self.requestModifier = requestModifier
         self.requestHandler = requestHandler ?? UTRequestHandler(session: session)
-        self.service = service ?? UTDefaultService()
+        self.service = service
         self.logger = logger ?? UTLogger()
     }
+
+    public func send<R: GetRequest>(request: R, completionHandler: @escaping (R.Result?,Error?) -> Void) -> UrbanThingsAPIRequest {
+
+        let requestStr = self.buildURL(request: request)
+        var urlRequest = URLRequest(url:URL(string:requestStr)!)
+        var headers = urlRequest.allHTTPHeaderFields ?? [String: String]()
+        headers[APIKeyHTTPHeaderKey] = self.service.key
+        urlRequest.allHTTPHeaderFields = headers
+        let modifiedRequest = self.requestModifier?.getRequest(request: urlRequest, logger:logger) ?? urlRequest
+        return self.requestHandler.makeRequest(request: modifiedRequest as URLRequest, logger:logger, completion: handleResponse(parser: request.parser, result: completionHandler))
+    }
+
+    public func send<R: PostRequest>(request: R, completionHandler: @escaping (R.Result?, Error?) -> Void) -> UrbanThingsAPIRequest {
+
+        let requestStr = self.buildURL(request: request)
+        var urlRequest = URLRequest(url:URL(string:requestStr)! as URL)
+        urlRequest.httpMethod = "POST"
+
+        do {
+            urlRequest.httpBody = try request.getBody()
+            var headers = urlRequest.allHTTPHeaderFields ?? [String: String]()
+            headers["Content-Type"] = "application/json"
+            headers[APIKeyHTTPHeaderKey] = self.service.key
+            urlRequest.allHTTPHeaderFields = headers
+        } catch {
+            completionHandler(nil,error as Error)
+        }
+        
+        let str = NSString(data: urlRequest.httpBody!, encoding: String.Encoding.utf8.rawValue)
+        print("\(str)")
+        let modifiedRequest = self.requestModifier?.getRequest(request: urlRequest, logger:logger) ?? urlRequest
+
+        return self.requestHandler.makeRequest(request: modifiedRequest, logger:logger, completion: handleResponse(parser: request.parser, result: completionHandler))
+    }
+
 }

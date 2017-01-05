@@ -20,7 +20,7 @@ class UTTransitTripInfo : UTObject, TransitTripInfo {
     let vehicleID:String?
     let isWheelchairAccessible:Bool?
 
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.agencyCode = try parse(optional:json, key: .AgencyCode, type: UTTransitTripInfo.self)
         self.tripID = try parse(optional:json, key: .TripID, type: UTTransitTripInfo.self)
         self.originName = try parse(optional:json, key: .OriginName, type: UTTransitTripInfo.self)

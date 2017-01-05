@@ -22,7 +22,7 @@ class UTPlacePoint : UTObject, PlacePoint {
     let location:Location
     let placePointType: PlacePointType
     
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.name = try parse(optional:json, key:.Name, type:UTPlacePoint.self)
         self.primaryCode = try parse(required:json, key:.PrimaryCode, type:UTPlacePoint.self)
         self.importSource = try parse(optional:json, key:.ImportSource, type:UTPlacePoint.self)
@@ -33,4 +33,5 @@ class UTPlacePoint : UTObject, PlacePoint {
         self.placePointType = try parse(required:json, key:.PlacePointType, type:UTPlacePoint.self)
         try super.init(json:json)
     }
+    
 }

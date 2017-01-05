@@ -20,7 +20,7 @@ struct TestPair<T> {
     }
 }
 
-func testType<T : JSONInitialization where T : Equatable>(tests:[TestPair<T>]) {
+func testType<T : JSONInitialization>(tests:[TestPair<T>]) where T : Equatable {
     for test in tests {
         if let input = test.input {
             if let expected = test.expected {

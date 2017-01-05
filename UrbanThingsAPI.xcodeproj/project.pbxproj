@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 2CFFCAEB1CEAF030002D8AC4 /* Build configuration list for PBXAggregateTarget "BuildNumber" */;
-			buildPhases = (
-				2CFFCAEE1CEAF042002D8AC4 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = BuildNumber;
-			productName = BuildNumber;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		2C0CE2B51CE316E30054847C /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2AB1CE316E30054847C /* UTAPI.framework */; };
 		2C0CE2DE1CE3178D0054847C /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0CE2D41CE3178D0054847C /* UTAPI.framework */; };
@@ -137,10 +123,7 @@
 		2C0CE35C1CE317D70054847C /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691021CD374C800747E36 /* TransitTripCalendarGroup.swift */; };
 		2C0CE35D1CE317D70054847C /* TransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C2E1CCF3FA800999713 /* TransitTripInfo.swift */; };
 		2C0CE35E1CE317D70054847C /* VehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C2C1CCF3F0E00999713 /* VehicleRTI.swift */; };
-		2C0CE35F1CE317D70054847C /* UrbanThingsAPI+Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E981CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift */; };
 		2C0CE3601CE317D70054847C /* UrbanThingsAPI+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691611CD7E02400747E36 /* UrbanThingsAPI+Public.swift */; };
-		2C0CE3611CE317D70054847C /* UrbanThingsAPI+RTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6915F1CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift */; };
-		2C0CE3621CE317D70054847C /* UrbanThingsAPI+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5E1CCFAB6800999713 /* UrbanThingsAPI+Static.swift */; };
 		2C0CE3631CE317D70054847C /* UrbanThingsAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C571CCF5FFB00999713 /* UrbanThingsAPIType.swift */; };
 		2C0CE3641CE317D80054847C /* Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C4D1CCF53DF00999713 /* Attribution.swift */; };
 		2C0CE3651CE317D80054847C /* DirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C361CCF425100999713 /* DirectionsResponse.swift */; };
@@ -180,10 +163,7 @@
 		2C0CE3871CE317D80054847C /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691021CD374C800747E36 /* TransitTripCalendarGroup.swift */; };
 		2C0CE3881CE317D80054847C /* TransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C2E1CCF3FA800999713 /* TransitTripInfo.swift */; };
 		2C0CE3891CE317D80054847C /* VehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C2C1CCF3F0E00999713 /* VehicleRTI.swift */; };
-		2C0CE38A1CE317D80054847C /* UrbanThingsAPI+Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E981CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift */; };
 		2C0CE38B1CE317D80054847C /* UrbanThingsAPI+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691611CD7E02400747E36 /* UrbanThingsAPI+Public.swift */; };
-		2C0CE38C1CE317D80054847C /* UrbanThingsAPI+RTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6915F1CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift */; };
-		2C0CE38D1CE317D80054847C /* UrbanThingsAPI+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5E1CCFAB6800999713 /* UrbanThingsAPI+Static.swift */; };
 		2C0CE38E1CE317D80054847C /* UrbanThingsAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C571CCF5FFB00999713 /* UrbanThingsAPIType.swift */; };
 		2C0CE38F1CE317D90054847C /* Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C4D1CCF53DF00999713 /* Attribution.swift */; };
 		2C0CE3901CE317D90054847C /* DirectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C361CCF425100999713 /* DirectionsResponse.swift */; };
@@ -223,10 +203,7 @@
 		2C0CE3B21CE317D90054847C /* TransitTripCalendarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691021CD374C800747E36 /* TransitTripCalendarGroup.swift */; };
 		2C0CE3B31CE317D90054847C /* TransitTripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C2E1CCF3FA800999713 /* TransitTripInfo.swift */; };
 		2C0CE3B41CE317D90054847C /* VehicleRTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C2C1CCF3F0E00999713 /* VehicleRTI.swift */; };
-		2C0CE3B51CE317D90054847C /* UrbanThingsAPI+Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E981CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift */; };
 		2C0CE3B61CE317D90054847C /* UrbanThingsAPI+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691611CD7E02400747E36 /* UrbanThingsAPI+Public.swift */; };
-		2C0CE3B71CE317D90054847C /* UrbanThingsAPI+RTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6915F1CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift */; };
-		2C0CE3B81CE317D90054847C /* UrbanThingsAPI+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5E1CCFAB6800999713 /* UrbanThingsAPI+Static.swift */; };
 		2C0CE3B91CE317D90054847C /* UrbanThingsAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C571CCF5FFB00999713 /* UrbanThingsAPIType.swift */; };
 		2C0CE3BA1CE317DF0054847C /* UrbanThingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5A1CCF634E00999713 /* UrbanThingsAPI.swift */; };
 		2C0CE3BB1CE317DF0054847C /* Error+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C60AEE41CDE515A00329630 /* Error+Internal.swift */; };
@@ -468,9 +445,7 @@
 		2C2A61C41CE3C40A0081C1EC /* CallingAtStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */; };
 		2C2A61C51CE3C40A0081C1EC /* CallingAtStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */; };
 		2C2A61C61CE3C40A0081C1EC /* CallingAtStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */; };
-		2C36A5331D587EE10058B4B8 /* AppOperatorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36A5321D587EE10058B4B8 /* AppOperatorsResponse.swift */; };
 		2C36A5351D588B970058B4B8 /* NSLocale+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36A5341D588B970058B4B8 /* NSLocale+JSON.swift */; };
-		2C36A5371D58926A0058B4B8 /* AppAgenciesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36A5361D58926A0058B4B8 /* AppAgenciesRequest.swift */; };
 		2C46A13C1CEB49300041B514 /* UrbanThingsAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2C46A13B1CEB49300041B514 /* UrbanThingsAPI.podspec */; };
 		2C46A17F1CEE30A40041B514 /* StaticAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C46A16A1CECFEFB0041B514 /* StaticAdapterTests.m */; };
 		2C46A1801CEE30A40041B514 /* StaticAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46A1711CECFF310041B514 /* StaticAdapterTests.swift */; };
@@ -500,7 +475,6 @@
 		2C591E8E1CDA1D4A00B955A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C591E8C1CDA1D4A00B955A6 /* LaunchScreen.storyboard */; };
 		2C591E931CDA1D7500B955A6 /* UTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UTAPI.framework */; };
 		2C591E941CDA1D7500B955A6 /* UTAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5F2C051CCE9AA900999713 /* UTAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2C591E991CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E981CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift */; };
 		2C591E9B1CDB131C00B955A6 /* TestPlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C591E9A1CDB131C00B955A6 /* TestPlacePoint.swift */; };
 		2C5F2C211CCE9AC400999713 /* PlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C201CCE9AC400999713 /* PlacePoint.swift */; };
 		2C5F2C271CCF3CC500999713 /* TransitStopRTIReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C261CCF3CC500999713 /* TransitStopRTIReport.swift */; };
@@ -529,7 +503,6 @@
 		2C5F2C581CCF5FFB00999713 /* UrbanThingsAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C571CCF5FFB00999713 /* UrbanThingsAPIType.swift */; };
 		2C5F2C5B1CCF634E00999713 /* UrbanThingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5A1CCF634E00999713 /* UrbanThingsAPI.swift */; };
 		2C5F2C5D1CCFAABF00999713 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5C1CCFAABF00999713 /* APIResponse.swift */; };
-		2C5F2C5F1CCFAB6800999713 /* UrbanThingsAPI+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C5E1CCFAB6800999713 /* UrbanThingsAPI+Static.swift */; };
 		2C5F2C611CCFAC6300999713 /* UTImportSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C601CCFAC6300999713 /* UTImportSource.swift */; };
 		2C5F2C631CCFB35800999713 /* UTPlacePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C621CCFB35800999713 /* UTPlacePoint.swift */; };
 		2C5F2C651CCFB65E00999713 /* UTTransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5F2C641CCFB65E00999713 /* UTTransitStop.swift */; };
@@ -629,8 +602,6 @@
 		2C9F52E81CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */; };
 		2C9F52E91CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */; };
 		2C9F52EA1CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */; };
-		2CBFCD481D50AD3800C93F86 /* AppSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFCD471D50AD3800C93F86 /* AppSearchRequest.swift */; };
-		2CBFCD4A1D50AD8A00C93F86 /* AppSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFCD491D50AD8A00C93F86 /* AppSearchResponse.swift */; };
 		2CD690CB1CD224DF00747E36 /* NSURL+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */; };
 		2CD690CD1CD2281200747E36 /* PlacePointType+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CC1CD2281200747E36 /* PlacePointType+JSON.swift */; };
 		2CD690CF1CD2296D00747E36 /* TransitMode+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD690CE1CD2296D00747E36 /* TransitMode+JSON.swift */; };
@@ -674,7 +645,6 @@
 		2CD691351CD684DB00747E36 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691341CD684DB00747E36 /* String+JSON.swift */; };
 		2CD691371CD6872800747E36 /* Array+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691361CD6872800747E36 /* Array+JSON.swift */; };
 		2CD6915A1CD72FA500747E36 /* JSONInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691591CD72FA500747E36 /* JSONInitialization.swift */; };
-		2CD691601CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6915F1CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift */; };
 		2CD691621CD7E02400747E36 /* UrbanThingsAPI+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691611CD7E02400747E36 /* UrbanThingsAPI+Public.swift */; };
 		2CD691641CD7E1EC00747E36 /* UTTransitStopRTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691631CD7E1EC00747E36 /* UTTransitStopRTIResponse.swift */; };
 		2CD691661CD7E23900747E36 /* TransitStopRTIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD691651CD7E23900747E36 /* TransitStopRTIResponse.swift */; };
@@ -920,34 +890,6 @@
 			remoteGlobalIDString = 2C0CE2C61CE3176E0054847C;
 			remoteInfo = "UrbanThingsAPI-watchOS";
 		};
-		2CFFCAEF1CEAF0B0002D8AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CFFCAEA1CEAF030002D8AC4;
-			remoteInfo = BuildNumber;
-		};
-		2CFFCAF11CEAF0B5002D8AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CFFCAEA1CEAF030002D8AC4;
-			remoteInfo = BuildNumber;
-		};
-		2CFFCAF31CEAF0B9002D8AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CFFCAEA1CEAF030002D8AC4;
-			remoteInfo = BuildNumber;
-		};
-		2CFFCAF51CEAF0BF002D8AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C5F2BFC1CCE9AA900999713 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CFFCAEA1CEAF030002D8AC4;
-			remoteInfo = BuildNumber;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -983,9 +925,7 @@
 		2C2A61BB1CE3AAE70081C1EC /* MockRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestHandler.swift; sourceTree = "<group>"; };
 		2C2A61BF1CE3C3D80081C1EC /* TransitStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TransitStops.json; sourceTree = "<group>"; };
 		2C2A61C31CE3C40A0081C1EC /* CallingAtStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CallingAtStops.json; sourceTree = "<group>"; };
-		2C36A5321D587EE10058B4B8 /* AppOperatorsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOperatorsResponse.swift; sourceTree = "<group>"; };
 		2C36A5341D588B970058B4B8 /* NSLocale+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+JSON.swift"; sourceTree = "<group>"; };
-		2C36A5361D58926A0058B4B8 /* AppAgenciesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAgenciesRequest.swift; sourceTree = "<group>"; };
 		2C46A13B1CEB49300041B514 /* UrbanThingsAPI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UrbanThingsAPI.podspec; sourceTree = "<group>"; };
 		2C46A1451CECFCDD0041B514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C46A16A1CECFEFB0041B514 /* StaticAdapterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StaticAdapterTests.m; path = ../UTAPIObjCAdapter/StaticAdapterTests.m; sourceTree = "<group>"; };
@@ -1004,7 +944,6 @@
 		2C591E8A1CDA1D4A00B955A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C591E8D1CDA1D4A00B955A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C591E8F1CDA1D4A00B955A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C591E981CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UrbanThingsAPI+Planning.swift"; sourceTree = "<group>"; };
 		2C591E9A1CDB131C00B955A6 /* TestPlacePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPlacePoint.swift; sourceTree = "<group>"; };
 		2C5F2C051CCE9AA900999713 /* UTAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UTAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5F2C081CCE9AA900999713 /* UTAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UTAPI.h; sourceTree = "<group>"; };
@@ -1036,7 +975,6 @@
 		2C5F2C571CCF5FFB00999713 /* UrbanThingsAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrbanThingsAPIType.swift; sourceTree = "<group>"; };
 		2C5F2C5A1CCF634E00999713 /* UrbanThingsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrbanThingsAPI.swift; sourceTree = "<group>"; };
 		2C5F2C5C1CCFAABF00999713 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
-		2C5F2C5E1CCFAB6800999713 /* UrbanThingsAPI+Static.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UrbanThingsAPI+Static.swift"; sourceTree = "<group>"; };
 		2C5F2C601CCFAC6300999713 /* UTImportSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTImportSource.swift; sourceTree = "<group>"; };
 		2C5F2C621CCFB35800999713 /* UTPlacePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTPlacePoint.swift; sourceTree = "<group>"; };
 		2C5F2C641CCFB65E00999713 /* UTTransitStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitStop.swift; sourceTree = "<group>"; };
@@ -1097,8 +1035,6 @@
 		2C9F52DF1CE72160004AF1FB /* RealtimeStatuses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RealtimeStatuses.json; sourceTree = "<group>"; };
 		2C9F52E31CE7238B004AF1FB /* Directions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Directions.json; sourceTree = "<group>"; };
 		2C9F52E71CE723B1004AF1FB /* DirectionsResponseProcessingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsResponseProcessingTests.swift; sourceTree = "<group>"; };
-		2CBFCD471D50AD3800C93F86 /* AppSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchRequest.swift; sourceTree = "<group>"; };
-		2CBFCD491D50AD8A00C93F86 /* AppSearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchResponse.swift; sourceTree = "<group>"; };
 		2CD690CA1CD224DF00747E36 /* NSURL+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+JSON.swift"; sourceTree = "<group>"; };
 		2CD690CC1CD2281200747E36 /* PlacePointType+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacePointType+JSON.swift"; sourceTree = "<group>"; };
 		2CD690CE1CD2296D00747E36 /* TransitMode+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransitMode+JSON.swift"; sourceTree = "<group>"; };
@@ -1143,7 +1079,6 @@
 		2CD691361CD6872800747E36 /* Array+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+JSON.swift"; sourceTree = "<group>"; };
 		2CD6914F1CD68B9400747E36 /* SystemObjectJsonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemObjectJsonTests.swift; sourceTree = "<group>"; };
 		2CD691591CD72FA500747E36 /* JSONInitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONInitialization.swift; sourceTree = "<group>"; };
-		2CD6915F1CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UrbanThingsAPI+RTI.swift"; sourceTree = "<group>"; };
 		2CD691611CD7E02400747E36 /* UrbanThingsAPI+Public.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UrbanThingsAPI+Public.swift"; sourceTree = "<group>"; };
 		2CD691631CD7E1EC00747E36 /* UTTransitStopRTIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTransitStopRTIResponse.swift; sourceTree = "<group>"; };
 		2CD691651CD7E23900747E36 /* TransitStopRTIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStopRTIResponse.swift; sourceTree = "<group>"; };
@@ -1376,8 +1311,8 @@
 		2C5F2BFB1CCE9AA900999713 = {
 			isa = PBXGroup;
 			children = (
-				2C80488A1CE4E12A00AE863A /* LICENSE */,
 				2C8048881CE4D49D00AE863A /* README.md */,
+				2C80488A1CE4E12A00AE863A /* LICENSE */,
 				2C46A13B1CEB49300041B514 /* UrbanThingsAPI.podspec */,
 				2C5F2C071CCE9AA900999713 /* UrbanThingsAPI */,
 				2C591E801CDA1D4A00B955A6 /* Demo */,
@@ -1420,10 +1355,7 @@
 		2C5F2C1F1CCE9AB000999713 /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				2C591E981CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift */,
 				2CD691611CD7E02400747E36 /* UrbanThingsAPI+Public.swift */,
-				2CD6915F1CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift */,
-				2C5F2C5E1CCFAB6800999713 /* UrbanThingsAPI+Static.swift */,
 				2C5F2C571CCF5FFB00999713 /* UrbanThingsAPIType.swift */,
 				2C4A15561CD1E9EF00C61B76 /* Error.swift */,
 				2C1CF7C31CE1C0A800F1E08A /* Logger.swift */,
@@ -1532,8 +1464,6 @@
 				2CD690D61CD2511600747E36 /* TransitStopsRequest.swift */,
 				2C60AEF21CDF5AAD00329630 /* TransitTripGroupsRequest.swift */,
 				2CD691201CD50BD800747E36 /* TransitTripsRequest.swift */,
-				2CBFCD471D50AD3800C93F86 /* AppSearchRequest.swift */,
-				2C36A5361D58926A0058B4B8 /* AppAgenciesRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1576,8 +1506,6 @@
 				2C5F2C361CCF425100999713 /* DirectionsResponse.swift */,
 				2C5F2C3C1CCF446400999713 /* DirectionsResponseStatus.swift */,
 				2C5F2C2A1CCF3EA000999713 /* Disruption.swift */,
-				2C36A5321D587EE10058B4B8 /* AppOperatorsResponse.swift */,
-				2CBFCD491D50AD8A00C93F86 /* AppSearchResponse.swift */,
 				2C5F2C421CCF46C400999713 /* ImportSource.swift */,
 				2C5F2C381CCF431400999713 /* Journey.swift */,
 				2C5F2C3A1CCF439200999713 /* JourneyLeg.swift */,
@@ -1831,7 +1759,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFFCAF21CEAF0B5002D8AC4 /* PBXTargetDependency */,
 			);
 			name = "UrbanThingsAPI-tvOS";
 			productName = "UrbanThingsAPI-tvOS";
@@ -1868,7 +1795,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFFCAF61CEAF0BF002D8AC4 /* PBXTargetDependency */,
 			);
 			name = "UrbanThingsAPI-watchOS";
 			productName = "UrbanThingsAPI-watchOS";
@@ -1887,7 +1813,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFFCAF41CEAF0B9002D8AC4 /* PBXTargetDependency */,
 			);
 			name = "UrbanThingsAPI-OSX";
 			productName = "UrbanThingsAPI-OSX";
@@ -1943,7 +1868,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFFCAF01CEAF0B0002D8AC4 /* PBXTargetDependency */,
 			);
 			name = "UrbanThingsAPI-iOS";
 			productName = FatAttitudeAPI;
@@ -2051,7 +1975,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = UrbanThings;
 				TargetAttributes = {
 					2C0CE2AA1CE316E30054847C = {
@@ -2090,9 +2014,6 @@
 					2CFFCA061CE86B46002D8AC4 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
-					2CFFCAEA1CEAF030002D8AC4 = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
 				};
 			};
 			buildConfigurationList = 2C5F2BFF1CCE9AA900999713 /* Build configuration list for PBXProject "UrbanThingsAPI" */;
@@ -2108,7 +2029,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */,
 				2C5F2C041CCE9AA900999713 /* UrbanThingsAPI-iOS */,
 				2C0CE2D31CE3178D0054847C /* UrbanThingsAPI-OSX */,
 				2C0CE2AA1CE316E30054847C /* UrbanThingsAPI-tvOS */,
@@ -2286,22 +2206,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2CFFCAEE1CEAF042002D8AC4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UrbanThingsAPI/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UTAPIObjCAdapter/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/Demo/Info.plist\n${PROJECT_DIR}/build-tools/bump_build_number.sh ${PROJECT_DIR}/UnitTests/Info.plist";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		2C0CE2A61CE316E30054847C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -2317,7 +2221,6 @@
 				2C0CE3731CE317D80054847C /* StopBoardColor.swift in Sources */,
 				2C0CE41A1CE317F90054847C /* APIResponseType.swift in Sources */,
 				2C0CE41B1CE317F90054847C /* JSONKey.swift in Sources */,
-				2C0CE38C1CE317D80054847C /* UrbanThingsAPI+RTI.swift in Sources */,
 				2C0CE4191CE317F90054847C /* APIResponse.swift in Sources */,
 				2C0CE41E1CE317F90054847C /* UTAttribution.swift in Sources */,
 				2C0CE36F1CE317D80054847C /* PlacePointType.swift in Sources */,
@@ -2404,7 +2307,6 @@
 				2C0CE43C1CE317F90054847C /* UTTransitStopScheduledCalls.swift in Sources */,
 				2C0CE31D1CE317CF0054847C /* TransitAgencyRequest.swift in Sources */,
 				2C0CE36D1CE317D80054847C /* PlacePoint.swift in Sources */,
-				2C0CE38A1CE317D80054847C /* UrbanThingsAPI+Planning.swift in Sources */,
 				2C0CE4211CE317F90054847C /* UTDisruption.swift in Sources */,
 				2C0CE4251CE317F90054847C /* UTJourneyLeg.swift in Sources */,
 				2C0CE3891CE317D80054847C /* VehicleRTI.swift in Sources */,
@@ -2421,7 +2323,6 @@
 				2C0CE3BC1CE317E00054847C /* UrbanThingsAPI.swift in Sources */,
 				2C0CE36E1CE317D80054847C /* PlacePointList.swift in Sources */,
 				2C0CE3211CE317CF0054847C /* TransitStopCallsRequest.swift in Sources */,
-				2C0CE38D1CE317D80054847C /* UrbanThingsAPI+Static.swift in Sources */,
 				2C0CE3781CE317D80054847C /* StopCall.swift in Sources */,
 				2C0CE4351CE317F90054847C /* UTTransitJourneyLeg.swift in Sources */,
 				2C0CE41F1CE317F90054847C /* UTDirectionsResponse.swift in Sources */,
@@ -2484,7 +2385,6 @@
 				2C0CE39E1CE317D90054847C /* StopBoardColor.swift in Sources */,
 				2C0CE4461CE317FA0054847C /* APIResponseType.swift in Sources */,
 				2C0CE4471CE317FA0054847C /* JSONKey.swift in Sources */,
-				2C0CE3B71CE317D90054847C /* UrbanThingsAPI+RTI.swift in Sources */,
 				2C0CE4451CE317FA0054847C /* APIResponse.swift in Sources */,
 				2C0CE44A1CE317FA0054847C /* UTAttribution.swift in Sources */,
 				2C0CE39A1CE317D90054847C /* PlacePointType.swift in Sources */,
@@ -2570,7 +2470,6 @@
 				2C0CE4681CE317FA0054847C /* UTTransitStopScheduledCalls.swift in Sources */,
 				2C0CE3311CE317D00054847C /* TransitAgencyRequest.swift in Sources */,
 				2C0CE3981CE317D90054847C /* PlacePoint.swift in Sources */,
-				2C0CE3B51CE317D90054847C /* UrbanThingsAPI+Planning.swift in Sources */,
 				2C0CE44D1CE317FA0054847C /* UTDisruption.swift in Sources */,
 				2C0CE4511CE317FA0054847C /* UTJourneyLeg.swift in Sources */,
 				2C0CE3B41CE317D90054847C /* VehicleRTI.swift in Sources */,
@@ -2587,7 +2486,6 @@
 				2C0CE3BE1CE317E00054847C /* UrbanThingsAPI.swift in Sources */,
 				2C0CE3991CE317D90054847C /* PlacePointList.swift in Sources */,
 				2C0CE3351CE317D00054847C /* TransitStopCallsRequest.swift in Sources */,
-				2C0CE3B81CE317D90054847C /* UrbanThingsAPI+Static.swift in Sources */,
 				2C0CE3A31CE317D90054847C /* StopCall.swift in Sources */,
 				2C0CE4611CE317FA0054847C /* UTTransitJourneyLeg.swift in Sources */,
 				2C0CE44B1CE317FA0054847C /* UTDirectionsResponse.swift in Sources */,
@@ -2621,7 +2519,6 @@
 				2C0CE3481CE317D70054847C /* StopBoardColor.swift in Sources */,
 				2C0CE3EE1CE317F80054847C /* APIResponseType.swift in Sources */,
 				2C0CE3EF1CE317F80054847C /* JSONKey.swift in Sources */,
-				2C0CE3611CE317D70054847C /* UrbanThingsAPI+RTI.swift in Sources */,
 				2C0CE3ED1CE317F80054847C /* APIResponse.swift in Sources */,
 				2C0CE3F21CE317F80054847C /* UTAttribution.swift in Sources */,
 				2C0CE3441CE317D70054847C /* PlacePointType.swift in Sources */,
@@ -2707,7 +2604,6 @@
 				2C0CE4101CE317F80054847C /* UTTransitStopScheduledCalls.swift in Sources */,
 				2C0CE3091CE317CE0054847C /* TransitAgencyRequest.swift in Sources */,
 				2C0CE3421CE317D70054847C /* PlacePoint.swift in Sources */,
-				2C0CE35F1CE317D70054847C /* UrbanThingsAPI+Planning.swift in Sources */,
 				2C0CE3F51CE317F80054847C /* UTDisruption.swift in Sources */,
 				2C0CE3F91CE317F80054847C /* UTJourneyLeg.swift in Sources */,
 				2C0CE35E1CE317D70054847C /* VehicleRTI.swift in Sources */,
@@ -2724,7 +2620,6 @@
 				2C0CE3BA1CE317DF0054847C /* UrbanThingsAPI.swift in Sources */,
 				2C0CE3431CE317D70054847C /* PlacePointList.swift in Sources */,
 				2C0CE30D1CE317CE0054847C /* TransitStopCallsRequest.swift in Sources */,
-				2C0CE3621CE317D70054847C /* UrbanThingsAPI+Static.swift in Sources */,
 				2C0CE34D1CE317D70054847C /* StopCall.swift in Sources */,
 				2C0CE4091CE317F80054847C /* UTTransitJourneyLeg.swift in Sources */,
 				2C0CE3F31CE317F80054847C /* UTDirectionsResponse.swift in Sources */,
@@ -2793,7 +2688,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD690FB1CD36C9600747E36 /* TransitTrip.swift in Sources */,
-				2C36A5331D587EE10058B4B8 /* AppOperatorsResponse.swift in Sources */,
 				2CD691271CD5F44A00747E36 /* UTColor+JSON.swift in Sources */,
 				2CD691681CD7E3A600747E36 /* UTTransitStopRTIReport.swift in Sources */,
 				2CD6912C1CD6122600747E36 /* MKPolyline+GooglePolyline.swift in Sources */,
@@ -2814,7 +2708,6 @@
 				2C5F2C501CCF549200999713 /* StopBoardRow.swift in Sources */,
 				2CD690DF1CD26FCA00747E36 /* PlacesListRequest.swift in Sources */,
 				2CD691811CD8916800747E36 /* UTStopBoardResponse.swift in Sources */,
-				2CBFCD481D50AD3800C93F86 /* AppSearchRequest.swift in Sources */,
 				2CD691A81CD916C300747E36 /* RealtimeReportRequest.swift in Sources */,
 				2C5F2C2D1CCF3F0E00999713 /* VehicleRTI.swift in Sources */,
 				2CD690E71CD3398D00747E36 /* QueryKeys.swift in Sources */,
@@ -2832,7 +2725,6 @@
 				2C5F2C7D1CD120AB00999713 /* TransitAgency.swift in Sources */,
 				2CD690D71CD2511600747E36 /* TransitStopsRequest.swift in Sources */,
 				2C5F2C211CCE9AC400999713 /* PlacePoint.swift in Sources */,
-				2C36A5371D58926A0058B4B8 /* AppAgenciesRequest.swift in Sources */,
 				2CD691661CD7E23900747E36 /* TransitStopRTIResponse.swift in Sources */,
 				2CD690CF1CD2296D00747E36 /* TransitMode+JSON.swift in Sources */,
 				2C5F2C691CD009D600999713 /* String+Extensions.swift in Sources */,
@@ -2843,10 +2735,8 @@
 				2C5F2C7B1CD103C400999713 /* UTTransitDetailedRouteInfo.swift in Sources */,
 				2C5F2C371CCF425100999713 /* DirectionsResponse.swift in Sources */,
 				2CD691371CD6872800747E36 /* Array+JSON.swift in Sources */,
-				2CD691601CD7E00F00747E36 /* UrbanThingsAPI+RTI.swift in Sources */,
 				2CD6916A1CD7E51C00747E36 /* UTAttribution.swift in Sources */,
 				2C5F2C4A1CCF521D00999713 /* StopBoardResponse.swift in Sources */,
-				2C591E991CDA965D00B955A6 /* UrbanThingsAPI+Planning.swift in Sources */,
 				2C5F2C291CCF3D8100999713 /* MonitoredStopCall.swift in Sources */,
 				2CD690DD1CD266D000747E36 /* TransitRoutesByLineNameRequest.swift in Sources */,
 				2CD6918D1CD8B8A800747E36 /* UTStopBoardGroup.swift in Sources */,
@@ -2879,7 +2769,6 @@
 				2CD691351CD684DB00747E36 /* String+JSON.swift in Sources */,
 				2C5F2C6B1CD00A0000999713 /* JSONKey.swift in Sources */,
 				2C5F2C2F1CCF3FA800999713 /* TransitTripInfo.swift in Sources */,
-				2CBFCD4A1D50AD8A00C93F86 /* AppSearchResponse.swift in Sources */,
 				2C5F2C561CCF582300999713 /* StopBoardMessage.swift in Sources */,
 				2C5F2C481CCF51AA00999713 /* APIResponseType.swift in Sources */,
 				2CD690E11CD2BFBF00747E36 /* TransitRoutesByImportSourceRequest.swift in Sources */,
@@ -2919,7 +2808,6 @@
 				2C60AEE71CDF139900329630 /* Request.swift in Sources */,
 				2C5F2C711CD08F5F00999713 /* UTPlacePointList.swift in Sources */,
 				2C60AEEB1CDF4EF500329630 /* Parsers.swift in Sources */,
-				2C5F2C5F1CCFAB6800999713 /* UrbanThingsAPI+Static.swift in Sources */,
 				2C5F2C791CD103A800999713 /* UTTransitRouteInfo.swift in Sources */,
 				2CD6915A1CD72FA500747E36 /* JSONInitialization.swift in Sources */,
 				2CD691901CD8BD8200747E36 /* UTStopBoardMessage.swift in Sources */,
@@ -3175,26 +3063,6 @@
 			target = 2C0CE2C61CE3176E0054847C /* UrbanThingsAPI-watchOS */;
 			targetProxy = 2CFFCAA41CE8C897002D8AC4 /* PBXContainerItemProxy */;
 		};
-		2CFFCAF01CEAF0B0002D8AC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
-			targetProxy = 2CFFCAEF1CEAF0B0002D8AC4 /* PBXContainerItemProxy */;
-		};
-		2CFFCAF21CEAF0B5002D8AC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
-			targetProxy = 2CFFCAF11CEAF0B5002D8AC4 /* PBXContainerItemProxy */;
-		};
-		2CFFCAF41CEAF0B9002D8AC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
-			targetProxy = 2CFFCAF31CEAF0B9002D8AC4 /* PBXContainerItemProxy */;
-		};
-		2CFFCAF61CEAF0BF002D8AC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CFFCAEA1CEAF030002D8AC4 /* BuildNumber */;
-			targetProxy = 2CFFCAF51CEAF0BF002D8AC4 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -3220,6 +3088,7 @@
 		2C0CE2BD1CE316E30054847C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3239,6 +3108,7 @@
 		2C0CE2BE1CE316E30054847C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3287,6 +3157,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3307,6 +3178,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3318,6 +3190,7 @@
 				PRODUCT_NAME = UTAPI;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -3402,9 +3275,9 @@
 		2C591E911CDA1D4A00B955A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3419,9 +3292,9 @@
 		2C591E921CDA1D4A00B955A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3446,8 +3319,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3475,6 +3350,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -3495,8 +3371,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3516,6 +3394,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3528,6 +3408,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3548,6 +3429,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3559,6 +3441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.urbanthings.ios.UrbanThingsAPI;
 				PRODUCT_NAME = UTAPI;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -3591,6 +3474,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3611,6 +3495,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3630,6 +3515,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3652,6 +3538,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3673,6 +3560,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3695,6 +3583,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3716,7 +3605,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3740,7 +3629,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -3755,20 +3644,6 @@
 				PRODUCT_NAME = UTAPIObjCAdapter;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		2CFFCAEC1CEAF030002D8AC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		2CFFCAED1CEAF030002D8AC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -3888,15 +3763,6 @@
 			buildConfigurations = (
 				2CFFCA0D1CE86B46002D8AC4 /* Debug */,
 				2CFFCA0E1CE86B46002D8AC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CFFCAEB1CEAF030002D8AC4 /* Build configuration list for PBXAggregateTarget "BuildNumber" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CFFCAEC1CEAF030002D8AC4 /* Debug */,
-				2CFFCAED1CEAF030002D8AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

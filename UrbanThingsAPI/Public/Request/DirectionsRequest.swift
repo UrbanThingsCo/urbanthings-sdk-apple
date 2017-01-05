@@ -11,9 +11,9 @@ import Foundation
 /// Enum that defines time for directions query
 public enum DirectionsTime {
     /// Specifies a departure time for the directions query
-    case Departure(NSDate)
+    case Departure(Date)
     /// Specifies an arrival time for the directions query
-    case Arrival(NSDate)
+    case Arrival(Date)
 }
 
 /// Enum that defines the travel mode for the directions query
@@ -39,54 +39,54 @@ public enum LineType: Int {
 /// Protocol defining accessibility options for directions query
 public protocol DirectionsRequestAccessibilityOptions {
     /// If true will exclude and routes that require stairs
-    var noStairs:Bool { get }
+    var noStairs: Bool { get }
     /// If true will exclude and routes that require escalators
-    var noEscalators:Bool { get }
+    var noEscalators: Bool { get }
     /// If true will exclude and routes that require elevators
-    var noElevators:Bool { get }
+    var noElevators: Bool { get }
     /// If true will exclude and routes that require steps to get on vehicle
-    var noStepsToVehicle:Bool { get }
+    var noStepsToVehicle: Bool { get }
     /// If true will exclude and routes that require steps to access platform
-    var noStepsToPlatform:Bool { get }
+    var noStepsToPlatform: Bool { get }
 }
 
 /// Protocol defining options that can be provided to a directions request
 public protocol DirectionsRequestOptions {
     /// Agency code to limit directions to.
-    var agencyCode:String? { get }
+    var agencyCode: String? { get }
     /// Specifies the departure or arrival time for the request.
-    var time:DirectionsTime? { get }
+    var time: DirectionsTime? { get }
     /// Specifies the type of travel mode for the request.
-    var travelContext:TravelMode { get }
+    var travelContext: TravelMode { get }
     /// Specifies the maximum number of legs to complete the journey.
-    var maximumLegs:UInt? { get }
+    var maximumLegs: UInt? { get }
     /// Specifies the walking speed to be used when calculating the journey.
-    var walkSpeed:Float? { get }
+    var walkSpeed: Float? { get }
     /// Specifies the maximum time allowed for walking between two consecutive legs.
-    var maximumWalkingTimeBetweenLegs:UInt? { get }
+    var maximumWalkingTimeBetweenLegs: UInt? { get }
     /// Specifies the maximum walking time for any walking leg.
-    var maximumWalkingLegTime:UInt? { get }
+    var maximumWalkingLegTime: UInt? { get }
     /// Specifies the maximum total walking time for a journey that statisfies the request.
-    var maximumTotalWalkingTime:UInt? { get }
+    var maximumTotalWalkingTime: UInt? { get }
     /// Acceptable types of vehicle that can be used to satify the request.
-    var acceptableVehicleTypes:[TransitMode]? { get }
+    var acceptableVehicleTypes: [TransitMode]? { get }
     /// Kinds of line that should be avoided.
-    var avoidedLineTypes:[LineType]? { get }
+    var avoidedLineTypes: [LineType]? { get }
     /// Set to `true` to return polylines representing the geographical coordinates travelled along.
-    var enableRouteGeometry:Bool { get }
-    ///  Set to `true` to attempt to return additional real time planning and route information. This 
+    var enableRouteGeometry: Bool { get }
+    ///  Set to `true` to attempt to return additional real time planning and route information. This
     /// option may not be respected by all planning engines.
-    var enableRealtimeResults:Bool { get }
-    /// Set to `true` to attempt to return any available information regarding fares and ticketing. This 
+    var enableRealtimeResults: Bool { get }
+    /// Set to `true` to attempt to return any available information regarding fares and ticketing. This
     /// option may not be respected by all planning engines.
-    var enableFareResults:Bool { get }
+    var enableFareResults: Bool { get }
 }
 
 /// Defines a direction request
-public protocol DirectionsRequest : Request {
-    
+public protocol DirectionsRequest: PostRequest {
+
     associatedtype Result = DirectionsResponse
-    
+
     /// The origin location where a planned journey should commence.
     var origin: PlacePoint { get }
     /// The destination location where a planned journey should end.
@@ -97,7 +97,7 @@ public protocol DirectionsRequest : Request {
     var accessibility: DirectionsRequestAccessibilityOptions? { get }
     /// General purpose dictionary for any parameters specific to a particular routing engine. Note that the values must be
     /// encodable as JSON.
-    var customOptions: [String:AnyObject]? { get }
+    var customOptions: [String:Any]? { get }
     /// The maximum number of journeys to find that fulfill the request.
     var maximumJourneys: UInt? { get }
 }
@@ -106,18 +106,18 @@ public protocol DirectionsRequest : Request {
 /// of passing parameters to API request methods. You may provide your own implementation if needed to pass to the API
 /// request methods.
 public struct UTDirectionsRequestAccessibilityOptions: DirectionsRequestAccessibilityOptions {
-    
+
     /// If true will exclude and routes that require stairs
-    public let noStairs:Bool
+    public let noStairs: Bool
     /// If true will exclude and routes that require escalators
-    public let noEscalators:Bool
+    public let noEscalators: Bool
     /// If true will exclude and routes that require elevators
-    public let noElevators:Bool
+    public let noElevators: Bool
     /// If true will exclude and routes that require steps to get on vehicle
-    public let noStepsToVehicle:Bool
+    public let noStepsToVehicle: Bool
     /// If true will exclude and routes that require steps to access platform
-    public let noStepsToPlatform:Bool
-    
+    public let noStepsToPlatform: Bool
+
     /// Initialize an instance of `UTDirectionsRequestAccessibilityOptions`
     ///
     ///  - parameters:
@@ -126,11 +126,11 @@ public struct UTDirectionsRequestAccessibilityOptions: DirectionsRequestAccessib
     ///    - noElevators: Whether or not to allow routes that require taking elevators.
     ///    - noStepsToVehicle: Whether or not to allow routes that require taking steps to get on/off a vehicle.
     ///    - noStepsToPlatform: Whether or not to allow routes that require taking steps to get on/off a platform.
-    public init(noStairs:Bool = false,
-                noEscalators:Bool = false,
-                noElevators:Bool = false,
-                noStepsToVehicle:Bool = false,
-                noStepsToPlatform:Bool = false) {
+    public init(noStairs: Bool = false,
+                noEscalators: Bool = false,
+                noElevators: Bool = false,
+                noStepsToVehicle: Bool = false,
+                noStepsToPlatform: Bool = false) {
         self.noStairs = noStairs
         self.noEscalators = noEscalators
         self.noElevators = noElevators
@@ -143,35 +143,35 @@ public struct UTDirectionsRequestAccessibilityOptions: DirectionsRequestAccessib
 /// of passing parameters to API request methods. You may provide your own implementation if needed to pass to the API
 /// request methods.
 public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
-    
+
     /// Agency code to limit directions to.
-    public let agencyCode:String?
+    public let agencyCode: String?
     /// Specifies the departure or arrival time for the request.
-    public let time:DirectionsTime?
+    public let time: DirectionsTime?
     /// Specifies the type of travel mode for the request.
-    public let travelContext:TravelMode
+    public let travelContext: TravelMode
     /// Specifies the maximum number of legs to complete the journey.
-    public let maximumLegs:UInt?
+    public let maximumLegs: UInt?
     /// Specifies the walking speed to be used when calculating the journey.
-    public let walkSpeed:Float?
+    public let walkSpeed: Float?
     /// Specifies the maximum time allowed for walking between two consecutive legs.
-    public let maximumWalkingTimeBetweenLegs:UInt?
+    public let maximumWalkingTimeBetweenLegs: UInt?
     /// Specifies the maximum walking time for any walking leg.
-    public let maximumWalkingLegTime:UInt?
+    public let maximumWalkingLegTime: UInt?
     /// Specifies the maximum total walking time for a journey that statisfies the request.
-    public let maximumTotalWalkingTime:UInt?
+    public let maximumTotalWalkingTime: UInt?
     /// Acceptable types of vehicle that can be used to satify the request.
-    public let acceptableVehicleTypes:[TransitMode]?
+    public let acceptableVehicleTypes: [TransitMode]?
     /// Kinds of line that should be avoided.
-    public let avoidedLineTypes:[LineType]?
+    public let avoidedLineTypes: [LineType]?
     /// Set to `true` to return polylines representing the geographical coordinates travelled along.
-    public let enableRouteGeometry:Bool
+    public let enableRouteGeometry: Bool
     /// Set to `true` to attempt to return additional real time planning and route information. This
     /// option may not be respected by all planning engines.
-    public let enableRealtimeResults:Bool
+    public let enableRealtimeResults: Bool
     /// Set to `true` to attempt to return any available information regarding fares and ticketing. This
     /// option may not be respected by all planning engines.
-    public let enableFareResults:Bool
+    public let enableFareResults: Bool
 
     /// Initialize an instance of `UTDirectionsRequestOptions` for a departure time.
     ///
@@ -191,20 +191,20 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
     /// option may not be respected by all planning engines.
     ///    - enableFareResults: Set to `true` to attempt to return any available information regarding fares and ticketing. This
     /// option may not be respected by all planning engines.
-    public init(departureTime:NSDate,
-                agencyCode:String? = nil,
-                travelContext:TravelMode = .Transit,
-                maximumLegs:UInt? = nil,
-                walkSpeed:Float? = nil,
-                maximumWalkingTimeBetweenLegs:UInt? = nil,
-                maximumWalkingLegTime:UInt? = nil,
-                maximumTotalWalkingTime:UInt? = nil,
-                acceptableVehicleTypes:[TransitMode]? = nil,
-                avoidedLineTypes:[LineType]? = nil,
-                enableRouteGeometry:Bool = false,
-                enableRealtimeResults:Bool = false,
-                enableFareResults:Bool = false) {
-        
+    public init(departureTime: Date,
+                agencyCode: String? = nil,
+                travelContext: TravelMode = .Transit,
+                maximumLegs: UInt? = nil,
+                walkSpeed: Float? = nil,
+                maximumWalkingTimeBetweenLegs: UInt? = nil,
+                maximumWalkingLegTime: UInt? = nil,
+                maximumTotalWalkingTime: UInt? = nil,
+                acceptableVehicleTypes: [TransitMode]? = nil,
+                avoidedLineTypes: [LineType]? = nil,
+                enableRouteGeometry: Bool = false,
+                enableRealtimeResults: Bool = false,
+                enableFareResults: Bool = false) {
+
         self.init(time: .Departure(departureTime),
                   agencyCode: agencyCode,
                   travelContext: travelContext,
@@ -218,7 +218,7 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
                   enableRealtimeResults: enableRealtimeResults,
                   enableFareResults: enableFareResults)
     }
-    
+
     /// Initialize an instance of `UTDirectionsRequestOptions` for an arrival time.
     ///
     ///  - parameters:
@@ -237,20 +237,20 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
     /// option may not be respected by all planning engines.
     ///    - enableFareResults: Set to `true` to attempt to return any available information regarding fares and ticketing. This
     /// option may not be respected by all planning engines.
-    public init(arrivalTime:NSDate,
-                agencyCode:String? = nil,
-                travelContext:TravelMode = .Transit,
-                maximumLegs:UInt? = nil,
-                walkSpeed:Float? = nil,
-                maximumWalkingTimeBetweenLegs:UInt? = nil,
-                maximumWalkingLegTime:UInt? = nil,
-                maximumTotalWalkingTime:UInt? = nil,
-                acceptableVehicleTypes:[TransitMode]? = nil,
-                avoidedLineTypes:[LineType]? = nil,
-                enableRouteGeometry:Bool = false,
-                enableRealtimeResults:Bool = false,
-                enableFareResults:Bool = false) {
-        
+    public init(arrivalTime: Date,
+                agencyCode: String? = nil,
+                travelContext: TravelMode = .Transit,
+                maximumLegs: UInt? = nil,
+                walkSpeed: Float? = nil,
+                maximumWalkingTimeBetweenLegs: UInt? = nil,
+                maximumWalkingLegTime: UInt? = nil,
+                maximumTotalWalkingTime: UInt? = nil,
+                acceptableVehicleTypes: [TransitMode]? = nil,
+                avoidedLineTypes: [LineType]? = nil,
+                enableRouteGeometry: Bool = false,
+                enableRealtimeResults: Bool = false,
+                enableFareResults: Bool = false) {
+
         self.init(time: .Arrival(arrivalTime),
                   agencyCode: agencyCode,
                   travelContext: travelContext,
@@ -264,7 +264,7 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
                   enableRealtimeResults: enableRealtimeResults,
                   enableFareResults: enableFareResults)
     }
-    
+
     /// Initialize an instance of `UTDirectionsRequestOptions` with departure time of 'now'.
     ///
     ///  - parameters:
@@ -283,19 +283,19 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
     /// option may not be respected by all planning engines.
     ///    - enableFareResults: Set to `true` to attempt to return any available information regarding fares and ticketing. This
     /// option may not be respected by all planning engines.
-    public init(travelContext:TravelMode = .Transit,
-                agencyCode:String?,
-                maximumLegs:UInt? = nil,
-                walkSpeed:Float? = nil,
-                maximumWalkingTimeBetweenLegs:UInt? = nil,
-                maximumWalkingLegTime:UInt? = nil,
-                maximumTotalWalkingTime:UInt? = nil,
-                acceptableVehicleTypes:[TransitMode]? = nil,
-                avoidedLineTypes:[LineType]? = nil,
-                enableRouteGeometry:Bool = false,
-                enableRealtimeResults:Bool = false,
-                enableFareResults:Bool = false) {
-        
+    public init(travelContext: TravelMode = .Transit,
+                agencyCode: String?,
+                maximumLegs: UInt? = nil,
+                walkSpeed: Float? = nil,
+                maximumWalkingTimeBetweenLegs: UInt? = nil,
+                maximumWalkingLegTime: UInt? = nil,
+                maximumTotalWalkingTime: UInt? = nil,
+                acceptableVehicleTypes: [TransitMode]? = nil,
+                avoidedLineTypes: [LineType]? = nil,
+                enableRouteGeometry: Bool = false,
+                enableRealtimeResults: Bool = false,
+                enableFareResults: Bool = false) {
+
         self.init(time: nil,
                   agencyCode: agencyCode,
                   travelContext: travelContext,
@@ -309,21 +309,21 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
                   enableRealtimeResults: enableRealtimeResults,
                   enableFareResults: enableFareResults)
     }
-    
-    init(time:DirectionsTime? = .Departure(NSDate()),
-         agencyCode:String? = nil,
-         travelContext:TravelMode = .Transit,
-         maximumLegs:UInt? = nil,
-         walkSpeed:Float? = nil,
-         maximumWalkingTimeBetweenLegs:UInt? = nil,
-         maximumWalkingLegTime:UInt? = nil,
-         maximumTotalWalkingTime:UInt? = nil,
-         acceptableVehicleTypes:[TransitMode]? = nil,
-         avoidedLineTypes:[LineType]? = nil,
-         enableRouteGeometry:Bool = false,
-         enableRealtimeResults:Bool = false,
-         enableFareResults:Bool = false) {
-        
+
+    init(time: DirectionsTime? = .Departure(Date()),
+         agencyCode: String? = nil,
+         travelContext: TravelMode = .Transit,
+         maximumLegs: UInt? = nil,
+         walkSpeed: Float? = nil,
+         maximumWalkingTimeBetweenLegs: UInt? = nil,
+         maximumWalkingLegTime: UInt? = nil,
+         maximumTotalWalkingTime: UInt? = nil,
+         acceptableVehicleTypes: [TransitMode]? = nil,
+         avoidedLineTypes: [LineType]? = nil,
+         enableRouteGeometry: Bool = false,
+         enableRealtimeResults: Bool = false,
+         enableFareResults: Bool = false) {
+
         self.time = time
         self.agencyCode = agencyCode
         self.travelContext = travelContext
@@ -343,11 +343,19 @@ public struct UTDirectionsRequestOptions: DirectionsRequestOptions {
 /// Default implementation of `DirectionsRequest` protocol provided by the API as standard means
 /// of passing parameters to API request methods. You may provide your own implementation if needed to pass to the API
 /// request methods.
-public struct UTDirectionsRequest : DirectionsRequest {
-    
+public struct UTDirectionsRequest: DirectionsRequest {
+
     public typealias Result = DirectionsResponse
-    public typealias Parser = (json:AnyObject?, logger:Logger) throws -> Result
-    
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
+    public let endpoint = "plan/directions"
+    public let queryParameters: QueryParameters = [:]
+
+    public let contentType = "application/json; charset=utf-8"
+
+    public func getBody() throws -> Data {
+        return try self.toJSON()
+    }
+
     /// The origin location where a planned journey should commence.
     public let origin: PlacePoint
     /// The destination location where a planned journey should end.
@@ -358,26 +366,26 @@ public struct UTDirectionsRequest : DirectionsRequest {
     public let accessibility: DirectionsRequestAccessibilityOptions?
     /// General purpose dictionary for any parameters specific to a particular routing engine. Note that the values must be
     /// encodable as JSON.
-    public let customOptions: [String:AnyObject]?
+    public let customOptions: [String:Any]?
     /// The maximum number of journeys to find that fulfill the request.
     public let maximumJourneys: UInt?
 
     /// Parser that will be used to process server response
-    public let parser:Parser
-    
+    public let parser: Parser
+
     /// Initialize an instance of `UTDirectionsRequest`
     ///
     ///  - parameters:
     ///    - origin: PlacePoint providing the start of the directions request
     ///    - destination: PlacePoint providing the end of the directions request
     ///    - options: Optional instance of the `DirectionsRequestOptions` protocol providing options to the request
-    ///    - accessibility: Optional instance of the `DirectionsRequestAccessibilityOptions` protocol providing 
+    ///    - accessibility: Optional instance of the `DirectionsRequestAccessibilityOptions` protocol providing
     /// accessibility options to the request
-    ///    - customOptions: Optional general purpose dictionary for any parameters specific to a particular routing 
+    ///    - customOptions: Optional general purpose dictionary for any parameters specific to a particular routing
     /// engine. Note that the values must be encodable as JSON.
     ///    - maximumJourneys: The maximum number of journeys to find that fulfill the request.
-    public init(origin: PlacePoint, destination:PlacePoint, options: DirectionsRequestOptions? = nil, accessibility:DirectionsRequestAccessibilityOptions? = nil, customOptions:[String:AnyObject]? = nil, maximumJourneys:UInt? = nil, parser: Parser = urbanThingsParser) {
-    
+    public init(origin: PlacePoint, destination: PlacePoint, options: DirectionsRequestOptions? = nil, accessibility: DirectionsRequestAccessibilityOptions? = nil, customOptions: [String:Any]? = nil, maximumJourneys: UInt? = nil, parser: @escaping Parser = urbanThingsParser) {
+
         self.parser = parser
         self.origin = origin
         self.destination = destination
@@ -388,9 +396,9 @@ public struct UTDirectionsRequest : DirectionsRequest {
     }
 }
 
-extension Dictionary where Key : StringLiteralConvertible, Value : AnyObject {
+extension Dictionary where Key : ExpressibleByStringLiteral, Value : Any {
 
-    subscript(key:QueryKey) -> Value? {
+    subscript(key: QueryKey) -> Value? {
         get {
             return self[key.description as! Key]
         }
@@ -404,8 +412,8 @@ extension Dictionary where Key : StringLiteralConvertible, Value : AnyObject {
 }
 
 extension PlacePoint {
-    func toJSONObject() throws -> [String:AnyObject] {
-        var json:[String:AnyObject] = [:]
+    func toJSONObject() throws -> [String:Any] {
+        var json: [String:Any] = [:]
         json[.Lat] = self.location.latitude
         json[.Lng] = self.location.longitude
         json[.Name] = self.name
@@ -414,26 +422,23 @@ extension PlacePoint {
     }
 }
 
-extension NSDate {
+extension Date {
 
-    private static var token:dispatch_once_t = 0
-    private static var dateFormatter:NSDateFormatter?
+    private static var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        return formatter
+    }()
     
-    var asISO8601:String {
-        dispatch_once(&NSDate.token) {
-            let formatter = NSDateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-            NSDate.dateFormatter = formatter
-        }
-        
-        return NSDate.dateFormatter!.stringFromDate(self)
+    var asISO8601: String {
+        return Date.dateFormatter.string(from: self)
     }
 }
 
 extension DirectionsRequest {
 
-    func toJSON() throws -> NSData {
-        var json:[String:AnyObject] = [:]
+    func toJSON() throws -> Data {
+        var json: [String:Any] = [:]
         json[.Origin] = try self.origin.toJSONObject()
         json[.Destination] = try self.destination.toJSONObject()
         if let time = self.options?.time {
@@ -446,10 +451,10 @@ extension DirectionsRequest {
                 break
             }
         } else {
-            json[.DepartureTime] = NSDate().asISO8601
+            json[.DepartureTime] = Date().asISO8601
         }
         json[.AgencyCode] = self.options?.agencyCode
-        var custom = [String:AnyObject]()
+        var custom = [String:Any]()
         custom[.KeyValues] = self.customOptions
         json[.CustomOptions] = custom
         json[.EnableRouteGeometry] = self.options?.enableRouteGeometry
@@ -457,7 +462,7 @@ extension DirectionsRequest {
         json[.EnableFareResults] = self.options?.enableFareResults
         json[.TravelContext] = self.options?.travelContext.rawValue
         json[.MaximumJourneys] = self.maximumJourneys
-        var options = [String:AnyObject]()
+        var options = [String:Any]()
         options[.MaximumLegs] = self.options?.maximumLegs
         options[.WalkSpeed] = self.options?.walkSpeed
         options[.MaximumWalkingLegTime] = self.options?.maximumWalkingLegTime
@@ -471,6 +476,6 @@ extension DirectionsRequest {
         options[.AccessibilityNoStepsToVehicle] = self.accessibility?.noStepsToVehicle
         options[.AccessibilityNoStepsToPlatform] = self.accessibility?.noStepsToPlatform
         json[.Options] = options
-        return try NSJSONSerialization.dataWithJSONObject(json, options:[])
+        return try JSONSerialization.data(withJSONObject: json, options:[])
     }
 }

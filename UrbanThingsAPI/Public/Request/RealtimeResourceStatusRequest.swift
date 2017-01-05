@@ -9,34 +9,35 @@
 import Foundation
 
 /// Defines a resource status request for a single resource
-public protocol RealtimeResourceStatusRequest : Request {
-    
+public protocol RealtimeResourceStatusRequest: GetRequest {
+
     associatedtype Result = ResourceStatus
-    
+
     /// Stop Id of the resource that status is being requested for.
-    var stopID:String { get }
+    var stopID: String { get }
 }
 
 /// Default implementation of `RealtimeResourceStatusRequest` protocol provided by the API as standard means
 /// of passing parameters to API request methods. You may provide your own implementation if needed to pass to the API
 /// request methods.
-public struct UTRealtimeResourceStatusRequest : RealtimeResourceStatusRequest {
-    
+public struct UTRealtimeResourceStatusRequest: RealtimeResourceStatusRequest {
+
     public typealias Result = ResourceStatus
-    public typealias Parser = (json:AnyObject?, logger:Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
+    public let endpoint = "rti/resources/status"
 
     /// Stop Id of the resource that status is being requested for.
-    public let stopID:String
-    
+    public let stopID: String
+
     /// Parser to use when processing response to the request
-    public let parser:Parser
-    
+    public let parser: Parser
+
     /// Initialize instance of `UTRealtimeResourceStatusRequest`.
     ///
     /// - parameters:
     ///   - stopID: The stop ID to request status for.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(stopID:String, parser:Parser = urbanThingsParser) {
+    public init(stopID: String, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.stopID = stopID
     }

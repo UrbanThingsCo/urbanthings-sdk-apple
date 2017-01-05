@@ -9,7 +9,7 @@
 import Foundation
 
 /// ErrorType enum defining possible error states from the API framework
-public enum Error : ErrorType {
+public enum UTAPIError : Error {
 
     /// API reported some error in processing the request
     case APIError(message:String?)
@@ -23,5 +23,5 @@ public enum Error : ErrorType {
     /// If you experience this error please report to apisupport@urbanthings.io giving as much detail as you can.
     case Unexpected(message:String, debugInfo:String)
     /// Error that is re-throwing some other error
-    case Rethrown(message:String, innerError:ErrorType)
+    case Rethrown(message:String, innerError:Error)
 }

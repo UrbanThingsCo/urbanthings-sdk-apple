@@ -12,9 +12,9 @@ import UTAPI
 /// `MonitoredStopCall` contains realtime information for a timetabled call at a transit stop.
 @objc public protocol MonitoredStopCall : StopCall {
     /// The real time estimate of when this vehicle is expected to arrive at the stop.
-    var expectedArrivalTime:NSDate? { get }
+    var expectedArrivalTime:Date? { get }
     /// The real time estimate of when this vehicle is expected to depart from the stop.
-    var expectedDepartureTime:NSDate? { get }
+    var expectedDepartureTime:Date? { get }
     /// The real time estimate of the distance from the stop, along the route, that the vehicle is presently located at.
     var distanceMetres:Int { get }
     /// A value to aid presentation; this indicates whether a time based or distance based display is most appropriate.
@@ -36,8 +36,8 @@ import UTAPI
         super.init(adapt: adapt)
     }
     
-    public var expectedArrivalTime:NSDate? { return self.monitoredStopCall.expectedArrivalTime }
-    public var expectedDepartureTime:NSDate? { return self.monitoredStopCall.expectedDepartureTime }
+    public var expectedArrivalTime:Date? { return self.monitoredStopCall.expectedArrivalTime }
+    public var expectedDepartureTime:Date? { return self.monitoredStopCall.expectedDepartureTime }
     public var distanceMetres:Int { return self.monitoredStopCall.distanceMetres ?? -1 }
     public var masterDisplayFormat:MonitoredStopCallDisplayFormat { return self.monitoredStopCall.masterDisplayFormat }
     public let vehicleRTI:VehicleRTI

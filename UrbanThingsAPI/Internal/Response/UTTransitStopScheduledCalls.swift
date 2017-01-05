@@ -11,11 +11,11 @@ import Foundation
 class UTTransitStopScheduledCalls : UTObject, TransitStopScheduledCalls {
     
     let stopID:String
-    let startTime:NSDate?
-    let endTime:NSDate?
+    let startTime:Date?
+    let endTime:Date?
     let scheduledCalls:[StopCall]
 
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.stopID = try parse(required:json, key: .StopID, type: UTTransitStopScheduledCalls.self)
         self.startTime = try parse(optional:json, key: .QueryStartTime, type:UTTransitStopScheduledCalls.self) { try String(optional: $0)?.requiredDate() }
         self.endTime = try parse(optional:json, key: .QueryEndTime, type:UTTransitStopScheduledCalls.self) { try String(optional: $0)?.requiredDate() }

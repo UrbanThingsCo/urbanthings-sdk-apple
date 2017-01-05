@@ -16,9 +16,9 @@ import UTAPI
     /// The main text of the message.
     var mainText:String? { get }
     /// The URL of an graphic that represents this message, if available.
-    var iconURL:NSURL? { get }
+    var iconURL:URL? { get }
     /// The URL of a web page with further information relating to this message, if available.
-    var linkURL:NSURL? { get }
+    var linkURL:URL? { get }
     /// A piece of text that describes the content of the web page referred to in the linkURL field if applicable.
     var linkText:String? { get }
     /// Severity of distruption associated with the message.
@@ -35,8 +35,8 @@ import UTAPI
     
     public var headerText:String? { return self.stopBoardMessage.headerText }
     public var mainText:String? { return self.stopBoardMessage.mainText }
-    public var iconURL:NSURL? { return self.stopBoardMessage.iconURL }
-    public var linkURL:NSURL? { return self.stopBoardMessage.linkURL }
+    public var iconURL:URL? { return self.stopBoardMessage.iconURL }
+    public var linkURL:URL? { return self.stopBoardMessage.linkURL }
     public var linkText:String? { return self.stopBoardMessage.linkText }
     public var severity:DisruptionSeverity { return self.stopBoardMessage.severity }
 }

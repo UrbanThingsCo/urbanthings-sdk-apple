@@ -14,7 +14,7 @@ struct APIResponse<T> : APIResponseType {
 
     let data: T?
 
-    init(json: AnyObject, parser:(json: AnyObject?, logger: Logger) throws -> T, logger: Logger) throws {
-        self.data = try parser(json: json, logger: logger) as T
+    init(json: AnyObject, parser:(_ json: AnyObject?, _ logger: Logger) throws -> T, logger: Logger) throws {
+        self.data = try parser(json, logger) as T
     }
 }

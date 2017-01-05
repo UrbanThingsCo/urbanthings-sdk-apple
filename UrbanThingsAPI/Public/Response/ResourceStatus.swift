@@ -25,7 +25,7 @@ public protocol ResourceStatus : Attribution {
     /// Import source ID detailing where the status information is being obtained from.
     var importSourceID:String { get }
     /// Timestamp detailing time that the data applies to.
-    var timestamp:NSDate { get }
+    var timestamp:Date { get }
     /// A text message detailing the current status if available/applicable.
     var statusText:String? { get }
     /// Number of available places at the resource.

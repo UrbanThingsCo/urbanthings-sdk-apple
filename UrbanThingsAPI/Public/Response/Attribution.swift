@@ -13,7 +13,7 @@ public protocol Attribution {
     /// An attribution label text for the data - clients MUST display either this label or the string contained at AttributionLabel to conform with the Terms and Conditions of using the API.
     var attributionLabel:String? { get }
     /// An attribution graphic for the data - clients MUST display either this label or the string contained at AttributionLabel to conform with the Terms and Conditions of using the API.
-    var attributionImageURL:NSURL? { get }
+    var attributionImageURL:URL? { get }
     /// Optional guidance explaining how the AttributionText and AttributionImageURL should be displayed.
     var attributionNotes:String? { get }
 }

@@ -12,7 +12,7 @@ class UTTransitStopRTIResponse : UTRTIResponse, TransitStopRTIResponse {
     
     let rtiReports:[TransitStopRTIReport]?
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.rtiReports = try parse(required:json, key: .RTIReports, type:UTTransitStopRTIReport.self) { try [UTTransitStopRTIReport](required:$0) }.map { $0 as TransitStopRTIReport }
         try super.init(json:json)
     }

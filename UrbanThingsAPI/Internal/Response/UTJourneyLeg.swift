@@ -14,7 +14,7 @@ class UTJourneyLeg : UTJourneyCore, JourneyLeg {
     let distance:UInt?
     let polyline:String? 
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.vehicleType = try parse(required: json, key: .VehicleType, type: UTJourneyLeg.self)
         self.distance = try parse(optional: json, key: .Distance, type: UTJourneyLeg.self)
         self.polyline = try parse(optional: json, key: .Polyline, type: UTJourneyLeg.self)

@@ -26,28 +26,23 @@
 
 import Foundation
 
-extension NSCharacterSet {
+extension CharacterSet {
+    
+    private static var characterSet: CharacterSet = {
+        var set = CharacterSet.urlQueryAllowed
+        
+        set.remove(charactersIn: "&=:")
+        return set
+    }()
     
     /**
-     Return a singleton instance of character set that contains only the characters for a URL parameter value 
+     Return a singleton instance of character set that contains only the characters for a URL parameter value
      that don't need encoding.
      
      - returns: The character set instance
      */
-    public static func URLQueryParameterValueAllowedCharacterSet() -> NSCharacterSet {
-     
-        struct Static {
-            static var token: dispatch_once_t = 0
-            static var characterSet:NSCharacterSet?
-        }
-        
-        dispatch_once(&Static.token) {
-            let set = NSCharacterSet.URLQueryAllowedCharacterSet().mutableCopy() as! NSMutableCharacterSet
-            set.removeCharactersInString("&=:")
-            Static.characterSet = set
-        }
-        
-        return Static.characterSet!
+    public static func URLQueryParameterValueAllowedCharacterSet() -> CharacterSet {
+        return characterSet
     }
     
 }
