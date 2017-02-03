@@ -17,7 +17,7 @@ class UTTransitStopScheduledCallSummary : UTObject, TransitStopScheduledCallSumm
     let scheduledCall:TransitScheduledCall
     let transitStopLocation:Location?
     
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.transitStopPrimaryCode = try parse(required:json, key: .TransitStopPrimaryCode, type: UTTransitStopScheduledCallSummary.self)
         self.transitStopName = try parse(optional:json, key: .TransitStopName, type: UTTransitStopScheduledCallSummary.self)
         self.transitStopLocalityName = try parse(optional:json, key: .TransitStopLocalityName, type: UTTransitStopScheduledCallSummary.self)

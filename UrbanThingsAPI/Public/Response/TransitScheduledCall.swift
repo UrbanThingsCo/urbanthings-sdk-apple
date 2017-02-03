@@ -23,9 +23,9 @@ public enum TransitCallType:Int {
 /// `TransitScheduledCall` details a single scheduled call at a transit stop.
 public protocol TransitScheduledCall {
     /// The scheduled arrival time of the vehicle, if available.
-    var scheduledArrivalTime:NSDate? { get }
+    var scheduledArrivalTime:Date? { get }
     /// The scheduled departure time of the vehicle, if available.
-    var scheduledDepartureTime:NSDate? { get }
+    var scheduledDepartureTime:Date? { get }
     /// How the vehicle picks up passengers at this stop, if at all. See GTFS specification. Note - if this value is omitted, the default value of `RegularlyScheduled` should be assumed
     var pickupType:TransitCallType? { get }
     /// How the vehicle drops off passengers at this stop, if at all. See GTFS specification. Note - if this value is omitted, the default value of `RegularlyScheduled` should be assumed
@@ -33,17 +33,17 @@ public protocol TransitScheduledCall {
 }
 
 extension TransitCallType : JSONInitialization {
-    init(required:AnyObject?) throws {
+    public init(required:Any?) throws {
         guard let raw = required as? Int else {
-            throw Error(expected: Int.self, not: required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected: Int.self, not: required, file:#file, function:#function, line:#line)
         }
         guard let call = TransitCallType(rawValue:raw) else {
-            throw Error(enumType: TransitCallType.self, invalidRawValue: raw, file:#file, function:#function, line:#line)
+            throw UTAPIError(enumType: TransitCallType.self, invalidRawValue: raw, file:#file, function:#function, line:#line)
         }
         self = call
     }
     
-    init?(optional:AnyObject?) throws {
+    public init?(optional:Any?) throws {
         guard optional != nil else {
             return nil
         }

@@ -10,23 +10,23 @@ import Foundation
 
 extension NSTimeZone {
     
-    convenience init?(optional:AnyObject?) throws {
+    public convenience init?(optional:Any?) throws {
         guard optional != nil else {
             return nil
         }
-        try self.init(required: optional)
+        try self.init(required: optional as Any)
     }
     
-    convenience init(required:AnyObject?) throws {
+    public convenience init(required:Any) throws {
         guard let value = required as? String else {
-            throw Error(expected:String.self, not:required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected:String.self, not:required, file:#file, function:#function, line:#line)
         }
         if let _ = NSTimeZone(name: value) {
             self.init(name: value)!
         } else if let _ = NSTimeZone(abbreviation: value) {
             self.init(abbreviation: value)!
         } else {
-            throw Error(jsonParseError: "Unable to parse NSTimeZone from \(value)", file: #file, function: #function, line: #line)
+            throw UTAPIError(jsonParseError: "Unable to parse NSTimeZone from \(value)", file: #file, function: #function, line: #line)
         }
     }
 }

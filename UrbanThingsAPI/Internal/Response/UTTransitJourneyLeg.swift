@@ -17,10 +17,10 @@ class UTTransitJourneyLeg : UTJourneyLeg, TransitJourneyLeg {
     /// A list of stops that will be called at en-route, if known.
     let scheduledStopCalls: [TransitScheduledCall]?
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.linkedTransitRouteInfo = try parse(optional: json, key: .LinkedTransitRouteInfo, type: UTTransitJourneyLeg.self) as UTTransitRouteInfo?
         self.linkedTransitTripInfo = try parse(optional: json, key: .LinkedTransitTripInfo, type: UTTransitJourneyLeg.self) as UTTransitTripInfo?
-        self.scheduledStopCalls = try parse(optional:json, key: .ScheduledStopCalls, type:UTTransitJourneyLeg.self) { try [UTTransitScheduledCall](required:$0) }?.map { $0 as TransitScheduledCall }
+        self.scheduledStopCalls = try parse(optional:json, key: .ScheduledStopCalls, type:UTTransitJourneyLeg.self) { try [UTTransitScheduledCall](optional:$0) }?.map { $0 as TransitScheduledCall }
         try super.init(json: json)
     }
 }

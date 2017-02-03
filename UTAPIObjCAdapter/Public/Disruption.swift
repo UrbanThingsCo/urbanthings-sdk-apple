@@ -12,9 +12,9 @@ import UTAPI
 /// Defines properties for a disruption record.
 @objc public protocol Disruption : NSObjectProtocol {
     /// The date and time at which this disruption started, or will start. If nil, the start date/time of the disruption is assumed to have passed
-    var startDate:NSDate? { get }
+    var startDate:Date? { get }
     /// The date and time at which this disruption will end, or ended. If nil, it is assumed that the end date/time of the disruption has not passed
-    var endDate:NSDate? { get }
+    var endDate:Date? { get }
     /// A textual summary description of the nature of the disruption
     var localizedSummary:String? { get }
     /// A detailed description of the nature of the disruption
@@ -34,8 +34,8 @@ import UTAPI
         self.adapted = adapt
     }
     
-    public var startDate:NSDate? { return self.adapted.startDate }
-    public var endDate:NSDate? { return self.adapted.endDate }
+    public var startDate:Date? { return self.adapted.startDate }
+    public var endDate:Date? { return self.adapted.endDate }
     public var localizedSummary:String? { return self.adapted.localizedSummary }
     public var localizedDescription:String? { return self.adapted.localizedDescription }
     public var localizedAdditionalInfo:String? { return self.adapted.localizedAdditionalInfo }

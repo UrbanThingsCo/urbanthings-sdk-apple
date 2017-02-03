@@ -17,43 +17,44 @@ public enum TransitRoutesImportSource {
 }
 
 /// Defines a request for a transit route information.
-public protocol TransitRoutesByImportSourceRequest : Request {
-    
+public protocol TransitRoutesByImportSourceRequest: GetRequest {
+
     associatedtype Result = [TransitDetailedRouteInfo]
 
     /// Source for transit routes
-    var source:TransitRoutesImportSource { get }
-    
+    var source: TransitRoutesImportSource { get }
+
 }
 
 /// Default implementation of `TransitRoutesByImportSourceRequest` protocol provided by the API as standard means
 /// of passing parameters to API request methods. You may provide your own implementation if needed to pass to the API
 /// request methods.
-public struct UTTransitRoutesByImportSourceRequest : TransitRoutesByImportSourceRequest {
-    
+public struct UTTransitRoutesByImportSourceRequest: TransitRoutesByImportSourceRequest {
+
     public typealias Result = [TransitDetailedRouteInfo]
-    public typealias Parser = (json:AnyObject?, logger:Logger) throws -> Result
+    public typealias Parser = (_ json: Any?, _ logger: Logger) throws -> Result
+    public let endpoint = "static/routes/info/Source"
 
     /// Source for transit routes
-    public let source:TransitRoutesImportSource
-    
+    public let source: TransitRoutesImportSource
+
     /// Parser to use when processing response to the request
-    public let parser:Parser
+    public let parser: Parser
 
     /// Initialize an instance of `UTTransitRoutesByImportSourceRequest`
     /// - parameters:
     ///   - agencyID: The agency ID for the transit agency to fetch data for.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(agencyID:String, parser:Parser = urbanThingsParser) {
+    public init(agencyID: String, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.source = .AgencyID(agencyID)
     }
-    
+
     /// Initialize an instance of `UTTransitRoutesByImportSourceRequest`
     /// - parameters:
     ///   - importSource: The import source to fetch data for.
     ///   - parser: Optional custom parser to process the response from the server. If omitted standard parser will be used.
-    public init(importSource:String, parser:Parser = urbanThingsParser) {
+    public init(importSource: String, parser: @escaping Parser = urbanThingsParser) {
         self.parser = parser
         self.source = .ImportSource(importSource)
     }

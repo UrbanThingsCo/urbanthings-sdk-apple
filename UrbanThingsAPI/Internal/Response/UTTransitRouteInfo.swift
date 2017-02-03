@@ -21,7 +21,7 @@ class UTTransitRouteInfo : UTObject, TransitRouteInfo {
     let routeType:TransitMode
     let centerPoint:Location?
 
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.agencyCode = try parse(optional:json, key: .AgencyCode, type: UTTransitRouteInfo.self)
         self.routeID = try parse(optional:json, key: .RouteID, type: UTTransitRouteInfo.self)
         self.lineName = try parse(optional:json, key: .LineName, type: UTTransitRouteInfo.self)

@@ -1,6 +1,4 @@
-{
-    "success": true,
-    "data": [
+[
              {
              "agencyCode": "TFL",
              "routeID": "TFL-1",
@@ -82,4 +80,3 @@
              "centrePointLng": -0.4020135
              }
         ]
-}

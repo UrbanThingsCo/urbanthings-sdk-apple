@@ -17,7 +17,7 @@ public protocol ImportSource : Attribution {
     /// Optional comments to clarify the source of the data or explain its origin.
     var comments:String? { get }
     /// Optional URL to a web page describing the source of the data.
-    var sourceInfoURL:NSURL? { get }
+    var sourceInfoURL:URL? { get }
     /// Optional URL linking to the external data itself.
-    var sourceDataURL:NSURL? { get }
+    var sourceDataURL:URL? { get }
 }

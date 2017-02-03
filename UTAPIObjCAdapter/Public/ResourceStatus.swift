@@ -32,7 +32,7 @@ import UTAPI
     /// Import source ID detailing where the status information is being obtained from.
     var importSourceID:String { get }
     /// Timestamp detailing time that the data applies to.
-    var timestamp:NSDate { get }
+    var timestamp:Date { get }
     /// A text message detailing the current status if available/applicable.
     var statusText:String? { get }
     var hasPlaceInformation: Bool { get }
@@ -62,7 +62,7 @@ import UTAPI
     
     public var primaryCode:String { return self.resourceStatus.primaryCode }
     public var importSourceID:String { return self.resourceStatus.importSourceID }
-    public var timestamp:NSDate { return self.resourceStatus.timestamp }
+    public var timestamp:Date { return self.resourceStatus.timestamp }
     public var statusText:String? { return self.resourceStatus.statusText }
     public var hasPlaceInformation: Bool { return self.resourceStatus.availablePlaces != nil && self.resourceStatus.takenPlaces != nil }
     public var availablePlaces:Int { return self.resourceStatus.availablePlaces ?? 0 }

@@ -23,7 +23,7 @@ class UTStopBoardRow : UTObject, StopBoardRow {
     let timeMajorLabel:String? 
     let timeMinorLabel:String?
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.noteText = try parse(optional: json, key: .NoteText, type: UTStopBoardRow.self)
         self.isRTI = try parse(required: json, key: .IsRTI, type: UTStopBoardRow.self)
         self.groupID = try parse(optional: json, key: .GroupID, type: UTStopBoardRow.self)

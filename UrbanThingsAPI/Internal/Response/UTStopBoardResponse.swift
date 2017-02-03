@@ -10,14 +10,12 @@ import Foundation
 
 class UTStopBoardResponse : UTRTIResponse, StopBoardResponse {
     
-    let timestamp:NSDate?
+    let timestamp:Date?
     let stopBoards:[StopBoard]?
-    let enableAutoRefresh:Bool
 
-    override init(json: [String : AnyObject]) throws {
-        self.timestamp = try parse(optional:json, key: .Timestamp, type:UTStopBoardResponse.self) { try NSDate.toDate($0) }
+    override init(json: [String : Any]) throws {
+        self.timestamp = try parse(optional: json, key: .Timestamp, type: UTStopBoardResponse.self) { try Date.toDate(json: $0) }
         self.stopBoards = try [UTStopBoard](required: json[.StopBoards]).map { $0 as StopBoard }
-        self.enableAutoRefresh = try parse(required: json, key: .EnableAutoRefresh, type: UTStopBoardResponse.self)
         try super.init(json: json)
     }
 }

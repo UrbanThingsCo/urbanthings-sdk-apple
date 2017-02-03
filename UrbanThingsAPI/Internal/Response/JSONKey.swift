@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum JSONKey : String {
-    
+public enum JSONKey: String {
+
     case Success = "success"
     case Data = "data"
     case LocalizedErrorMessage = "localizedErrorMessage"
@@ -30,6 +30,7 @@ enum JSONKey : String {
     case Latitude = "lat"
     case Longitude = "lng"
     case StopMode = "stopMode"
+    case HasStopboard = "hasStopBoard"
     case AdditionalCode = "additionalCode"
     case ParentPrimaryCode = "parentPrimaryCode"
     case SmsCode = "smsCode"
@@ -42,6 +43,7 @@ enum JSONKey : String {
     case PlacePointType = "placePointType"
     case SubclassType = "subClassType"
     case AgencyID = "agencyID"
+    case AgencyId = "agencyId"
     case AgencyName = "agencyName"
     case AgencyURL = "agencyURL"
     case AgencyTimeZone = "agencyTimeZone"
@@ -66,8 +68,10 @@ enum JSONKey : String {
     case RouteInfo = "routeInfo"
     case ScheduledCall = "scheduledCall"
     case RouteDescription = "routeDescription"
+    case CenterPoint = "centerPoint"
     case AgencyCode = "agencyCode"
     case RouteID = "routeID"
+    case RouteId = "routeId"
     case LineName = "lineName"
     case LineColor = "lineColor"
     case LineTextColor = "lineTextColor"
@@ -157,6 +161,7 @@ enum JSONKey : String {
     case MainText = "mainText"
     case LinkText = "linkText"
     case IconURL = "iconURL"
+    case IconUrl = "iconUrl"
     case LinkURL = "linkURL"
     case AvailablePlaces = "availablePlaces"
     case TakenPlaces = "takenPlaces"
@@ -181,16 +186,43 @@ enum JSONKey : String {
     case Duration = "duration"
     case Distance = "distance"
     case Stop = "stop"
-    case Type = "type"
+    case `Type` = "type"
     case LinkedTransitRouteInfo = "linkedTransitRouteInfo"
     case LinkedTransitTripInfo = "linkedTransitTripInfo"
     case ScheduledStopCalls = "scheduledStopCalls"
+    case Location = "location"
+    case Locality = "locality"
+    case PlaceSearchResults = "placeSearchResults"
+    case RouteSearchResults = "routeSearchResults"
+    case Results = "results"
+    case PrimaryColor = "primaryColor"
+    case PrimaryColorCompliment = "primaryColorCompliment"
+    case SecondaryColor = "secondaryColor"
+    case SecondaryColorCompliment = "secondaryColorCompliment"
+    case MarketingDescription = "marketingDescription"
+    case Branding = "branding"
+    case DisplayName = "displayName"
+    case OperatingAreaName = "operatingAreaName"
+    case Agencies = "agencies"
+    case ReferenceData = "referenceData"
+    case LogoUrl = "logoUrl"
+    case AttributionText = "attributionText"
+    case AttributionImageUrl = "attributionImageUrl"
+    case Kind = "kind"
+    case Nature = "nature"
+    case Value = "value"
+    case Modifier = "modifier"
+    case TimeZone = "timeZone"
+    case Language = "language"
+    case Region = "region"
+    case Presences = "presences"
+    case Items = "items"
 }
 
-extension Dictionary where Key: StringLiteralConvertible, Value: AnyObject {
-    subscript(key:JSONKey) -> AnyObject? {
+extension Dictionary where Key: ExpressibleByStringLiteral, Value: Any {
+    subscript(key: JSONKey) -> Any? {
         get {
-            if let dict = (self as? AnyObject) as? [String:AnyObject] {
+            if let dict = (self as Any) as? [String:Any] {
                 return dict[key.rawValue]
             }
             return nil

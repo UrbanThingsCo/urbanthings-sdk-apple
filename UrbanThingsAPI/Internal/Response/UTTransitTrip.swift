@@ -15,7 +15,7 @@ class UTTransitTrip : UTObject, TransitTrip {
     let stopCalls:[TransitStopScheduledCallSummary]
     let polyline:String?
 
-    override init(json:[String:AnyObject]) throws {
+    override init(json:[String:Any]) throws {
         self.info = try parse(required:json, key: .Info, type: UTTransitTrip.self) as UTTransitTripInfo
         self.calendar = try parse(optional:json, key: .Calendar, type: UTTransitTrip.self) as UTTransitCalendar?
         self.stopCalls = try parse(required:json, key: .StopCalls, type:UTTransitTrip.self) { try [UTTransitStopScheduledCallSummary](required:$0) }.map { $0 as TransitStopScheduledCallSummary }

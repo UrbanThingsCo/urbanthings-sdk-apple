@@ -12,9 +12,9 @@ import UTAPI
 /// `Journey` defines a journey that fulfills a directions request
 @objc public protocol Journey : NSObjectProtocol {
     /// Arrival time for the journey.
-    var arrivalTime:NSDate? { get }
+    var arrivalTime:Date? { get }
     /// Departure time for the journey.
-    var departureTime:NSDate? { get }
+    var departureTime:Date? { get }
     /// Summary text for the journey with HTML formatting.
     var summaryHTML:String? { get }
     /// Duration of the journey in seconds if available, will be zero if no information provided.
@@ -36,8 +36,8 @@ import UTAPI
         self.legs = [] //
     }
     
-    public var arrivalTime:NSDate? { return self.adapted.arrivalTime }
-    public var departureTime:NSDate? { return self.adapted.departureTime }
+    public var arrivalTime:Date? { return self.adapted.arrivalTime }
+    public var departureTime:Date? { return self.adapted.departureTime }
     public var summaryHTML:String? { return self.adapted.summaryHTML }
     public var duration:UInt { return self.adapted.duration ?? 0 }
     public let legs:[JourneyLeg]

@@ -28,7 +28,7 @@ import UTAPI
     var sourceName:String { get }
     /// The time at which this report was generated. Can be used to generate a more accurate 'waiting time until vehicle comes'
     /// since we know what the server THOUGHT the time was when it generated the expected time.
-    var timestamp:NSDate? { get }
+    var timestamp:Date? { get }
 }
 
 @objc public class UTTransitStopRTIReport : UTAttribution, TransitStopRTIReport {
@@ -47,5 +47,5 @@ import UTAPI
     public let disruptions:[Disruption]
     public var noDataLabel:String? { return self.transitStopRTIReport.noDataLabel }
     public var sourceName:String { return self.transitStopRTIReport.sourceName }
-    public var timestamp:NSDate? { return self.transitStopRTIReport.timestamp }
+    public var timestamp:Date? { return self.transitStopRTIReport.timestamp }
 }

@@ -10,8 +10,6 @@ import Foundation
 
 protocol APIResponseType {
     associatedtype DataType
-    
-    var success:Bool { get }
-    var localizedErrorMessage:String? { get }
-    var data:DataType? { get }
+
+    var data: DataType? { get }
 }

@@ -15,5 +15,5 @@ public protocol PlacePointList {
     /// The source of the location lookup which should be displayed to end-users
     var sourceName:String { get }
     /// A URL to a graphic representing the source of the location lookup which should be displayed to end-users
-    var sourceIconURL:NSURL { get }
+    var sourceIconURL:URL { get }
 }

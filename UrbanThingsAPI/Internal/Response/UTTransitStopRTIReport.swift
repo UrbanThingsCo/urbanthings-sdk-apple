@@ -16,9 +16,9 @@ class UTTransitStopRTIReport : UTAttribution, TransitStopRTIReport {
     let disruptions:[Disruption]
     let noDataLabel:String?
     let sourceName:String
-    let timestamp:NSDate?
+    let timestamp:Date?
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.reportName = try parse(optional: json, key: .ReportName, type: UTTransitStopRTIReport.self)
         self.platformID = try parse(optional: json, key: .PlatformID, type: UTTransitStopRTIReport.self)
         self.upcomingCalls = try parse(required:json, key: .UpcomingCalls, type:UTTransitStopRTIReport.self) { try [UTMonitoredStopCall](required:$0) }.map { $0 as MonitoredStopCall }

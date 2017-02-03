@@ -28,7 +28,7 @@ import Foundation
 
 /// ErrorType enum for errors that occur whilst parsing a Google polyline into
 /// set of coordinate points.
-public enum GooglePolylineError: ErrorType {
+public enum GooglePolylineError: Error {
     /// The string was not a valid Google polyline. Error includes the source string and index position of failure within that string.
     case InvalidPolylineString(string:String, errorPosition:String.Index)
 }
@@ -40,8 +40,8 @@ extension GooglePolylineError : CustomStringConvertible {
         get {
             switch self {
             case .InvalidPolylineString(let string, let errorPosition):
-                let offset = string.startIndex.distanceTo(errorPosition)
-                let char = string.characters[string.characters.startIndex.advancedBy(offset)]
+                let offset = string.characters.distance(from: string.startIndex, to: errorPosition)
+                let char = string.characters[string.characters.index(string.characters.startIndex, offsetBy:offset)]
                 return "Invalid Google Polyline \"\(string)\". '\(char)' at position \(offset)"
             }
         }

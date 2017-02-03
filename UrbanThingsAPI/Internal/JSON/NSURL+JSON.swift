@@ -8,19 +8,19 @@
 
 import Foundation
 
-extension NSURL {
+extension URL {
     
-    class func fromJSON(required required:AnyObject?) throws -> NSURL {
+    public static func fromJSON(required:Any?) throws -> URL {
         guard let urlString = required as? String else {
-            throw Error(jsonParseError:"Expected String, not \(required)", file:#file, function:#function, line:#line)
+            throw UTAPIError(jsonParseError:"Expected String, not \(required)", file:#file, function:#function, line:#line)
         }
-        guard let url = NSURL(string:urlString) else {
-            throw Error(jsonParseError:"Invalid url string \(urlString)", file:#file, function:#function, line:#line)
+        guard let url = URL(string: urlString) else {
+            throw UTAPIError(jsonParseError:"Invalid url string \(urlString)", file:#file, function:#function, line:#line)
         }
         return url
     }
     
-    class func fromJSON(optional optional:AnyObject?) throws -> NSURL? {
+    public static func fromJSON(optional:Any?) throws -> URL? {
         guard optional != nil else {
             return nil
         }

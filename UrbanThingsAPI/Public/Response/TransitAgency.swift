@@ -15,7 +15,7 @@ public protocol TransitAgency {
     /// The name of the transit agency.
     var agencyName:String { get }
     /// The main website for the agency.
-    var agencyURL:NSURL { get }
+    var agencyURL:URL { get }
     /// The time zone in which the agency's head office is based.
     var agencyTimeZone:NSTimeZone { get }
     /// An ISO language code representing the agency's main operating language.
@@ -23,7 +23,7 @@ public protocol TransitAgency {
     /// An International phone number for the agency's transit-related customer service department.
     var agencyPhone:String? { get }
     /// The URL of a page detailing the agency's fares, if available.
-    var agencyFareURL:NSURL? { get }
+    var agencyFareURL:URL? { get }
     /// The location of the agency.
     var agencyRegion:String? { get }
     /// The data import source for this agency.

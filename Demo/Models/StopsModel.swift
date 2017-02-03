@@ -10,8 +10,9 @@ import Foundation
 import UTAPI
 import CoreLocation
 
-// Replace string with your API key
-let ApiKey = "12345"
+// Replace string with your API key, available by registering at
+// https://portal-bristol.api.urbanthings.io/#/signup
+let ApiKey = "YOUR_API_KEY"
 
 /// Notification that is sent whenever there is a data update received from the server.
 let StopDataUpdated = "StopDataUpdated"
@@ -190,7 +191,8 @@ class StopsModel {
                             var map = [String:RequestItem]()
                             self.deferred.forEach { map[$0.stopID] = $0 }
                             data.forEach {
-                                // Lets call some ObjC code
+                                // Lets call some ObjC code, so we adapt the pure swift object
+                                // and pass to ObjC method
                                 ObjCDemo.logStatus(UTAPIObjCAdapter.UTResourceStatus(adapt: $0))
                                 if let item = map[$0.primaryCode] {
                                     let msg = $0.statusText ?? Unavailable

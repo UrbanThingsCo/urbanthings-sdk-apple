@@ -1,6 +1,4 @@
-{
-"success": true,
-"data": [
+[
 {
 "routeDescription": "Keepers Corner - Reigate Sixth Form College",
 "agencyCode": "UK_TNDS_NOC_SPSV",
@@ -132,4 +130,3 @@
 "centrePointLng": -4.448485204
 }
 ]
-}

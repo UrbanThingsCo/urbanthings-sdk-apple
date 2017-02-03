@@ -24,7 +24,7 @@ class UTStopBoard : UTAttribution, StopBoard {
     let color:UTColor?
     let colorCompliment:UTColor?
 
-    override init(json: [String : AnyObject]) throws {
+    override init(json: [String : Any]) throws {
         self.headerLabel = try parse(optional: json, key: .HeaderLabel, type: UTStopBoard.self)
         self.rows = try parse(required:json, key: .Rows, type:UTStopBoard.self) { try [UTStopBoardRow](required:$0) }.map { $0 as StopBoardRow }
         self.groups = try parse(required:json, key: .Groups, type:UTStopBoard.self) { try [UTStopBoardGroup](required:$0) }.map { $0 as StopBoardGroup }

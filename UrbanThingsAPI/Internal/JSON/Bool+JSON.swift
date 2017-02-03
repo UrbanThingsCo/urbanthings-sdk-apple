@@ -15,9 +15,9 @@ extension Bool : JSONInitialization {
     ///  - parameters:
     ///    - required: Input JSON object that is required to be parsed into a `Bool`.
     ///  - throws: Error.JSONParseError if unable to parse into `Bool`.
-    init(required:AnyObject?) throws {
+    public init(required:Any?) throws {
         guard let value = required as? Bool else {
-            throw Error(expected:Bool.self, not:required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected:Bool.self, not:required, file:#file, function:#function, line:#line)
         }
         self = value
     }
@@ -27,7 +27,7 @@ extension Bool : JSONInitialization {
     ///  - parameters:
     ///    - optional: Input JSON object that is to be parsed into a `Bool`.
     ///  - throws: Error.JSONParseError if unable to parse non-nil input into `Bool`.
-    init?(optional:AnyObject?) throws {
+    public init?(optional:Any?) throws {
         guard optional != nil else {
             return nil
         }

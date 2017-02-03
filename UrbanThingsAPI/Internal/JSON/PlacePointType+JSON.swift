@@ -17,17 +17,17 @@ extension PlacePointType : JSONInitialization {
     ///  - parameters:
     ///    - required: Input JSON object that is required to be parsed into a `PlacePointType`.
     ///  - throws: Error.JSONParseError if unable to parse into `PlacePointType`.
-    init(required:AnyObject?) throws {
+    public init(required:Any?) throws {
         guard let rawValue = required as? Int else {
-            throw Error(expected:Int.self, not:required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected:Int.self, not:required, file:#file, function:#function, line:#line)
         }
         guard let value = PlacePointType(rawValue:rawValue) else {
-            throw Error(enumType: PlacePointType.self, invalidRawValue: rawValue, file:#file, function:#function, line:#line)
+            throw UTAPIError(enumType: PlacePointType.self, invalidRawValue: rawValue, file:#file, function:#function, line:#line)
         }
         self = value
     }
     
-    init?(optional:AnyObject?) throws {
+    public init?(optional:Any?) throws {
         guard let rawValue = optional as? Int else {
             return nil
         }

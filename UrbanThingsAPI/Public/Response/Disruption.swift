@@ -35,9 +35,9 @@ import Foundation
 /// Defines properties for a disruption record.
 public protocol Disruption {
     /// The date and time at which this disruption started, or will start. If nil, the start date/time of the disruption is assumed to have passed
-    var startDate:NSDate? { get }
+    var startDate:Date? { get }
     /// The date and time at which this disruption will end, or ended. If nil, it is assumed that the end date/time of the disruption has not passed
-    var endDate:NSDate? { get }
+    var endDate:Date? { get }
     /// A textual summary description of the nature of the disruption
     var localizedSummary:String? { get }
     /// A detailed description of the nature of the disruption

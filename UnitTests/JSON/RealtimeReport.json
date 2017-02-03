@@ -1,6 +1,4 @@
 {
-    "success": true,
-    "data": {
         "stopID": "490007418W",
         "rtiReports": [
                        {
@@ -99,5 +97,4 @@
                        }
                        ],
         "sourceName": "Multiple"
-    }
 }

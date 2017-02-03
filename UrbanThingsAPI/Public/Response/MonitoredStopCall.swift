@@ -19,9 +19,9 @@ import Foundation
 /// `MonitoredStopCall` contains realtime information for a timetabled call at a transit stop.
 public protocol MonitoredStopCall : StopCall {
     /// The real time estimate of when this vehicle is expected to arrive at the stop.
-    var expectedArrivalTime:NSDate? { get }
+    var expectedArrivalTime:Date? { get }
     /// The real time estimate of when this vehicle is expected to depart from the stop.
-    var expectedDepartureTime:NSDate? { get }
+    var expectedDepartureTime:Date? { get }
     /// The real time estimate of the distance from the stop, along the route, that the vehicle is presently located at.
     var distanceMetres:Int? { get }
     /// A value to aid presentation; this indicates whether a time based or distance based display is most appropriate.
@@ -36,17 +36,17 @@ public protocol MonitoredStopCall : StopCall {
 
 extension MonitoredStopCallDisplayFormat : JSONInitialization {
     
-    init(required:AnyObject?) throws {
+    public init(required:Any?) throws {
         guard let rawValue = required as? Int else {
-            throw Error(expected: Int.self, not: required, file:#file, function:#function, line:#line)
+            throw UTAPIError(expected: Int.self, not: required, file:#file, function:#function, line:#line)
         }
         guard let value = MonitoredStopCallDisplayFormat(rawValue:rawValue) else {
-            throw Error(enumType: MonitoredStopCallDisplayFormat.self, invalidRawValue: rawValue, file:#file, function:#function, line:#line)
+            throw UTAPIError(enumType: MonitoredStopCallDisplayFormat.self, invalidRawValue: rawValue, file:#file, function:#function, line:#line)
         }
         self = value
     }
     
-    init?(optional:AnyObject?) throws {
+    public init?(optional:Any?) throws {
         guard optional != nil else {
             return nil
         }

@@ -22,13 +22,13 @@ extension LocationFilter : CustomStringConvertible {
     
     public var description:String {
         switch self {
-        case Point(let location, let country):
+        case .Point(let location, let country):
             if let country = country {
                 return "LocationFilter.Point(\(location), \(country)"
             } else {
                 return "LocationFilter.Point(\(location))"
             }
-        case Country(let country):
+        case .Country(let country):
             return "LocationFilter.Country(\(country))"
         }
     }

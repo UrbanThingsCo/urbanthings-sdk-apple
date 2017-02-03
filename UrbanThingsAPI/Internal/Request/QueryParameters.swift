@@ -8,10 +8,10 @@
 
 import Foundation
 
-typealias QueryParameters = [QueryKey:QueryParameter]
+public typealias QueryParameters = [QueryKey:QueryParameter]
 
-enum QueryParameter {
-    init(_ value:Any?) {
+public enum QueryParameter {
+    public init(_ value: Any?) {
         if let value = value {
             if let array = value as? [Any] {
                 self = .Array(array)
@@ -26,21 +26,21 @@ enum QueryParameter {
             self = .Nil
         }
     }
-    
+
     case Value(Any)
     case Array([Any])
     case Nil
 }
 
 extension QueryParameter : CustomStringConvertible {
-    var description:String {
+    public var description: String {
         switch self {
         case .Nil:
             return ""
         case .Value(let v):
             return "\(v)"
         case .Array(let a):
-            return a.map { "\($0)" }.joinWithSeparator(",")
+            return a.map { "\($0)" }.joined(separator: ",")
         }
     }
 }
@@ -49,10 +49,10 @@ extension Dictionary {
 
     var description: String {
         let params = self
-            .map { (k,v) in ("\(k)", "\(v)") }
-            .filter { (k,v) in v.characters.count > 0 }
-            .map { (k,v) in "\(k)=\(v.stringByURLEncodingAsQueryParameterValue())" }
-            .joinWithSeparator("&")
+            .map { (k, v) in ("\(k)", "\(v)") }
+            .filter { (k, v) in v.characters.count > 0 }
+            .map { (k, v) in "\(k)=\(v.stringByURLEncodingAsQueryParameterValue())" }
+            .joined(separator: "&")
         if params.characters.count > 0 {
             return "?" + params
         }
@@ -61,11 +61,11 @@ extension Dictionary {
 }
 
 func +(lhs: QueryParameters, rhs: QueryParameters) -> QueryParameters {
-    
+
     var result = lhs
-    rhs.forEach { (k,v) in
+    rhs.forEach { (k, v) in
         if let existing = result[k] {
-            result[k] = QueryParameter.Array([existing,v].map {
+            result[k] = QueryParameter.Array([existing, v].map {
                 switch $0 {
                 case .Value(let v):
                     return QueryParameter.Array([v])
@@ -83,7 +83,7 @@ func +(lhs: QueryParameters, rhs: QueryParameters) -> QueryParameters {
 }
 
 extension TransitRoutesByLineNameRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.LineName:QueryParameter(lineName),
                 QueryKey.ExactMatch:QueryParameter(exactMatch),
                 QueryKey.AgencyRegion:QueryParameter(agencyRegion)]
@@ -92,36 +92,36 @@ extension TransitRoutesByLineNameRequest {
 }
 
 extension TransitRoutesImportSource {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         switch self {
-        case AgencyID(let agencyID):
+        case .AgencyID(let agencyID):
             return [QueryKey.AgencyID: QueryParameter(agencyID)]
-        case ImportSource(let source):
+        case .ImportSource(let source):
             return [QueryKey.ImportSource: QueryParameter(source)]
         }
     }
 }
 
 extension TransitRoutesByImportSourceRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return self.source.queryParameters
     }
 }
 
 extension TransitRoutesByStopRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.StopID: QueryParameter.Value(stopID)]
     }
 }
 
 extension TransitAgencyRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.AgencyID:QueryParameter.Value(agencyID)]
     }
 }
 
 extension AreaFilter {
-    var queryParameters:QueryParameters {
+    var queryParameters: QueryParameters {
         switch self {
         case .Circle(let center, let radius):
             return [QueryKey.CenterLat:QueryParameter(center.latitude),
@@ -137,7 +137,7 @@ extension AreaFilter {
 }
 
 extension RouteOrTripID {
-    var queryParameters:QueryParameters {
+    var queryParameters: QueryParameters {
         switch self {
         case .RouteID(let routeID):
             return [QueryKey.RouteID: QueryParameter(routeID)]
@@ -148,7 +148,7 @@ extension RouteOrTripID {
 }
 
 extension TransitTripsRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return routeOrTripID.queryParameters +
             [QueryKey.OriginStopID:QueryParameter(originStopID),
              QueryKey.DestStopID:QueryParameter(destinationStopID),
@@ -158,13 +158,13 @@ extension TransitTripsRequest {
 }
 
 extension TransitAgenciesRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.ImportSource:QueryParameter.Value(importSource)]
     }
 }
 
 extension TransitTripGroupsRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.RouteID:QueryParameter(routeID),
                 QueryKey.IncludePolylines: QueryParameter(includePolylines),
                 QueryKey.IncludeStopCoordinates: QueryParameter(includeStopCoordinates)]
@@ -172,19 +172,19 @@ extension TransitTripGroupsRequest {
 }
 
 extension RealtimeResourceStatusRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.StopIDs: QueryParameter(stopID)]
     }
 }
 
 extension RealtimeResourcesStatusRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.StopIDs: QueryParameter(stopIDs)]
     }
 }
 
 extension LocationFilter {
-    var queryParameters:QueryParameters {
+    var queryParameters: QueryParameters {
         switch self {
         case .Point(let point, let country):
             return [QueryKey.Lat:QueryParameter(point.latitude),
@@ -197,7 +197,7 @@ extension LocationFilter {
 }
 
 extension PlacePointsRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return area.queryParameters +
             [QueryKey.PlacePointTypes:QueryParameter(placepointTypes?.map { $0.rawValue }),
              QueryKey.MaxResults:QueryParameter(maximumResults)]
@@ -205,7 +205,7 @@ extension PlacePointsRequest {
 }
 
 extension TransitStopsRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return area.queryParameters +
             [QueryKey.StopName:QueryParameter(stopName),
              QueryKey.ImportSource:QueryParameter(importSource),
@@ -216,7 +216,7 @@ extension TransitStopsRequest {
 }
 
 extension PlacesListRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return self.location.queryParameters + [QueryKey.Name:QueryParameter(name),
                                                 QueryKey.PlacePointTypes:QueryParameter(placePointTypes?.map { $0.rawValue }),
                                                 QueryKey.MaxResultsPerType:QueryParameter(maximumResultsPerType)]
@@ -224,7 +224,7 @@ extension PlacesListRequest {
 }
 
 extension TransitStopCallsRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.StopID: QueryParameter(stopID),
                 QueryKey.QueryTime: QueryParameter(queryTime),
                 QueryKey.LookAheadMinutes: QueryParameter(lookAheadMinutes)]
@@ -232,7 +232,7 @@ extension TransitStopCallsRequest {
 }
 
 extension RealtimeReportRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.StopID: QueryParameter(stopID),
                 QueryKey.LookAheadMinutes: QueryParameter(lookAheadMinutes),
                 QueryKey.MaximumItems: QueryParameter(maximumItems)]
@@ -240,7 +240,7 @@ extension RealtimeReportRequest {
 }
 
 extension RealtimeStopboardRequest {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         return [QueryKey.StopID: QueryParameter(stopID),
                 QueryKey.MaximumItems: QueryParameter(maximumItems),
                 QueryKey.VehiclePassingType: QueryParameter(vehiclePassingType),
@@ -249,19 +249,19 @@ extension RealtimeStopboardRequest {
 }
 
 extension TransitRoutesByLineRequiredParameters {
-    var queryParameters:QueryParameters {
+    public var queryParameters: QueryParameters {
         switch self {
-        case Location(let location, let agencyID, let importSource):
+        case .Location(let location, let agencyID, let importSource):
             return [QueryKey.Lat: QueryParameter(location.latitude),
                     QueryKey.Lng: QueryParameter(location.longitude),
                     QueryKey.AgencyID: QueryParameter(agencyID),
                     QueryKey.ImportSource: QueryParameter(importSource)]
-        case AgencyID(let agencyID, let location, let importSource):
+        case .AgencyID(let agencyID, let location, let importSource):
             return [QueryKey.Lat: QueryParameter(location?.latitude),
                     QueryKey.Lng: QueryParameter(location?.longitude),
                     QueryKey.AgencyID: QueryParameter(agencyID),
                     QueryKey.ImportSource: QueryParameter(importSource)]
-        case ImportSource(let importSource, let location, let agencyID):
+        case .ImportSource(let importSource, let location, let agencyID):
             return [QueryKey.Lat: QueryParameter(location?.latitude),
                     QueryKey.Lng: QueryParameter(location?.longitude),
                     QueryKey.AgencyID: QueryParameter(agencyID),
@@ -269,4 +269,3 @@ extension TransitRoutesByLineRequiredParameters {
         }
     }
 }
-
