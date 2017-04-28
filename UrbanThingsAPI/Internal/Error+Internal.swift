@@ -73,7 +73,7 @@ extension UTAPIError {
     ///    - function: Function name, use #function for this parameter or provide other string detailing function or class information
     ///    - line: Line number of error, use #line for this parameter
     public init<T>(expected: T.Type, not: Any?, file: String, function: String, line: Int) {
-        self.init(jsonParseError:"Expected \(expected) value, not \(not)", file:file, function:function, line:line)
+        self.init(jsonParseError:"Expected \(expected) value, not \(String(describing: not))", file:file, function:function, line:line)
     }
 
     /// Constructs Error for invalid raw value when parsing JSON to enum type
