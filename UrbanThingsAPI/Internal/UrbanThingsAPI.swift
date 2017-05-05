@@ -28,7 +28,7 @@ extension UrbanThingsAPI {
 
     func toHttpResponse(response: URLResponse?) throws -> HTTPURLResponse {
         guard let httpResponse = response as? HTTPURLResponse else {
-            throw UTAPIError(unexpected: "Expected HTTPURLResponse, got \(response)", file: #file, function: #function, line: #line)
+            throw UTAPIError(unexpected: "Expected HTTPURLResponse, got \(String(describing: response))", file: #file, function: #function, line: #line)
         }
         return httpResponse
     }

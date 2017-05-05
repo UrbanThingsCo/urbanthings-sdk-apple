@@ -12,7 +12,7 @@ extension URL {
     
     public static func fromJSON(required:Any?) throws -> URL {
         guard let urlString = required as? String else {
-            throw UTAPIError(jsonParseError:"Expected String, not \(required)", file:#file, function:#function, line:#line)
+            throw UTAPIError(jsonParseError:"Expected String, not \(String(describing: required))", file:#file, function:#function, line:#line)
         }
         guard let url = URL(string: urlString) else {
             throw UTAPIError(jsonParseError:"Invalid url string \(urlString)", file:#file, function:#function, line:#line)
