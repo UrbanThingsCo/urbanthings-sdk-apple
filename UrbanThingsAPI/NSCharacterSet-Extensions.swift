@@ -29,9 +29,7 @@ import Foundation
 extension CharacterSet {
     
     private static var characterSet: CharacterSet = {
-        var set = CharacterSet.urlQueryAllowed
-        
-        set.remove(charactersIn: "&=:")
+        let set = CharacterSet(charactersIn: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*-._")
         return set
     }()
     
