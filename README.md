@@ -1,7 +1,7 @@
 ![Logo](http://urbanthings.co/wp-content/themes/urbanthings/assets/images/urbanthings_logo_small.png)
 
 # UrbanThings API Framework for Apple Platforms
-[![Carthage compatible](https://img.shields.io/badge/Version-0.9.4-109480.svg?style=flat)]()
+[![Carthage compatible](https://img.shields.io/badge/Version-0.9.5-109480.svg?style=flat)]()
 [![CI Status](http://img.shields.io/travis/urbanthings/urbanthings-sdk-apple.svg?style=flat)](https://travis-ci.org/urbanthings/urbanthings-sdk-apple)
 
 ## Introduction
@@ -14,7 +14,7 @@ The SDK has been developed in Swift and is to be used with Swift.  This is in or
 [![Platform](https://img.shields.io/badge/Platforms-iOS|tvOS|watchOS|OSX-109480.svg?style=flat)]()
 [![Swift Version](https://img.shields.io/badge/Swift-2.2-109480.svg?style=flat)](https://developer.apple.com/swift)
 
-The SDK is compatible with iOS (including extensions), OS X (incuding extensions), tvOS and watchKit. It is built with Xcode 7.3.1 / Swift 2.2. Deployment versions supported are as follows:
+The SDK is compatible with iOS (including extensions), OS X (incuding extensions), tvOS and watchKit. It is built with Xcode 8.3.3 / Swift 3.1. Deployment versions supported are as follows:
 
 Platform | Min Supported Version
 ---------|----------------------
@@ -65,7 +65,10 @@ To request data from the server, you instantiate an instance of the `UrbanThings
 ```
 import UTAPI
 
-let api = UrbanThingsAPI("A valid API key")
+let service = UTService(endpoint: "https://bristol.api.urbanthings.io/api",
+                        version: "2.0",
+                        key: "A valid API key")
+let api = UrbanThingsAPI(service: service)
 ```
 
 A single instance can be safely used for all requests during the lifetime of an application, but you can create and destroy instances as you need and maintain multiple instances at the same time.
@@ -75,20 +78,20 @@ A single instance can be safely used for all requests during the lifetime of an 
 Requests are made by calling `sendRequest` and passing it a `Request`.  Basic usage is as easy as passing in one of the `UT...Request` objects provided, all of which implement the required protocols.  For example:
 
 ```
-api.sendRequest(UTImportSourcesRequest()) { data, error in
+api.send(request: UTImportSourcesRequest()) { data, error in
 }
 ```
 
 Data is [returned asynchronously](#responses) as part of the trailing closure ([see below](#responses)).
 
-You can use such [pre-provided default implementations](#supported-requests) of all Requests, or advanced users may wish to [create their own](#custom-requests).
+You can use such [pre-provided default implementations](#supported-requests) of all Requests, or advanced users may wish to create their own implementation by implementing the appropraite protocol(s).
 
 #### Passing in request data
 Many API requests require the passing of input data to specify the required parameters.  For example, let's request the set of place points within a 500 metre radius of the UrbanThings office:
 
 ```
 let myOffice = CLLocationCoordinate2D(latitude: 51.5291205, longitude:-0.0802295)
-api.sendRequest(UTPlacePointsRequest(center:myOffice, radius:500)) { data, error in
+    api.send(request: UTPlacePointsRequest(center:myOffice, radius:500)) { data, error in
 }
 ```
 
@@ -98,14 +101,14 @@ In this way, the SDK design prevents many invalid requests from being constructe
 
 <a name="responses"></a>
 ## Handing the response
-The `sendRequest` method is asynchronous and a closure is provided when making the call to pass back the results of that call when available. The `completionHandler` closure receives optional arguments: `data` (populated if a request succeeds) and `error` (populated if a request fails).
+The `send` method is asynchronous and a closure is provided when making the call to pass back the results of that call when available. The `completionHandler` closure receives optional arguments: `data` (populated if a request succeeds) and `error` (populated if a request fails).
 
 The `data` argument is typed to the data expected from the response. The SDK defines a full set of protocols for all data objects returned by the API. Internally, the response JSON is parsed into implementations of these protocols which are then passed to the completion handler closure. This means in your code you are always working with the correctly typed objects and thus no mis-interpreation of the data can occur. This is all enforced at compile time.
 
 Let's extend the example above to include some processing of the response:
 
 ```
-api.sendRequest(UTPlacePointsRequest(center:office, radius:500)) { data, error in
+api.send(request: UTPlacePointsRequest(center:office, radius:500)) { data, error in
 	if let data = data {
 		for placePoint in data.placePoints {
 			print("\(placePoint.name)")
@@ -121,7 +124,7 @@ In this case data is `PlacePointList?`, an optional for the protocol `PlacePoint
 Let's examine an alternative request, for a list of import sources:
 
 ```
-api.sendRequest(UTImportSourcesRequest()) { data, error in
+api.send(request: UTImportSourcesRequest()) { data, error in
 	if let data = data {
 		for importSource in data {
 			print("\(importSource.importSourceID) - \(importSource.name)")
@@ -134,107 +137,6 @@ api.sendRequest(UTImportSourcesRequest()) { data, error in
 Here the response data is typed as `[ImportSource]?`, an optional for an array containing instances of the `ImportSource` protocol. Again we can access this data through the protocol with full type safety.
 
 Please see the [online documentation](http://portal-dev.api.urbanthings.io/ios_sdk_docs/Classes/UrbanThingsAPI.html) for details of the full set of protocols that may be received through the API.
-## Advanced Usage
-
-<a name="custom-requests"></a>
-### Customising Requests
-All requests are based on the `Request` protocol. Specific requests are protocols implementing `Request` as well as a protocol defining the particular request that is to be made. For example the `ImportSourceRequest` protocol defines a request that obtains a list of import sources. So to make a request you provide an implementation of the `ImportSourceRequest`. 
-
-Whilst you can implement the various request protocols defined by the API SDK we don't expect you to do this so provide a full set of default implementations. All have the same name as the request protocol that they implement, but prefixed with `UT`.  For example, `ImportSourceRequest` has an SDK provided implementation `UTImportSourcesRequest`.
-
-
-### Configuration
-The entire API SDK is built around protocols allowing easy testing, customization and configuration. At the highest level the `UrbanThingsAPI` is an implementation of `UrbanThingsAPIType`.  This means that an alternative implementation of the entire API could be provided if desired for testing purposes.
-
-When instantiating the provided implementation of the API a number of options for configuration are possible:
-
-#### Logging
-The API protocol `Logger` defines methods for logging instrumentation messages. By default if none is provided by the API client the standard logger is installed in the API instance. This will output messages to the console using the `NSLog` method. There are 4 levels of log message available and the most verbose, `Debug` will only be output when the SDK is build for debug. If you provide your own logger implementation you can handle logging however you see fit.
-
-#### Request Modification
-The API protocol `RequestModifier` defines a method that will be called for every request made by the SDK with the NSURLRequest instance that wil be used to make the request. This gives an opportunity to have sight of the request before its sent and if needed change or modify it. 
-
-#### Session Configuration
-The API makes requests using an instance of NSURLSession. By default this is configured automatically as needed for the API. However if there is a need to provide a different session configuration an alternative session instance can be provided. To aid in providing an alternative session the `NSURLSessionConfiguration` extension class method `sessionConfigurationForUrbanThingsAPI(apiKey:)`. This will return a NSURLSessionConfiguration instance configured for the given API key along with some other requirements for the API use. This may then be modified as needed and used to create an NSURLSession that can be passed to the `UrbanThingsAPI` init method. If a session is provided it will be used for all requests made by the API instance. 
-
-````
-let config = NSURLSessionConfiguration.sessionConfigurationForUrbanThingsAPI(apiKey:"A valid API Key")
-// Modify config as needed
-let session = NSURLSession(configuration:config)
-let api = UrbanThingsAPI(session: session)
-````
-
-#### Request Handler
-The API protocol `RequestHandler` defines a method to make an asychronous request and pass the results back through a completion handler when available. The default implementation used by the API instance makes requests through the NSURLSession instance as outlined above (either internally generated or passed in). If an alternative is provided other handling can be implemented. As an example for testing a version could be written that doesn't actually make network requests but returns canned data responses:
-
-```
-// Mock request cancellaton object that will be returned by the mock
-// request handler.
-public struct MockRequest : UrbanThingsAPIRequest {
-    public func cancel() {}
-}
-
-// An implementation of RequestHandler to mock response to a request. The mock handler
-// is initialized with a file of JSON to return for any requests made through it.
-struct MockRequestHandler : RequestHandler {
-
-    let data:NSData?
-    
-    init(jsonFile:String) {
-        if let path = NSBundle(forClass: MockRequestHandler.self)
-        		.pathForResource(jsonFile, ofType: "json") {
-            data = NSData(contentsOfFile: path)
-        } else {
-            data = nil
-        }
-    }
-    
-    func makeRequest(request:NSURLRequest, 
-                     logger:Logger, 
-                     completion:(NSData?, NSURLResponse?, ErrorType?) -> Void) -> UrbanThingsAPIRequest {
-        
-        let response = NSHTTPURLResponse(URL: request.URL!, 
-                                         statusCode: data != nil ? 200:404,
-                                         HTTPVersion: "1.1", 
-                                         headerFields: ["Content-Type" : "application/json"])
-        completion(data, response, nil)
-        return MockRequest()
-    }
-}
-
-// Lets test response processing of a trips group request
-func testTripGroupsRequest() {
-        
-    // Construct a mock request handler
-    let requestHandler = try MockRequestHandler(jsonFile: "response.json")
-    
-    // Configure a session
-    let config = NSURLSessionConfiguration.sessionConfigurationForUrbanThingsAPI(apiKey:"apikey")
-    let session = NSURLSession(configuration: config)
-    
-    // Create an API instance injecting the mock request handler
-    let api = UrbanThingsAPI(session: session, requestHandler: requestHandler)
-    
-    // Make a request (input data is ignored so anything can be passed for routeID)
-    let _ = api.sendRequest(UTTransitTripGroupRequest(routeID:"abc")) { data, error in
-    
-        // Do validation of data / error based on the input JSON and expected result
-    }
-}
-
-```
-
-Note you can only provide a `RequestHandler` instance if you are also providing the NSURLSession instance as it is assumed that the provided request handler will need to know about the session and it has been left for the implementation of these to decide how that is done (or if it is actually needed at all).
-
-#### Custom Parsing
-As discussed above requests are passed to the API as instances of the `Request` protocol.  A default set of request implementations are provided but custom request implementations can be used if needed. As well as defining the values to be passed up with request it also defines the parser that will be used to process the JSON response from the server. If a custom request is provided it will need to provide a parser. The API framework provides a standard set of parser functions that can be used. These are all named `urbanThingsParser` but through use of generics the approrpiate parser will be used for the response. For example the ImportSourcesRequest returns `[ImportSource]`, an array of import source instances. The parser that returns `[ImportSource]` will be selected to parse JSON into `[ImportSource]`. 
-
-If you do provide your own custom parsers, e.g. to return your own implementation of a response protocol, you don't have to use generics, just a function with the correct signature. 
-
-#### Summary
-The configuration options available allow for great flexibility and easy testability yet also simple use of the API too if these advanced features are not needed. We look forward to hearing your feedback on this approach.
-
-<a name="supported-requests"></a>
 ## Supported requests
 The full set of current request protocols defined alongside their provided implementations is as follows:
 
