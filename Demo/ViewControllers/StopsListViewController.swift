@@ -18,15 +18,15 @@ class StopsListViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.updateObserver = NSNotificationCenter.defaultCenter().addObserver(StopDataUpdated, object: nil, queue: NSOperationQueue.mainQueue()) { _ in
+        self.updateObserver = NotificationCenter.default.addObserver(name: StopDataUpdated, object: nil, queue: OperationQueue.main) { _ in
             self.data = StopsModel.sharedInstance.data
             self.tableView.reloadData()
         }
         
-        self.selectionObserver = NSNotificationCenter.defaultCenter().addObserver(TransitStopSelected, object: nil, queue: NSOperationQueue.mainQueue()) { [weak self] note in
-            if note.object !== self {
-                if let index = self?.data.indexOf({ $0.primaryCode == (note.userInfo?[TransitStopPrimaryCode] as? String) }) {
-                    self?.tableView.selectRowAtIndexPath(NSIndexPath(forRow: index, inSection:0), animated: true, scrollPosition: UITableViewScrollPosition.Top)
+        self.selectionObserver = NotificationCenter.default.addObserver(name: TransitStopSelected, object: nil, queue: OperationQueue.main) { [weak self] note in
+            if (note.object as AnyObject) !== self {
+                if let index = self?.data.index(where: { $0.primaryCode == (note.userInfo?[TransitStopPrimaryCode] as? String) }) {
+                    self?.tableView.selectRow(at: IndexPath(row: index, section:0), animated: true, scrollPosition: UITableViewScrollPosition.top)
                 }
             }
         }
@@ -41,32 +41,32 @@ class StopsListViewController : UITableViewController {
     }
     
     // MARK: UITableViewDataSource
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCellWithIdentifier("StopCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: "StopCell", for: indexPath as IndexPath)
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? StopCell {
-            cell.bind(self.data[indexPath.row])
+            cell.bind(stop: self.data[indexPath.row])
         }
     }
     
-    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? StopCell {
             cell.unbind()
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        NSNotificationCenter.defaultCenter().postNotificationName(TransitStopSelected,
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NotificationCenter.default.post(name: Notification.Name(TransitStopSelected),
                                                                   object: self,
                                                                   userInfo: [TransitStopPrimaryCode:self.data[indexPath.row].primaryCode])
     }

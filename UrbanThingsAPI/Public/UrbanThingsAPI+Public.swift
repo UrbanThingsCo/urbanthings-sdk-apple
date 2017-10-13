@@ -75,6 +75,11 @@ public struct UTService: Service {
     public let endpoint: String
     public let version: String
     public let key: String
+    public init(endpoint: String, version: String, key: String) {
+        self.endpoint = endpoint
+        self.version = version
+        self.key = key
+    }
 }
 
 public extension URLSessionConfiguration {
@@ -187,7 +192,7 @@ public final class UrbanThingsAPI: UrbanThingsAPIType {
         }
         
         let str = NSString(data: urlRequest.httpBody!, encoding: String.Encoding.utf8.rawValue)
-        print("\(str)")
+        print("\(String(describing: str))")
         let modifiedRequest = self.requestModifier?.getRequest(request: urlRequest, logger:logger) ?? urlRequest
 
         return self.requestHandler.makeRequest(request: modifiedRequest, logger:logger, completion: handleResponse(parser: request.parser, result: completionHandler))

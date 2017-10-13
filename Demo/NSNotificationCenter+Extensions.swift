@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSNotificationCenter {
+extension NotificationCenter {
     
     private class AutoReleaseObserver {
         let observer:AnyObject
@@ -16,13 +16,13 @@ extension NSNotificationCenter {
             self.observer = observer
         }
         deinit {
-            NSNotificationCenter.defaultCenter().removeObserver(observer)
+            NotificationCenter.default.removeObserver(observer)
         }
     }
     
-    func addObserver(name:String, object:AnyObject? = nil, queue:NSOperationQueue? = nil, usingBlock block: (NSNotification) -> Void) -> AnyObject {
+    func addObserver(name:String, object:AnyObject? = nil, queue:OperationQueue? = nil, usingBlock block: @escaping (Notification) -> Void) -> AnyObject {
         return AutoReleaseObserver(
-            self.addObserverForName(name, object: object, queue: queue,  usingBlock: block)
+            self.addObserver(forName: NSNotification.Name(rawValue: name), object: object, queue: queue,  using: block)
         )
     }
 }

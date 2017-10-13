@@ -24,17 +24,17 @@ class ContainerViewController : UIViewController {
         self.refreshData()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         // Ensure you have set a valid ApiKey in StopsModel.swift
         if !StopsModel.sharedInstance.hasValidApiKey() {
-            let alert = UIAlertController(title: "No API Key", message: "To use the demo app you must insert your Api key into the appropriate place in file StopsModel.swift", preferredStyle: UIAlertControllerStyle.Alert)
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "No API Key", message: "To use the demo app you must insert your Api key into the appropriate place in file StopsModel.swift", preferredStyle: UIAlertControllerStyle.alert)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
     
-    @IBAction func changeType(sender: UISegmentedControl) {
+    @IBAction func changeType(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 1:
             self.modes = [TransitMode.CycleHired]
@@ -50,25 +50,25 @@ class ContainerViewController : UIViewController {
 
     func refreshData() {
         self.navigationItem.rightBarButtonItem?.title = self.location?.title
-        StopsModel.sharedInstance.setLocation(self.location!.location, types: self.modes)
+        StopsModel.sharedInstance.setLocation(location: self.location!.location, types: self.modes)
     }
     
-    @IBAction func chooseLocation(sender: UIBarButtonItem) {
+    @IBAction func chooseLocation(_ sender: UIBarButtonItem) {
         
-        let action = UIAlertController(title:"Choose Location", message:nil, preferredStyle: .ActionSheet)
+        let action = UIAlertController(title:"Choose Location", message:nil, preferredStyle: .actionSheet)
         
         StopsModel.sharedInstance.demoLocations.forEach { demoLocation in
-            action.addAction(UIAlertAction(title: demoLocation.title, style: .Default, handler: { _ in
+            action.addAction(UIAlertAction(title: demoLocation.title, style: .default, handler: { _ in
                 self.location = demoLocation
                 self.refreshData()
             }))
         }
         
         if action.popoverPresentationController == nil {
-            action.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+            action.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         }
         action.popoverPresentationController?.barButtonItem = sender
-        self.presentViewController(action, animated: true, completion: nil)
+        self.present(action, animated: true, completion: nil)
     }
 }
 
