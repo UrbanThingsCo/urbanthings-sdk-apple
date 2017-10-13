@@ -11,13 +11,13 @@ import Foundation
 /// Types of message that can be logged through the Logger protocol
 public enum LoggerLevel {
     /// Error level indicates a serious problem
-    case Error
+    case error
     /// Warning level indicates warning
-    case Warning
+    case warning
     /// Info level is for general information
-    case Info
+    case info
     /// Debug is for messages relevant to debugging
-    case Debug
+    case debug
 }
 
 /// Protocol defining object providing logging method. If provided to an `UrbanThingsAPI` instance will be called with all
@@ -38,10 +38,10 @@ public protocol Logger {
 /// UTLogger is the standard logger provided by the API framework. An instance will be used by the API object
 /// if no custom logger provided when instantiating the API instance.
 public struct UTLogger : Logger {
-    public func log(message:String) { log(level: .Info, message) }
+    public func log(message:String) { log(level: .info, message) }
     public func log(level:LoggerLevel, _ message:String) {
         #if !DEBUG
-            if level == .Debug {
+            if level == .debug {
                 return
             }
         #endif
