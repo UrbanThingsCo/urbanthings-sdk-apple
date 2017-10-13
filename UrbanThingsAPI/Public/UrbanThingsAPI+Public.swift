@@ -75,6 +75,11 @@ public struct UTService: Service {
     public let endpoint: String
     public let version: String
     public let key: String
+    public init(endpoint: String, version: String, key: String) {
+        self.endpoint = endpoint
+        self.version = version
+        self.key = key
+    }
 }
 
 public extension URLSessionConfiguration {

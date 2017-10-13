@@ -44,22 +44,17 @@ struct DemoLocation {
 
 /// Location of the UrbanThings office
 let UrbanThingsLocation = CLLocationCoordinate2D(latitude: 51.5291205, longitude: -0.0802295)
+var _sharedInstance: StopsModel = {
+    return StopsModel()
+}()
 
 /// StopModel is a singleton that manages the app state and provides notifications whenever
 /// state changes
 class StopsModel {
     
-    /// Property to access singleton in a thread safe way
-    class var sharedInstance: StopsModel {
-        struct Static {
-            static var onceToken: dispatch_once_t = 0
-            static var instance: StopsModel? = nil
-        }
-        dispatch_once(&Static.onceToken) {
-            Static.instance = StopsModel()
-        }
-        return Static.instance!
-    }
+    static var sharedInstance: StopsModel = {
+        return StopsModel()
+    }()
     
     /// The supported locations for the demo app
     let demoLocations:[DemoLocation] = [
@@ -71,10 +66,12 @@ class StopsModel {
     
     // Initialize an API instance. Store as the protocol so that seperate implementation can be substituted without
     // needing to make any other changes to code
-    let api:UrbanThingsAPIType = UrbanThingsAPI(apiKey: ApiKey)
+    let api:UrbanThingsAPIType = UrbanThingsAPI(service: UTService(endpoint: "https://bristol.api.urbanthings.io/api",
+                                                                   version: "2.0",
+                                                                   key: ApiKey))
     
     // Setup dispatch queue for barrier use
-    let readWriteQueue:dispatch_queue_t = dispatch_queue_create("io.urbanthings.api.demo", DISPATCH_QUEUE_CONCURRENT)
+    let readWriteQueue: DispatchQueue = DispatchQueue(label: "io.urbanthings.api.demo", attributes: .concurrent)
     
     /// Current data is stored here, its private so that we can enforce
     /// thread safe access through use of dispatch barrier
@@ -82,7 +79,7 @@ class StopsModel {
     var data:[UTAPI.TransitStop] {
         get {
             var currentData:[UTAPI.TransitStop] = []
-            dispatch_sync(readWriteQueue) {
+            readWriteQueue.sync {
                 currentData = self.internalData
             }
             return currentData
@@ -105,19 +102,19 @@ class StopsModel {
         // If location has changed notify app
         if location.latitude != self.location?.latitude || location.longitude != self.location?.longitude {
             self.location = location
-            NSNotificationCenter.defaultCenter().postNotificationName(LocationChanged, object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: LocationChanged), object: nil)
         }
         
         // Start a new request
-        currentRequest = api.sendRequest(UTTransitStopsRequest(center:location, radius:1000, stopModes:types)) { data, error in
+        currentRequest = api.send(request: UTTransitStopsRequest(center:location, radius:1000, stopModes:types)) { data, error in
             
             // Update with result of call through dispatch barrier to ensure thread
             // safe access
-            dispatch_barrier_sync(self.readWriteQueue) {
+            self.readWriteQueue.sync(flags: .barrier) {
                 self.internalData = data ?? []
             }
             // Notify app that new data is available
-            NSNotificationCenter.defaultCenter().postNotificationName(StopDataUpdated, object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: StopDataUpdated), object: nil)
         }
     }
     
@@ -138,7 +135,7 @@ class StopsModel {
         let stopID:String
         let completion:(String?) -> Void
         
-        init(stopID:String, completion:(String?) -> Void) {
+        init(stopID:String, completion: @escaping (String?) -> Void) {
             self.stopID = stopID
             self.completion = completion
         }
@@ -152,7 +149,7 @@ class StopsModel {
         var deferred:DeferredGroup
         
         func cancel() {
-            deferred.cancel(item)
+            let _ = deferred.cancel(item: item)
         }
     }
     
@@ -161,16 +158,16 @@ class StopsModel {
     private class DeferredGroup {
         
         var deferred = [RequestItem]()
-        let readWriteQueue:dispatch_queue_t
+        let readWriteQueue: DispatchQueue
         var request:UrbanThingsAPIRequest?
         
-        init(readWriteQueue:dispatch_queue_t) {
+        init(readWriteQueue: DispatchQueue) {
             self.readWriteQueue = readWriteQueue
         }
         
         // Adds an item to the group
-        func add(stopID:String, completion:(String?) -> Void) -> UrbanThingsAPIRequest {
-            let requestItem = RequestItem(stopID:stopID, completion:completion)
+        func add(stopID:String, completion: @escaping (String?) -> Void) -> UrbanThingsAPIRequest {
+            let requestItem = RequestItem(stopID:stopID, completion: completion)
             if self.request != nil {
                 assertionFailure("Cannot add to group after request made")
             }
@@ -178,15 +175,15 @@ class StopsModel {
             return Request(item:requestItem, deferred:self)
         }
         
-        func start(api:UrbanThingsAPIType, cache:(stopID:String, message:String) -> Void) {
-            dispatch_barrier_async(self.readWriteQueue) {
+        func start(api:UrbanThingsAPIType, cache: @escaping (_ stopID:String, _ message:String) -> Void) {
+            self.readWriteQueue.async {
                 // If no items just return
                 if self.deferred.count == 0 {
                     return
                 }
                 
-                self.request = api.sendRequest(UTRealtimeResourcesStatusRequest(stopIDs:self.deferred.map { $0.stopID })) { data, error in
-                    dispatch_barrier_async(self.readWriteQueue) {
+                self.request = api.send(request: UTRealtimeResourcesStatusRequest(stopIDs:self.deferred.map { $0.stopID })) { data, error in
+                    self.readWriteQueue.async(flags: .barrier) {
                         if let data = data {
                             var map = [String:RequestItem]()
                             self.deferred.forEach { map[$0.stopID] = $0 }
@@ -197,13 +194,13 @@ class StopsModel {
                                 if let item = map[$0.primaryCode] {
                                     let msg = $0.statusText ?? Unavailable
                                     item.completion(msg)
-                                    cache(stopID: $0.primaryCode, message: msg)
+                                    cache($0.primaryCode, msg)
                                 }
                             }
                         } else {
                             self.deferred.forEach {
                                 $0.completion(Unavailable)
-                                cache(stopID: $0.stopID, message: Unavailable)
+                                cache($0.stopID, Unavailable)
                             }
                         }
                     }
@@ -216,7 +213,7 @@ class StopsModel {
         func cancel(item:RequestItem) -> Bool {
             var ret:Bool = false
             // Attempt to get an existing value from the cache
-            dispatch_sync(self.readWriteQueue) {
+            self.readWriteQueue.sync {
                 self.deferred = self.deferred.filter { $0 !== item }
                 ret = self.deferred.count == 0
             }
@@ -229,7 +226,7 @@ class StopsModel {
     
     // For collating close requests, time of last request
     // and array of stopID and completionHandler pairs
-    private var lastRequestTime = NSDate.distantPast()
+    private var lastRequestTime = Date.distantPast
     private var deferredGroup:DeferredGroup?
     
     // Method to get resource status of a stop asynchronously
@@ -237,11 +234,11 @@ class StopsModel {
     //  - parameters:
     //    - stop: The transit stop of interest
     //    - completion: Completion handler that will be called with result of call when completed
-    func getStopResources(stop:UTAPI.TransitStop, completion:(String?) -> Void) -> UrbanThingsAPIRequest? {
+    func getStopResources(stop:UTAPI.TransitStop, completion: @escaping (String?) -> Void) -> UrbanThingsAPIRequest? {
         var existing:ResourceStatus?
         
         // Attempt to get an existing value from the cache
-        dispatch_sync(self.readWriteQueue) {
+        self.readWriteQueue.sync {
             existing = self.cache[stop.primaryCode]
         }
         
@@ -255,13 +252,13 @@ class StopsModel {
         
         var ret:UrbanThingsAPIRequest?
         
-        dispatch_barrier_sync(self.readWriteQueue) {
+        self.readWriteQueue.sync(flags: .barrier) {
             let group:DeferredGroup? = self.deferredGroup ?? DeferredGroup(readWriteQueue:self.readWriteQueue)
-            ret = group?.add(stop.primaryCode, completion: completion)
+            ret = group?.add(stopID: stop.primaryCode, completion: completion)
             if self.lastRequestTime.timeIntervalSinceNow > -GroupingTimeWindow {
                 if self.deferredGroup == nil {
                     self.deferredGroup = group
-                    NSTimer.scheduledTimerWithTimeInterval(max(GroupingRequiredDelay, GroupingTimeWindow + self.lastRequestTime.timeIntervalSinceNow), target: self, selector: #selector(self.timer), userInfo: nil, repeats: false)
+                    Timer.scheduledTimer(timeInterval: max(GroupingRequiredDelay, GroupingTimeWindow + self.lastRequestTime.timeIntervalSinceNow), target: self, selector: #selector(self.timer), userInfo: nil, repeats: false)
                 }
             } else {
                 self.deferredGroup = group
@@ -274,23 +271,23 @@ class StopsModel {
     
     // Start a deferred group request
     func start() {
-        self.deferredGroup?.start(self.api) { code, message in
+        self.deferredGroup?.start(api: self.api) { code, message in
             self.cache[code] = ResourceStatus(status: message)
         }
-        self.lastRequestTime = NSDate()
+        self.lastRequestTime = Date()
         self.deferredGroup = nil
     }
     
     // Called when time window for grouping expires to trigger
     // request for grouped stops
-    @objc func timer(timer:NSTimer) {
-        dispatch_barrier_sync(self.readWriteQueue) {
+    @objc func timer(timer: Timer) {
+        self.readWriteQueue.sync(flags: .barrier) {
             self.start()
         }
     }
 
     // Test if a key has been edited into source
     func hasValidApiKey() -> Bool {
-        return !ApiKey.containsString("API_KEY")
+        return !ApiKey.contains("API_KEY")
     }
 }

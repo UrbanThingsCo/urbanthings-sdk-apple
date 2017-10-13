@@ -1,3 +1,4 @@
+
 //
 //  UrbanThingsAPI.swift
 //  UrbanThingsAPI
@@ -61,8 +62,8 @@ extension UrbanThingsAPI {
 
     func parseData<T>(parser:(_ json: Any?, _ logger: Logger) throws -> T, data: Data) throws -> T {
         #if DEBUG
-        if let utf8 = String(data: data, encoding: NSUTF8StringEncoding) {
-            logger.log(.Debug, utf8)
+        if let utf8 = String(data: data, encoding: String.Encoding.utf8) {
+            logger.log(level: .debug, utf8)
             print("\(utf8)")
         }
         #endif
@@ -85,12 +86,12 @@ extension UrbanThingsAPI {
 
                 do {
                     let httpResponse = try self.toHttpResponse(response: response)
-                    logger.log(level: .Debug, "\(httpResponse)")
+                    logger.log(level: .debug, "\(httpResponse)")
                     try self.validateHTTPStatus(response: httpResponse, data: data)
                     try self.validateData(response: httpResponse, data: data)
                     result(try self.parseData(parser: parser, data: data!) as T, nil)
                 } catch {
-                    self.logger.log(level: .Error, "\(error)")
+                    self.logger.log(level: .error, "\(error)")
                     result(nil, error as Error)
                 }
             }

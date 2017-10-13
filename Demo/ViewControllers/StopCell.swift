@@ -19,8 +19,8 @@ class StopCell : UITableViewCell {
     func bind(stop:UTAPI.TransitStop) {
         self.nameLabel?.text = stop.name!
         self.typeLabel?.text = "Checking..."
-        self.request = StopsModel.sharedInstance.getStopResources(stop) { status in
-            NSOperationQueue.mainQueue().addOperationWithBlock {
+        self.request = StopsModel.sharedInstance.getStopResources(stop: stop) { status in
+            OperationQueue.main.addOperation {
                 self.typeLabel.text = status ?? "Unavailable"
                 self.request = nil
             }
